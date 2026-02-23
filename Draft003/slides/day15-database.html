@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15: 데이터베이스 | PM 교육</title>
+    <link rel="stylesheet" href="../css/presentation.css">
+</head>
+
+<body>
+    <a href="../index.html" class="home-link">🏠 목차</a>
+    <div class="day-nav"><a href="day14-security.html">← Day 14</a><a href="day16-new-tech.html">Day 16 →</a></div>
+    <div class="presentation">
+        <div class="slide title-slide">
+            <div class="day-badge">DAY 15 · IT 기술</div>
+            <h1>데이터베이스</h1>
+            <p class="subtitle">Database Fundamentals for PM</p>
+            <div class="meta"><span>📅 교육 15일차</span><span>⏱️ 8시간</span><span>🗄️ RDBMS · ERD · SQL · 정규화 · NoSQL</span>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🎯 학습 목표</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🗄️</div>
+                    <div class="card-title">RDBMS 이해</div>
+                    <div class="card-text">관계형 데이터베이스의 구조와 핵심 개념을 설명할 수 있다</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📐</div>
+                    <div class="card-title">ERD 작성</div>
+                    <div class="card-text">엔티티-관계 다이어그램을 읽고 기본 설계를 검토할 수 있다</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📝</div>
+                    <div class="card-title">SQL 기초</div>
+                    <div class="card-text">SELECT, INSERT, UPDATE, DELETE의 기본 구조를 이해한다</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔀</div>
+                    <div class="card-title">NoSQL & 데이터 전략</div>
+                    <div class="card-text">NoSQL의 유형과 데이터 아키텍처 의사결정을 이해한다</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🗄️ 데이터베이스란?</h2>
+            <div class="info-box gold">
+                <div class="info-title">정의</div>
+                <p><strong>체계적으로 조직·관리되는 데이터의 집합</strong>과 이를 관리하는 시스템 (DBMS)</p>
+            </div>
+            <h3 style="margin-top:20px;">RDBMS 핵심 용어</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>용어</th>
+                            <th>설명</th>
+                            <th>비유</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>테이블 (Table)</strong></td>
+                            <td>데이터를 저장하는 2차원 구조</td>
+                            <td>엑셀 시트</td>
+                        </tr>
+                        <tr>
+                            <td><strong>행 (Row / Record)</strong></td>
+                            <td>하나의 데이터 레코드</td>
+                            <td>엑셀의 한 행</td>
+                        </tr>
+                        <tr>
+                            <td><strong>열 (Column / Field)</strong></td>
+                            <td>데이터의 속성</td>
+                            <td>엑셀의 열 헤더</td>
+                        </tr>
+                        <tr>
+                            <td><strong>기본키 (PK)</strong></td>
+                            <td>각 행을 유일하게 식별하는 키</td>
+                            <td>주민번호, 사원번호</td>
+                        </tr>
+                        <tr>
+                            <td><strong>외래키 (FK)</strong></td>
+                            <td>다른 테이블의 PK를 참조</td>
+                            <td>테이블 간 연결고리</td>
+                        </tr>
+                        <tr>
+                            <td><strong>인덱스 (Index)</strong></td>
+                            <td>검색 속도를 높이는 데이터 구조</td>
+                            <td>책의 색인(찾아보기)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>📐 ERD (Entity-Relationship Diagram)</h2>
+            <div class="info-box">
+                <div class="info-title">ERD란?</div>
+                <p>DB의 <strong>엔티티(테이블)</strong>간 <strong>관계</strong>를 시각적으로 표현한 다이어그램. 데이터 모델링의 핵심 도구</p>
+            </div>
+            <h3 style="margin-top:16px;">관계 유형</h3>
+            <div class="three-col">
+                <div class="card" style="text-align:center;">
+                    <div class="card-icon">1️⃣↔1️⃣</div>
+                    <div class="card-title">1:1 (일대일)</div>
+                    <div class="card-text">사원 ↔ 사원상세<br>한 사원은 하나의 상세정보만</div>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div class="card-icon">1️⃣↔♾️</div>
+                    <div class="card-title">1:N (일대다)</div>
+                    <div class="card-text">부서 ↔ 사원<br>한 부서에 여러 사원<br><span class="badge badge-success">가장 일반적</span>
+                    </div>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div class="card-icon">♾️↔♾️</div>
+                    <div class="card-title">N:M (다대다)</div>
+                    <div class="card-text">학생 ↔ 과목<br>중간 테이블로 분리<br>(수강 테이블)</div>
+                </div>
+            </div>
+            <div class="info-box gold" style="margin-top:16px;">
+                <div class="info-title">PM 관점에서 ERD가 중요한 이유</div>
+                <p>데이터 구조를 이해 → <strong>마이그레이션 범위, 연동 복잡도, 성능 이슈</strong>를 사전에 파악 가능!</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>📝 SQL 기초</h2>
+            <h3>CRUD (Create, Read, Update, Delete)</h3>
+            <div class="table-wrapper" style="margin-top:16px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>작업</th>
+                            <th>SQL 문</th>
+                            <th>예문</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>조회</strong> (Read)</td>
+                            <td><span class="highlight-primary">SELECT</span></td>
+                            <td>SELECT 이름, 부서 FROM 사원 WHERE 직급 = '과장'</td>
+                        </tr>
+                        <tr>
+                            <td><strong>삽입</strong> (Create)</td>
+                            <td><span class="highlight-primary">INSERT</span></td>
+                            <td>INSERT INTO 사원 (이름, 부서) VALUES ('홍길동', '개발팀')</td>
+                        </tr>
+                        <tr>
+                            <td><strong>수정</strong> (Update)</td>
+                            <td><span class="highlight-primary">UPDATE</span></td>
+                            <td>UPDATE 사원 SET 부서 = '기획팀' WHERE 사원번호 = 101</td>
+                        </tr>
+                        <tr>
+                            <td><strong>삭제</strong> (Delete)</td>
+                            <td><span class="highlight-primary">DELETE</span></td>
+                            <td>DELETE FROM 사원 WHERE 퇴사일 IS NOT NULL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="info-box" style="margin-top:16px;">
+                <div class="info-title">JOIN (테이블 결합)</div>
+                <p><strong>INNER JOIN</strong>: 양쪽 모두 일치하는 데이터만 | <strong>LEFT JOIN</strong>: 왼쪽 테이블 전체 + 오른쪽 일치</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>📊 정규화 (Normalization)</h2>
+            <div class="info-box">
+                <div class="info-title">정규화란?</div>
+                <p>데이터 <strong>중복을 최소화</strong>하고 <strong>이상(Anomaly)을 방지</strong>하기 위해 테이블을 분리하는 과정</p>
+            </div>
+            <div class="table-wrapper" style="margin-top:16px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>정규형</th>
+                            <th>조건</th>
+                            <th>핵심</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1NF</strong></td>
+                            <td>원자값, 반복 그룹 제거</td>
+                            <td>한 칸에 하나의 값만!</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2NF</strong></td>
+                            <td>1NF + 부분 함수 종속 제거</td>
+                            <td>PK 전체에 종속</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3NF</strong></td>
+                            <td>2NF + 이행 함수 종속 제거</td>
+                            <td>PK에만 직접 종속</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BCNF</strong></td>
+                            <td>모든 결정자가 후보키</td>
+                            <td>더 강한 3NF</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="two-col" style="margin-top:16px;">
+                <div class="info-box warning">
+                    <div class="info-title">이상(Anomaly)</div>
+                    <p><strong>삽입 이상</strong>: 불필요한 데이터 함께 삽입<br><strong>갱신 이상</strong>: 일부만 수정 → 불일치<br><strong>삭제
+                            이상</strong>: 필요 데이터 함께 삭제</p>
+                </div>
+                <div class="info-box success">
+                    <div class="info-title">반정규화 (Denormalization)</div>
+                    <p><strong>성능 향상</strong>을 위해 의도적으로 중복 허용. 조회 속도 ↑, 데이터 일관성 관리 복잡 ↑</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🔀 NoSQL 데이터베이스</h2>
+            <p>Not Only SQL — 관계형이 아닌 다양한 데이터 모델</p>
+            <div class="card-grid" style="margin-top:16px;">
+                <div class="card" style="border-top:3px solid var(--accent-primary);">
+                    <div class="card-title">📋 문서형 (Document)</div>
+                    <div class="card-text">JSON/BSON 문서 저장<br>유연한 스키마<br><strong>MongoDB</strong>, CouchDB</div>
+                </div>
+                <div class="card" style="border-top:3px solid var(--accent-secondary);">
+                    <div class="card-title">🔑 키-값 (Key-Value)</div>
+                    <div class="card-text">Key로 Value 조회<br>초고속 읽기/쓰기<br><strong>Redis</strong>, DynamoDB</div>
+                </div>
+                <div class="card" style="border-top:3px solid var(--accent-gold);">
+                    <div class="card-title">📊 컬럼형 (Column-family)</div>
+                    <div class="card-text">컬럼 기반 저장<br>대규모 분석에 적합<br><strong>Cassandra</strong>, HBase</div>
+                </div>
+                <div class="card" style="border-top:3px solid #b794f6;">
+                    <div class="card-title">🕸️ 그래프 (Graph)</div>
+                    <div class="card-text">노드·엣지 관계 저장<br>소셜 네트워크, 추천<br><strong>Neo4j</strong>, Amazon Neptune</div>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top:16px;">
+                <div class="info-title">RDBMS vs NoSQL 선택 기준</div>
+                <p><strong>RDBMS</strong>: 정형 데이터, 트랜잭션 중요, 복잡한 JOIN → ERP, 금융<br><strong>NoSQL</strong>: 비정형 데이터, 대용량,
+                    유연한 스키마, 수평 확장 → 소셜, IoT, 로그</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🏗️ 데이터 아키텍처</h2>
+            <div class="two-col">
+                <div>
+                    <h3>트랜잭션 & ACID</h3>
+                    <div class="card">
+                        <div class="card-title">ACID 속성</div>
+                        <div class="card-text"><strong>A</strong>tomicity (원자성): 전부 또는
+                            전무<br><strong>C</strong>onsistency (일관성): 규칙 유지<br><strong>I</strong>solation (격리성): 동시 간섭
+                            차단<br><strong>D</strong>urability (지속성): 영구 저장</div>
+                    </div>
+                    <div class="info-box" style="margin-top:12px;">
+                        <p>금융 거래 등 데이터 정합성이 중요한 경우 <strong>ACID 보장</strong>이 필수!</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>데이터 웨어하우스 & 레이크</h3>
+                    <div class="card" style="margin-bottom:10px;">
+                        <div class="card-title">🏢 데이터 웨어하우스</div>
+                        <div class="card-text">정형 데이터를 <strong>통합·정제</strong>하여 분석용으로 저장. ETL 프로세스 활용</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">🌊 데이터 레이크</div>
+                        <div class="card-text">원시 데이터를 <strong>형태 그대로</strong> 저장. 정형+비정형 모두 수용. 빅데이터 분석</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🔨 실습 & 학습 확인</h2>
+            <div class="practice-box">
+                <div class="practice-title">📋 실습: ERD 검토 & SQL 읽기</div>
+                <ol>
+                    <li>인사관리 시스템의 간이 <strong>ERD를 검토</strong>하고 테이블 간 관계를 설명하세요<br>(사원, 부서, 직급, 출퇴근, 급여)</li>
+                    <li>주어진 <strong>SQL 쿼리</strong>의 결과를 예측하세요</li>
+                    <li>"개발팀 소속, 직급이 대리 이상인 사원 목록"을 조회하는 SQL을 작성하세요</li>
+                    <li>RDBMS vs NoSQL 선택이 필요한 시나리오에서 <strong>의사결정 근거</strong>를 작성하세요</li>
+                </ol>
+            </div>
+            <div class="quiz-box" style="margin-top:16px;">
+                <div class="quiz-title">❓ 확인 질문</div>
+                <ol>
+                    <li>기본키(PK)와 외래키(FK)의 역할을 설명하시오</li>
+                    <li>정규화의 목적과 1NF~3NF를 간단히 설명하시오</li>
+                    <li>ACID의 각 속성을 예시와 함께 설명하시오</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="slide title-slide">
+            <div class="day-badge">DAY 15 마무리</div>
+            <h1>감사합니다</h1>
+            <p class="subtitle">내일은 Day 16 (최종일): 신기술 트렌드</p>
+            <div class="meta"><span>🚀 AI/ML, 클라우드, 블록체인, IoT, DevOps</span></div>
+        </div>
+    </div>
+    <script src="../js/presentation.js"></script>
+</body>
+
+</html>

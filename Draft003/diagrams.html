@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시각 자료 갤러리 | PM 교육</title>
+    <link rel="stylesheet" href="css/presentation.css">
+    <style>
+        body {
+            background: var(--bg-primary, #0f0f23);
+            color: var(--text-primary, #e0e0e0);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery-header {
+            text-align: center;
+            padding: 48px 20px 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .gallery-header .day-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #6c63ff, #00d4aa);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 0 12px;
+            background: linear-gradient(135deg, #fff, #a0a0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gallery-header p {
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0;
+        }
+
+        .home-link {
+            position: fixed;
+            top: 16px;
+            left: 20px;
+            background: rgba(108, 99, 255, 0.3);
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(108, 99, 255, 0.5);
+            z-index: 100;
+            transition: background 0.2s;
+        }
+
+        .home-link:hover {
+            background: rgba(108, 99, 255, 0.5);
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px 60px;
+        }
+
+        .day-section {
+            margin-top: 52px;
+        }
+
+        .day-section-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(108, 99, 255, 0.3);
+        }
+
+        .day-badge-small {
+            background: linear-gradient(135deg, #6c63ff, #5a52e0);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .day-badge-small.teal {
+            background: linear-gradient(135deg, #00d4aa, #00b894);
+        }
+
+        .day-badge-small.gold {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+
+        .day-section-title h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0;
+            color: #e0e0e0;
+        }
+
+        .diagrams-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 28px;
+        }
+
+        .diagram-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .diagram-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(108, 99, 255, 0.2);
+        }
+
+        .diagram-card-header {
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .diagram-card-header h3 {
+            margin: 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        .diagram-card-header .icon {
+            font-size: 1.2rem;
+        }
+
+        .diagram-body {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .diagram-body img,
+        .diagram-body svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .diagram-caption {
+            padding: 10px 18px 14px;
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.4);
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(108, 99, 255, 0.15);
+            color: #9b8fff;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            text-decoration: none;
+            border: 1px solid rgba(108, 99, 255, 0.3);
+            transition: background 0.2s;
+            float: right;
+        }
+
+        .download-btn:hover {
+            background: rgba(108, 99, 255, 0.3);
+        }
+
+        .week-divider {
+            margin: 52px 0 0;
+            padding: 14px 24px;
+            background: rgba(255, 255, 255, 0.04);
+            border-left: 4px solid #6c63ff;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #9b8fff;
+        }
+
+        .week-divider.teal {
+            border-left-color: #00d4aa;
+            color: #00d4aa;
+        }
+
+        .week-divider.gold {
+            border-left-color: #f39c12;
+            color: #f39c12;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.82rem;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="home-link">🏠 목차</a>
+
+    <div class="gallery-header">
+        <div class="day-badge">VISUAL REFERENCE GALLERY</div>
+        <h1>📊 시각 자료 갤러리</h1>
+        <p>PM 교육과정 Day 1–17 핵심 다이어그램 모음 — 이미지 우클릭 → 새 탭에서 열기로 확대 가능</p>
+    </div>
+
+    <div class="gallery-container">
+
+        <!-- ===== WEEK 1 ===== -->
+        <div class="week-divider">📌 1주차 — 프로젝트 관리 기초 (Day 1–5)</div>
+
+        <!-- Day 01 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small">D01</span>
+                <h2>오리엔테이션 &amp; 프로젝트 개요</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🔺</span>
+                        <h3>Triple Constraint Triangle (Iron Triangle)</h3>
+                        <a href="images/day01-triple-constraint.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day01-triple-constraint.svg" alt="Triple Constraint Triangle" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">범위(Scope) · 일정(Time) · 원가(Cost) 삼각형. 하나를 변경하면 나머지 둘에 반드시 영향이 옵니다. 중심의 품질(Quality)은 세 제약의 균형에서 나옵니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 02 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small">D02</span>
+                <h2>프로젝트 통합 관리</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🔄</span>
+                        <h3>5개 프로세스 그룹 × 통합 관리 흐름도</h3>
+                        <a href="images/day02-integration-flow.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day02-integration-flow.svg" alt="Integration Management Process Flow" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">PMBOK 6판 기준 착수→계획→실행→감시통제→종료 프로세스 그룹. 감시통제에서 변경 요청 발생 시 계획 단계로 피드백됩니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 03 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small">D03</span>
+                <h2>프로젝트 범위 관리</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🌲</span>
+                        <h3>WBS (Work Breakdown Structure) 분해도</h3>
+                        <a href="images/day03-wbs.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day03-wbs.svg" alt="WBS Work Breakdown Structure" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">모바일 뱅킹 앱 WBS 예시. 100% Rule: 상위 항목의 작업 = 하위 항목 전체 합. 가장 하위 Work Package 단위에 담당자·기간·비용을 배정합니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 04 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small">D04</span>
+                <h2>프로젝트 일정 관리</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🔴</span>
+                        <h3>CPM 네트워크 다이어그램 &amp; 주공정(Critical Path)</h3>
+                        <a href="images/day04-network-cpm.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day04-network-cpm.svg" alt="CPM Network Diagram Critical Path" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">빨간색 경로(A→C→E→F = 14일)가 주공정입니다. Float이 0이므로 하루라도 지연되면 전체 프로젝트가 지연됩니다. B-D 경로는 Float 3일 여유가 있습니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 05 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small">D05</span>
+                <h2>프로젝트 원가 관리</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">📈</span>
+                        <h3>EVM S-Curve — PV / EV / AC</h3>
+                        <a href="images/day05-evm-scurve.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day05-evm-scurve.svg" alt="EVM Earned Value Management S-Curve" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">현재 시점(8개월): EV=5억, AC=5.5억, PV=6억. CPI=0.91(예산 초과), SPI=0.83(일정 지연). EAC = BAC/CPI로 최종 원가를 예측할 수 있습니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== WEEK 2 ===== -->
+        <div class="week-divider">📌 1–2주차 — 프로젝트 관리 심화 (Day 6–11)</div>
+
+        <!-- Day 06 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small">D06</span>
+                <h2>품질 관리</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🔁</span>
+                        <h3>PDCA 품질 사이클 (Deming Cycle)</h3>
+                        <a href="images/day06-pdca.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day06-pdca.svg" alt="PDCA Quality Cycle" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">Plan(계획)→Do(실행)→Check(측정)→Act(개선)의 지속적 개선 사이클. QA는 P+D 단계의 예방 활동, QC는 C 단계의 검출 활동입니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 07 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small">D07</span>
+                <h2>자원 관리</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">👥</span>
+                        <h3>터크만(Tuckman) 팀 발전 5단계 &amp; 생산성 곡선</h3>
+                        <a href="images/day07-tuckman.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day07-tuckman.svg" alt="Tuckman Team Development Model" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">Forming→Storming→Norming→Performing→Adjourning. PM의 핵심 역할은 Storming(갈등) 단계를 빠르게 통과시켜 Performing으로 이끄는 것입니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 08 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small">D08</span>
+                <h2>의사소통 관리</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🕸️</span>
+                        <h3>의사소통 채널 수 = n(n-1)/2</h3>
+                        <a href="images/day08-communication.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day08-communication.svg" alt="Communication Channels Formula" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">팀원 10명 → 채널 45개, 20명 → 190개. 팀 규모가 커질수록 소통 복잡도가 기하급수적으로 증가합니다. 의사소통 계획은 5W1H로 수립합니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 09 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small">D09</span>
+                <h2>리스크 관리</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">⚠️</span>
+                        <h3>리스크 P-I 매트릭스 (확률×영향도)</h3>
+                        <a href="images/day09-risk-matrix.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day09-risk-matrix.svg" alt="Risk Probability Impact Matrix" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">5×5 색상 매트릭스. 빨강=회피·전가, 노랑=완화, 초록=수용. EMV = P × I로 각 리스크의 예상 금전 가치를 계산해 예비비를 산정합니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 10 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small">D10</span>
+                <h2>조달 관리</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">📋</span>
+                        <h3>조달 프로세스 흐름 &amp; 계약 유형 비교</h3>
+                        <a href="images/day10-procurement.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day10-procurement.svg" alt="Procurement Process and Contract Types" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">Make-or-Buy → RFP → 입찰 → 선정 → 계약 체결 → 관리 → 종료. 계약 유형: FFP(구매자 리스크↓) ↔ CPFF(공급자 리스크↓). T&amp;M은 애자일·단기 프로젝트에 적합합니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 11 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small">D11</span>
+                <h2>이해관계자 관리</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🗺️</span>
+                        <h3>이해관계자 Power-Interest Grid</h3>
+                        <a href="images/day11-stakeholder-grid.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day11-stakeholder-grid.svg" alt="Stakeholder Power-Interest Grid" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">고권력·고관심=긴밀관리, 고권력·저관심=만족유지, 저권력·고관심=모니터링, 저권력·저관심=최소관리. Salience Model로 정당성·긴급성까지 추가 분석합니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== WEEK 3 ===== -->
+        <div class="week-divider teal">📌 3주차 — 기술 이해 (Day 12–16)</div>
+
+        <!-- Day 12 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small teal">D12</span>
+                <h2>소프트웨어 공학</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🚀</span>
+                        <h3>CI/CD 파이프라인 &amp; 배포 환경</h3>
+                        <a href="images/day12-cicd-pipeline.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day12-cicd-pipeline.svg" alt="CI/CD Pipeline" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">Code→Build→Test→Scan→Package→Deploy. CI는 코드 통합·자동 테스트, CD는 스테이징→운영 자동 배포. Dev→Staging→Production 환경 파이프라인.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 13 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small teal">D13</span>
+                <h2>네트워크</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🌐</span>
+                        <h3>OSI 7계층 모델 &amp; 데이터 캡슐화</h3>
+                        <a href="images/day13-osi-layers.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day13-osi-layers.svg" alt="OSI 7 Layers Model" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">7→1 캡슐화(Encapsulation), 1→7 역캡슐화. 4계층=TCP/UDP+포트, 3계층=IP+라우팅, 2계층=MAC+스위치, 1계층=물리. 기억법: All People Seem To Need Data Processing.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 14 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small teal">D14</span>
+                <h2>정보보안</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🔐</span>
+                        <h3>CIA Triad — 정보보안 3원칙</h3>
+                        <a href="images/day14-cia-triad.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day14-cia-triad.svg" alt="CIA Triad Security" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">기밀성(Confidentiality)=암호화·접근통제, 무결성(Integrity)=해시·전자서명, 가용성(Availability)=이중화·DDoS방어. OWASP Top 10 공격은 세 요소 중 하나 이상을 위협합니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 15 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small teal">D15</span>
+                <h2>데이터베이스</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🗄️</span>
+                        <h3>ERD (Entity Relationship Diagram) — 쇼핑몰 예시</h3>
+                        <a href="images/day15-erd.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day15-erd.svg" alt="Entity Relationship Diagram ERD" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">고객(1)–주문(N)–상품(M) 관계. N:M 관계는 주문상품 브리지 테이블로 분해합니다. PK=기본키, FK=외래키, 정규화 1NF→2NF→3NF 순서로 중복을 제거합니다.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 16 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small teal">D16</span>
+                <h2>신기술 트렌드</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">☁</span>
+                        <h3>클라우드 서비스 모델 (IaaS/PaaS/SaaS) &amp; AI/ML 파이프라인</h3>
+                        <a href="images/day16-cloud.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day16-cloud.svg" alt="Cloud Service Models IaaS PaaS SaaS and AI ML Pipeline" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">IaaS(인프라 직접관리) → PaaS(코드만 관리) → SaaS(설정만 관리). 배포 모델: Public/Private/Hybrid/Multi-Cloud. DevOps 무한루프 + MLOps(모델 버전관리·드리프트 감지).</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== BONUS ===== -->
+        <div class="week-divider gold">📌 보너스 — 애자일 &amp; PM 도구 (Day 17)</div>
+
+        <!-- Day 17 -->
+        <div class="day-section">
+            <div class="day-section-title">
+                <span class="day-badge-small gold">D17</span>
+                <h2>애자일/스크럼 &amp; PM 도구</h2>
+            </div>
+            <div class="diagrams-grid">
+                <div class="diagram-card">
+                    <div class="diagram-card-header">
+                        <span class="icon">🏃</span>
+                        <h3>스크럼 프레임워크 — 3역할·5이벤트·3산출물</h3>
+                        <a href="images/day17-scrum-framework.svg" download class="download-btn">⬇ SVG</a>
+                    </div>
+                    <div class="diagram-body">
+                        <img src="images/day17-scrum-framework.svg" alt="Scrum Framework" loading="lazy">
+                    </div>
+                    <div class="diagram-caption">Product Backlog → Sprint Planning → Sprint Backlog → 2주 Sprint (Daily Scrum 포함) → Review + Retrospective → Increment. 반복하며 제품을 점진적으로 완성합니다.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>PM 전문가 양성 교육과정 시각 자료 갤러리 &copy; 2026</p>
+        <p style="margin-top:8px;">이미지를 우클릭 → "새 탭에서 열기"로 원본 SVG를 확대해서 볼 수 있습니다</p>
+    </footer>
+
+</body>
+
+</html>

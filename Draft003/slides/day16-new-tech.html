@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16: 신기술 트렌드 | PM 교육</title>
+    <link rel="stylesheet" href="../css/presentation.css">
+</head>
+
+<body>
+    <a href="../index.html" class="home-link">🏠 목차</a>
+    <div class="day-nav"><a href="day15-database.html">← Day 15</a></div>
+    <div class="presentation">
+        <div class="slide title-slide">
+            <div class="day-badge">DAY 16 · FINAL</div>
+            <h1>신기술 트렌드</h1>
+            <p class="subtitle">Emerging Technologies for PM</p>
+            <div class="meta"><span>📅 교육 최종일</span><span>⏱️ 8시간</span><span>🚀 AI · 클라우드 · 블록체인 · IoT · DevOps</span>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🎯 PM이 신기술을 알아야 하는 이유</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🔮</div>
+                    <div class="card-title">전략적 의사결정</div>
+                    <div class="card-text">기술 트렌드 이해 → 프로젝트의 기술 방향과 비즈니스 가치 판단</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚠️</div>
+                    <div class="card-title">리스크 관리</div>
+                    <div class="card-text">신기술 도입의 불확실성과 리스크를 사전에 식별하고 대응</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🗣️</div>
+                    <div class="card-title">이해관계자 소통</div>
+                    <div class="card-text">경영진·기술팀 간 기술 관련 의사소통의 브릿지 역할</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <div class="card-title">혁신 촉진</div>
+                    <div class="card-text">기존 방식의 한계를 인식하고, 혁신적 대안을 제안</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🤖 인공지능 & 머신러닝 (AI/ML)</h2>
+            <div class="info-box gold">
+                <div class="info-title">핵심 개념</div>
+                <p><strong>AI</strong>: 인간의 지능을 모방하는 기술 | <strong>ML</strong>: 데이터로부터 학습하는 AI의 하위 분야 |
+                    <strong>DL</strong>: 신경망 기반 ML</p>
+            </div>
+            <div class="three-col" style="margin-top:16px;">
+                <div class="card">
+                    <div class="card-title">📊 지도학습</div>
+                    <div class="card-text">정답이 있는 데이터로 학습<br>분류, 예측<br><small>스팸 필터, 가격 예측</small></div>
+                </div>
+                <div class="card">
+                    <div class="card-title">🔍 비지도학습</div>
+                    <div class="card-text">정답 없이 패턴 발견<br>군집화, 이상 탐지<br><small>고객 세분화, 이상거래</small></div>
+                </div>
+                <div class="card">
+                    <div class="card-title">💬 생성형 AI</div>
+                    <div class="card-text">새로운 콘텐츠 생성<br>LLM, 이미지 생성<br><small>ChatGPT, Copilot, DALL-E</small></div>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top:16px;">
+                <div class="info-title">PM 관점: AI 프로젝트의 특수성</div>
+                <p>• 데이터 수집·정제에 전체 시간의 <strong>60-70%</strong> 소요<br>• 정확도 목표 설정이 범위 정의의 핵심<br>•
+                    <strong>윤리·편향(Bias)</strong> 이슈 고려 필수<br>• 반복적·탐색적 개발 → 애자일 적합</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>☁️ 클라우드 컴퓨팅 심화</h2>
+            <div class="two-col">
+                <div>
+                    <h3>클라우드 배포 모델</h3>
+                    <div class="card" style="margin-bottom:8px;">
+                        <div class="card-title">퍼블릭 클라우드</div>
+                        <div class="card-text">AWS, Azure, GCP<br>비용 효율적, 확장 용이</div>
+                    </div>
+                    <div class="card" style="margin-bottom:8px;">
+                        <div class="card-title">프라이빗 클라우드</div>
+                        <div class="card-text">자체 인프라에 구축<br>보안·통제 강화</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">하이브리드 클라우드</div>
+                        <div class="card-text">퍼블릭 + 프라이빗 조합<br>유연한 워크로드 배분</div>
+                    </div>
+                </div>
+                <div>
+                    <h3>클라우드 네이티브 기술</h3>
+                    <div class="card" style="margin-bottom:8px;">
+                        <div class="card-title">🐳 컨테이너 (Docker)</div>
+                        <div class="card-text">앱을 격리된 환경에 패키징<br>"내 PC에서는 되는데..."를 해결</div>
+                    </div>
+                    <div class="card" style="margin-bottom:8px;">
+                        <div class="card-title">⚙️ 오케스트레이션 (K8s)</div>
+                        <div class="card-text">Kubernetes로 컨테이너 자동 관리<br>스케일링, 롤링 업데이트</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">⚡ 서버리스 (Serverless)</div>
+                        <div class="card-text">서버 관리 불필요<br>AWS Lambda, Azure Functions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🔗 블록체인</h2>
+            <div class="info-box">
+                <div class="info-title">핵심 개념</div>
+                <p><strong>분산 원장 기술</strong> — 거래 기록을 모든 참여자가 공유하며, 변조가 사실상 불가능한 구조</p>
+            </div>
+            <div class="card-grid" style="margin-top:16px;">
+                <div class="card">
+                    <div class="card-title">🔐 불변성</div>
+                    <div class="card-text">한번 기록된 데이터는 수정·삭제 불가</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">🌐 분산화</div>
+                    <div class="card-text">중앙 기관 없이 P2P 네트워크로 운영</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">📋 스마트 계약</div>
+                    <div class="card-text">조건 충족 시 자동 실행되는 프로그래밍 가능한 계약</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">🏢 활용 분야</div>
+                    <div class="card-text">금융, 공급망 추적, 디지털 자산, 전자 투표, 인증</div>
+                </div>
+            </div>
+            <div class="info-box warning" style="margin-top:16px;">
+                <div class="info-title">PM 관점의 블록체인 프로젝트 주의점</div>
+                <p>• 모든 문제에 블록체인이 필요한 것은 아님! (적합성 평가 필수)<br>• 성능 제약 (TPS 한계), 에너지 소비, 규제 불확실성 고려</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>📡 IoT (Internet of Things)</h2>
+            <div class="info-box gold">
+                <div class="info-title">정의</div>
+                <p>물리적 장치에 센서·네트워크를 부착하여 <strong>데이터를 수집·교환하는 기술 생태계</strong></p>
+            </div>
+            <div class="two-col" style="margin-top:16px;">
+                <div>
+                    <h3>IoT 아키텍처</h3>
+                    <div class="diagram" style="flex-direction:column; gap:8px;">
+                        <div class="step" style="width:100%;">
+                            <div class="step-label">Layer 1</div>
+                            <div class="step-name">🔌 디바이스 (센서, 액추에이터)</div>
+                        </div>
+                        <div class="step" style="width:100%;">
+                            <div class="step-label">Layer 2</div>
+                            <div class="step-name">🌐 네트워크 (Wi-Fi, 5G, LoRa)</div>
+                        </div>
+                        <div class="step" style="width:100%;">
+                            <div class="step-label">Layer 3</div>
+                            <div class="step-name">☁️ 플랫폼 (데이터 처리·분석)</div>
+                        </div>
+                        <div class="step" style="width:100%;">
+                            <div class="step-label">Layer 4</div>
+                            <div class="step-name">📱 애플리케이션 (대시보드, 알림)</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>활용 분야</h3>
+                    <div class="card-grid" style="grid-template-columns:1fr;">
+                        <div class="card">
+                            <div class="card-text">🏭 <strong>스마트 팩토리</strong>: 설비 모니터링, 예지 정비</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-text">🏠 <strong>스마트 홈</strong>: 에너지 관리, 보안</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-text">🚗 <strong>커넥티드 카</strong>: 차량 원격 진단</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-text">🏥 <strong>헬스케어</strong>: 원격 환자 모니터링</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>📊 빅데이터</h2>
+            <div class="three-col">
+                <div class="card" style="text-align:center; border-top:3px solid var(--accent-primary);">
+                    <div style="font-size:2rem; font-weight:900; color:var(--accent-primary);">V</div>
+                    <div class="card-title">Volume (규모)</div>
+                    <div class="card-text">테라·페타바이트급<br>대규모 데이터</div>
+                </div>
+                <div class="card" style="text-align:center; border-top:3px solid var(--accent-secondary);">
+                    <div style="font-size:2rem; font-weight:900; color:var(--accent-secondary);">V</div>
+                    <div class="card-title">Velocity (속도)</div>
+                    <div class="card-text">실시간 스트리밍<br>고속 데이터 생성</div>
+                </div>
+                <div class="card" style="text-align:center; border-top:3px solid var(--accent-gold);">
+                    <div style="font-size:2rem; font-weight:900; color:var(--accent-gold);">V</div>
+                    <div class="card-title">Variety (다양성)</div>
+                    <div class="card-text">정형+비정형<br>텍스트, 이미지, 로그</div>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top:16px;">
+                <div class="info-title">빅데이터 처리 기술 스택</div>
+                <p><strong>수집</strong>: Kafka, Fluentd | <strong>저장</strong>: HDFS, S3, Data Lake | <strong>처리</strong>:
+                    Spark, Flink | <strong>분석</strong>: Tableau, Power BI</p>
+            </div>
+            <div class="info-box gold" style="margin-top:12px;">
+                <div class="info-title">PM 관점</div>
+                <p>데이터 수집 범위·품질이 프로젝트 성패를 좌우. <strong>데이터 거버넌스</strong>, 개인정보보호, 인프라 비용 관리가 핵심</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🔄 DevOps & CI/CD</h2>
+            <div class="info-box gold">
+                <div class="info-title">DevOps란?</div>
+                <p><strong>개발(Dev)</strong>과 <strong>운영(Ops)</strong>의 벽을 허물어, 소프트웨어 인도 속도와 품질을 높이는 문화·방법론</p>
+            </div>
+            <div class="diagram" style="margin:20px 0;">
+                <div class="step" style="border-top:3px solid #6c63ff;">
+                    <div class="step-name">📝 Plan</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step" style="border-top:3px solid #00d4aa;">
+                    <div class="step-name">💻 Code</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step" style="border-top:3px solid #ffd700;">
+                    <div class="step-name">🔨 Build</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step" style="border-top:3px solid #ff6b6b;">
+                    <div class="step-name">🔍 Test</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step" style="border-top:3px solid #b794f6;">
+                    <div class="step-name">🚀 Deploy</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step" style="border-top:3px solid #a0a0c0;">
+                    <div class="step-name">👁️ Monitor</div>
+                </div>
+            </div>
+            <div class="two-col">
+                <div class="card">
+                    <div class="card-title">🔄 CI (Continuous Integration)</div>
+                    <div class="card-text">코드 변경 시 자동으로 빌드·테스트<br>통합 오류를 조기 발견<br><small>Jenkins, GitHub Actions, GitLab
+                            CI</small></div>
+                </div>
+                <div class="card">
+                    <div class="card-title">🚀 CD (Continuous Delivery/Deployment)</div>
+                    <div class="card-text">자동으로 스테이징·프로덕션 배포<br>릴리스 주기 대폭 단축<br><small>ArgoCD, Spinnaker</small></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🏗️ 신기술 프로젝트 관리 포인트</h2>
+            <div class="card-grid">
+                <div class="card" style="border-left:3px solid var(--accent-warning);">
+                    <div class="card-title">⚠️ 기술 검증 (PoC)</div>
+                    <div class="card-text">신기술 도입 전 Proof of Concept 수행. 본 프로젝트 전에 기술적 가능성 검증</div>
+                </div>
+                <div class="card" style="border-left:3px solid var(--accent-primary);">
+                    <div class="card-title">📋 테일러링</div>
+                    <div class="card-text">신기술 프로젝트는 높은 불확실성 → 애자일·반복적 접근 강력 권장</div>
+                </div>
+                <div class="card" style="border-left:3px solid var(--accent-secondary);">
+                    <div class="card-title">👥 역량 확보</div>
+                    <div class="card-text">팀 기술 역량 사전 점검. 교육·외부 전문가 투입 계획 필수</div>
+                </div>
+                <div class="card" style="border-left:3px solid var(--accent-gold);">
+                    <div class="card-title">🔒 보안 & 윤리</div>
+                    <div class="card-text">AI 편향, 데이터 프라이버시, 기술 의존성 등 비기능적 리스크 관리</div>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top:16px;">
+                <div class="info-title">기가트너 하이프 사이클 (Hype Cycle) 인식</div>
+                <p>기술 트리거 → 과대 기대 정점 → 환멸구간 → 깨달음의 경사 → 생산성 안정기<br>PM은 기술의 <strong>현재 성숙도</strong>를 정확히 파악하고 기대를 관리해야
+                    합니다.</p>
+            </div>
+        </div>
+
+        <div class="slide section-slide">
+            <div class="section-number">🎓</div>
+            <h2>16일 교육과정 수료</h2>
+            <p style="color: var(--text-secondary); font-size: 1.2rem;">비즈니스 담당자에서 PM 전문가로의 여정</p>
+        </div>
+
+        <div class="slide">
+            <h2>🗺️ 16일간의 학습 여정 요약</h2>
+            <div class="two-col">
+                <div>
+                    <h3 style="color:var(--accent-primary);">프로젝트 관리 (Day 1-11)</h3>
+                    <ul>
+                        <li>D1: 프로젝트 개요 & 오리엔테이션</li>
+                        <li>D2: 통합 관리 (헌장, CCB)</li>
+                        <li>D3: 범위 관리 (WBS, Scope Creep)</li>
+                        <li>D4: 일정 관리 (CPM, 간트차트)</li>
+                        <li>D5: 원가 관리 (EVM)</li>
+                        <li>D6: 품질 관리 (QA/QC, 7도구)</li>
+                        <li>D7: 자원 관리 (RACI, 터크만)</li>
+                        <li>D8: 의사소통 관리 (채널, RAG)</li>
+                        <li>D9: 리스크 관리 (P-I, EMV)</li>
+                        <li>D10: 조달 관리 (계약 유형, RFP)</li>
+                        <li>D11: 이해관계자 + 종합 실습</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color:var(--accent-secondary);">기술 이해 (Day 12-16)</h3>
+                    <ul>
+                        <li>D12: 소프트웨어공학 (SDLC, 애자일)</li>
+                        <li>D13: 네트워크 (OSI, TCP/IP, API)</li>
+                        <li>D14: 정보보안 (CIA, OWASP, ISMS)</li>
+                        <li>D15: 데이터베이스 (ERD, SQL, NoSQL)</li>
+                        <li>D16: 신기술 (AI, 클라우드, DevOps)</li>
+                    </ul>
+                    <div class="info-box success" style="margin-top:20px;">
+                        <div class="info-title">🎉 다음 단계</div>
+                        <p>• PMP 자격증 도전<br>• 실전 프로젝트 경험 축적<br>• PM CoP 참여<br>• 지속적 학습과 네트워킹</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide title-slide">
+            <div class="day-badge">FINAL · DAY 16</div>
+            <h1>PM 전문가 교육과정을 마칩니다 🎓</h1>
+            <p class="subtitle">16일간의 여정에 함께해주셔서 감사합니다</p>
+            <div class="meta"><span>🚀 이제 여러분은 PM 전문가입니다!</span></div>
+        </div>
+    </div>
+    <script src="../js/presentation.js"></script>
+</body>
+
+</html>
