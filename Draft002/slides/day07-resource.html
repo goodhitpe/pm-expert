@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7: 프로젝트 자원 관리 | PM 교육</title>
+    <link rel="stylesheet" href="../css/presentation.css">
+</head>
+
+<body>
+    <a href="../index.html" class="home-link">🏠 목차</a>
+    <div class="day-nav"><a href="day06-quality.html">← Day 6</a><a href="day08-communication.html">Day 8 →</a></div>
+    <div class="presentation">
+        <div class="slide title-slide">
+            <div class="day-badge">DAY 7</div>
+            <h1>프로젝트 자원 관리</h1>
+            <p class="subtitle">Project Resource Management</p>
+            <div class="meta"><span>📅 교육 7일차</span><span>⏱️ 8시간</span><span>👥 RACI · 터크만 · 갈등 해결</span></div>
+        </div>
+
+        <div class="slide">
+            <h2>🎯 학습 목표</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <div class="card-title">RACI 차트</div>
+                    <div class="card-text">책임배정 매트릭스를 작성하고 활용할 수 있다</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <div class="card-title">터크만 모델</div>
+                    <div class="card-text">팀 발전 5단계를 이해하고 각 단계별 PM 역할을 안다</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <div class="card-title">갈등 해결</div>
+                    <div class="card-text">5가지 갈등 해결 기법의 차이와 적절한 상황을 판단한다</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💪</div>
+                    <div class="card-title">동기부여 이론</div>
+                    <div class="card-text">매슬로, 허츠버그, 맥그리거 이론을 실무에 적용한다</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>📋 RACI 차트</h2>
+            <p>작업별 역할과 책임을 명확히 정의하는 책임배정 매트릭스</p>
+            <div class="table-wrapper" style="margin-top:20px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>약어</th>
+                            <th>역할</th>
+                            <th>설명</th>
+                            <th>규칙</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-size:1.5rem; font-weight:900; color:var(--accent-warning);">R</td>
+                            <td>Responsible<br>(실행 책임자)</td>
+                            <td>실제 작업을 수행하는 사람</td>
+                            <td>작업당 1인 이상</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:1.5rem; font-weight:900; color:var(--accent-primary);">A</td>
+                            <td>Accountable<br>(최종 책임자)</td>
+                            <td>작업의 최종 승인/결과 책임</td>
+                            <td><strong>작업당 반드시 1인!</strong></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:1.5rem; font-weight:900; color:var(--accent-secondary);">C</td>
+                            <td>Consulted<br>(자문)</td>
+                            <td>작업 전 의견을 구하는 대상</td>
+                            <td>양방향 소통</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:1.5rem; font-weight:900; color:var(--text-muted);">I</td>
+                            <td>Informed<br>(통보)</td>
+                            <td>작업 후 결과를 통보받는 대상</td>
+                            <td>단방향 소통</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>👥 터크만 팀 발전 모델</h2>
+            <div class="diagram" style="margin:20px 0;">
+                <div class="step" style="border-top:3px solid #6c63ff;">
+                    <div class="step-name">🤝 형성<br><small>Forming</small></div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step" style="border-top:3px solid #ff6b6b;">
+                    <div class="step-name">⚡ 격동<br><small>Storming</small></div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step" style="border-top:3px solid #ffd700;">
+                    <div class="step-name">📏 규범<br><small>Norming</small></div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step" style="border-top:3px solid #00d4aa;">
+                    <div class="step-name">🚀 성과<br><small>Performing</small></div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step" style="border-top:3px solid #a0a0c0;">
+                    <div class="step-name">👋 해산<br><small>Adjourning</small></div>
+                </div>
+            </div>
+            <div class="card-grid" style="grid-template-columns: repeat(5,1fr);">
+                <div class="card" style="padding:12px;">
+                    <div class="card-text" style="font-size:0.8rem;">서로 탐색<br>예의 바름<br>PM: 지시적</div>
+                </div>
+                <div class="card" style="padding:12px;">
+                    <div class="card-text" style="font-size:0.8rem;">의견 충돌<br>권력 다툼<br>PM: 코칭</div>
+                </div>
+                <div class="card" style="padding:12px;">
+                    <div class="card-text" style="font-size:0.8rem;">규칙 합의<br>신뢰 형성<br>PM: 참여적</div>
+                </div>
+                <div class="card" style="padding:12px;">
+                    <div class="card-text" style="font-size:0.8rem;">최고 생산성<br>자율 운영<br>PM: 위임</div>
+                </div>
+                <div class="card" style="padding:12px;">
+                    <div class="card-text" style="font-size:0.8rem;">프로젝트 종료<br>팀원 성과 인정<br>PM: 지원</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>⚡ 갈등 해결 5가지 기법</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>기법</th>
+                            <th>설명</th>
+                            <th>자기주장</th>
+                            <th>협조성</th>
+                            <th>적합 상황</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong class="highlight-green">협력</strong><br>Collaborate</td>
+                            <td>Win-Win 해결책 도출</td>
+                            <td>높음</td>
+                            <td>높음</td>
+                            <td><span class="badge badge-success">가장 이상적!</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong class="highlight-primary">타협</strong><br>Compromise</td>
+                            <td>양측 일부 양보</td>
+                            <td>중간</td>
+                            <td>중간</td>
+                            <td>시간 제한, 임시 해결</td>
+                        </tr>
+                        <tr>
+                            <td><strong>수용</strong><br>Accommodate</td>
+                            <td>상대 의견 수용</td>
+                            <td>낮음</td>
+                            <td>높음</td>
+                            <td>관계 유지, 사안이 작을 때</td>
+                        </tr>
+                        <tr>
+                            <td><strong>강요</strong><br>Force</td>
+                            <td>한쪽 의견 관철</td>
+                            <td>높음</td>
+                            <td>낮음</td>
+                            <td>긴급 상황, 안전 관련</td>
+                        </tr>
+                        <tr>
+                            <td><strong>회피</strong><br>Withdraw</td>
+                            <td>갈등 상황 회피</td>
+                            <td>낮음</td>
+                            <td>낮음</td>
+                            <td>감정 격앙 시 냉각기</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="info-box gold" style="margin-top:16px;">
+                <div class="info-title">PM이 선호해야 할 기법</div>
+                <p><strong>협력(Collaborate)</strong> → 타협(Compromise) 순서. 강요는 최후의 수단!</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>💪 동기부여 이론</h2>
+            <div class="three-col">
+                <div class="card">
+                    <div class="card-title">📐 매슬로 욕구 5단계</div>
+                    <div class="card-text">
+                        <ol>
+                            <li>생리적 욕구</li>
+                            <li>안전 욕구</li>
+                            <li>사회적 욕구</li>
+                            <li>존경 욕구</li>
+                            <li><strong>자아실현</strong></li>
+                        </ol>하위 욕구 충족 → 상위 이동
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">⚖️ 허츠버그 2요인</div>
+                    <div class="card-text"><strong>위생 요인</strong>: 급여, 환경, 정책<br>→ 불만 해소 (동기부여 X)<br><br><strong>동기
+                            요인</strong>: 성취, 인정, 성장<br>→ 진정한 동기부여 ⭐</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">🔤 맥그리거 X-Y 이론</div>
+                    <div class="card-text"><strong>X 이론</strong>: 인간은 게으름<br>→ 통제·감독 필요<br><br><strong>Y 이론</strong>:
+                        인간은 자발적<br>→ 자율·참여 강조 ⭐</div>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top:16px;">
+                <p>PM은 <strong>Y 이론</strong> 관점으로 팀을 이끌고, <strong>동기 요인</strong>(인정, 성장 기회)을 제공하여 팀 성과를 높여야 합니다.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🔨 실습 & 학습 확인</h2>
+            <div class="practice-box">
+                <div class="practice-title">📋 RACI 차트 작성 실습</div>
+                <p>인사관리 시스템 프로젝트에서 아래 역할로 RACI 차트를 작성하세요:</p>
+                <p><strong>역할</strong>: PM, 개발리드, 기획자, 디자이너, QA리드, 스폰서</p>
+                <p><strong>작업 항목</strong>: 요구분석, UI설계, 백엔드 개발, 테스트, 배포, 변경 승인</p>
+            </div>
+            <div class="quiz-box" style="margin-top:16px;">
+                <div class="quiz-title">❓ 확인 질문</div>
+                <ol>
+                    <li>RACI에서 Accountable이 작업당 반드시 1명이어야 하는 이유?</li>
+                    <li>터크만 모델에서 Storming 단계의 PM 역할은?</li>
+                    <li>협력(Collaborate)과 타협(Compromise)의 차이?</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="slide title-slide">
+            <div class="day-badge">DAY 7 마무리</div>
+            <h1>감사합니다</h1>
+            <p class="subtitle">내일은 Day 8: 프로젝트 의사소통 관리</p>
+            <div class="meta"><span>💬 의사소통 채널, Push/Pull, RAG 보고</span></div>
+        </div>
+    </div>
+    <script src="../js/presentation.js"></script>
+</body>
+
+</html>

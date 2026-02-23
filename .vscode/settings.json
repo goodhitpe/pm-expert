@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^mkdir Draft001\\\\css, Draft001\\\\js, Draft001\\\\slides, Draft001\\\\summaries 2>\\$null ; dir Draft001$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

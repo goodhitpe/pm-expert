@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11: 이해관계자 관리 + 종합 실습 | PM 교육</title>
+    <link rel="stylesheet" href="../css/presentation.css">
+</head>
+
+<body>
+    <a href="../index.html" class="home-link">🏠 목차</a>
+    <div class="day-nav"><a href="day10-procurement.html">← Day 10</a><a href="day12-sw-engineering.html">Day 12 →</a>
+    </div>
+    <div class="presentation">
+        <div class="slide title-slide">
+            <div class="day-badge">DAY 11</div>
+            <h1>이해관계자 관리 + 종합 실습</h1>
+            <p class="subtitle">Stakeholder Management & Comprehensive Practice</p>
+            <div class="meta"><span>📅 교육 11일차</span><span>⏱️ 오전: 이론 / 오후: 종합 실습</span><span>🤝 PM 관리 영역 완료!</span>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🤝 이해관계자란?</h2>
+            <div class="info-box gold">
+                <div class="info-title">PMBOK® 정의</div>
+                <p>프로젝트에 <strong>영향을 주거나, 영향을 받거나, 영향을 받는다고 인식</strong>하는 개인, 그룹, 조직</p>
+            </div>
+            <h3 style="margin-top:16px;">이해관계자 식별 예시</h3>
+            <div class="card-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="card" style="text-align:center;padding:14px;">
+                    <div class="card-icon">👔</div>
+                    <div class="card-title" style="font-size:0.85rem;">스폰서</div>
+                </div>
+                <div class="card" style="text-align:center;padding:14px;">
+                    <div class="card-icon">👥</div>
+                    <div class="card-title" style="font-size:0.85rem;">프로젝트 팀</div>
+                </div>
+                <div class="card" style="text-align:center;padding:14px;">
+                    <div class="card-icon">😊</div>
+                    <div class="card-title" style="font-size:0.85rem;">고객/사용자</div>
+                </div>
+                <div class="card" style="text-align:center;padding:14px;">
+                    <div class="card-icon">🏢</div>
+                    <div class="card-title" style="font-size:0.85rem;">기능부서 관리자</div>
+                </div>
+                <div class="card" style="text-align:center;padding:14px;">
+                    <div class="card-icon">🤝</div>
+                    <div class="card-title" style="font-size:0.85rem;">협력업체</div>
+                </div>
+                <div class="card" style="text-align:center;padding:14px;">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title" style="font-size:0.85rem;">PMO</div>
+                </div>
+                <div class="card" style="text-align:center;padding:14px;">
+                    <div class="card-icon">⚖️</div>
+                    <div class="card-title" style="font-size:0.85rem;">규제기관</div>
+                </div>
+                <div class="card" style="text-align:center;padding:14px;">
+                    <div class="card-icon">🏛️</div>
+                    <div class="card-title" style="font-size:0.85rem;">경영진</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>📊 권력-관심도 매트릭스</h2>
+            <div class="table-wrapper">
+                <table style="text-align:center;">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th colspan="2">관심도 (Interest)</th>
+                        </tr>
+                        <tr>
+                            <th>권력 (Power)</th>
+                            <th>낮은 관심</th>
+                            <th>높은 관심</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>높은 권력</strong></td>
+                            <td style="background:rgba(255,215,0,0.1);padding:20px;"><strong>만족 유지</strong><br>(Keep
+                                Satisfied)<br><small>경영진, 정부기관</small></td>
+                            <td style="background:rgba(0,212,170,0.1);padding:20px;"><strong class="highlight-green">핵심
+                                    관리</strong><br>(Manage Closely)<br><small>스폰서, 핵심 고객</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>낮은 권력</strong></td>
+                            <td style="padding:20px;"><strong>최소 관리</strong><br>(Monitor)<br><small>일반 사용자</small></td>
+                            <td style="background:rgba(108,99,255,0.1);padding:20px;"><strong
+                                    class="highlight-primary">정보 제공</strong><br>(Keep Informed)<br><small>팀원, 하위
+                                    관리자</small></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="info-box" style="margin-top:16px;">
+                <div class="info-title">핵심 관리(Manage Closely) 대상</div>
+                <p>높은 권력 + 높은 관심 → PM이 가장 많은 시간과 에너지를 투입해야 하는 그룹!</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>📈 이해관계자 참여도 평가 매트릭스</h2>
+            <div class="table-wrapper">
+                <table style="text-align:center;">
+                    <thead>
+                        <tr>
+                            <th>이해관계자</th>
+                            <th>비인식<br>(Unaware)</th>
+                            <th>저항<br>(Resistant)</th>
+                            <th>중립<br>(Neutral)</th>
+                            <th>지지<br>(Supportive)</th>
+                            <th>주도적<br>(Leading)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>경영진</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>C</td>
+                            <td><strong class="highlight">D</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>사용자 부서장</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td>C</td>
+                            <td><strong class="highlight">D</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>IT 운영팀</strong></td>
+                            <td></td>
+                            <td>C</td>
+                            <td></td>
+                            <td><strong class="highlight">D</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top:12px; text-align:center; color:var(--text-muted);"><strong>C</strong> = 현재(Current) 참여도
+                | <strong class="highlight">D</strong> = 목표(Desired) 참여도</p>
+            <div class="info-box" style="margin-top:12px;">
+                <p>C와 D의 간격이 클수록 PM의 <strong>적극적 참여 관리 전략</strong>이 필요합니다!</p>
+            </div>
+        </div>
+
+        <div class="slide section-slide">
+            <div class="section-number">02</div>
+            <h2>종합 실습: 모의 프로젝트</h2>
+            <p style="color: var(--text-secondary); font-size: 1.2rem;">Day 2~11 지식을 총동원하여 프로젝트를 기획합니다</p>
+        </div>
+
+        <div class="slide">
+            <h2>🔨 종합 실습 과제</h2>
+            <div class="practice-box">
+                <div class="practice-title">📋 시나리오: 사내 모바일 근태관리 시스템 신규 구축</div>
+                <p>예산 3억원, 기간 6개월, 팀 8명. 다음 산출물을 팀별로 작성하세요:</p>
+            </div>
+            <div class="table-wrapper" style="margin-top:16px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>산출물</th>
+                            <th>관련 지식영역</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>프로젝트 헌장</td>
+                            <td>통합 관리 (Day 2)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>WBS (3레벨 이상)</td>
+                            <td>범위 관리 (Day 3)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>간트차트 + CPM 식별</td>
+                            <td>일정 관리 (Day 4)</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>예산 산출 + S-Curve</td>
+                            <td>원가 관리 (Day 5)</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>리스크 등록부 (5개 이상)</td>
+                            <td>리스크 관리 (Day 9)</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>RACI 차트</td>
+                            <td>자원 관리 (Day 7)</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>이해관계자 등록부 + P-I Grid</td>
+                            <td>이해관계자 관리 (Day 11)</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>의사소통 관리 계획서</td>
+                            <td>의사소통 관리 (Day 8)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>📊 10일간의 PM 교육 정리</h2>
+            <div class="card-grid" style="grid-template-columns:repeat(5,1fr);">
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-size:1.2rem;">🔗</div>
+                    <div class="card-title" style="font-size:0.75rem;">D2 통합</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-size:1.2rem;">📦</div>
+                    <div class="card-title" style="font-size:0.75rem;">D3 범위</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-size:1.2rem;">⏰</div>
+                    <div class="card-title" style="font-size:0.75rem;">D4 일정</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-size:1.2rem;">💰</div>
+                    <div class="card-title" style="font-size:0.75rem;">D5 원가</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-size:1.2rem;">✅</div>
+                    <div class="card-title" style="font-size:0.75rem;">D6 품질</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-size:1.2rem;">👥</div>
+                    <div class="card-title" style="font-size:0.75rem;">D7 자원</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-size:1.2rem;">💬</div>
+                    <div class="card-title" style="font-size:0.75rem;">D8 의사소통</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-size:1.2rem;">⚠️</div>
+                    <div class="card-title" style="font-size:0.75rem;">D9 리스크</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-size:1.2rem;">🛒</div>
+                    <div class="card-title" style="font-size:0.75rem;">D10 조달</div>
+                </div>
+                <div class="card" style="text-align:center;padding:12px;">
+                    <div style="font-size:1.2rem;">🤝</div>
+                    <div class="card-title" style="font-size:0.75rem;">D11 이해관계자</div>
+                </div>
+            </div>
+            <div class="info-box success" style="margin-top:20px;">
+                <div class="info-title">🎉 축하합니다!</div>
+                <p>프로젝트 관리 10개 지식영역 학습 완료! 내일부터는 IT 기술 과목이 시작됩니다.</p>
+            </div>
+        </div>
+
+        <div class="slide title-slide">
+            <div class="day-badge">DAY 11 마무리</div>
+            <h1>프로젝트 관리 교육 완료! 🎉</h1>
+            <p class="subtitle">내일부터 Day 12-16: IT 기술 교육</p>
+            <div class="meta"><span>💻 소프트웨어공학 → 🌐 네트워크 → 🔒 보안 → 🗄️ DB → 🚀 신기술</span></div>
+        </div>
+    </div>
+    <script src="../js/presentation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+day01-orientation | 1992 | 1500 | -492
+day02-integration | 1825 | 1992 | 167
+day03-scope | 1263 | 1396 | 133
+day04-schedule | 3350 | 3405 | 55
+day05-cost | 4558 | 4613 | 55
+day06-quality | 1623 | 1652 | 29
+day07-resource | 1527 | 1582 | 55
+day08-communication | 1359 | 1389 | 30
+day09-risk | 1128 | 1185 | 57
+day10-procurement | 1204 | 1233 | 29
+day11-stakeholder | 1425 | 2667 | 1242
+day12-sw-engineering | 5668 | 5697 | 29
+day13-network | 10208 | 4333 | -5875
+day14-security | 1921 | 1951 | 30
+day15-database | 2063 | 2092 | 29
+day16-new-tech | 2678 | 2869 | 191
