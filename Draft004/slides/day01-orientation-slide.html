@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 01: 프로젝트 관리 오리엔테이션 | PM Expert</title>
+  <link rel="stylesheet" href="../css/presentation.css">
+</head>
+<body>
+
+<div class="presentation">
+
+  <!-- ============================
+       SLIDE 1: 타이틀
+  ============================= -->
+  <div class="slide title-slide">
+    <div class="title-content">
+      <div class="day-badge">Day 01</div>
+      <h1>프로젝트 관리 오리엔테이션</h1>
+      <p class="subtitle">프로젝트란 무엇인가 · Triple Constraint · PMBOK 프레임워크<br>PMP 6판 vs 7판 · PM의 IT 기술 학습 필요성</p>
+      <div class="title-meta">
+        <span>📅 1일차</span>
+        <span>⏱ 8시간</span>
+        <span>🎯 오리엔테이션</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 2: 학습 목표
+  ============================= -->
+  <div class="slide">
+    <h2>학습 목표</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">📌</div>
+        <h3>프로젝트 정의</h3>
+        <p>프로젝트와 운영(Operation)의 차이를 설명하고, 프로젝트의 3대 특성을 나열할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚖️</div>
+        <h3>Triple Constraint</h3>
+        <p>범위·일정·원가의 상호 영향 관계를 분석하고, 실무 트레이드오프 의사결정을 수행할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🗺️</div>
+        <h3>PMBOK 프레임워크</h3>
+        <p>5개 프로세스 그룹과 10개 지식 영역의 구조를 이해하고, 49개 프로세스 전체 맥락을 파악할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📚</div>
+        <h3>6판 vs 7판</h3>
+        <p>PMP 6판(프로세스 기반)과 7판(원칙 기반)의 핵심 차이점을 비교하고 테일러링 개념을 이해한다</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 3: 오늘의 흐름
+  ============================= -->
+  <div class="slide">
+    <h2>오늘의 흐름 — 6교시 로드맵</h2>
+    <div class="diagram">
+      <div class="step">
+        <span class="step-num">1교시</span>
+        <span class="step-label">프로젝트란?</span>
+        <span class="step-time">1.5h</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <span class="step-num">2교시</span>
+        <span class="step-label">Triple Constraint</span>
+        <span class="step-time">1.5h</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <span class="step-num">3교시</span>
+        <span class="step-label">PMBOK 프레임워크</span>
+        <span class="step-time">1h</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <span class="step-num">4교시</span>
+        <span class="step-label">6판 vs 7판</span>
+        <span class="step-time">2h</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <span class="step-num">5교시</span>
+        <span class="step-label">IT 기술 필요성</span>
+        <span class="step-time">1h</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <span class="step-num">6교시</span>
+        <span class="step-label">과정 안내 & Q&amp;A</span>
+        <span class="step-time">1.5h</span>
+      </div>
+    </div>
+    <div class="info-box gold" style="margin-top:1.5rem;">
+      💡 오늘은 16일 전체 과정의 큰 그림을 그리는 날입니다. 모든 개념을 완벽히 이해하기보다는 <strong>전체 흐름 파악</strong>에 집중하세요.
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 4: [1교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">1교시</div>
+      <h2>프로젝트란 무엇인가?</h2>
+      <p>프로젝트의 정의 · 3대 특성 · 프로젝트 vs 운영 · PM의 역할과 역량</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 5: 프로젝트 정의 & 3대 특성
+  ============================= -->
+  <div class="slide">
+    <h2>프로젝트의 정의와 3대 특성</h2>
+    <div class="info-box">
+      <strong>PMBOK® 정의:</strong> "고유한 제품, 서비스, 결과를 창출하기 위해 <span class="highlight">일시적으로 투입하는 노력</span>"
+    </div>
+    <div class="card-grid" style="margin-top:1.2rem;">
+      <div class="card">
+        <div class="card-icon">⏳</div>
+        <h3>일시성 (Temporary)</h3>
+        <p>명확한 시작일과 종료일 존재<br>
+        <small>※ 짧은 기간 ≠ 일시적<br>경부고속도로(2년4개월), 신공항(수십년)</small></p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💎</div>
+        <h3>고유성 (Unique)</h3>
+        <p>이전에 동일하게 수행된 적 없음<br>
+        <small>동일 ERP 도입도 회사마다 커스터마이징이 다름 → 불확실성 내포</small></p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>점진적 구체화</h3>
+        <p>초기: 상위 수준 계획<br>
+        진행 → 정보 수집 → 더 정확한 추정<br>
+        <small>Rolling Wave Planning</small></p>
+      </div>
+    </div>
+    <div class="info-box warning" style="margin-top:1rem;">
+      ⚠️ "일시성"은 짧은 기간이 아닙니다. 산출물(건물, 소프트웨어)은 영구적으로 사용될 수 있습니다.
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 6: 프로젝트 vs 운영
+  ============================= -->
+  <div class="slide">
+    <h2>프로젝트 vs 운영 (Operation)</h2>
+    <div class="comparison">
+      <div class="vs-col left">
+        <h3>🚀 프로젝트</h3>
+        <ul>
+          <li>시작과 끝이 명확</li>
+          <li>고유한 결과물 창출</li>
+          <li>변화를 추진</li>
+          <li>임시 조직(프로젝트 팀)</li>
+          <li>불확실성 높음</li>
+          <li>성공 기준 명확</li>
+        </ul>
+        <div class="examples">
+          <div class="badge badge-primary">신규 ERP 구축</div>
+          <div class="badge badge-primary">클라우드 마이그레이션</div>
+          <div class="badge badge-primary">모바일 앱 개발</div>
+        </div>
+      </div>
+      <div class="vs-col right">
+        <h3>⚙️ 운영</h3>
+        <ul>
+          <li>반복적·지속적 수행</li>
+          <li>동일 제품/서비스 반복 생산</li>
+          <li>현상 유지·안정성 추구</li>
+          <li>상설 조직(부서)</li>
+          <li>예측 가능성 높음</li>
+          <li>효율성·일관성이 핵심</li>
+        </ul>
+        <div class="examples">
+          <div class="badge badge-success">ERP 운영/유지보수</div>
+          <div class="badge badge-success">IT 헬프데스크</div>
+          <div class="badge badge-success">월간 급여 처리</div>
+        </div>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:1rem;">
+      🔄 <strong>관계:</strong> 프로젝트가 완료되면 운영으로 전환. 운영 중 개선 필요 시 새로운 프로젝트 시작.
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 7: PM의 역할 - Talent Triangle
+  ============================= -->
+  <div class="slide">
+    <h2>PM의 역할과 역량 — PMI Talent Triangle</h2>
+    <div class="three-col">
+      <div class="col-item">
+        <div class="col-header" style="background:var(--accent-primary);">🔧 기술적 PM</div>
+        <ul>
+          <li>10대 지식영역 전문성</li>
+          <li>WBS, CPM, EVM 활용</li>
+          <li>PMBOK 프로세스 적용</li>
+          <li>일정/원가 기준선 수립</li>
+          <li>리스크 분석 수행</li>
+        </ul>
+      </div>
+      <div class="col-item">
+        <div class="col-header" style="background:var(--accent-secondary);">🌟 리더십</div>
+        <ul>
+          <li>팀원 동기부여</li>
+          <li>갈등 조정 및 해결</li>
+          <li>협상 및 영향력 발휘</li>
+          <li>비전 제시 / 변화 촉진</li>
+          <li>감성 지능(EQ) 활용</li>
+        </ul>
+      </div>
+      <div class="col-item">
+        <div class="col-header" style="background:var(--accent-gold);color:#000;">💼 전략/비즈니스</div>
+        <ul>
+          <li>조직 전략과 프로젝트 연계</li>
+          <li>ROI, NPV, IRR 이해</li>
+          <li>비즈니스 가치 관점</li>
+          <li>시장·경쟁 환경 파악</li>
+          <li>경영진 설득 역량</li>
+        </ul>
+      </div>
+    </div>
+    <div class="info-box gold" style="margin-top:1rem;">
+      💡 세 역량은 균형 있게 개발되어야 합니다. 기술만 강한 PM은 팀을 이끌지 못하고, 리더십만 강한 PM은 데이터 없이 결정합니다.
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 8: [2교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">2교시</div>
+      <h2>Triple Constraint와 품질</h2>
+      <p>범위 · 일정 · 원가의 상호 의존 관계 · 품질의 위치 · 기준선</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 9: Triple Constraint
+  ============================= -->
+  <div class="slide">
+    <h2>Triple Constraint — 삼중 제약</h2>
+    <div class="two-col">
+      <div>
+        <svg viewBox="0 0 300 260" width="100%" style="max-width:280px;display:block;margin:auto;">
+          <defs>
+            <marker id="ah" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#6c63ff"/>
+            </marker>
+          </defs>
+          <!-- Triangle -->
+          <polygon points="150,20 30,230 270,230" fill="none" stroke="#6c63ff" stroke-width="2.5"/>
+          <!-- Center circle - Quality -->
+          <circle cx="150" cy="153" r="38" fill="#1a1f3a" stroke="#ffd700" stroke-width="2"/>
+          <text x="150" y="148" text-anchor="middle" fill="#ffd700" font-size="13" font-weight="bold">품질</text>
+          <text x="150" y="164" text-anchor="middle" fill="#ffd700" font-size="10">Quality</text>
+          <!-- Labels -->
+          <text x="150" y="14" text-anchor="middle" fill="#00d4aa" font-size="14" font-weight="bold">범위 (Scope)</text>
+          <text x="20" y="252" text-anchor="middle" fill="#6c63ff" font-size="13" font-weight="bold">일정</text>
+          <text x="20" y="266" text-anchor="middle" fill="#6c63ff" font-size="11">(Schedule)</text>
+          <text x="278" y="252" text-anchor="middle" fill="#e74c3c" font-size="13" font-weight="bold">원가</text>
+          <text x="278" y="266" text-anchor="middle" fill="#e74c3c" font-size="11">(Cost)</text>
+        </svg>
+      </div>
+      <div>
+        <div class="info-box warning">
+          <strong>🔴 범위 증가 시:</strong><br>
+          ↑ 일정 연장 또는 ↑ 원가 증가<br>
+          일정/원가 고정 시 → 품질 저하
+        </div>
+        <div class="info-box" style="margin-top:0.8rem;">
+          <strong>🔵 일정 단축 시:</strong><br>
+          ↓ 범위 축소 OR ↑ 원가 증가<br>
+          테스트 부족 → 품질 저하
+        </div>
+        <div class="info-box success" style="margin-top:0.8rem;">
+          <strong>🟢 원가 절감 시:</strong><br>
+          ↓ 범위 축소 OR ↑ 일정 연장<br>
+          저숙련 인력 → 품질 저하
+        </div>
+        <div class="info-box gold" style="margin-top:0.8rem;">
+          💡 품질은 4번째 제약이 아닌 <strong>세 제약의 균형점</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 10: Scope Creep + 기준선
+  ============================= -->
+  <div class="slide">
+    <h2>Scope Creep와 기준선 (Baseline)</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.8rem;">📌 Scope Creep 사례</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>시점</th><th>변경 요청</th><th>누적 영향</th></tr></thead>
+            <tbody>
+              <tr><td>1개월</td><td>소셜 로그인 추가</td><td>+5일 +500만원</td></tr>
+              <tr><td>2개월</td><td>실시간 채팅 추가</td><td>+15일 +2천만원</td></tr>
+              <tr><td>3개월</td><td>모바일 앱 함께 개발</td><td>+2개월 +1억원</td></tr>
+              <tr style="background:rgba(231,76,60,0.1)"><td><strong>최종</strong></td><td><strong>초기 대비 150% 증가</strong></td><td><strong>+83% 지연, +73% 초과</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box warning" style="margin-top:0.8rem;">
+          ⚠️ 작은 변경도 축적되면 프로젝트 실패. 모든 변경은 <strong>공식 변경 통제</strong> 필수!
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.8rem;">🎯 3대 기준선 (Baseline)</h3>
+        <div class="card-grid" style="grid-template-columns:1fr;">
+          <div class="card" style="padding:0.8rem;">
+            <strong>범위 기준선</strong>
+            <p style="font-size:0.85rem;margin:0.3rem 0 0;">승인된 WBS + 범위 기술서</p>
+          </div>
+          <div class="card" style="padding:0.8rem;">
+            <strong>일정 기준선</strong>
+            <p style="font-size:0.85rem;margin:0.3rem 0 0;">승인된 일정 계획 (간트차트)</p>
+          </div>
+          <div class="card" style="padding:0.8rem;">
+            <strong>원가 기준선</strong>
+            <p style="font-size:0.85rem;margin:0.3rem 0 0;">시간 배분된 승인 예산 (S-Curve)</p>
+          </div>
+        </div>
+        <div class="info-box gold" style="margin-top:0.8rem;">
+          💡 기준선 = 성과 측정의 기준점. <strong>공식 변경 통제</strong>를 통해서만 수정 가능
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 11: [3교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">3교시</div>
+      <h2>프로젝트 관리 프레임워크 개요</h2>
+      <p>5개 프로세스 그룹 · 10개 지식 영역 · 49개 프로세스 · 이해관계자 · OPA/EEF · PMO</p>
+      <div class="section-time">⏱ 1시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 12: 5개 프로세스 그룹
+  ============================= -->
+  <div class="slide">
+    <h2>5개 프로세스 그룹 (Process Groups)</h2>
+    <div class="diagram">
+      <div class="step">
+        <span class="step-num">착수</span>
+        <span class="step-label">Initiating</span>
+        <span class="step-time">2프로세스</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <span class="step-num">기획</span>
+        <span class="step-label">Planning</span>
+        <span class="step-time">24프로세스</span>
+      </div>
+      <div class="arrow">⇄</div>
+      <div class="step" style="background:rgba(0,212,170,0.15);border-color:var(--accent-secondary);">
+        <span class="step-num">실행</span>
+        <span class="step-label">Executing</span>
+        <span class="step-time">10프로세스</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step">
+        <span class="step-num">종료</span>
+        <span class="step-label">Closing</span>
+        <span class="step-time">1프로세스</span>
+      </div>
+    </div>
+    <div class="info-box" style="margin:0.8rem 0;text-align:center;">
+      ↕️ <strong>감시 및 통제 (Monitoring &amp; Controlling)</strong> — 12개 프로세스 — 전체 기간 동안 병행 수행
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>프로세스 그룹</th><th>목적</th><th>핵심 산출물</th><th>예산 소비</th></tr></thead>
+        <tbody>
+          <tr><td>착수</td><td>프로젝트 공식 시작 + PM 임명</td><td>프로젝트 헌장, 이해관계자 등록부</td><td>~1%</td></tr>
+          <tr><td>기획</td><td>상세 계획 수립 (가장 많은 프로세스)</td><td>프로젝트 관리 계획서</td><td>~5%</td></tr>
+          <tr><td>실행</td><td>계획된 작업 실제 수행</td><td>인도물, 작업 성과 데이터</td><td>80~90%</td></tr>
+          <tr><td>감시/통제</td><td>계획 대비 실적 추적·조정</td><td>작업 성과 보고서, 변경 요청</td><td>—</td></tr>
+          <tr><td>종료</td><td>프로젝트 공식 완료</td><td>최종 보고서, 교훈 문서</td><td>~5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 13: 10개 지식 영역
+  ============================= -->
+  <div class="slide">
+    <h2>10개 지식 영역 (Knowledge Areas)</h2>
+    <div class="two-col">
+      <div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>#</th><th>지식 영역</th><th>프로세스</th><th>핵심</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td><span class="badge badge-gold">통합 관리</span></td><td>7개</td><td>헌장·변경통제·종료 (PM만)</td></tr>
+              <tr><td>2</td><td>범위 관리</td><td>6개</td><td>WBS, Scope Creep 방지</td></tr>
+              <tr><td>3</td><td>일정 관리</td><td>6개</td><td>CPM, 간트차트, 일정 단축</td></tr>
+              <tr><td>4</td><td>원가 관리</td><td>4개</td><td>산정, 예산, EVM</td></tr>
+              <tr><td>5</td><td>품질 관리</td><td>3개</td><td>QA vs QC, 7대 도구</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>#</th><th>지식 영역</th><th>프로세스</th><th>핵심</th></tr></thead>
+            <tbody>
+              <tr><td>6</td><td>자원 관리</td><td>6개</td><td>RACI, Tuckman, 갈등관리</td></tr>
+              <tr><td>7</td><td>의사소통 관리</td><td>3개</td><td>채널 공식, 보고 체계</td></tr>
+              <tr><td>8</td><td>리스크 관리</td><td>7개</td><td>P-I 매트릭스, EMV</td></tr>
+              <tr><td>9</td><td>조달 관리</td><td>3개</td><td>Make or Buy, 계약유형</td></tr>
+              <tr><td>10</td><td>이해관계자 관리</td><td>4개</td><td>권력-관심 매트릭스</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="info-box gold" style="margin-top:1rem;">
+      📊 <strong>49개 프로세스</strong> = 착수(2) + 기획(24) + 실행(10) + 감시/통제(12) + 종료(1)<br>
+      기획 프로세스가 절반(24개) — "계획에 실패하는 것은 실패를 계획하는 것"
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 14: OPA/EEF + PMO
+  ============================= -->
+  <div class="slide">
+    <h2>OPA / EEF / PMO — PM의 환경 요소</h2>
+    <div class="two-col">
+      <div>
+        <div class="comparison">
+          <div class="vs-col left">
+            <h3>OPA (조직 프로세스 자산)</h3>
+            <p>조직이 <strong>만든</strong> 내부 자산</p>
+            <ul>
+              <li>WBS 템플릿, 변경관리 절차</li>
+              <li>과거 프로젝트 일정/원가 이력</li>
+              <li>교훈(Lessons Learned) DB</li>
+              <li>재사용 코드 라이브러리</li>
+            </ul>
+            <div class="badge badge-primary">PM이 통제 가능</div>
+          </div>
+          <div class="vs-col right">
+            <h3>EEF (기업 환경 요인)</h3>
+            <p>환경이 <strong>주는</strong> 외·내부 요인</p>
+            <ul>
+              <li>법령/규제 (개인정보보호법)</li>
+              <li>기업 문화, HR 정책</li>
+              <li>市장 상황, 경쟁사 동향</li>
+              <li>현재 보유 인프라</li>
+            </ul>
+            <div class="badge badge-warning">PM이 통제 불가</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.8rem;">🏢 PMO 3가지 유형</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>유형</th><th>PM 권한</th><th>PMO 역할</th></tr></thead>
+            <tbody>
+              <tr><td><span class="badge badge-success">지원형</span></td><td>높음(자율)</td><td>도구·템플릿 제공</td></tr>
+              <tr><td><span class="badge badge-warning">통제형</span></td><td>중간</td><td>표준 준수 감사</td></tr>
+              <tr><td><span class="badge badge-primary">지시형</span></td><td>낮음(지휘)</td><td>프로젝트 직접 관리</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box gold" style="margin-top:0.8rem;">
+          💡 본인 조직의 PMO 유형을 파악하면 어느 수준의 지원·통제를 예상해야 하는지 알 수 있습니다.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 15: [4교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">4교시</div>
+      <h2>PMBOK 6판 vs 7판 비교</h2>
+      <p>프로세스 기반 vs 원칙 기반 · 12개 원칙 · 8개 성과 도메인 · 테일러링 · Value Delivery System</p>
+      <div class="section-time">⏱ 2시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 16: 6판 vs 7판 핵심 비교
+  ============================= -->
+  <div class="slide">
+    <h2>PMBOK 6판 vs 7판 — 핵심 비교</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>구분</th><th>6판 (2017)</th><th>7판 (2021)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>접근 방식</strong></td><td>프로세스 기반 (Process-based)</td><td>원칙 기반 (Principle-based)</td></tr>
+          <tr><td><strong>핵심 구조</strong></td><td>5대 프로세스 그룹 × 10개 지식영역</td><td>12개 관리 원칙 + 8개 성과 도메인</td></tr>
+          <tr><td><strong>프로세스</strong></td><td>49개 프로세스 (ITTO 구조)</td><td>명시적 프로세스 목록 없음</td></tr>
+          <tr><td><strong>방법론</strong></td><td>예측형(Waterfall) 중심</td><td>예측형 + 적응형(Agile) 모두 포괄</td></tr>
+          <tr><td><strong>유연성</strong></td><td>표준 프로세스 준수</td><td>테일러링(Tailoring) 강조</td></tr>
+          <tr><td><strong>성공 기준</strong></td><td>범위·일정·원가 준수</td><td>비즈니스 가치 실현</td></tr>
+          <tr><td><strong>본 과정 기준</strong></td><td style="color:var(--accent-gold);font-weight:bold;">✅ 주 교재</td><td>Day 2 부록에서 보완</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box gold" style="margin-top:1rem;">
+      💡 <strong>6판과 7판은 대체가 아닌 보완 관계</strong> — 두 판 모두 공존하며 함께 활용. PMP 시험도 두 판을 함께 반영.
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 17: 7판 - 12개 원칙 + 8개 도메인
+  ============================= -->
+  <div class="slide">
+    <h2>PMBOK 7판 — 12개 원칙 &amp; 8개 성과 도메인</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.6rem;">12개 프로젝트 관리 원칙</h3>
+        <div class="keyword-tags">
+          <span class="keyword-tag">1. 스튜어드십</span>
+          <span class="keyword-tag">2. 팀</span>
+          <span class="keyword-tag">3. 이해관계자</span>
+          <span class="keyword-tag">4. 가치</span>
+          <span class="keyword-tag">5. 시스템 사고</span>
+          <span class="keyword-tag">6. 리더십</span>
+          <span class="keyword-tag">7. 테일러링</span>
+          <span class="keyword-tag">8. 품질</span>
+          <span class="keyword-tag">9. 복잡성</span>
+          <span class="keyword-tag">10. 리스크</span>
+          <span class="keyword-tag">11. 적응성/회복력</span>
+          <span class="keyword-tag">12. 변화 관리</span>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.6rem;">8개 성과 도메인 (Performance Domains)</h3>
+        <div class="keyword-tags">
+          <span class="keyword-tag">1. 이해관계자</span>
+          <span class="keyword-tag">2. 팀</span>
+          <span class="keyword-tag">3. 개발접근법/생애주기</span>
+          <span class="keyword-tag">4. 기획</span>
+          <span class="keyword-tag">5. 프로젝트 작업</span>
+          <span class="keyword-tag">6. 인도</span>
+          <span class="keyword-tag">7. 측정</span>
+          <span class="keyword-tag">8. 불확실성</span>
+        </div>
+        <div class="info-box" style="margin-top:0.8rem;">
+          <strong>6판 vs 7판 관계:</strong><br>
+          6판 「지식영역」≈ 7판 「성과 도메인」<br>
+          (이름·구조는 다르지만 다루는 본질은 유사)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 18: 테일러링 + Value Delivery
+  ============================= -->
+  <div class="slide">
+    <h2>테일러링(Tailoring) &amp; Value Delivery System</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.6rem;">✂️ 테일러링 4단계</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.4rem;">
+          <div class="step" style="width:100%;">1단계: 현황 파악 — 프로젝트 특성·팀 역량 분석</div>
+          <div class="step" style="width:100%;">2단계: 방법론 선택 — 워터폴/애자일/하이브리드</div>
+          <div class="step" style="width:100%;">3단계: 조정 — 불필요 프로세스 제거·커스터마이징</div>
+          <div class="step" style="width:100%;">4단계: 개선 — 회고를 통한 지속 개선</div>
+        </div>
+        <div class="table-wrapper" style="margin-top:0.6rem;">
+          <table>
+            <thead><tr><th>요구사항 명확도</th><th>권장 방법론</th></tr></thead>
+            <tbody>
+              <tr><td>매우 높음 + 규제 강함</td><td>워터폴(Waterfall)</td></tr>
+              <tr><td>낮음/변동 + 소규모팀</td><td>스크럼(Scrum)/Agile</td></tr>
+              <tr><td>중간 수준</td><td>하이브리드</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.6rem;">🌟 Value Delivery System</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.5rem;align-items:stretch;">
+          <div class="step" style="width:100%;text-align:center;">포트폴리오 — 조직 전략 실현</div>
+          <div style="text-align:center;color:var(--accent-primary);">↓</div>
+          <div class="step" style="width:100%;text-align:center;">프로그램 — 시너지 편익 관리</div>
+          <div style="text-align:center;color:var(--accent-primary);">↓</div>
+          <div class="step" style="width:100%;text-align:center;">프로젝트 — 고유 산출물 도출</div>
+          <div style="text-align:center;color:var(--accent-primary);">↓</div>
+          <div class="step" style="width:100%;text-align:center;background:rgba(255,215,0,0.15);border-color:var(--accent-gold);">비즈니스 가치 실현 (Business Value)</div>
+        </div>
+        <div class="info-box gold" style="margin-top:0.8rem;">
+          💡 7판은 산출물 완성 = 성공(6판)이 아닌 <strong>이점(Benefit) 실현까지</strong> PM이 책임져야 한다고 강조
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 19: [5교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">5교시</div>
+      <h2>PM이 IT 기술을 배워야 하는 이유</h2>
+      <p>기술 이해의 필요성 · 5가지 이유 · 기술 과목별 PM 활용 포인트</p>
+      <div class="section-time">⏱ 1시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 20: PM의 IT 기술 학습 필요성
+  ============================= -->
+  <div class="slide">
+    <h2>PM이 IT 기술을 알아야 하는 5가지 이유</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>#</th><th>이유</th><th>기술 모르면 (❌)</th><th>기술 알면 (✅)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><strong>정확한 의사결정</strong></td>
+            <td>개발팀 말 무비판 수용</td>
+            <td>근거 있는 승인/거부</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>효과적 의사소통</strong></td>
+            <td>기술용어를 그대로 전달 → 혼란</td>
+            <td>비즈니스 언어로 번역</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong>현실적 일정 산정</strong></td>
+            <td>"로그인 하루면 되지" (실제 5~7일)</td>
+            <td>작업 분해로 정확 산정</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>리스크 조기 식별</strong></td>
+            <td>개발 완료 후 성능 문제 발견</td>
+            <td>설계 단계에서 리스크 발견</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><strong>이해관계자 신뢰</strong></td>
+            <td>"개발팀이 그렇게 말했어요"</td>
+            <td>기술적 근거로 직접 설명</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box gold" style="margin-top:1rem;">
+      🎯 PM의 IT 학습 목표: <strong>개발자 수준의 코딩 능력 ❌</strong> → <strong>"의사결정에 필요한 수준" = 올바른 질문을 던지는 역량 ✅</strong>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 21: [6교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">6교시</div>
+      <h2>전체 교육과정 안내 &amp; Q&amp;A</h2>
+      <p>16일 커리큘럼 전체 로드맵 · 학습 방법 · 평가 기준</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 22: 16일 전체 커리큘럼
+  ============================= -->
+  <div class="slide">
+    <h2>16일 전체 커리큘럼 로드맵</h2>
+    <div class="three-col">
+      <div class="col-item">
+        <div class="col-header" style="background:var(--accent-primary);">1주차: PM 기초 (Day 1~5)</div>
+        <ul>
+          <li>Day 1: 오리엔테이션 (오늘)</li>
+          <li>Day 2: 프로젝트 통합관리</li>
+          <li>Day 3: 범위관리 &amp; WBS</li>
+          <li>Day 4: 일정관리 &amp; CPM</li>
+          <li>Day 5: 원가관리 &amp; EVM</li>
+        </ul>
+      </div>
+      <div class="col-item">
+        <div class="col-header" style="background:var(--accent-secondary);">2주차: PM 심화 (Day 6~11)</div>
+        <ul>
+          <li>Day 6: 품질관리</li>
+          <li>Day 7: 자원관리</li>
+          <li>Day 8: 의사소통관리</li>
+          <li>Day 9: 리스크관리</li>
+          <li>Day 10: 조달관리</li>
+          <li>Day 11: 이해관계자관리 + 종합실습</li>
+        </ul>
+      </div>
+      <div class="col-item">
+        <div class="col-header" style="background:var(--accent-gold);color:#000;">3주차: IT 기술 (Day 12~16)</div>
+        <ul>
+          <li>Day 12: SW공학 &amp; 방법론</li>
+          <li>Day 13: 네트워크 &amp; 인프라</li>
+          <li>Day 14: 보안관리</li>
+          <li>Day 15: 데이터베이스</li>
+          <li>Day 16: 신기술 &amp; 종합정리</li>
+        </ul>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:1rem;">
+      📊 <strong>구성 비율:</strong> 프로젝트 관리 11일 (69%) + IT 기술 5일 (31%) | 총 96시간
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 23: 평가 기준 & 학습 방법
+  ============================= -->
+  <div class="slide">
+    <h2>평가 기준 &amp; 효과적인 학습 방법</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.8rem;">📋 평가 항목</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>항목</th><th>비중</th><th>내용</th></tr></thead>
+            <tbody>
+              <tr><td>참여도</td><td>30%</td><td>출석, Q&amp;A 참여, 그룹 활동</td></tr>
+              <tr><td>실습 과제</td><td>40%</td><td>일일 실습 + 종합 프로젝트(Day11)</td></tr>
+              <tr><td>최종 평가</td><td>30%</td><td>Day16 선택형·서술형+시나리오 분석</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box warning" style="margin-top:0.8rem;">
+          수료 기준: 총점 70점 이상 + 출석률 80% 이상 (13일 이상)
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.8rem;">📖 학습 방법 3단계 사이클</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.5rem;align-items:stretch;">
+          <div class="step" style="width:100%;">🌅 <strong>수업 전</strong> — 전날 내용 10분 복습 + 다음날 키워드 예습</div>
+          <div class="step" style="width:100%;">📚 <strong>수업 중</strong> — 즉시 질문 + 예시와 본인 경험 연결</div>
+          <div class="step" style="width:100%;">🌙 <strong>수업 후</strong> — 당일 30분 복습 + 실무 적용 시도</div>
+        </div>
+        <div class="info-box gold" style="margin-top:0.8rem;">
+          💡 <strong>그룹 스터디 권장:</strong> 2~3명이 서로 설명해주기 — 가르치면서 학습 효과 극대화!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 24: 핵심 키워드
+  ============================= -->
+  <div class="slide">
+    <h2>Day 01 핵심 키워드</h2>
+    <div class="keyword-tags" style="font-size:1rem;">
+      <span class="keyword-tag">프로젝트</span>
+      <span class="keyword-tag">일시성</span>
+      <span class="keyword-tag">고유성</span>
+      <span class="keyword-tag">점진적 구체화</span>
+      <span class="keyword-tag">운영(Operation)</span>
+      <span class="keyword-tag">Triple Constraint</span>
+      <span class="keyword-tag">범위(Scope)</span>
+      <span class="keyword-tag">일정(Schedule)</span>
+      <span class="keyword-tag">원가(Cost)</span>
+      <span class="keyword-tag">품질(Quality)</span>
+      <span class="keyword-tag">Scope Creep</span>
+      <span class="keyword-tag">기준선(Baseline)</span>
+      <span class="keyword-tag">5대 프로세스 그룹</span>
+      <span class="keyword-tag">10개 지식 영역</span>
+      <span class="keyword-tag">49개 프로세스</span>
+      <span class="keyword-tag">이해관계자</span>
+      <span class="keyword-tag">OPA</span>
+      <span class="keyword-tag">EEF</span>
+      <span class="keyword-tag">PMO</span>
+      <span class="keyword-tag">PMBOK 6판</span>
+      <span class="keyword-tag">PMBOK 7판</span>
+      <span class="keyword-tag">12개 원칙</span>
+      <span class="keyword-tag">8개 성과 도메인</span>
+      <span class="keyword-tag">테일러링</span>
+      <span class="keyword-tag">Value Delivery System</span>
+      <span class="keyword-tag">PMI Talent Triangle</span>
+    </div>
+    <div class="info-box gold" style="margin-top:1.5rem;">
+      📌 오늘 등장한 키워드 전체를 지금 당장 암기할 필요는 없습니다. Day 2~16을 거치며 자연스럽게 체득됩니다.
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 25: 학습 확인 퀴즈
+  ============================= -->
+  <div class="slide">
+    <h2>학습 확인 퀴즈</h2>
+    <div class="quiz-box">
+      <div class="quiz-item">
+        <p><strong>Q1.</strong> 프로젝트와 운영(Operation)의 차이점 3가지를 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안 보기</summary>
+          <p>① 프로젝트는 시작·끝이 명확한 일시적 노력이지만, 운영은 반복·지속적 업무<br>
+          ② 프로젝트는 고유한 결과물을 창출하지만, 운영은 동일 제품/서비스를 반복 생산<br>
+          ③ 프로젝트는 변화를 추진하지만, 운영은 현상 유지·안정성을 추구</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q2.</strong> Triple Constraint에서 범위가 증가했을 때 발생할 수 있는 영향을 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안 보기</summary>
+          <p>범위 증가 → 더 많은 작업 = 일정 연장 OR 원가 증가. 일정·원가 고정 시 → 품질 저하·팀 번아웃 발생</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q3.</strong> PMBOK 7판에서 강조하는 "테일러링"의 개념을 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안 보기</summary>
+          <p>하나의 방법론이 모든 프로젝트에 맞지 않으으로, 프로젝트 특성(요구사항 명확도, 팀 규모, 규제, 불확실성)에 맞게 방법론을 조정·커스터마이징하는 것</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q4.</strong> PM이 IT 기술 지식을 갖춰야 하는 이유 2가지를 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안 보기</summary>
+          <p>① 현실적 일정 산정: 기술 이해 없이는 "로그인 하루면 된다"처럼 비현실적 계획 수립<br>
+          ② 리스크 조기 식별: 기술적 리스크를 설계 단계에서 발견하지 않으면 개발 완료 후 발견 → 막대한 재작업 비용</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 26: 다음 Day 예고
+  ============================= -->
+  <div class="slide">
+    <h2>다음 시간 예고 — Day 02: 프로젝트 통합관리</h2>
+    <div class="info-box gold">
+      <h3 style="margin:0 0 0.8rem;color:var(--accent-gold);">📅 Day 02 주요 학습 내용</h3>
+    </div>
+    <div class="card-grid" style="margin-top:1rem;">
+      <div class="card">
+        <div class="card-icon">📄</div>
+        <h3>프로젝트 헌장</h3>
+        <p>Project Charter 작성법과 PM 권한 부여 프로세스</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>프로젝트 관리 계획서</h3>
+        <p>통합 관리 계획서의 구조와 작성 원칙</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔄</div>
+        <h3>통합 변경 통제</h3>
+        <p>CCB, 변경 요청 프로세스, 기준선 관리</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏁</div>
+        <h3>Phase Gate / Kill Point</h3>
+        <p>단계별 의사결정 게이트와 프로젝트 종료 판단</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:1.2rem;">
+      📖 <strong>예습 포인트:</strong> "프로젝트 헌장이 없으면 PM은 권한이 없다" — 헌장의 역할을 생각해보세요.<br>
+      🔑 오늘 배운 <strong>5대 프로세스 그룹 + 10대 지식영역</strong> 복습 후 오시면 Day 02 이해가 2배 빨라집니다!
+    </div>
+  </div>
+
+</div><!-- /presentation -->
+
+<script src="../js/presentation.js"></script>
+</body>
+</html>

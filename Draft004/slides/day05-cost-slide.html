@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 05: 프로젝트 원가 관리 | PM Expert</title>
+  <link rel="stylesheet" href="../css/presentation.css">
+</head>
+<body>
+
+<div class="presentation">
+
+  <!-- ============================
+       SLIDE 1: 타이틀
+  ============================= -->
+  <div class="slide title-slide">
+    <div class="title-content">
+      <div class="day-badge">Day 05</div>
+      <h1>프로젝트 원가 관리</h1>
+      <p class="subtitle">Project Cost Management<br>
+        원가 산정 · 예산 수립 · EVM 획득가치 관리 · EAC 완료 예측</p>
+      <div class="title-meta">
+        <span>📅 5일차</span>
+        <span>⏱ 8시간</span>
+        <span>🎯 EVM으로 프로젝트 성과 진단</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 2: 학습 목표
+  ============================= -->
+  <div class="slide">
+    <h2>학습 목표</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">💰</div>
+        <h3>원가 유형 분류</h3>
+        <p>직접비/간접비, 고정비/변동비, 매몰비용, 기회비용을 사례로 설명할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔢</div>
+        <h3>원가 산정 기법</h3>
+        <p>유사·모수·상향식·3점 산정의 정확도와 적용 시점을 선택할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>EVM 지표 계산</h3>
+        <p>PV·EV·AC로 SV, CV, SPI, CPI를 계산하고 프로젝트 상태를 진단할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔮</div>
+        <h3>EAC 완료 예측</h3>
+        <p>3가지 EAC 공식으로 최종 예상 비용을 산출하고 시정 조치를 제안할 수 있다</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 3: 오늘의 흐름
+  ============================= -->
+  <div class="slide">
+    <h2>오늘의 흐름 — 6교시 로드맵</h2>
+    <div class="diagram">
+      <div class="step"><span class="step-num">1교시</span><span class="step-label">원가 관리 개요<br>원가 유형</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">2교시</span><span class="step-label">원가 산정 기법<br>4가지 비교</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">3교시</span><span class="step-label">예산 수립<br>S-Curve</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">4교시</span><span class="step-label">EVM 개요<br>PV·EV·AC</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">5교시</span><span class="step-label">EVM 심화<br>EAC·TCPI</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">6교시</span><span class="step-label">EVM 실습<br>종합 계산</span></div>
+    </div>
+    <div class="info-box gold" style="margin-top:1.5rem;">
+      📅 <strong>Day 04 연결:</strong> 어제 CPM으로 일정(언제)을 계획했습니다.<br>
+      오늘 EVM의 <strong>PV(계획가치)</strong>는 "일정별로 예산이 얼마나 투입될지"를 기반으로 합니다.
+      즉, 기간+원가+범위를 <strong>하나의 숫자로 통합</strong>하는 것이 EVM입니다!
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 4: [1교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">1교시</div>
+      <h2>원가 관리 개요 &amp; 원가 유형</h2>
+      <p>4개 프로세스 · 직접/간접비 · 매몰비용 · 기회비용 · 생애주기 원가</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 5: 원가 관리 4개 프로세스 + 원가 유형
+  ============================= -->
+  <div class="slide">
+    <h2>원가 관리 4개 프로세스 &amp; 원가의 유형</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.6rem;">원가 관리 4개 프로세스</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.4rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.85rem;"><strong>7.1</strong> 원가 관리 계획 수립 → 원가 관리 계획서</div>
+          <div class="step" style="width:100%;font-size:0.85rem;"><strong>7.2</strong> 원가 산정 (Estimate Costs) → 원가 산정치, 산정 근거</div>
+          <div class="step" style="width:100%;font-size:0.85rem;"><strong>7.3</strong> 예산 수립 (Determine Budget) → <strong>원가 기준선</strong></div>
+          <div class="step" style="width:100%;font-size:0.85rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);"><strong>7.4</strong> 원가 통제 (Control Costs) → 작업성과정보, EVM</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.6rem;">원가 유형</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.82rem;">
+            <thead><tr><th>유형</th><th>개념</th><th>IT 사례</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>직접비</strong><br>(Direct)</td>
+                <td>프로젝트에<br>직접 귀속</td>
+                <td>개발자 인건비, 외주 용역비, 전용 라이선스</td>
+              </tr>
+              <tr>
+                <td><strong>간접비</strong><br>(Indirect)</td>
+                <td>여러 프로젝트<br>공유</td>
+                <td>사무실 임대료, 관리부서 인건비, 공용 인프라</td>
+              </tr>
+              <tr>
+                <td><strong>고정비</strong><br>(Fixed)</td>
+                <td>규모 관계없이<br>일정</td>
+                <td>연간 라이선스, PM 급여, 서버 임대</td>
+              </tr>
+              <tr>
+                <td><strong>변동비</strong><br>(Variable)</td>
+                <td>작업량에<br>비례</td>
+                <td>시간당 계약 인력, 클라우드 사용료</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box warning" style="margin-top:0.7rem;font-size:0.85rem;">
+          ⚠️ <strong>매몰비용 (Sunk Cost)</strong>: 이미 지출되어 회수 불가.<br>
+          "이미 10억을 투자했으니 계속해야 한다" → <strong>Sunk Cost Fallacy!</strong><br>
+          미래 비용 vs 미래 편익만으로 의사결정해야 함.
+        </div>
+        <div class="info-box" style="margin-top:0.5rem;font-size:0.85rem;">
+          💡 <strong>기회비용 (Opportunity Cost)</strong>: 선택하지 않은 대안의 가치.<br>
+          프로젝트 A(NPV 10억) 선택 시, B(NPV 7억)가 기회비용 → A의 순편익 = 3억
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 6: [2교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">2교시</div>
+      <h2>원가 산정 기법</h2>
+      <p>유사 산정 · 모수 산정 · 상향식 산정 · 3점 산정 · 산정 정확도 등급</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 7: 원가 산정 4기법 비교
+  ============================= -->
+  <div class="slide">
+    <h2>원가 산정 4기법 — 비교표</h2>
+    <div class="table-wrapper" style="margin-bottom:1rem;">
+      <table>
+        <thead><tr><th>기법</th><th>접근</th><th>정확도</th><th>시간/비용</th><th>필요 정보</th><th>적용 시점</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>유사 산정</strong><br>(Analogous)</td>
+            <td>Top-down</td>
+            <td>ROM<br>-25%~+75%</td>
+            <td>빠름/저렴</td>
+            <td>과거 유사 프로젝트 실적</td>
+            <td>착수/초기</td>
+          </tr>
+          <tr>
+            <td><strong>모수 산정</strong><br>(Parametric)</td>
+            <td>통계 관계식</td>
+            <td>예산<br>-10%~+25%</td>
+            <td>중간</td>
+            <td>단가 통계 (단가×수량)</td>
+            <td>기획 중반</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--accent-gold);">상향식 산정</strong><br>(Bottom-up)</td>
+            <td>Bottom-up</td>
+            <td>확정<br>-5%~+10%</td>
+            <td>느림/비쌈</td>
+            <td>상세 WBS 필수</td>
+            <td>기획 후반</td>
+          </tr>
+          <tr>
+            <td><strong>3점 산정</strong><br>(Three-point)</td>
+            <td>확률 분포</td>
+            <td>중간~높음</td>
+            <td>중간</td>
+            <td>전문가 3점 판단</td>
+            <td>불확실성 高</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="two-col">
+      <div>
+        <div class="formula">
+          <strong>PERT (베타 분포) — 원가 산정:</strong><br>
+          기대 원가 = (O + 4M + P) ÷ 6<br>
+          SD = (P − O) ÷ 6<br>
+          <small>O=낙관 · M=최빈 · P=비관</small>
+        </div>
+        <div class="practice-box" style="margin-top:0.7rem;">
+          <h4>계산 예시</h4>
+          O=600만, M=1000만, P=1800만<br>
+          기대 = (600+4000+1800)÷6 = <strong>1,067만원</strong><br>
+          SD = (1800-600)÷6 = <strong>200만원</strong>
+        </div>
+      </div>
+      <div>
+        <div class="info-box gold">
+          <strong>산정 정확도 등급</strong><br>
+          <strong>ROM</strong>: -25%~+75% — 착수 단계, Go/No-Go<br>
+          <strong>예산 산정</strong>: -10%~+25% — 기획, 예산 승인<br>
+          <strong>확정 산정</strong>: -5%~+10% — 실행 직전, 계약 체결
+        </div>
+        <div class="info-box" style="margin-top:0.7rem;">
+          <strong>모수 산정 예시</strong><br>
+          80개 화면 × 500만/화면 × 복잡도 1.2<br>
+          = <strong>4.8억원</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 8: [3교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">3교시</div>
+      <h2>예산 수립 &amp; 원가 기준선</h2>
+      <p>예산 구조 · 우발 예비 vs 관리 예비 · S-Curve · 자금 조달 한도</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 9: 예산 구조 + S-Curve
+  ============================= -->
+  <div class="slide">
+    <h2>프로젝트 예산 구조 &amp; S-Curve</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.6rem;">예산 레이어 구조</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.4rem;align-items:stretch;">
+          <div class="step" style="width:100%;background:rgba(255,100,100,0.1);border-color:#ff6464;font-size:0.88rem;">
+            🔴 <strong>프로젝트 예산</strong> (Project Budget)<br>
+            = 원가 기준선 + 관리 예비
+          </div>
+          <div style="text-align:center;font-size:0.75rem;color:var(--text-secondary);">┣ 관리 예비: Unknown Unknowns, 경영진 승인 필요</div>
+          <div class="step" style="width:100%;background:rgba(255,165,0,0.1);border-color:orange;font-size:0.88rem;">
+            🟠 <strong>원가 기준선</strong> (Cost Baseline)<br>
+            = 원가 산정치 합 + 우발 예비
+          </div>
+          <div style="text-align:center;font-size:0.75rem;color:var(--text-secondary);">┣ 우발 예비: Known Unknowns, PM 권한, 기준선 포함</div>
+          <div class="step" style="width:100%;background:rgba(100,200,100,0.1);border-color:#60c060;font-size:0.88rem;">
+            🟢 <strong>원가 산정치 합</strong><br>
+            WBS 하위 원가 Bottom-up 합산
+          </div>
+        </div>
+        <div class="info-box gold" style="margin-top:0.8rem;font-size:0.84rem;">
+          💡 원가 기준선은 EVM의 <strong>PV(계획가치)</strong>의 기반.<br>
+          시간 배분된 원가 기준선 = S-Curve (누적 PV)
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.6rem;">📈 S-Curve (누적 지출 곡선)</h3>
+        <svg viewBox="0 0 320 200" width="100%">
+          <!-- Grid -->
+          <line x1="40" y1="160" x2="300" y2="160" stroke="#333" stroke-width="1"/>
+          <line x1="40" y1="160" x2="40" y2="10" stroke="#333" stroke-width="1"/>
+          <!-- Axes labels -->
+          <text x="165" y="178" fill="#aaa" font-size="10" text-anchor="middle">시간 (월)</text>
+          <text x="12" y="90" fill="#aaa" font-size="10" text-anchor="middle" transform="rotate(-90,12,90)">누적 지출</text>
+          <!-- PV S-curve -->
+          <path d="M40,160 C60,158 90,145 120,125 S180,75 220,35 L280,18" fill="none" stroke="#6c63ff" stroke-width="2.5"/>
+          <!-- EV curve (behind plan) -->
+          <path d="M40,160 C65,159 95,150 125,135 S185,90 230,50 L280,25" fill="none" stroke="#ffd700" stroke-width="2" stroke-dasharray="5,3"/>
+          <!-- AC curve (above plan - over budget) -->
+          <path d="M40,160 C55,157 85,140 110,115 S165,60 210,25 L280,10" fill="none" stroke="#ff6464" stroke-width="2" stroke-dasharray="3,3"/>
+          <!-- BAC line -->
+          <line x1="40" y1="18" x2="300" y2="18" stroke="#555" stroke-width="1" stroke-dasharray="3,3"/>
+          <text x="302" y="22" fill="#888" font-size="9">BAC</text>
+          <!-- Labels -->
+          <text x="285" y="65" fill="#6c63ff" font-size="9">PV</text>
+          <text x="285" y="78" fill="#ffd700" font-size="9">EV</text>
+          <text x="285" y="91" fill="#ff6464" font-size="9">AC</text>
+          <!-- Today line -->
+          <line x1="185" y1="10" x2="185" y2="165" stroke="#fff" stroke-width="1" stroke-dasharray="2,2"/>
+          <text x="187" y="170" fill="#ddd" font-size="9">오늘</text>
+          <!-- SV annotation -->
+          <line x1="185" y1="70" x2="185" y2="90" stroke="#ffd700" stroke-width="1"/>
+          <text x="187" y="82" fill="#ffd700" font-size="8">SV↓</text>
+          <!-- CV annotation -->
+          <line x1="185" y1="40" x2="185" y2="64" stroke="#ff6464" stroke-width="1"/>
+          <text x="187" y="55" fill="#ff6464" font-size="8">CV↓</text>
+        </svg>
+        <p style="font-size:0.78rem;color:var(--text-secondary);margin-top:0.3rem;">
+          EV &lt; PV: 일정 지연 / AC &gt; EV: 예산 초과 (최악)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 10: [4교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">4교시</div>
+      <h2>EVM 획득가치 관리 — 개요</h2>
+      <p>PV · EV · AC · SV · CV · SPI · CPI — 숫자로 프로젝트 성과 측정</p>
+      <div class="section-time">⏱ 1시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 11: EVM 핵심 3변수 + 지표
+  ============================= -->
+  <div class="slide">
+    <h2>EVM — 핵심 3변수 &amp; 성과 지표</h2>
+    <div class="three-col" style="margin-bottom:1rem;">
+      <div class="info-box" style="text-align:center;">
+        <div style="font-size:1.5rem;font-weight:bold;color:#6c63ff;">PV</div>
+        <strong>계획가치</strong><br>
+        Planned Value<br>
+        지금까지 계획된<br>작업의 예산
+      </div>
+      <div class="info-box" style="text-align:center;">
+        <div style="font-size:1.5rem;font-weight:bold;color:var(--accent-gold);">EV</div>
+        <strong>획득가치</strong><br>
+        Earned Value<br>
+        지금까지 실제<br>완료한 작업의 예산 가치
+      </div>
+      <div class="info-box" style="text-align:center;">
+        <div style="font-size:1.5rem;font-weight:bold;color:#ff6464;">AC</div>
+        <strong>실제원가</strong><br>
+        Actual Cost<br>
+        지금까지<br>실제 지출한 비용
+      </div>
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>지표</th><th>공식</th><th>값 해석</th><th>의미</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>SV</strong> (일정 편차)</td>
+            <td>EV − PV</td>
+            <td>+ 앞섬 / − 지연</td>
+            <td>일정 성과 편차</td>
+          </tr>
+          <tr>
+            <td><strong>CV</strong> (원가 편차)</td>
+            <td>EV − AC</td>
+            <td>+ 절감 / − 초과</td>
+            <td>예산 성과 편차</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--accent-gold);">SPI</strong> (일정 성과 지수)</td>
+            <td>EV ÷ PV</td>
+            <td>&gt;1 앞섬 / &lt;1 지연</td>
+            <td>일정 효율성</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--accent-gold);">CPI</strong> (원가 성과 지수)</td>
+            <td>EV ÷ AC</td>
+            <td>&gt;1 절감 / &lt;1 초과</td>
+            <td>원가 효율성</td>
+          </tr>
+          <tr>
+            <td><strong>BAC</strong> (완료 예산)</td>
+            <td>원가 기준선 합계</td>
+            <td>프로젝트 전체 예산</td>
+            <td>Budget at Completion</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="practice-box" style="margin-top:0.8rem;">
+      <h4>예시: PV=5억, EV=4억, AC=6억</h4>
+      SV = 4-5 = <strong>-1억</strong> (지연) | CV = 4-6 = <strong>-2억</strong> (초과) |
+      SPI = 4/5 = <strong>0.8</strong> (일정 80% 효율) | CPI = 4/6 = <strong>0.67</strong> (원가 67% 효율)
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 12: [5교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">5교시</div>
+      <h2>EVM 심화 — 완료 예측</h2>
+      <p>EAC 3가지 공식 · ETC · VAC · TCPI · 프로젝트 상태 진단</p>
+      <div class="section-time">⏱ 2시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 13: EAC 3가지 공식
+  ============================= -->
+  <div class="slide">
+    <h2>EAC — 완료 시 예상 비용 (3가지 공식)</h2>
+    <div class="three-col" style="gap:0.8rem;margin-bottom:1rem;">
+      <div class="info-box gold">
+        <h3 style="font-size:0.95rem;color:var(--accent-gold);">① 현재 추세 지속</h3>
+        <div class="formula" style="font-size:0.95rem;">EAC = BAC ÷ CPI</div>
+        <p style="font-size:0.82rem;">현재 CPI가 앞으로도 유지된다고 가정.<br>
+        가장 일반적으로 사용.<br>
+        <em>CPI가 나쁘면 EAC가 크게 증가</em></p>
+      </div>
+      <div class="info-box">
+        <h3 style="font-size:0.95rem;color:var(--accent-secondary);">② 비전형적 차이</h3>
+        <div class="formula" style="font-size:0.95rem;">EAC = AC + (BAC − EV)</div>
+        <p style="font-size:0.82rem;">초기 편차는 일시적이며<br>나머지는 계획대로 될 것.<br>
+        <em>단발성 문제 해결 후 정상화 시</em></p>
+      </div>
+      <div class="info-box warning">
+        <h3 style="font-size:0.95rem;">③ 복합 지표</h3>
+        <div class="formula" style="font-size:0.9rem;">EAC = AC + (BAC−EV)<br>÷ (CPI × SPI)</div>
+        <p style="font-size:0.82rem;">일정과 원가 모두 고려.<br>
+        프로젝트가 일정·비용 모두 압박 시.<br>
+        <em>결과가 가장 비관적</em></p>
+      </div>
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>지표</th><th>공식</th><th>의미</th></tr></thead>
+        <tbody>
+          <tr><td><strong>ETC</strong> (잔여 원가 산정치)</td><td>EAC − AC</td><td>지금부터 완료까지 필요한 추가 비용</td></tr>
+          <tr><td><strong>VAC</strong> (완료 시 편차)</td><td>BAC − EAC</td><td>최종 예산 편차 (음수 = 초과)</td></tr>
+          <tr><td><strong>TCPI</strong> (완료 성과 지수)</td><td>(BAC−EV) ÷ (BAC−AC)</td><td>목표 달성에 필요한 앞으로의 효율. &gt;1은 더 잘해야 함을 의미</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="practice-box" style="margin-top:0.8rem;">
+      <h4>예시: BAC=20억, PV=10억, EV=8억, AC=12억</h4>
+      CPI = 8/12 = 0.667 | SPI = 8/10 = 0.8<br>
+      EAC① = 20÷0.667 = <strong>30억</strong> | EAC② = 12+(20-8) = <strong>24억</strong> | EAC③ = 12+12÷(0.667×0.8) = <strong>34.5억</strong><br>
+      TCPI = (20-8)÷(20-12) = 12÷8 = <strong>1.5</strong> (앞으로 50% 더 효율적으로 해야!)
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 14: EVM 상태 진단표
+  ============================= -->
+  <div class="slide">
+    <h2>EVM 상태 진단 — 사분면 해석</h2>
+    <div class="two-col">
+      <div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>SPI</th><th>CPI</th><th>상태</th><th>조치</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(100,200,100,0.1);">
+                <td>> 1 (앞섬)</td><td>> 1 (절감)</td>
+                <td>✅ <strong>최상</strong></td>
+                <td>현 추세 유지, 공유 및 벤치마킹</td>
+              </tr>
+              <tr style="background:rgba(255,215,0,0.1);">
+                <td>> 1 (앞섬)</td><td>&lt; 1 (초과)</td>
+                <td>⚠️ <strong>일정 Good<br>비용 Bad</strong></td>
+                <td>비용 원인 분석, 자원 효율성 개선 필요</td>
+              </tr>
+              <tr style="background:rgba(255,140,0,0.1);">
+                <td>&lt; 1 (지연)</td><td>> 1 (절감)</td>
+                <td>⚠️ <strong>일정 Bad<br>비용 Good</strong></td>
+                <td>일정 단축 기법 (Crashing, Fast-tracking) 적용</td>
+              </tr>
+              <tr style="background:rgba(255,100,100,0.1);">
+                <td>&lt; 1 (지연)</td><td>&lt; 1 (초과)</td>
+                <td>🔴 <strong>최악</strong></td>
+                <td>스폰서 보고, 범위 조정, 긴급 회의 필요</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box gold" style="margin-top:1rem;">
+          💡 <strong>CPI &lt; 0.8은 위험 신호!</strong><br>
+          연구에 따르면 CPI가 0.8 이하가 되면<br>
+          프로젝트 종료까지 회복하는 경우가 거의 없음.<br>
+          → 즉각적인 PM 보고 + 스폰서 개입 필요
+        </div>
+      </div>
+      <div>
+        <svg viewBox="0 0 300 280" width="100%">
+          <!-- Quadrant chart -->
+          <line x1="150" y1="10" x2="150" y2="270" stroke="#555" stroke-width="1.5"/>
+          <line x1="10" y1="140" x2="290" y2="140" stroke="#555" stroke-width="1.5"/>
+          <!-- Quadrant labels -->
+          <text x="75" y="75" fill="#ffa500" font-size="11" text-anchor="middle">SPI&gt;1 / CPI&lt;1</text>
+          <text x="75" y="90" fill="#ffa500" font-size="10" text-anchor="middle">일정↑ 비용↓</text>
+          <text x="225" y="75" fill="#60c060" font-size="11" text-anchor="middle" font-weight="bold">SPI&gt;1 / CPI&gt;1</text>
+          <text x="225" y="90" fill="#60c060" font-size="10" text-anchor="middle">최상 ✅</text>
+          <text x="75" y="195" fill="#ff6464" font-size="11" text-anchor="middle" font-weight="bold">SPI&lt;1 / CPI&lt;1</text>
+          <text x="75" y="210" fill="#ff6464" font-size="10" text-anchor="middle">최악 🔴</text>
+          <text x="225" y="195" fill="#ffa500" font-size="11" text-anchor="middle">SPI&lt;1 / CPI&gt;1</text>
+          <text x="225" y="210" fill="#ffa500" font-size="10" text-anchor="middle">일정↓ 비용↑</text>
+          <!-- Axis labels -->
+          <text x="150" y="8" fill="#aaa" font-size="9" text-anchor="middle">CPI↑</text>
+          <text x="150" y="278" fill="#aaa" font-size="9" text-anchor="middle">CPI↓</text>
+          <text x="5" y="143" fill="#aaa" font-size="9">SPI↓</text>
+          <text x="270" y="143" fill="#aaa" font-size="9">SPI↑</text>
+          <!-- Origin label -->
+          <text x="155" y="148" fill="#888" font-size="9">SPI=1<br>CPI=1</text>
+          <!-- Example point (SPI<1, CPI<1) -->
+          <circle cx="80" cy="180" r="6" fill="#ff6464" opacity="0.8"/>
+          <text x="90" y="184" fill="#ff6464" font-size="9">현재 프로젝트</text>
+          <text x="90" y="195" fill="#ff6464" font-size="8">SPI=0.8, CPI=0.67</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 15: [6교시] Section
+  ============================= -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">6교시</div>
+      <h2>EVM 종합 실습</h2>
+      <p>BAC·PV·EV·AC 계산 → 지표 산출 → 프로젝트 상태 진단 → 시정 조치 제안</p>
+      <div class="section-time">⏱ 1시간</div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 16: 실습 문제
+  ============================= -->
+  <div class="slide">
+    <h2>EVM 실습 — IT 인프라 현대화 프로젝트</h2>
+    <div class="practice-box">
+      <h4>📋 시나리오</h4>
+      <div class="two-col">
+        <div>
+          <p style="font-size:0.88rem;">
+            <strong>프로젝트:</strong> 클라우드 전환 프로젝트<br>
+            <strong>BAC:</strong> 10억원, <strong>기간:</strong> 10개월<br>
+            <strong>현재:</strong> 5개월차 (50% 경과)<br><br>
+            <strong>현재 측정치:</strong><br>
+            • PV = 5억 (계획상 5개월치 예산)<br>
+            • EV = 3억 (실제 완료된 작업의 가치)<br>
+            • AC = 5억 (실제 지출 비용)
+          </p>
+        </div>
+        <div>
+          <p style="font-size:0.88rem;"><strong>계산 과제:</strong></p>
+          <ol style="font-size:0.85rem;">
+            <li>SV, CV 계산 및 해석</li>
+            <li>SPI, CPI 계산 및 해석</li>
+            <li>EAC 3가지 공식으로 계산</li>
+            <li>ETC, VAC, TCPI 계산</li>
+            <li>프로젝트 상태 진단 결론</li>
+            <li>스폰서에게 제안할 시정 조치는?</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="table-wrapper" style="margin-top:1rem;">
+      <table style="font-size:0.85rem;">
+        <thead><tr><th>지표</th><th>공식</th><th>계산 과정</th><th>결과</th><th>해석</th></tr></thead>
+        <tbody>
+          <tr><td>SV</td><td>EV-PV</td><td>3-5</td><td></td><td></td></tr>
+          <tr><td>CV</td><td>EV-AC</td><td>3-5</td><td></td><td></td></tr>
+          <tr><td>SPI</td><td>EV/PV</td><td>3/5</td><td></td><td></td></tr>
+          <tr><td>CPI</td><td>EV/AC</td><td>3/5</td><td></td><td></td></tr>
+          <tr><td>EAC①</td><td>BAC/CPI</td><td></td><td></td><td></td></tr>
+          <tr><td>EAC②</td><td>AC+(BAC-EV)</td><td></td><td></td><td></td></tr>
+          <tr><td>TCPI</td><td>(BAC-EV)/(BAC-AC)</td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 17: 핵심 키워드
+  ============================= -->
+  <div class="slide">
+    <h2>Day 05 핵심 키워드</h2>
+    <div class="keyword-tags" style="font-size:0.95rem;">
+      <span class="keyword-tag">원가 관리 4개 프로세스</span>
+      <span class="keyword-tag">직접비 / 간접비</span>
+      <span class="keyword-tag">고정비 / 변동비</span>
+      <span class="keyword-tag">매몰비용 (Sunk Cost)</span>
+      <span class="keyword-tag">기회비용</span>
+      <span class="keyword-tag">생애주기 원가 (LCC)</span>
+      <span class="keyword-tag">유사 산정 (ROM)</span>
+      <span class="keyword-tag">모수 산정</span>
+      <span class="keyword-tag">상향식 산정</span>
+      <span class="keyword-tag">3점 산정 / PERT</span>
+      <span class="keyword-tag">원가 기준선</span>
+      <span class="keyword-tag">우발 예비</span>
+      <span class="keyword-tag">관리 예비</span>
+      <span class="keyword-tag">S-Curve</span>
+      <span class="keyword-tag">EVM</span>
+      <span class="keyword-tag">PV / EV / AC</span>
+      <span class="keyword-tag">SV / CV</span>
+      <span class="keyword-tag">SPI / CPI</span>
+      <span class="keyword-tag">BAC</span>
+      <span class="keyword-tag">EAC (3공식)</span>
+      <span class="keyword-tag">ETC / VAC</span>
+      <span class="keyword-tag">TCPI</span>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 18: 학습 확인 퀴즈
+  ============================= -->
+  <div class="slide">
+    <h2>학습 확인 퀴즈</h2>
+    <div class="quiz-box">
+      <div class="quiz-item">
+        <p><strong>Q1.</strong> 매몰비용이란 무엇이며, 프로젝트 의사결정에 사용하면 안 되는 이유는?</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>매몰비용은 이미 지출되어 어떤 결정을 해도 회수 불가능한 비용입니다.<br>
+          "이미 10억을 투자했으니 계속해야 한다" → Sunk Cost Fallacy (매몰비용 오류).<br>
+          합리적 의사결정은 <strong>향후 투입할 비용 vs 향후 얻을 편익</strong>만 비교해야 합니다.</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q2.</strong> BAC=20억, EV=8억, AC=12억, PV=10억일 때 SV, CV, SPI, CPI를 계산하고 상태를 진단하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>SV = EV-PV = 8-10 = <strong>-2억</strong> (일정 지연)<br>
+          CV = EV-AC = 8-12 = <strong>-4억</strong> (예산 초과)<br>
+          SPI = 8/10 = <strong>0.8</strong> (일정 80% 효율 — 지연)<br>
+          CPI = 8/12 = <strong>0.67</strong> (원가 67% 효율 — 심각한 초과)<br>
+          → SPI&lt;1, CPI&lt;1으로 최악의 사분면. CPI&lt;0.8이므로 즉각 스폰서 보고 필요.</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q3.</strong> 위 상황(BAC=20억, EV=8억, AC=12억)에서 EAC를 3가지 방법으로 계산하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>①현재 추세 지속: EAC = BAC÷CPI = 20÷0.67 = <strong>약 29.9억</strong><br>
+          ②비전형적 차이: EAC = AC+(BAC-EV) = 12+12 = <strong>24억</strong><br>
+          ③복합(CPI×SPI): EAC = 12+12÷(0.67×0.8) = 12+22.4 = <strong>34.4억</strong><br>
+          → 현실적으로 ①가 일반적. 스폰서에게 29~34억 초과 가능성 보고.</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q4.</strong> 상향식 산정과 유사 산정의 차이를 정확도 및 적용 시점 관점에서 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>유사 산정</strong>: Top-down, 과거 유사 프로젝트 참고, 정확도 낮음(ROM: -25%~+75%), 착수~초기 단계.<br>
+          <strong>상향식 산정</strong>: Bottom-up, WBS 작업패키지 개별 산정 후 합산, 가장 정확(-5%~+10%), 기획 후반~실행 직전.<br>
+          → 초기에는 빠른 유사 산정으로 의사결정 → 실행 전 상향식으로 정확한 원가 기준선 수립.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SLIDE 19: 다음 Day 예고
+  ============================= -->
+  <div class="slide">
+    <h2>다음 시간 예고 — Day 06: 품질 관리</h2>
+    <div class="info-box gold">
+      <h3 style="margin:0 0 0.8rem;color:var(--accent-gold);">📅 Day 06 주요 학습 내용</h3>
+    </div>
+    <div class="card-grid" style="margin-top:1rem;">
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <h3>품질 관리 계획</h3>
+        <p>품질 기준 정의 · Cost of Quality (예방/평가/실패 비용)</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔧</div>
+        <h3>품질 보증 vs 통제</h3>
+        <p>QA (프로세스) vs QC (결과물) — "예방이 수정보다 저렴하다"</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>품질 도구</h3>
+        <p>파레토 차트 · 관리도 · 히스토그램 · 체크 시트 · 인과관계도</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">✅</div>
+        <h3>결함 관리</h3>
+        <p>결함 기록 · 근본 원인 분석 · 재검사 · Six Sigma 개요</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:1.2rem;">
+      🔑 <strong>연결 포인트:</strong> 오늘 EVM에서 CPI &lt; 1 (예산 초과)의 주요 원인이<br>
+      품질 문제로 인한 재작업 비용임을 기억해두세요. 품질과 원가는 직결됩니다!
+    </div>
+  </div>
+
+</div><!-- /presentation -->
+
+<script src="../js/presentation.js"></script>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 11: 이해관계자 관리 | PM Expert</title>
+  <link rel="stylesheet" href="../css/presentation.css">
+</head>
+<body>
+
+<div class="presentation">
+
+  <!-- SLIDE 1: 타이틀 -->
+  <div class="slide title-slide">
+    <div class="title-content">
+      <div class="day-badge">Day 11</div>
+      <h1>이해관계자 관리 &amp; 종합 실습</h1>
+      <p class="subtitle">Project Stakeholder Management<br>
+        P-I Grid · 참여도 매트릭스 · 현저성 모델 · Champion</p>
+      <div class="title-meta">
+        <span>📅 11일차</span>
+        <span>⏱ 8시간</span>
+        <span>🎯 사람이 프로젝트의 핵심!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: 학습 목표 -->
+  <div class="slide">
+    <h2>학습 목표</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>이해관계자 식별</h3>
+        <p>프로젝트에 영향을 주거나 받는 모든 개인·조직을 체계적으로 발굴하고 등록부를 작성할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>권력-관심도 분석</h3>
+        <p>P-I Grid, 현저성 모델로 이해관계자를 분류하고 사분면별 관리 전략을 수립할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤝</div>
+        <h3>참여도 관리</h3>
+        <p>불인지→저항→중립→지지→주도 5단계로 참여도 현황과 목표를 분석하여 전략을 실행할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔗</div>
+        <h3>종합 통합</h3>
+        <p>이해관계자 분석이 RACI·의사소통 계획·리스크 식별의 기반임을 설명하고 통합 적용할 수 있다</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: 오늘의 흐름 -->
+  <div class="slide">
+    <h2>오늘의 흐름 — 6교시 구성</h2>
+    <div class="diagram">
+      <div class="step"><span class="step-num">1교시</span><span class="step-label">이해관계자<br>개요·4프로세스</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">2교시</span><span class="step-label">식별·분류<br>P-I Grid</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">3교시</span><span class="step-label">참여 계획<br>참여도 매트릭스</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">4교시</span><span class="step-label">참여 관리<br>신뢰·갈등</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">5교시</span><span class="step-label">참여 감시<br>전략 조정</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">6교시</span><span class="step-label">종합 실습<br>1~10일 통합</span></div>
+    </div>
+    <div class="info-box gold" style="margin-top:1.5rem;">
+      🔗 <strong>10일 총정리 시작점:</strong> 이해관계자 분석은 모든 지식영역 계획의 <strong>출발점</strong>입니다.<br>
+      누가 영향을 받는지 알아야 — RACI, 의사소통 계획, 리스크 식별이 가능합니다.
+    </div>
+  </div>
+
+  <!-- SLIDE 4: [1교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">1교시</div>
+      <h2>이해관계자 관리 개요</h2>
+      <p>정의 · 4개 프로세스 · 중요성</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: 개요 -->
+  <div class="slide">
+    <h2>이해관계자 관리 4개 프로세스</h2>
+    <div class="two-col">
+      <div>
+        <div class="info-box gold" style="margin-bottom:0.8rem;">
+          <strong>이해관계자(Stakeholder) 정의</strong><br>
+          프로젝트에 <strong>영향을 주거나 받는</strong> 모든<br>개인, 그룹, 조직<br><br>
+          내부: 경영진, 팀원, PM, 후원자<br>
+          외부: 고객, 사용자, 벤더, 규제 기관, 지역사회
+        </div>
+        <div class="info-box warning" style="font-size:0.83rem;">
+          ⚠️ <strong>이해관계자 관리 실패 = 프로젝트 실패 1위 원인</strong><br>
+          • 반대 이해관계자 → 프로젝트 중단<br>
+          • 무관심 경영진 → 예산·자원 지원 중단<br>
+          • 요구사항 수집 실패 → 품질 문제
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">4개 프로세스</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.35rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.83rem;"><strong>13.1</strong> 이해관계자 식별<br>등록부 작성, 프로젝트 내내 갱신</div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);"><strong>13.2</strong> 이해관계자 참여 계획 수립<br>P-I Grid, 참여도 매트릭스, 전략</div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);"><strong>13.3</strong> 이해관계자 참여 관리<br>기대 관리, 신뢰 구축, 갈등 해결</div>
+          <div class="step" style="width:100%;font-size:0.83rem;"><strong>13.4</strong> 이해관계자 참여 감시<br>참여도 변화 추적, 전략 조정</div>
+        </div>
+        <div class="info-box" style="margin-top:0.5rem;font-size:0.82rem;">
+          💡 13.1 식별 → PM 책임자(A) 지정<br>
+          PMBOK 7판: 이해관계자 = 초기 식별 → 지속 관리
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: [2교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">2교시</div>
+      <h2>이해관계자 식별 &amp; 분류</h2>
+      <p>등록부 · 권력-관심도 매트릭스 · 현저성 모델</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: P-I Grid -->
+  <div class="slide">
+    <h2>권력-관심도 매트릭스 (Power-Interest Grid)</h2>
+    <div class="two-col">
+      <div>
+        <svg viewBox="0 0 280 230" width="100%">
+          <!-- 축 -->
+          <line x1="30" y1="10" x2="30" y2="200" stroke="#555" stroke-width="1"/>
+          <line x1="30" y1="200" x2="275" y2="200" stroke="#555" stroke-width="1"/>
+          <!-- 축 제목 -->
+          <text x="152" y="220" fill="#aaa" font-size="9" text-anchor="middle">관심도(Interest) →</text>
+          <text x="12" y="105" fill="#aaa" font-size="9" text-anchor="middle" transform="rotate(-90,12,105)">권력(Power) →</text>
+          <!-- 4분면 -->
+          <!-- 3사분면: 낮은 권력+낮은 관심 = Monitor -->
+          <rect x="30" y="105" width="122" height="95" fill="rgba(80,200,80,0.15)" stroke="#444" stroke-width="0.5"/>
+          <text x="91" y="155" fill="#80dd80" font-size="10" text-anchor="middle" font-weight="bold">Monitor</text>
+          <text x="91" y="168" fill="#888" font-size="8" text-anchor="middle">모니터링</text>
+          <!-- 4사분면: 낮은 권력+높은 관심 = Keep Informed -->
+          <rect x="152" y="105" width="123" height="95" fill="rgba(108,99,255,0.15)" stroke="#444" stroke-width="0.5"/>
+          <text x="213" y="155" fill="#b0acff" font-size="10" text-anchor="middle" font-weight="bold">Keep Informed</text>
+          <text x="213" y="168" fill="#888" font-size="8" text-anchor="middle">정보 제공</text>
+          <!-- 2사분면: 높은 권력+낮은 관심 = Keep Satisfied -->
+          <rect x="30" y="10" width="122" height="95" fill="rgba(255,165,0,0.15)" stroke="#444" stroke-width="0.5"/>
+          <text x="91" y="55" fill="#ffbb60" font-size="10" text-anchor="middle" font-weight="bold">Keep Satisfied</text>
+          <text x="91" y="68" fill="#888" font-size="8" text-anchor="middle">만족 유지</text>
+          <!-- 1사분면: 높은 권력+높은 관심 = Manage Closely -->
+          <rect x="152" y="10" width="123" height="95" fill="rgba(255,215,0,0.2)" stroke="#ffd700" stroke-width="1.5"/>
+          <text x="213" y="50" fill="#ffd700" font-size="10" text-anchor="middle" font-weight="bold">Manage Closely</text>
+          <text x="213" y="63" fill="#ccc" font-size="8" text-anchor="middle">긴밀 관리 ★</text>
+          <!-- 동적 인물 배치 예시 -->
+          <circle cx="210" cy="35" r="5" fill="rgba(255,215,0,0.6)"/>
+          <text x="220" y="39" fill="#ffd700" font-size="7">스폰서</text>
+          <circle cx="170" cy="70" r="4" fill="rgba(255,215,0,0.5)"/>
+          <text x="178" y="74" fill="#ccc" font-size="7">핵심고객</text>
+          <circle cx="65" cy="35" r="4" fill="rgba(255,165,0,0.6)"/>
+          <text x="73" y="39" fill="#ffbb60" font-size="7">경영진</text>
+          <circle cx="200" cy="160" r="4" fill="rgba(108,99,255,0.6)"/>
+          <text x="208" y="164" fill="#b0acff" font-size="7">사용자팀</text>
+          <circle cx="80" cy="160" r="4" fill="rgba(80,200,80,0.6)"/>
+          <text x="88" y="164" fill="#80dd80" font-size="7">외부감사</text>
+        </svg>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">4사분면 관리 전략</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.82rem;">
+            <thead><tr><th>사분면</th><th>전략</th><th>소통 빈도</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(255,215,0,0.08);">
+                <td><strong>고권력+고관심</strong></td>
+                <td><strong>긴밀 관리</strong><br>Manage Closely</td>
+                <td>높음 — 정기 1:1<br>의사결정 참여</td>
+              </tr>
+              <tr>
+                <td><strong>고권력+저관심</strong></td>
+                <td>만족 유지<br>Keep Satisfied</td>
+                <td>중간 — 주요 이슈만<br>승인 요청</td>
+              </tr>
+              <tr>
+                <td><strong>저권력+고관심</strong></td>
+                <td>정보 제공<br>Keep Informed</td>
+                <td>중간 — 정기 보고<br>현황 공유</td>
+              </tr>
+              <tr>
+                <td><strong>저권력+저관심</strong></td>
+                <td>모니터링<br>Monitor</td>
+                <td>낮음 — 변화 시 알림<br>과도 소통 불필요</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box gold" style="margin-top:0.6rem;font-size:0.82rem;">
+          💡 <strong>현저성 모델(Salience Model)</strong><br>
+          권력(Power) + 긴급성(Urgency) + 적법성(Legitimacy)<br>
+          3가지 속성 보유 수에 따라 중요도 결정<br>
+          3개 모두 = 주도적 이해관계자 (최우선)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: 이해관계자 등록부 -->
+  <div class="slide">
+    <h2>이해관계자 등록부 &amp; 분류</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">이해관계자 등록부 구조</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.78rem;">
+            <thead>
+              <tr><th>항목</th><th>내용</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>기본 정보</td><td>이름, 직위, 부서, 연락처</td></tr>
+              <tr><td>역할</td><td>프로젝트에서의 역할 (의사결정자/사용자/제공자)</td></tr>
+              <tr><td>기대사항</td><td>원하는 결과, 우려사항, 성공 기준</td></tr>
+              <tr><td>영향력 수준</td><td>High/Medium/Low</td></tr>
+              <tr><td>P-I 위치</td><td>사분면 위치 및 관리 전략</td></tr>
+              <tr><td>분류</td><td>내부/외부, 지지/중립/저항</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">IT 프로젝트 전형적 이해관계자</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.78rem;">
+            <thead><tr><th>이해관계자</th><th>권력</th><th>관심</th><th>관리</th></tr></thead>
+            <tbody>
+              <tr><td>스폰서(CIO)</td><td>高</td><td>高</td><td>긴밀 관리</td></tr>
+              <tr><td>현업 부서장</td><td>高</td><td>高</td><td>긴밀 관리</td></tr>
+              <tr><td>CEO/경영진</td><td>高</td><td>低</td><td>만족 유지</td></tr>
+              <tr><td>최종 사용자</td><td>低</td><td>高</td><td>정보 제공</td></tr>
+              <tr><td>IT 보안팀</td><td>中</td><td>中</td><td>정보 제공</td></tr>
+              <tr><td>외부 벤더</td><td>低</td><td>高</td><td>정보 제공</td></tr>
+              <tr><td>외부 감사</td><td>低</td><td>低</td><td>모니터링</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box" style="margin-top:0.5rem;font-size:0.82rem;">
+          💡 이해관계자 위치는 프로젝트 진행에 따라 변할 수 있음<br>
+          → 정기적으로 등록부 재검토 필요
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: [3교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">3교시</div>
+      <h2>이해관계자 참여 계획 수립</h2>
+      <p>참여도 매트릭스 · C(현재) vs D(희망) · 전략 수립</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: 참여도 매트릭스 -->
+  <div class="slide">
+    <h2>이해관계자 참여도 매트릭스</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">5단계 참여 수준</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.3rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,80,80,0.1);border-color:#ff6464;">
+            <strong>불인지 (Unaware)</strong>: 프로젝트 존재 자체를 모름
+          </div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,140,0,0.1);border-color:orange;">
+            <strong>저항 (Resistant)</strong>: 변화에 반대, 방해 가능성
+          </div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);">
+            <strong>중립 (Neutral)</strong>: 지지도 반대도 아님
+          </div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(0,200,150,0.1);border-color:#00d4aa;">
+            <strong>지지 (Supportive)</strong>: 프로젝트를 돕겠다는 의지
+          </div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,215,0,0.15);border-color:var(--accent-gold);">
+            <strong>주도 (Leading)</strong>: 적극 옹호, Champion 역할
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">참여도 매트릭스 (C:현재 / D:목표)</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead>
+              <tr><th>이해관계자</th><th>불인지</th><th>저항</th><th>중립</th><th>지지</th><th>주도</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>스폰서</td>
+                <td></td><td></td><td></td>
+                <td>C</td>
+                <td style="background:rgba(255,215,0,0.15);">D</td>
+              </tr>
+              <tr>
+                <td>현업부서장</td>
+                <td></td>
+                <td style="background:rgba(255,80,80,0.1);">C</td>
+                <td style="background:rgba(255,215,0,0.1);">D</td>
+                <td></td><td></td>
+              </tr>
+              <tr>
+                <td>최종사용자</td>
+                <td style="background:rgba(255,80,80,0.1);">C</td>
+                <td></td>
+                <td style="background:rgba(255,215,0,0.1);">D</td>
+                <td></td><td></td>
+              </tr>
+              <tr>
+                <td>IT팀장</td>
+                <td></td><td></td>
+                <td>C</td>
+                <td style="background:rgba(0,200,150,0.1);">D</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box gold" style="margin-top:0.6rem;font-size:0.82rem;">
+          💡 C = D → 이상적, 현재 참여도가 목표와 일치<br>
+          C ≠ D → 갭 분석 후 전략 수립 필요<br>
+          저항: 원인 파악 → 우려 해소 → 점진적 참여 유도<br>
+          불인지: 존재 알리기 → 이해 증진 → 이익 공유
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: [4교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">4교시</div>
+      <h2>이해관계자 참여 관리</h2>
+      <p>기대 관리 · 신뢰 구축 · 갈등 해결 · Champion 활용</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: 참여 관리 전략 -->
+  <div class="slide">
+    <h2>이해관계자 참여 관리 전략</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">유형별 관리 전략</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>유형</th><th>접근 전략</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(255,80,80,0.06);">
+                <td><strong>저항형</strong><br>반대·방해</td>
+                <td>• 저항 원인 파악 (인터뷰·개인 면담)<br>• 우려사항 공식 기록 후 해소<br>• 작은 성공 경험 제공<br>• 주요 결정에 참여 유도</td>
+              </tr>
+              <tr style="background:rgba(255,215,0,0.06);">
+                <td><strong>중립형</strong><br>관망</td>
+                <td>• 프로젝트의 개인적 이익 설명<br>• 정보 지속 제공<br>• 의견 요청으로 관여도 높이기</td>
+              </tr>
+              <tr style="background:rgba(0,200,150,0.06);">
+                <td><strong>지지형</strong><br>협조</td>
+                <td>• 적극적으로 활용<br>• Champion 역할 부여<br>• 성과 인정·보상</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="info-box gold" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <h4 style="color:var(--accent-gold);margin:0 0 0.4rem;">🏆 Champion (프로젝트 옹호자)</h4>
+          프로젝트를 적극 지지하고 조직 내 홍보·설득<br>
+          PM이 접근 어려운 경영진에 대한 영향력 행사<br>
+          예: C-Level 스폰서가 Champion이 되면<br>예산·우선순위 확보가 훨씬 쉬워짐
+        </div>
+        <div class="info-box" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <strong>기대 관리 3원칙</strong><br>
+          1. <strong>현실적 기대 설정</strong>: 과도한 약속 금지<br>
+          2. <strong>투명한 소통</strong>: 나쁜 소식도 빠르게<br>
+          3. <strong>일관성 유지</strong>: 말과 행동이 일치해야 신뢰 형성
+        </div>
+        <div class="info-box warning" style="font-size:0.82rem;">
+          ⚠️ 이해관계자가 원하는 것(Wants)과<br>실제 필요한 것(Needs)은 다를 수 있음<br>
+          진짜 문제를 파악하는 능동적 경청 필수
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 13: [5, 6교시] 합본 + 종합 실습 Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">5~6교시</div>
+      <h2>참여 감시 &amp; 종합 실습</h2>
+      <p>참여도 변화 추적 · Day 1~10 지식영역 통합 프로젝트</p>
+      <div class="section-time">⏱ 3시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 14: 감시 + 통합 -->
+  <div class="slide">
+    <h2>참여 감시 &amp; 10대 지식영역 통합</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">이해관계자 참여 감시</h3>
+        <div class="info-box" style="margin-bottom:0.6rem;font-size:0.83rem;">
+          <strong>추적 항목</strong><br>
+          • 참여도 매트릭스 주기적 재평가<br>
+          • 새로운 이해관계자 추가 식별<br>
+          • 기존 이해관계자 위치 변화 확인<br>
+          • 전략 효과성 측정 (참여 행동 변화?)<br>
+          • 경영진 지원 수준 모니터링
+        </div>
+        <div class="info-box warning" style="font-size:0.82rem;">
+          ⚠️ 이해관계자 관리는 프로젝트 전 생애주기에 걸쳐 수행<br>
+          시작 시 식별하고 종료 시까지 감시·조정
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">10대 지식영역 상호 연결</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.76rem;">
+            <thead><tr><th>지식영역</th><th>이해관계자와의 연결</th></tr></thead>
+            <tbody>
+              <tr><td><strong>통합</strong> (Day02)</td><td>헌장에 이해관계자 명시</td></tr>
+              <tr><td><strong>범위</strong> (Day03)</td><td>이해관계자 = 요구사항 제공자</td></tr>
+              <tr><td><strong>일정·원가</strong> (Day04-05)</td><td>스폰서 승인 필요</td></tr>
+              <tr><td><strong>품질</strong> (Day06)</td><td>고객이 품질 기준 정의</td></tr>
+              <tr><td><strong>자원</strong> (Day07)</td><td>RACI = 이해관계자 역할 분배</td></tr>
+              <tr><td><strong>소통</strong> (Day08)</td><td>이해관계자별 소통 계획 수립</td></tr>
+              <tr><td><strong>리스크</strong> (Day09)</td><td>이해관계자 = 리스크 식별 원천</td></tr>
+              <tr><td><strong>조달</strong> (Day10)</td><td>벤더도 이해관계자</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 15: 종합 실습 -->
+  <div class="slide">
+    <h2>종합 실습 — 이해관계자 관리 계획 작성</h2>
+    <div class="practice-box">
+      <h4>📋 실습 시나리오: 스마트 물류 시스템 구축 (6개월, 15명)</h4>
+    </div>
+    <div class="two-col" style="margin-top:0.8rem;">
+      <div class="info-box" style="font-size:0.83rem;">
+        <strong>단계 1: 이해관계자 식별 (15분)</strong><br>
+        물류팀장, CTO, 현장 직원, 고객사, ERP 벤더,<br>
+        IT 보안팀, 노동조합, 규제 기관<br>
+        → 누락된 이해관계자 브레인스토밍<br><br>
+        <strong>단계 2: P-I Grid 배치 (10분)</strong><br>
+        각 이해관계자를 4사분면에 배치<br>
+        → 관리 전략 결정
+      </div>
+      <div class="info-box gold" style="font-size:0.83rem;">
+        <strong>단계 3: 참여도 매트릭스 작성 (15분)</strong><br>
+        C (현재 참여도) 와 D (목표 참여도) 설정<br>
+        갭이 있는 이해관계자 3명 선정<br>
+        → 구체적 전략 수립<br><br>
+        <strong>단계 4: 의사소통 계획 연계 (10분)</strong><br>
+        Day 08 의사소통 매트릭스와 연결<br>
+        이해관계자별 정보·주기·방법 결정<br>
+        → 팀 발표 (3분)
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 16: 핵심 키워드 -->
+  <div class="slide">
+    <h2>Day 11 핵심 키워드</h2>
+    <div class="keyword-tags">
+      <span class="keyword-tag">이해관계자 정의</span>
+      <span class="keyword-tag">이해관계자 관리 4개 프로세스</span>
+      <span class="keyword-tag">이해관계자 등록부</span>
+      <span class="keyword-tag">권력-관심도 매트릭스</span>
+      <span class="keyword-tag">P-I Grid 4사분면</span>
+      <span class="keyword-tag">Manage Closely</span>
+      <span class="keyword-tag">Keep Satisfied</span>
+      <span class="keyword-tag">Keep Informed</span>
+      <span class="keyword-tag">Monitor</span>
+      <span class="keyword-tag">현저성 모델</span>
+      <span class="keyword-tag">권력+긴급성+적법성</span>
+      <span class="keyword-tag">참여도 5단계</span>
+      <span class="keyword-tag">불인지→저항→중립→지지→주도</span>
+      <span class="keyword-tag">C(현재) vs D(목표)</span>
+      <span class="keyword-tag">갭 분석</span>
+      <span class="keyword-tag">Champion (옹호자)</span>
+      <span class="keyword-tag">기대 관리</span>
+      <span class="keyword-tag">신뢰 구축</span>
+      <span class="keyword-tag">10대 지식영역 통합</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 17: 퀴즈 -->
+  <div class="slide">
+    <h2>학습 확인 퀴즈</h2>
+    <div class="quiz-box">
+      <div class="quiz-item">
+        <p><strong>Q1.</strong> 권력-관심도 매트릭스의 4개 사분면별 관리 전략을 설명하고, 각 사분면에 해당하는 이해관계자 예시를 드시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>고권력+고관심 → Manage Closely (긴밀 관리)</strong>: 스폰서, 핵심 고객 — 정기 미팅, 모든 주요 결정 참여<br>
+          <strong>고권력+저관심 → Keep Satisfied (만족 유지)</strong>: CEO, 경영진 — 주요 이슈만 보고, 과도한 세부 사항 피함<br>
+          <strong>저권력+고관심 → Keep Informed (정보 제공)</strong>: 최종 사용자, 사용자 부서 — 진행 현황 공유<br>
+          <strong>저권력+저관심 → Monitor (모니터링)</strong>: 외부 감사, 규제 기관 — 변화 발생 시만 알림</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q2.</strong> 저항하는 이해관계자를 지지 수준으로 전환하기 위한 전략 3가지를 구체적으로 제시하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>① <strong>저항 원인 파악</strong>: 개인 면담을 통해 실제 우려 사항 파악. 변화에 따른 역할 변화, 업무 부담 증가 등 구체적 이유 도출<br>
+          ② <strong>우려 사항 해소 및 참여 유도</strong>: 공식적으로 우려 기록 + 대응 계획 공유. 파일럿 참여 제안 — 작은 성공 체험 제공<br>
+          ③ <strong>의사결정 참여 보장</strong>: 주요 결정에 해당 이해관계자를 포함. "당신의 의견이 반영되었다"는 인식을 줌 → 소유의식(Ownership) 형성</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q3.</strong> 이해관계자 참여도 매트릭스에서 C(현재)와 D(목표)가 다를 때 PM이 해야 할 일을 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>C ≠ D는 현재 참여도가 프로젝트 성공을 위한 목표 수준에 미달함을 의미합니다.<br>
+          ① <strong>갭 분석</strong>: 어떤 이해관계자의 어떤 단계에서 갭이 있는지 구체화<br>
+          ② <strong>원인 파악</strong>: 정보 부족인지, 변화 저항인지, 관계 문제인지 진단<br>
+          ③ <strong>맞춤 전략 수립</strong>: 갭 유형에 따라 소통 방식·빈도·내용 조정<br>
+          ④ <strong>진행 추적</strong>: 전략 실행 후 참여도 변화 재평가 (주기적 등록부 갱신)</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q4.</strong> 이해관계자 식별이 Day 07 RACI 차트, Day 08 의사소통 계획과 어떻게 연결되는지 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>이해관계자 식별 → RACI 차트</strong>:<br>
+          이해관계자 등록부에서 각 이해관계자의 역할과 권한 수준이 파악되면<br>
+          RACI의 R/A/C/I 배정의 기초가 됩니다. 특히 Accountable(A)은 고권력 이해관계자에게 배정<br><br>
+          <strong>이해관계자 식별 → 의사소통 계획</strong>:<br>
+          이해관계자 등록부의 P-I 위치와 정보 요구사항이<br>
+          의사소통 매트릭스의 '이해관계자' 열의 直접적 입력이 됩니다.<br>
+          Keep Informed → 정기 보고(Push) 방식, Manage Closely → Interactive 방식 선택</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 18: 다음 Day 예고 -->
+  <div class="slide">
+    <h2>다음 시간 예고 — Day 12: SW 공학</h2>
+    <div class="info-box gold">
+      <h3 style="margin:0 0 0.8rem;color:var(--accent-gold);">📅 Day 12 주요 학습 내용 — IT 전문 영역 시작</h3>
+    </div>
+    <div class="card-grid" style="margin-top:1rem;">
+      <div class="card">
+        <div class="card-icon">🌊</div>
+        <h3>SDLC 모델</h3>
+        <p>워터폴 vs 애자일 vs 하이브리드 — 각 방법론의 특징과 선택 기준</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔄</div>
+        <h3>애자일 심화</h3>
+        <p>스크럼(Sprint/백로그/번다운) · 칸반 · SAFe · XP — 프레임워크 비교</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>DevOps &amp; CI/CD</h3>
+        <p>지속적 통합/배포 · 인프라 코드화 · 마이크로서비스 개요</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📐</div>
+        <h3>UML &amp; 패턴</h3>
+        <p>UseCase·클래스·시퀀스 다이어그램 · 디자인 패턴 기초</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:1.2rem;">
+      💡 Day 12부터는 PM + IT 심화 영역입니다. 지금까지 배운 PM 지식영역의 기반 위에<br>
+      IT 전문 기술 지식을 더해 완전한 IT PM 역량을 구축합니다.
+    </div>
+  </div>
+
+</div><!-- /presentation -->
+
+<script src="../js/presentation.js"></script>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 09: 프로젝트 리스크 관리 | PM Expert</title>
+  <link rel="stylesheet" href="../css/presentation.css">
+</head>
+<body>
+
+<div class="presentation">
+
+  <!-- SLIDE 1: 타이틀 -->
+  <div class="slide title-slide">
+    <div class="title-content">
+      <div class="day-badge">Day 09</div>
+      <h1>프로젝트 리스크 관리</h1>
+      <p class="subtitle">Project Risk Management<br>
+        식별 · P-I 매트릭스 · EMV · 위협/기회 대응 전략</p>
+      <div class="title-meta">
+        <span>📅 9일차</span>
+        <span>⏱ 8시간</span>
+        <span>🎯 위험을 기회로 바꾸는 PM!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: 학습 목표 -->
+  <div class="slide">
+    <h2>학습 목표</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>리스크 식별</h3>
+        <p>브레인스토밍·SWOT·PESTLE로 리스크를 체계적으로 발굴하고 등록부를 초기 작성할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📐</div>
+        <h3>정성적·정량적 분석</h3>
+        <p>확률-영향 매트릭스, EMV, 토네이도 다이어그램, 몬테카를로 기법을 적용할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>대응 전략</h3>
+        <p>위협(회피/전가/완화/수용)과 기회(활용/공유/증대/수용)의 상황별 전략을 수립할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>리스크 등록부</h3>
+        <p>리스크 Owner 지정, 우발 대응 계획, 잔여 리스크 관리 체계를 구축할 수 있다</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: 오늘의 흐름 -->
+  <div class="slide">
+    <h2>오늘의 흐름 — 6교시 로드맵</h2>
+    <div class="diagram">
+      <div class="step"><span class="step-num">1교시</span><span class="step-label">리스크 개요<br>7개 프로세스</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">2교시</span><span class="step-label">리스크 식별<br>RBS·등록부</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">3교시</span><span class="step-label">정성적 분석<br>P-I 매트릭스</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">4교시</span><span class="step-label">정량적 분석<br>EMV·몬테카를로</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">5교시</span><span class="step-label">대응 전략<br>위협/기회</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">6교시</span><span class="step-label">실습<br>등록부 작성</span></div>
+    </div>
+    <div class="info-box gold" style="margin-top:1.5rem;">
+      🔗 <strong>Day 08 연결:</strong> 의사소통 보고 체계의 에스컬레이션이<br>
+      오늘 배울 <strong>리스크 에스컬레이션</strong>과 동일한 원리로 작동합니다.
+    </div>
+  </div>
+
+  <!-- SLIDE 4: [1교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">1교시</div>
+      <h2>리스크 관리 개요</h2>
+      <p>리스크 vs 이슈 · 위협/기회 · 7개 프로세스</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: 개요 -->
+  <div class="slide">
+    <h2>리스크 기본 개념 &amp; 7개 프로세스</h2>
+    <div class="two-col">
+      <div>
+        <div class="comparison" style="margin-bottom:0.8rem;">
+          <div class="vs-col left">
+            <h4>리스크 (Risk)</h4>
+            <p style="font-size:0.83rem;">아직 <strong>발생하지 않은</strong><br>불확실한 미래 사건<br><br>👉 예방·대비 가능<br>리스크 관리 계획 수립<br><br>예: "API 외부 종속성이<br>일정 지연을 유발할 수 있음"</p>
+          </div>
+          <div class="vs-col right">
+            <h4>이슈 (Issue)</h4>
+            <p style="font-size:0.83rem;"><strong>이미 발생한</strong><br>현재 문제<br><br>👉 즉각 대응 필요<br>이슈 로그(Issue Log) 관리<br><br>예: "API가 오늘 다운되어<br>개발 중단됨"</p>
+          </div>
+        </div>
+        <div class="info-box gold" style="font-size:0.83rem;">
+          <strong>리스크 2가지 유형</strong><br>
+          ⚠️ <strong>위협(Threat)</strong>: 부정적 영향 → 비용 초과, 일정 지연<br>
+          ✅ <strong>기회(Opportunity)</strong>: 긍정적 영향 → 비용 절감, 조기 완료<br>
+          <em>기회도 적극적으로 관리해야 한다!</em>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">리스크 관리 7개 프로세스</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.25rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.8rem;"><strong>11.1</strong> 리스크 관리 계획 수립</div>
+          <div class="step" style="width:100%;font-size:0.8rem;"><strong>11.2</strong> 리스크 식별 → 등록부 초기화</div>
+          <div class="step" style="width:100%;font-size:0.8rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);"><strong>11.3</strong> 정성적 리스크 분석 (P-I 매트릭스)</div>
+          <div class="step" style="width:100%;font-size:0.8rem;"><strong>11.4</strong> 정량적 리스크 분석 (EMV, 몬테카를로)</div>
+          <div class="step" style="width:100%;font-size:0.8rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);"><strong>11.5</strong> 리스크 대응 계획 수립</div>
+          <div class="step" style="width:100%;font-size:0.8rem;"><strong>11.6</strong> 리스크 대응 실행</div>
+          <div class="step" style="width:100%;font-size:0.8rem;"><strong>11.7</strong> 리스크 감시</div>
+        </div>
+        <div class="info-box" style="margin-top:0.5rem;font-size:0.82rem;">
+          <strong>Risk Owner</strong>: 각 리스크에 대한 책임자<br>
+          RACI의 A처럼 — 1명을 반드시 지정
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: [2교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">2교시</div>
+      <h2>리스크 식별</h2>
+      <p>식별 기법 · RBS · 리스크 등록부 초기 작성</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: 식별 기법 -->
+  <div class="slide">
+    <h2>리스크 식별 기법 &amp; 등록부</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">주요 식별 기법</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.82rem;">
+            <thead><tr><th>기법</th><th>내용</th></tr></thead>
+            <tbody>
+              <tr><td><strong>브레인스토밍</strong></td><td>팀 집단지성 → 비판 없이 아이디어 수집</td></tr>
+              <tr><td><strong>전문가 인터뷰</strong></td><td>유사 프로젝트 경험자 면담</td></tr>
+              <tr><td><strong>SWOT 분석</strong></td><td>강점/약점/기회/위협 → 내외부 리스크</td></tr>
+              <tr><td><strong>체크리스트</strong></td><td>과거 프로젝트 기반 표준 항목</td></tr>
+              <tr><td><strong>가정 분석</strong></td><td>계획의 가정·제약이 잘못될 경우</td></tr>
+              <tr><td><strong>인과도(Fishbone)</strong></td><td>원인 → 결과 연결 → 근본 리스크 발굴</td></tr>
+              <tr><td><strong>PESTLE</strong></td><td>정치/경제/사회/기술/법률/환경</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box" style="margin-top:0.6rem;font-size:0.82rem;">
+          <strong>RBS (Risk Breakdown Structure)</strong><br>
+          • 기술 리스크 (Technology Risk)<br>
+          • 외부 리스크 (Market, Vendor, Regulatory)<br>
+          • 조직 리스크 (Resource, Priority, Funding)<br>
+          • 프로젝트 관리 리스크 (PM Process)
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">리스크 등록부 초기 구조</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.75rem;">
+            <thead>
+              <tr><th>ID</th><th>설명</th><th>유형</th><th>원인</th><th>영향</th><th>Owner</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>R-001</td>
+                <td>핵심 개발자 이탈</td>
+                <td>위협</td>
+                <td>타사 스카우트</td>
+                <td>일정 4주 지연</td>
+                <td>PM</td>
+              </tr>
+              <tr>
+                <td>R-002</td>
+                <td>클라우드 비용 절감</td>
+                <td>기회</td>
+                <td>신규 요금제</td>
+                <td>예산 10% 절감</td>
+                <td>인프라팀</td>
+              </tr>
+              <tr>
+                <td>R-003</td>
+                <td>요구사항 변경 빈번</td>
+                <td>위협</td>
+                <td>이해관계자 이견</td>
+                <td>재작업 비용</td>
+                <td>BA팀장</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box gold" style="margin-top:0.6rem;font-size:0.82rem;">
+          💡 리스크 등록부는 살아있는 문서<br>
+          → 프로젝트 내내 지속 업데이트<br>
+          → 정기 리스크 리뷰 (주 1회 권장)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: [3교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">3교시</div>
+      <h2>정성적 리스크 분석</h2>
+      <p>확률-영향 매트릭스 · 리스크 점수 · 우선순위화</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: P-I 매트릭스 -->
+  <div class="slide">
+    <h2>확률-영향 매트릭스 (P-I Matrix)</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">P-I 매트릭스</h3>
+        <svg viewBox="0 0 280 230" width="100%">
+          <!-- Y축 레이블 (확률) -->
+          <text x="12" y="50" fill="#ccc" font-size="9" text-anchor="middle">높음</text>
+          <text x="12" y="120" fill="#ccc" font-size="9" text-anchor="middle">중간</text>
+          <text x="12" y="190" fill="#ccc" font-size="9" text-anchor="middle">낮음</text>
+          <!-- X축 레이블 (영향) -->
+          <text x="80" y="220" fill="#ccc" font-size="9" text-anchor="middle">낮음</text>
+          <text x="155" y="220" fill="#ccc" font-size="9" text-anchor="middle">중간</text>
+          <text x="230" y="220" fill="#ccc" font-size="9" text-anchor="middle">높음</text>
+          <!-- 축 -->
+          <line x1="30" y1="15" x2="30" y2="205" stroke="#555" stroke-width="1"/>
+          <line x1="30" y1="205" x2="270" y2="205" stroke="#555" stroke-width="1"/>
+          <!-- 확률(높음) 행: 3셀 -->
+          <rect x="30" y="20" width="80" height="60" fill="rgba(255,200,0,0.3)" stroke="#555" stroke-width="0.5"/>
+          <text x="70" y="55" fill="#ffd700" font-size="10" text-anchor="middle" font-weight="bold">중간</text>
+          <rect x="110" y="20" width="80" height="60" fill="rgba(255,80,80,0.35)" stroke="#555" stroke-width="0.5"/>
+          <text x="150" y="55" fill="#ff8888" font-size="10" text-anchor="middle" font-weight="bold">높음</text>
+          <rect x="190" y="20" width="80" height="60" fill="rgba(255,40,40,0.45)" stroke="#555" stroke-width="0.5"/>
+          <text x="230" y="55" fill="#ff6666" font-size="11" text-anchor="middle" font-weight="bold">매우 높음</text>
+          <!-- 확률(중간) 행 -->
+          <rect x="30" y="80" width="80" height="60" fill="rgba(80,200,100,0.25)" stroke="#555" stroke-width="0.5"/>
+          <text x="70" y="115" fill="#80ee80" font-size="10" text-anchor="middle">낮음</text>
+          <rect x="110" y="80" width="80" height="60" fill="rgba(255,200,0,0.3)" stroke="#555" stroke-width="0.5"/>
+          <text x="150" y="115" fill="#ffd700" font-size="10" text-anchor="middle" font-weight="bold">중간</text>
+          <rect x="190" y="80" width="80" height="60" fill="rgba(255,80,80,0.35)" stroke="#555" stroke-width="0.5"/>
+          <text x="230" y="115" fill="#ff8888" font-size="10" text-anchor="middle" font-weight="bold">높음</text>
+          <!-- 확률(낮음) 행 -->
+          <rect x="30" y="140" width="80" height="65" fill="rgba(80,200,100,0.2)" stroke="#555" stroke-width="0.5"/>
+          <text x="70" y="175" fill="#80ee80" font-size="10" text-anchor="middle">매우 낮음</text>
+          <rect x="110" y="140" width="80" height="65" fill="rgba(80,200,100,0.25)" stroke="#555" stroke-width="0.5"/>
+          <text x="150" y="175" fill="#80ee80" font-size="10" text-anchor="middle">낮음</text>
+          <rect x="190" y="140" width="80" height="65" fill="rgba(255,200,0,0.3)" stroke="#555" stroke-width="0.5"/>
+          <text x="230" y="175" fill="#ffd700" font-size="10" text-anchor="middle" font-weight="bold">중간</text>
+          <!-- 축 제목 -->
+          <text x="150" y="12" fill="#aaa" font-size="9" text-anchor="middle">← 영향(Impact) →</text>
+        </svg>
+        <div style="display:flex;gap:0.5rem;margin-top:0.3rem;font-size:0.78rem;">
+          <span style="background:rgba(255,40,40,0.3);padding:2px 8px;border-radius:4px;">🔴 즉시 대응</span>
+          <span style="background:rgba(255,200,0,0.3);padding:2px 8px;border-radius:4px;">🟡 감시</span>
+          <span style="background:rgba(80,200,100,0.25);padding:2px 8px;border-radius:4px;">🟢 수용 가능</span>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">리스크 점수 계산 예시</h3>
+        <div class="formula" style="margin-bottom:0.8rem;">
+          리스크 점수 = <strong>확률 × 영향</strong>
+        </div>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>리스크</th><th>확률</th><th>영향</th><th>점수</th><th>우선순위</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(255,60,60,0.1);">
+                <td>핵심 개발자 이탈</td>
+                <td>중간 (0.5)</td>
+                <td>높음 (0.8)</td>
+                <td><strong>0.40</strong></td>
+                <td>🔴 1위</td>
+              </tr>
+              <tr style="background:rgba(255,200,0,0.08);">
+                <td>요구사항 불명확</td>
+                <td>높음 (0.7)</td>
+                <td>중간 (0.5)</td>
+                <td><strong>0.35</strong></td>
+                <td>🟡 2위</td>
+              </tr>
+              <tr>
+                <td>3rd-party API 장애</td>
+                <td>낮음 (0.2)</td>
+                <td>높음 (0.8)</td>
+                <td><strong>0.16</strong></td>
+                <td>🟡 3위</td>
+              </tr>
+              <tr>
+                <td>서버 비용 초과</td>
+                <td>낮음 (0.2)</td>
+                <td>중간 (0.4)</td>
+                <td><strong>0.08</strong></td>
+                <td>🟢 4위</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box" style="margin-top:0.6rem;font-size:0.82rem;">
+          <strong>리스크 긴급도(Urgency)</strong><br>
+          점수가 같아도 <strong>근접성(Proximity)</strong>이 높으면 우선 대응<br>
+          예: 2주 내 발생 가능한 리스크 = 6개월 후보다 긴급
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: [4교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">4교시</div>
+      <h2>정량적 리스크 분석</h2>
+      <p>EMV · 의사결정 나무 · 토네이도 다이어그램 · 몬테카를로</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: 정량적 분석 -->
+  <div class="slide">
+    <h2>정량적 리스크 분석 기법</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">EMV &amp; 의사결정 나무</h3>
+        <div class="formula" style="margin-bottom:0.8rem;font-size:1.1rem;">
+          EMV = <strong>확률 × 금액(화폐가치)</strong>
+        </div>
+        <div class="info-box" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <strong>의사결정 나무 예시</strong><br>
+          □ 자체 개발 vs 구매 결정<br>
+          ○ 성공 확률 70% → 수익 +5억<br>
+          ○ 실패 확률 30% → 손실 -3억<br>
+          EMV = 0.7×5억 + 0.3×(-3억) = <strong>3.5억 - 0.9억 = 2.6억</strong>
+        </div>
+        <div class="info-box warning" style="font-size:0.83rem;">
+          <strong>EMV 적용 예:</strong><br>
+          리스크 확률 30%, 손실 1억원<br>
+          EMV = 0.3 × -1억 = <strong>-3,000만원</strong><br>
+          → 보험료가 3,000만원 미만이면 가입 합리적
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">토네이도 &amp; 몬테카를로</h3>
+        <div class="info-box gold" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <strong>토네이도 다이어그램 (Tornado Diagram)</strong><br>
+          민감도 분석 시각화<br>
+          막대가 길수록 → 프로젝트 결과에 더 큰 영향<br>
+          맨 위 = 가장 중요한 리스크 변수<br><br>
+          <svg viewBox="0 0 220 100" width="100%">
+            <line x1="110" y1="5" x2="110" y2="95" stroke="#555" stroke-width="1"/>
+            <rect x="30" y="10" width="80" height="15" fill="rgba(255,80,80,0.5)"/>
+            <rect x="110" y="10" width="70" height="15" fill="rgba(255,80,80,0.4)"/>
+            <text x="25" y="22" fill="#ccc" font-size="8" text-anchor="end">개발 일정</text>
+            <rect x="55" y="32" width="55" height="15" fill="rgba(255,165,0,0.5)"/>
+            <rect x="110" y="32" width="45" height="15" fill="rgba(255,165,0,0.4)"/>
+            <text x="50" y="44" fill="#ccc" font-size="8" text-anchor="end">인력 비용</text>
+            <rect x="70" y="54" width="40" height="15" fill="rgba(255,215,0,0.4)"/>
+            <rect x="110" y="54" width="30" height="15" fill="rgba(255,215,0,0.35)"/>
+            <text x="65" y="66" fill="#ccc" font-size="8" text-anchor="end">요구사항</text>
+            <rect x="85" y="76" width="25" height="15" fill="rgba(100,200,100,0.4)"/>
+            <rect x="110" y="76" width="20" height="15" fill="rgba(100,200,100,0.35)"/>
+            <text x="80" y="88" fill="#ccc" font-size="8" text-anchor="end">라이선스</text>
+          </svg>
+        </div>
+        <div class="info-box" style="font-size:0.82rem;">
+          <strong>몬테카를로 시뮬레이션</strong><br>
+          각 활동 기간을 확률 분포로 정의<br>
+          → 수천 번 반복 시뮬레이션<br>
+          → 전체 일정/원가의 확률 분포(S-Curve)<br>
+          예: "80% 확률로 150일 내 완료"<br>
+          고위험/대규모 프로젝트에 적용
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: [5교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">5교시</div>
+      <h2>리스크 대응 전략</h2>
+      <p>위협 4전략 · 기회 4전략 · 에스컬레이션 · 우발 대응</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 13: 대응 전략 -->
+  <div class="slide">
+    <h2>리스크 대응 전략 — 위협 &amp; 기회</h2>
+    <div class="comparison">
+      <div class="vs-col left" style="border-color:#ff6464;">
+        <h4 style="color:#ff8888;">⚠️ 위협(Threat) 대응 전략</h4>
+        <div class="table-wrapper" style="font-size:0.8rem;">
+          <table>
+            <thead><tr><th>전략</th><th>내용</th><th>예시</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>회피 (Avoid)</strong></td>
+                <td>리스크 완전 제거<br>계획 변경</td>
+                <td>위험한 기술<br>→ 검증된 기술로 변경</td>
+              </tr>
+              <tr>
+                <td><strong>전가 (Transfer)</strong></td>
+                <td>제3자에게 이전</td>
+                <td>보험 가입,<br>아웃소싱, 계약</td>
+              </tr>
+              <tr>
+                <td><strong>완화 (Mitigate)</strong></td>
+                <td>확률 또는 영향 감소</td>
+                <td>추가 테스트,<br>프로토타입, 교육</td>
+              </tr>
+              <tr>
+                <td><strong>수용 (Accept)</strong></td>
+                <td>위협 인정</td>
+                <td>적극적: 예비비 확보<br>소극적: 발생 시 대처</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="vs-col right" style="border-color:#00d4aa;">
+        <h4 style="color:#00d4aa;">✅ 기회(Opportunity) 대응 전략</h4>
+        <div class="table-wrapper" style="font-size:0.8rem;">
+          <table>
+            <thead><tr><th>전략</th><th>내용</th><th>예시</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>활용 (Exploit)</strong></td>
+                <td>기회 실현 보장<br>불확실성 제거</td>
+                <td>최고 전문가 배정<br>→ 조기 완료 보장</td>
+              </tr>
+              <tr>
+                <td><strong>공유 (Share)</strong></td>
+                <td>기회 최적화 위해<br>제3자와 협력</td>
+                <td>JV, 파트너십,<br>컨소시엄</td>
+              </tr>
+              <tr>
+                <td><strong>증대 (Enhance)</strong></td>
+                <td>기회의 확률·영향<br>증가</td>
+                <td>추가 자원 투입<br>→ 더 좋은 결과</td>
+              </tr>
+              <tr>
+                <td><strong>수용 (Accept)</strong></td>
+                <td>기회 인정하나<br>적극 추구 않음</td>
+                <td>여건이 되면 활용<br>하겠다고 기록</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="two-col" style="margin-top:0.8rem;gap:0.5rem;">
+      <div class="info-box warning" style="font-size:0.82rem;">
+        ⬆️ <strong>에스컬레이션(Escalate)</strong><br>
+        PM 권한 밖 리스크 → 스폰서·경영진에 보고<br>위협·기회 모두 에스컬레이션 가능
+      </div>
+      <div class="info-box gold" style="font-size:0.82rem;">
+        📋 <strong>우발 대응 계획 (Contingency Plan)</strong><br>
+        리스크 발생 시 실행할 사전 계획<br>
+        <strong>대체 대응 (Fallback Plan)</strong>: Contingency가 실패했을 때의 Plan B
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 14: 잔여/2차 리스크 -->
+  <div class="slide">
+    <h2>리스크 대응 후 관리</h2>
+    <div class="two-col">
+      <div>
+        <div class="comparison">
+          <div class="vs-col left">
+            <h4>잔여 리스크<br>(Residual)</h4>
+            <p style="font-size:0.83rem;">대응 조치 후에도 <strong>남아있는</strong> 리스크<br><br>예: 보험 가입 후에도<br>면제 조항·한도 이상의<br>손실 가능성<br><br>→ 예비비(Reserve)로 대비</p>
+          </div>
+          <div class="vs-col right">
+            <h4>2차 리스크<br>(Secondary)</h4>
+            <p style="font-size:0.83rem;">대응 조치로 인해 <strong>새로 생긴</strong> 리스크<br><br>예: 외주(Transfer) 계약 후<br>→ 벤더 파산 리스크 발생<br><br>→ 새로운 리스크로 등록</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">예비비 vs 관리예비비</h3>
+        <div class="info-box" style="margin-bottom:0.6rem;font-size:0.83rem;">
+          <strong>우발 사태 예비비 (Contingency Reserve)</strong><br>
+          알려진 리스크에 대비 — 원가 기준선에 포함<br>
+          PM이 사용 권한 보유<br>
+          예: 식별된 리스크 EMV 합계
+        </div>
+        <div class="info-box warning" style="font-size:0.83rem;">
+          <strong>관리 예비비 (Management Reserve)</strong><br>
+          알 수 없는 리스크(Unknown-Unknown)에 대비<br>
+          원가 기준선 밖, 총 예산에 포함<br>
+          경영진 승인 필요<br>
+          예: 전체 프로젝트 예산의 5~10%
+        </div>
+        <div class="info-box gold" style="margin-top:0.5rem;font-size:0.82rem;">
+          💡 <strong>리스크 감시(11.7)</strong><br>
+          • 정기 리스크 리뷰 회의<br>
+          • 새로운 리스크 지속 식별<br>
+          • Risk Owner 대응 진행 확인<br>
+          • 잔여·2차 리스크 모니터링
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 15: [6교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">6교시</div>
+      <h2>실습: 리스크 등록부 작성</h2>
+      <p>ERP 구축 프로젝트 · 브레인스토밍 · P-I 분석 · 대응 전략</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 16: 실습 -->
+  <div class="slide">
+    <h2>리스크 등록부 실습 — ERP 구축 프로젝트</h2>
+    <div class="practice-box">
+      <h4>📋 실습 과제</h4>
+      <p style="font-size:0.85rem;"><strong>시나리오:</strong> 제조업 ERP 시스템 구축 (예산 30억, 기간 18개월, 팀 20명)</p>
+    </div>
+    <div class="table-wrapper" style="margin-top:0.8rem;">
+      <table style="font-size:0.78rem;">
+        <thead>
+          <tr>
+            <th>ID</th><th>리스크 설명</th><th>유형</th>
+            <th>확률</th><th>영향</th><th>점수</th>
+            <th>대응 전략</th><th>Owner</th><th>Contingency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>R-001</td><td>데이터 마이그레이션 오류</td><td>위협</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>R-002</td><td>레거시 시스템 인터페이스 불일치</td><td>위협</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>R-003</td><td>최종 사용자 교육 미흡</td><td>위협</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>R-004</td><td>규제 변경(세금 모듈)</td><td>위협</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>R-005</td><td>클라우드 이전 시 성능 개선</td><td>기회</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="two-col" style="margin-top:0.8rem;">
+      <div class="info-box" style="font-size:0.82rem;">
+        <strong>단계:</strong><br>
+        1️⃣ 팀별 브레인스토밍 (10개 이상 식별)<br>
+        2️⃣ P-I 매트릭스로 점수 계산<br>
+        3️⃣ 상위 5개 대응 전략 수립<br>
+        4️⃣ 등록부 완성 + 팀 발표
+      </div>
+      <div class="info-box gold" style="font-size:0.82rem;">
+        <strong>체크포인트:</strong><br>
+        ✅ 모든 리스크에 Owner 지정됐는가?<br>
+        ✅ 위협과 기회 모두 포함됐는가?<br>
+        ✅ Contingency Plan이 구체적인가?<br>
+        ✅ 2차 리스크가 고려됐는가?
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 17: 핵심 키워드 -->
+  <div class="slide">
+    <h2>Day 09 핵심 키워드</h2>
+    <div class="keyword-tags">
+      <span class="keyword-tag">리스크 vs 이슈</span>
+      <span class="keyword-tag">위협 vs 기회</span>
+      <span class="keyword-tag">리스크 관리 7개 프로세스</span>
+      <span class="keyword-tag">Risk Owner</span>
+      <span class="keyword-tag">SWOT 분석</span>
+      <span class="keyword-tag">PESTLE</span>
+      <span class="keyword-tag">RBS (리스크 분류체계)</span>
+      <span class="keyword-tag">리스크 등록부</span>
+      <span class="keyword-tag">P-I 매트릭스</span>
+      <span class="keyword-tag">리스크 점수 = 확률×영향</span>
+      <span class="keyword-tag">리스크 긴급도(근접성)</span>
+      <span class="keyword-tag">EMV = 확률×금액</span>
+      <span class="keyword-tag">의사결정 나무</span>
+      <span class="keyword-tag">토네이도 다이어그램</span>
+      <span class="keyword-tag">몬테카를로 시뮬레이션</span>
+      <span class="keyword-tag">회피/전가/완화/수용</span>
+      <span class="keyword-tag">활용/공유/증대/수용</span>
+      <span class="keyword-tag">에스컬레이션</span>
+      <span class="keyword-tag">Contingency Plan</span>
+      <span class="keyword-tag">Fallback Plan</span>
+      <span class="keyword-tag">잔여 리스크</span>
+      <span class="keyword-tag">2차 리스크</span>
+      <span class="keyword-tag">우발 사태 예비비</span>
+      <span class="keyword-tag">관리 예비비</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 18: 퀴즈 -->
+  <div class="slide">
+    <h2>학습 확인 퀴즈</h2>
+    <div class="quiz-box">
+      <div class="quiz-item">
+        <p><strong>Q1.</strong> 리스크와 이슈(Issue)의 차이를 정의하고, 같은 사건이 어떻게 리스크에서 이슈로 전환되는지 예를 들어 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>리스크</strong>: 아직 발생하지 않은 불확실한 사건 → 리스크 등록부(Risk Register)에 기록<br>
+          <strong>이슈</strong>: 이미 발생한 문제 → 이슈 로그(Issue Log)에 기록, 즉각 대응<br><br>
+          전환 예: "3rd-party API가 업데이트로 호환성이 깨질 수 있다" (리스크)<br>
+          → "어제 3rd-party API가 업데이트되어 우리 서비스가 다운됐다" (이슈)</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q2.</strong> 기회(Opportunity)에 대한 4가지 대응 전략을 각각 한 단어와 예시로 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>활용(Exploit)</strong>: 기회 실현 보장 — 최고 전문가 배정으로 조기 완료 확정<br>
+          <strong>공유(Share)</strong>: 제3자와 협력 — JV 파트너십으로 시장 선점 기회 공동 추구<br>
+          <strong>증대(Enhance)</strong>: 확률·영향 증대 — 추가 자원 투입으로 신기술 우선 도입 가능성 높임<br>
+          <strong>수용(Accept)</strong>: 인정하되 적극 추구 않음 — 여건이 되면 활용 기록</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q3.</strong> 리스크 EMV가 -2,000만원이다. 보험료 500만원의 보험에 가입하는 것이 합리적인지 분석하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>EMV -2,000만원 = 해당 리스크 발생 시 기대 손실이 2,000만원<br>
+          보험료 500만원 &lt; 기대 손실 2,000만원<br>
+          → <strong>보험 가입이 합리적</strong> (비용 < 기대 손실 제거 효과)<br><br>
+          추가 고려: 보험 면제 조항, 잔여 리스크, 2차 리스크(보험사 파산) 검토 필요<br>
+          이는 리스크 전가(Transfer) 전략에 해당합니다.</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q4.</strong> 잔여 리스크와 2차 리스크의 차이를 설명하고, 각각에 대한 PM의 대응 방법을 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>잔여 리스크</strong>: 대응 조치 후에도 남아있는 리스크<br>
+          대응: 우발 사태 예비비(Contingency Reserve)로 대비. 사전에 수량화하여 예산에 반영<br><br>
+          <strong>2차 리스크</strong>: 대응 조치로 인해 새로 발생한 리스크<br>
+          대응: 리스크 등록부에 새로운 리스크로 추가 등록. 동일한 분석·대응 프로세스 적용<br><br>
+          예: 아웃소싱(Transfer) → 벤더 파산 리스크(2차) 발생 → 새로운 리스크로 관리</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 19: 다음 Day 예고 -->
+  <div class="slide">
+    <h2>다음 시간 예고 — Day 10: 조달 관리</h2>
+    <div class="info-box gold">
+      <h3 style="margin:0 0 0.8rem;color:var(--accent-gold);">📅 Day 10 주요 학습 내용</h3>
+    </div>
+    <div class="card-grid" style="margin-top:1rem;">
+      <div class="card">
+        <div class="card-icon">📄</div>
+        <h3>계약 유형</h3>
+        <p>고정가(FP) / 실비보상(CR) / 단가계약(T&M) 장단점 비교 및 리스크 배분</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>조달 프로세스</h3>
+        <p>조달 계획(Make-or-Buy) → 입찰 → 벤더 선정 → 계약 관리 → 종료</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚖️</div>
+        <h3>계약 관리</h3>
+        <p>SOW(업무 기술서) · RFP · 평가 기준 · 변경 요청 관리</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔗</div>
+        <h3>리스크 연결</h3>
+        <p>리스크 전가(Transfer) = 계약·보험 활용. 오늘 배운 내용이 직접 연결됩니다</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:1.2rem;">
+      💡 <strong>Day 09 → Day 10 연결:</strong> 오늘 배운 리스크 <strong>전가(Transfer)</strong> 전략의<br>
+      대표적 수단이 보험과 외주 계약 — 내일 계약 유형별 리스크 배분을 자세히 배웁니다.
+    </div>
+  </div>
+
+</div><!-- /presentation -->
+
+<script src="../js/presentation.js"></script>
+</body>
+</html>

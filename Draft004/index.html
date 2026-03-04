@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PM Expert — 17일 완성 과정</title>
+  <link rel="stylesheet" href="css/presentation.css">
+  <style>
+    /* ── index 전용: body 기본값 재정의 (슬라이드와 달리 스크롤 필요) ── */
+    body {
+      overflow: auto;
+      height: auto;
+      width: auto;
+      background: var(--bg-primary);
+    }
+
+    /* ── 배경 글로우 (슬라이드 ::before/::after 와 동일 언어) ── */
+    .index-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .index-bg::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      right: -15%;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(108,99,255,0.07) 0%, transparent 65%);
+      border-radius: 50%;
+    }
+    .index-bg::after {
+      content: '';
+      position: absolute;
+      bottom: -10%;
+      left: -10%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,212,170,0.05) 0%, transparent 65%);
+      border-radius: 50%;
+    }
+
+    .index-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 6rem;
+    }
+
+    /* ── 히어로 헤더 ── */
+    .index-hero {
+      text-align: center;
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .course-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent-primary), #8b5cf6);
+      color: #fff;
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+
+    .index-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      /* 슬라이드 h1 과 동일한 그라디언트 */
+      background: linear-gradient(135deg, #fff 0%, var(--accent-primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .index-hero .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      max-width: 580px;
+      margin: 0 auto 2rem;
+    }
+
+    .index-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      display: block;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── 섹션 구분 헤더 ── */
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 2.8rem 0 1.4rem;
+    }
+    .section-heading h2 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 0;
+      white-space: nowrap;
+      /* h2 기본 그라디언트 재정의 */
+      background: none;
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: var(--text-muted);
+      background-clip: unset;
+    }
+    .section-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-color);
+    }
+
+    /* ── 카드 그리드 ── */
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 16px;
+    }
+
+    /* 슬라이드의 .card 와 동일한 glass 스타일 기반 */
+    .day-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 1.3rem 1.5rem;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(10px);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+    /* 상단 포인트 라인 */
+    .day-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--card-accent, var(--accent-primary));
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    .day-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-primary);
+      box-shadow: var(--shadow-glow);
+    }
+    .day-card:hover::before { opacity: 1; }
+
+    /* 색상 구분 */
+    .day-card.pm    { --card-accent: var(--accent-primary); }
+    .day-card.it    { --card-accent: var(--accent-secondary); }
+    .day-card.final { --card-accent: var(--accent-gold); }
+
+    .day-card.it:hover    { border-color: var(--accent-secondary); box-shadow: 0 0 30px rgba(0,212,170,0.12); }
+    .day-card.final:hover { border-color: var(--accent-gold);      box-shadow: 0 0 30px rgba(255,215,0,0.12); }
+
+    /* 카드 헤더 */
+    .day-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+    }
+    .day-num {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent-primary), #8b5cf6);
+      color: #fff;
+      padding: 3px 12px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+    .day-card.it    .day-num { background: linear-gradient(135deg, var(--accent-secondary), #00a884); }
+    .day-card.final .day-num { background: linear-gradient(135deg, var(--accent-gold), #e6a000); color: #1a1050; }
+
+    .day-topic-badge {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      background: rgba(108,99,255,0.1);
+      border: 1px solid var(--glass-border);
+      border-radius: 6px;
+      padding: 2px 8px;
+    }
+
+    /* 카드 본문 */
+    .day-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 0.4rem;
+      line-height: 1.35;
+      /* h3 기본 color 재정의 */
+      -webkit-text-fill-color: var(--text-primary);
+    }
+    .day-card .day-subtitle {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+      flex: 1;
+    }
+
+    /* 카드 푸터 */
+    .day-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+      padding-top: 0.7rem;
+      border-top: 1px solid var(--glass-border);
+    }
+    .day-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+    .day-tag {
+      font-size: 0.63rem;
+      color: var(--text-muted);
+      background: rgba(108,99,255,0.08);
+      border: 1px solid var(--glass-border);
+      border-radius: 4px;
+      padding: 1px 6px;
+    }
+    .day-go {
+      font-size: 1rem;
+      color: var(--accent-primary);
+      opacity: 0.5;
+      transition: opacity 0.3s, transform 0.3s;
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+    }
+    .day-card.it    .day-go { color: var(--accent-secondary); }
+    .day-card.final .day-go { color: var(--accent-gold); }
+    .day-card:hover .day-go { opacity: 1; transform: translateX(3px); }
+
+    /* ── 범례 (슬라이드 .info-box 언어) ── */
+    .legend {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 2.5rem;
+      padding: 1rem 1.5rem;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+    }
+    .legend-dot {
+      width: 10px; height: 10px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .legend-hint {
+      margin-left: auto;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 640px) {
+      .index-hero h1  { font-size: 2rem; }
+      .days-grid      { grid-template-columns: 1fr; }
+      .index-stats    { gap: 1.8rem; }
+      .index-wrap     { padding: 2.5rem 1.2rem 4rem; }
+      .legend-hint    { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="index-bg"></div>
+
+<div class="index-wrap">
+
+  <!-- ── 히어로 헤더 ───────────────────────── -->
+  <header class="index-hero">
+    <div class="course-tag">PM Expert Course</div>
+    <h1>PM Expert</h1>
+    <p class="hero-sub">IT 프로젝트 관리자를 위한 17일 완성 과정<br>
+      PMBOK 10대 지식영역 × IT 핵심 기술 통합 커리큘럼</p>
+    <div class="index-stats">
+      <div class="stat-item">
+        <span class="stat-num">17</span>
+        <div class="stat-label">강의 일수</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">136</span>
+        <div class="stat-label">총 학습 시간</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">11</span>
+        <div class="stat-label">PM 지식영역</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">6</span>
+        <div class="stat-label">IT 기술 과목</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── PM 지식영역 (Day 01 ~ 11) ──────────── -->
+  <div class="section-heading">
+    <h2>📋 PM 지식영역 — Day 01 ~ 11</h2>
+  </div>
+
+  <div class="days-grid">
+
+    <a href="slides/day01-orientation-slide.html" class="day-card pm">
+      <div class="day-card-header">
+        <span class="day-num">Day 01</span>
+        <span class="day-topic-badge">오리엔테이션</span>
+      </div>
+      <h3>프로젝트 관리 오리엔테이션</h3>
+      <p class="day-subtitle">Triple Constraint · 5 프로세스 그룹 · PMBOK 10대 지식영역 · PMP 6판 vs 7판</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">Triple Constraint</span>
+          <span class="day-tag">프로세스 그룹</span>
+          <span class="day-tag">PMBOK</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day02-integration-slide.html" class="day-card pm">
+      <div class="day-card-header">
+        <span class="day-num">Day 02</span>
+        <span class="day-topic-badge">통합 관리</span>
+      </div>
+      <h3>통합 관리</h3>
+      <p class="day-subtitle">프로젝트 헌장 · 관리 계획서 · CCB · 변경 통제 · 프로젝트 종료</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">프로젝트 헌장</span>
+          <span class="day-tag">CCB</span>
+          <span class="day-tag">변경 통제</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day03-scope-slide.html" class="day-card pm">
+      <div class="day-card-header">
+        <span class="day-num">Day 03</span>
+        <span class="day-topic-badge">범위 관리</span>
+      </div>
+      <h3>범위 관리</h3>
+      <p class="day-subtitle">WBS · Scope Creep · 범위 기준선 · 요구사항 수집 5기법 · 인도물 검증</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">WBS</span>
+          <span class="day-tag">Scope Creep</span>
+          <span class="day-tag">요구사항 수집</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day04-schedule-slide.html" class="day-card pm">
+      <div class="day-card-header">
+        <span class="day-num">Day 04</span>
+        <span class="day-topic-badge">일정 관리</span>
+      </div>
+      <h3>일정 관리</h3>
+      <p class="day-subtitle">CPM · 간트 차트 · 네트워크 다이어그램 · Fast-Tracking · Crashing</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">CPM</span>
+          <span class="day-tag">간트 차트</span>
+          <span class="day-tag">Critical Path</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day05-cost-slide.html" class="day-card pm">
+      <div class="day-card-header">
+        <span class="day-num">Day 05</span>
+        <span class="day-topic-badge">원가 관리</span>
+      </div>
+      <h3>원가 관리</h3>
+      <p class="day-subtitle">EVM · EV / PV / AC · CPI · SPI · EAC · ETC 공식 체계</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">EVM</span>
+          <span class="day-tag">CPI / SPI</span>
+          <span class="day-tag">EAC / ETC</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day06-quality-slide.html" class="day-card pm">
+      <div class="day-card-header">
+        <span class="day-num">Day 06</span>
+        <span class="day-topic-badge">품질 관리</span>
+      </div>
+      <h3>품질 관리</h3>
+      <p class="day-subtitle">QA vs QC · 7대 품질 도구 · COQ · 6시그마 · CMMI · Kaizen</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">QA vs QC</span>
+          <span class="day-tag">7대 도구</span>
+          <span class="day-tag">6시그마</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day07-resource-slide.html" class="day-card pm">
+      <div class="day-card-header">
+        <span class="day-num">Day 07</span>
+        <span class="day-topic-badge">자원 관리</span>
+      </div>
+      <h3>자원 관리</h3>
+      <p class="day-subtitle">RACI · 터크만 5단계 · Maslow · Herzberg · 갈등 관리 5전략</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">RACI</span>
+          <span class="day-tag">터크만 모델</span>
+          <span class="day-tag">동기부여</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day08-communication-slide.html" class="day-card pm">
+      <div class="day-card-header">
+        <span class="day-num">Day 08</span>
+        <span class="day-topic-badge">의사소통 관리</span>
+      </div>
+      <h3>의사소통 관리</h3>
+      <p class="day-subtitle">N(N-1)/2 채널 공식 · RAG 지위 보고 · 의사소통 방법·기술·매체</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">채널 공식</span>
+          <span class="day-tag">RAG 보고</span>
+          <span class="day-tag">메라비안</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day09-risk-slide.html" class="day-card pm">
+      <div class="day-card-header">
+        <span class="day-num">Day 09</span>
+        <span class="day-topic-badge">리스크 관리</span>
+      </div>
+      <h3>리스크 관리</h3>
+      <p class="day-subtitle">P-I 매트릭스 · EMV · SWOT · 회피/전가/완화/수용 · 토네이도 다이어그램</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">P-I 매트릭스</span>
+          <span class="day-tag">EMV</span>
+          <span class="day-tag">대응 4전략</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day10-procurement-slide.html" class="day-card pm">
+      <div class="day-card-header">
+        <span class="day-num">Day 10</span>
+        <span class="day-topic-badge">조달 관리</span>
+      </div>
+      <h3>조달 관리</h3>
+      <p class="day-subtitle">FFP / CPFF / T&amp;M 계약 유형 · RFP/RFQ · 공급업체 선정 · 조달 클로징</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">계약 유형</span>
+          <span class="day-tag">RFP / RFQ</span>
+          <span class="day-tag">조달 클로징</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day11-stakeholder-slide.html" class="day-card pm">
+      <div class="day-card-header">
+        <span class="day-num">Day 11</span>
+        <span class="day-topic-badge">이해관계자 관리</span>
+      </div>
+      <h3>이해관계자 관리</h3>
+      <p class="day-subtitle">권력-관심도 매트릭스 · 현저성 모델 · 참여도 C/D 갭 · Champion 전략</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">P-I 그리드</span>
+          <span class="day-tag">참여도 매트릭스</span>
+          <span class="day-tag">Champion</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ── IT 기술 과목 (Day 12 ~ 16) ──────────── -->
+  <div class="section-heading">
+    <h2>💻 IT 기술 과목 — Day 12 ~ 16</h2>
+  </div>
+
+  <div class="days-grid">
+
+    <a href="slides/day12-sw-engineering-slide.html" class="day-card it">
+      <div class="day-card-header">
+        <span class="day-num">Day 12</span>
+        <span class="day-topic-badge">소프트웨어공학</span>
+      </div>
+      <h3>소프트웨어 공학</h3>
+      <p class="day-subtitle">SDLC · 워터폴 vs 애자일 · V-모델 · MoSCoW · Kano · CI/CD · DORA</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">SDLC</span>
+          <span class="day-tag">V-모델</span>
+          <span class="day-tag">CI/CD</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day13-network-slide.html" class="day-card it">
+      <div class="day-card-header">
+        <span class="day-num">Day 13</span>
+        <span class="day-topic-badge">네트워크</span>
+      </div>
+      <h3>네트워크</h3>
+      <p class="day-subtitle">OSI 7계층 · TCP vs UDP · DNS · HTTP/REST · IaaS/PaaS/SaaS · IDS/IPS</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">OSI 7계층</span>
+          <span class="day-tag">TCP/UDP</span>
+          <span class="day-tag">REST API</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day14-security-slide.html" class="day-card it">
+      <div class="day-card-header">
+        <span class="day-num">Day 14</span>
+        <span class="day-topic-badge">정보보안</span>
+      </div>
+      <h3>정보보안</h3>
+      <p class="day-subtitle">CIA Triad · OWASP Top 10 · MFA · PKI · ISMS · RPO/RTO · GDPR</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">CIA Triad</span>
+          <span class="day-tag">OWASP</span>
+          <span class="day-tag">ISMS / GDPR</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day15-database-slide.html" class="day-card it">
+      <div class="day-card-header">
+        <span class="day-num">Day 15</span>
+        <span class="day-topic-badge">데이터베이스</span>
+      </div>
+      <h3>데이터베이스</h3>
+      <p class="day-subtitle">ACID · PK/FK · ERD · Crow's Foot · JOIN 4종 · 정규화 · NoSQL vs RDBMS</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">ACID</span>
+          <span class="day-tag">ERD / SQL</span>
+          <span class="day-tag">NoSQL</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+    <a href="slides/day16-new-tech-slide.html" class="day-card it">
+      <div class="day-card-header">
+        <span class="day-num">Day 16</span>
+        <span class="day-topic-badge">신기술 트렌드</span>
+      </div>
+      <h3>신기술 트렌드</h3>
+      <p class="day-subtitle">AI/ML · 생성형 AI · 클라우드 6R · 빅데이터 5V · 블록체인 · IoT · DevOps · DX</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">AI / ML</span>
+          <span class="day-tag">6R 마이그레이션</span>
+          <span class="day-tag">DevOps</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ── 실습 & 총정리 (Day 17) ──────────── -->
+  <div class="section-heading">
+    <h2>🎓 실습 &amp; 총정리 — Day 17</h2>
+  </div>
+
+  <div class="days-grid">
+
+    <a href="slides/day17-agile-tools-slide.html" class="day-card final">
+      <div class="day-card-header">
+        <span class="day-num">Day 17</span>
+        <span class="day-topic-badge">최종</span>
+      </div>
+      <h3>애자일/스크럼 &amp; PM 도구</h3>
+      <p class="day-subtitle">애자일 선언문 · 스크럼 3·5·3 · 칸반 WIP · Jira · MS Project · Trello · 17일 총정리 · 수료</p>
+      <div class="day-card-footer">
+        <div class="day-tags">
+          <span class="day-tag">스크럼</span>
+          <span class="day-tag">칸반</span>
+          <span class="day-tag">Jira / MS Project</span>
+        </div>
+        <span class="day-go">→</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ── 범례 ───────────────────────────────── -->
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-dot" style="background:rgba(108,99,255,0.8);"></div>
+      PM 지식영역 (Day 01–11)
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:rgba(0,212,170,0.8);"></div>
+      IT 기술 과목 (Day 12–16)
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:rgba(255,215,0,0.9);"></div>
+      실습 &amp; 총정리 (Day 17)
+    </div>
+    <span class="legend-hint">⌨ 슬라이드 내 이동: ← → 키 / F 전체화면</span>
+  </div>
+
+</div><!-- /index-wrap -->
+
+</body>
+</html>

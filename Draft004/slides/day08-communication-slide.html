@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 08: 프로젝트 의사소통 관리 | PM Expert</title>
+  <link rel="stylesheet" href="../css/presentation.css">
+</head>
+<body>
+
+<div class="presentation">
+
+  <!-- SLIDE 1: 타이틀 -->
+  <div class="slide title-slide">
+    <div class="title-content">
+      <div class="day-badge">Day 08</div>
+      <h1>프로젝트 의사소통 관리</h1>
+      <p class="subtitle">Project Communications Management<br>
+        채널 공식 · 3가지 소통 방법 · 보고 체계 · 능동적 경청</p>
+      <div class="title-meta">
+        <span>📅 8일차</span>
+        <span>⏱ 8시간</span>
+        <span>🎯 PM 시간의 90%는 의사소통!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: 학습 목표 -->
+  <div class="slide">
+    <h2>학습 목표</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">📡</div>
+        <h3>채널 수 공식</h3>
+        <p>n(n-1)/2 공식으로 의사소통 복잡도를 계산하고 이해할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>의사소통 계획</h3>
+        <p>이해관계자별 정보 요구사항을 분석하여 의사소통 매트릭스를 작성할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📢</div>
+        <h3>소통 방법 선택</h3>
+        <p>Push/Pull/Interactive 3가지 방법의 상황별 적용 기준을 설명할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>보고 체계</h3>
+        <p>상태/진행/예측 보고서 유형을 구분하고 RAG 신호등 보고를 작성할 수 있다</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: 오늘의 흐름 -->
+  <div class="slide">
+    <h2>오늘의 흐름 — 6교시 로드맵</h2>
+    <div class="diagram">
+      <div class="step"><span class="step-num">1교시</span><span class="step-label">의사소통 개요<br>채널 공식</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">2교시</span><span class="step-label">소통 모델<br>3가지 방법</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">3교시</span><span class="step-label">의사소통<br>계획 수립</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">4교시</span><span class="step-label">실행<br>능동적 경청</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">5교시</span><span class="step-label">보고 체계<br>RAG/대시보드</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">6교시</span><span class="step-label">실습<br>매트릭스+보고서</span></div>
+    </div>
+    <div class="info-box gold" style="margin-top:1.5rem;">
+      🔗 <strong>Day 07 연결:</strong> RACI에서 I(통보)·C(자문) 대상이 확정되었습니다.<br>
+      오늘은 그 대상들에게 <strong>언제, 무엇을, 어떻게 전달할지</strong> 계획을 세웁니다.
+    </div>
+  </div>
+
+  <!-- SLIDE 4: [1교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">1교시</div>
+      <h2>의사소통 관리 개요 &amp; 채널 수</h2>
+      <p>3개 프로세스 · n(n-1)/2 공식 · 의사소통의 5C</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: 개요 + 채널 수 -->
+  <div class="slide">
+    <h2>의사소통 관리 프로세스 &amp; 채널 수 공식</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">3개 프로세스</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.4rem;align-items:stretch;">
+          <div class="step" style="width:100%;"><strong>10.1</strong> 의사소통 관리 계획 수립<br><small>누가 무엇을 언제 어떻게 받을지</small></div>
+          <div class="step" style="width:100%;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);"><strong>10.2</strong> 의사소통 관리<br><small>계획에 따라 정보 생성·배포</small></div>
+          <div class="step" style="width:100%;"><strong>10.3</strong> 의사소통 감시<br><small>효과성 확인, 개선</small></div>
+        </div>
+        <div class="info-box gold" style="margin-top:0.8rem;font-size:0.85rem;">
+          💡 <strong>PM 시간의 약 90%는 의사소통!</strong><br>
+          실패 원인 1위 = 불충분한 의사소통<br>
+          "Communication is the key to PM success"
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">의사소통 채널 수 공식</h3>
+        <div class="formula" style="font-size:1.3rem;margin-bottom:1rem;">
+          채널 수 = <strong>n(n-1) ÷ 2</strong>
+        </div>
+        <div class="table-wrapper">
+          <table style="font-size:0.85rem;">
+            <thead><tr><th>이해관계자 (n명)</th><th>채널 수</th><th>증가량</th></tr></thead>
+            <tbody>
+              <tr><td>5명</td><td>10</td><td>—</td></tr>
+              <tr><td>6명</td><td>15</td><td>+5</td></tr>
+              <tr><td>10명</td><td>45</td><td>+30</td></tr>
+              <tr><td>15명</td><td>105</td><td>+60</td></tr>
+              <tr style="background:rgba(255,215,0,0.1);"><td><strong>20명</strong></td><td><strong>190</strong></td><td>+85</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box warning" style="margin-top:0.6rem;font-size:0.83rem;">
+          ⚠️ 1명 추가 시 채널이 n-1개 증가 → 복잡도 급증<br>
+          → 불필요한 이해관계자 참여 최소화 전략 필요
+        </div>
+        <h4 style="margin-top:0.8rem;">의사소통의 5C 원칙</h4>
+        <div class="keyword-tags" style="font-size:0.82rem;">
+          <span class="keyword-tag">Correct 정확</span>
+          <span class="keyword-tag">Concise 간결</span>
+          <span class="keyword-tag">Clear 명확</span>
+          <span class="keyword-tag">Coherent 일관</span>
+          <span class="keyword-tag">Courteous 정중</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: [2교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">2교시</div>
+      <h2>의사소통 모델 &amp; 방법 3가지</h2>
+      <p>발신자→수신자 모델 · 공식/비공식 · Push/Pull/Interactive</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: 소통 모델 + 3가지 방법 -->
+  <div class="slide">
+    <h2>의사소통 모델 &amp; 방법 분류</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">의사소통 모델 (Shannon & Weaver)</h3>
+        <div class="diagram" style="flex-wrap:wrap;gap:0.35rem;justify-content:flex-start;">
+          <div class="step" style="font-size:0.78rem;min-width:auto;padding:0.4rem 0.6rem;">발신자</div>
+          <div class="arrow">→</div>
+          <div class="step" style="font-size:0.78rem;min-width:auto;padding:0.4rem 0.6rem;">부호화<br>(Encode)</div>
+          <div class="arrow">→</div>
+          <div class="step" style="font-size:0.78rem;min-width:auto;padding:0.4rem 0.6rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);">매체<br>(Medium)</div>
+          <div class="arrow">→</div>
+          <div class="step" style="font-size:0.78rem;min-width:auto;padding:0.4rem 0.6rem;">해독<br>(Decode)</div>
+          <div class="arrow">→</div>
+          <div class="step" style="font-size:0.78rem;min-width:auto;padding:0.4rem 0.6rem;">수신자</div>
+        </div>
+        <div class="info-box warning" style="margin-top:0.6rem;font-size:0.82rem;">
+          ⚠️ <strong>잡음(Noise)</strong>: 모든 단계에서 발생 가능<br>
+          언어 장벽, 전문 용어, 감정적 상태, 기술 문제<br>
+          <strong>피드백</strong>: 메시지 수신 확인 → 오해 예방
+        </div>
+        <h4 style="margin-top:0.8rem;">의사소통 유형 분류</h4>
+        <div class="comparison" style="gap:0.5rem;margin-top:0.3rem;">
+          <div class="vs-col left" style="font-size:0.8rem;">
+            <h4>공식적(Formal)</h4>
+            보고서, 공문<br>프레젠테이션<br>계약서, 회의록
+          </div>
+          <div class="vs-col right" style="font-size:0.8rem;">
+            <h4>비공식적(Informal)</h4>
+            이메일, 메신저<br>비공식 대화<br>메모, 채팅
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">의사소통 방법 3가지</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.5rem;align-items:stretch;">
+          <div class="step" style="width:100%;background:rgba(0,200,150,0.1);border-color:#00d4aa;">
+            <strong>Interactive (상호작용형)</strong><br>
+            회의, 전화, 화상회의, 즉각 응답<br>
+            <span style="color:#00d4aa;font-size:0.82rem;">양방향 실시간 — 복잡한 이슈 해결에 최적</span>
+          </div>
+          <div class="step" style="width:100%;background:rgba(108,99,255,0.1);border-color:#6c63ff;">
+            <strong>Push (밀어넣기형)</strong><br>
+            이메일, 보고서 배포, 공지사항, 메모<br>
+            <span style="color:#b0acff;font-size:0.82rem;">발신자 → 수신자 (수신 확인 없음)</span>
+          </div>
+          <div class="step" style="width:100%;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);">
+            <strong>Pull (당기기형)</strong><br>
+            공유 드라이브, 인트라넷, 지식 저장소<br>
+            <span style="color:var(--accent-gold);font-size:0.82rem;">수신자가 필요 시 접근 — 대규모 정보 배포</span>
+          </div>
+        </div>
+        <div class="info-box gold" style="margin-top:0.7rem;font-size:0.82rem;">
+          💡 <strong>선택 기준</strong>: 긴급성/민감도/분산도/청중 수<br>
+          긴급 + 복잡 → Interactive<br>
+          정기 배포 + 기록 필요 → Push<br>
+          대용량 + 참조용 → Pull
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: [3교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">3교시</div>
+      <h2>의사소통 관리 계획 수립</h2>
+      <p>계획서 구성요소 · 의사소통 매트릭스 · 에스컬레이션</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: 의사소통 계획 -->
+  <div class="slide">
+    <h2>의사소통 관리 계획서 &amp; 매트릭스</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">계획서 필수 구성요소</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.82rem;">
+            <thead><tr><th>요소</th><th>내용</th></tr></thead>
+            <tbody>
+              <tr><td>정보 요구사항</td><td>누가? 무엇을? 언제? 어떻게?</td></tr>
+              <tr><td>이해관계자별 요구</td><td>스폰서 vs 팀원 vs 고객 차별화</td></tr>
+              <tr><td>보고 주기·형식</td><td>일간/주간/월간, 대시보드 vs 문서</td></tr>
+              <tr><td>에스컬레이션 절차</td><td>이슈 → PM → 스폰서 → 경영진</td></tr>
+              <tr><td>용어 사전(Glossary)</td><td>오해 방지, 공통 언어 확립</td></tr>
+              <tr><td>기술(Technology)</td><td>긴급성/보안/분산도별 도구 선택</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">의사소통 매트릭스 예시</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.76rem;">
+            <thead>
+              <tr><th>이해관계자</th><th>정보 내용</th><th>주기</th><th>방법</th><th>담당</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>스폰서</td>
+                <td>프로젝트 상태<br>주요 이슈</td>
+                <td>월 1회</td>
+                <td>보고서 + 회의</td>
+                <td>PM</td>
+              </tr>
+              <tr>
+                <td>운영위원회</td>
+                <td>마일스톤 현황<br>예산 실적</td>
+                <td>월 1회</td>
+                <td>대시보드</td>
+                <td>PM</td>
+              </tr>
+              <tr>
+                <td>팀 전체</td>
+                <td>주간 진행 현황<br>일정 변경</td>
+                <td>주 1회</td>
+                <td>팀 회의</td>
+                <td>PM</td>
+              </tr>
+              <tr>
+                <td>개발팀</td>
+                <td>기술 이슈<br>코드 리뷰</td>
+                <td>일 1회</td>
+                <td>스탠드업<br>Jira</td>
+                <td>개발팀장</td>
+              </tr>
+              <tr>
+                <td>현업 사용자</td>
+                <td>데모 결과<br>변경 영향</td>
+                <td>스프린트別</td>
+                <td>데모 + 이메일</td>
+                <td>PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box gold" style="margin-top:0.6rem;font-size:0.82rem;">
+          💡 <strong>에스컬레이션 기준 명문화</strong><br>
+          무엇이 에스컬레이션 트리거인지 사전에 합의<br>
+          예: 일정 5% 초과 → PM 즉시 스폰서 보고
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: [4교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">4교시</div>
+      <h2>의사소통 실행 &amp; 효과적 기법</h2>
+      <p>능동적 경청 · 55-38-7 법칙 · 회의 운영 3단계</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: 능동적 경청 + 회의 운영 -->
+  <div class="slide">
+    <h2>효과적 의사소통 실행</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">메시지 전달 — 55-38-7 법칙</h3>
+        <svg viewBox="0 0 280 180" width="100%">
+          <!-- 파이 차트: 비언어 55%, 목소리 38%, 단어 7% -->
+          <!-- 비언어 55% (198도) -->
+          <circle cx="140" cy="90" r="70" fill="none" stroke="#333" stroke-width="1"/>
+          <!-- 55% 비언어 -->
+          <path d="M140,90 L140,20 A70,70 0 1 1 52,132 Z" fill="rgba(255,215,0,0.35)" stroke="#ffd700" stroke-width="1.5"/>
+          <text x="100" y="70" fill="#ffd700" font-size="11" font-weight="bold" text-anchor="middle">비언어</text>
+          <text x="100" y="85" fill="#ffd700" font-size="14" font-weight="bold" text-anchor="middle">55%</text>
+          <text x="100" y="98" fill="#aaa" font-size="9" text-anchor="middle">표정·자세·제스처</text>
+          <!-- 38% 목소리 -->
+          <path d="M140,90 L52,132 A70,70 0 0 1 140,20 Z" fill="rgba(108,99,255,0.35)" stroke="#6c63ff" stroke-width="1.5"/>
+          <text x="180" y="125" fill="#b0acff" font-size="11" font-weight="bold" text-anchor="middle">목소리 38%</text>
+          <text x="180" y="138" fill="#888" font-size="9" text-anchor="middle">톤·속도·강세</text>
+          <!-- 7% 단어 -->
+          <path d="M140,90 L140,20 A70,70 0 0 0 52,132 Z" fill="rgba(0,200,150,0.25)" stroke="#00d4aa" stroke-width="1.5"/>
+          <text x="100" y="130" fill="#80ffe8" font-size="10" font-weight="bold" text-anchor="middle">단어 7%</text>
+        </svg>
+        <div class="info-box" style="font-size:0.82rem;">
+          <strong>능동적 경청 (Active Listening)</strong><br>
+          • 눈 맞춤, 고개 끄덕임, 집중 자세<br>
+          • 확인 질문: "말씀하신 게 ~이 맞나요?"<br>
+          • 요약 반복: "핵심을 정리하면 ~입니다"<br>
+          • 판단 유보 — 끝까지 듣기
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">효과적 회의 운영 3단계</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.4rem;align-items:stretch;">
+          <div class="step" style="width:100%;background:rgba(0,200,150,0.1);border-color:#00d4aa;">
+            <strong>회의 전 (Before)</strong><br>
+            • 안건(Agenda) 48시간 전 배포<br>
+            • 목적·기대 결과 명확화<br>
+            • 필요 인원만 초대 (채널 수 최소화!)
+          </div>
+          <div class="step" style="width:100%;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);">
+            <strong>회의 중 (During)</strong><br>
+            • 타임키핑 + 안건 준수<br>
+            • 참여 유도, 침묵 방지<br>
+            • 회의록(Minutes) 실시간 작성
+          </div>
+          <div class="step" style="width:100%;background:rgba(108,99,255,0.1);border-color:#6c63ff;">
+            <strong>회의 후 (After)</strong><br>
+            • 24시간 내 회의록 배포<br>
+            • Action Item: 담당자·기한 명시<br>
+            • 다음 회의 전 ACTION 진행 확인
+          </div>
+        </div>
+        <div class="info-box warning" style="margin-top:0.6rem;font-size:0.82rem;">
+          ⚠️ 불필요한 회의 = 생산성 최대 적<br>
+          회의 필요성 체크: 이메일/문서로 대체 가능한가?
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: [5교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">5교시</div>
+      <h2>프로젝트 보고 체계</h2>
+      <p>보고서 5유형 · 작업 성과 흐름 · RAG · 번다운 차트</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 13: 보고 체계 -->
+  <div class="slide">
+    <h2>프로젝트 보고 체계</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">보고서 5종류</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.82rem;">
+            <thead><tr><th>종류</th><th>내용</th><th>주기</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>상태 보고서</strong><br>(Status)</td>
+                <td>현재 시점 스냅샷<br>RAG 상태</td>
+                <td>주간</td>
+              </tr>
+              <tr>
+                <td><strong>진행 보고서</strong><br>(Progress)</td>
+                <td>기간별 완료 작업 비교</td>
+                <td>격주~월간</td>
+              </tr>
+              <tr>
+                <td><strong>추세 보고서</strong><br>(Trend)</td>
+                <td>시간 경과에 따른 추세<br>SPI/CPI 변화</td>
+                <td>월간</td>
+              </tr>
+              <tr style="background:rgba(255,215,0,0.08);">
+                <td><strong>예측 보고서</strong><br>(Forecasting)</td>
+                <td>EAC, 완료 예상일<br>향후 리스크</td>
+                <td>월간</td>
+              </tr>
+              <tr>
+                <td><strong>편차 보고서</strong><br>(Variance)</td>
+                <td>계획 vs 실적 차이<br>SV, CV 분석</td>
+                <td>이슈 발생 시</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">작업 성과 데이터 흐름</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.4rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.85rem;">
+            <strong>작업 성과 데이터 (Work Performance Data)</strong><br>
+            원시 측정값: 완료율 %, 지출액, 잔여 기간<br>
+            <span style="color:#888;">"가공 전" 숫자들</span>
+          </div>
+          <div class="arrow" style="transform:rotate(90deg);align-self:center;">→</div>
+          <div class="step" style="width:100%;font-size:0.85rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);">
+            <strong>작업 성과 정보 (Work Performance Info)</strong><br>
+            분석된 데이터: SPI=0.85, CPI=0.92, SV=-10일<br>
+            <span style="color:var(--accent-gold);">"의미가 붙은" 지표</span>
+          </div>
+          <div class="arrow" style="transform:rotate(90deg);align-self:center;">→</div>
+          <div class="step" style="width:100%;font-size:0.85rem;background:rgba(0,200,150,0.1);border-color:#00d4aa;">
+            <strong>작업 성과 보고서 (Work Performance Report)</strong><br>
+            의사결정을 위한 종합 문서<br>
+            <span style="color:#00d4aa;">"경영진이 읽는" 형태</span>
+          </div>
+        </div>
+        <h4 style="margin-top:0.8rem;">RAG 신호등 보고</h4>
+        <div class="three-col" style="margin-top:0.3rem;">
+          <div class="card" style="padding:0.5rem;text-align:center;border-color:#ff4444;">
+            <div style="font-size:1.8rem;">🔴</div>
+            <strong style="color:#ff6666;">RED</strong><br>
+            <small>심각한 문제<br>즉각 조치 필요</small>
+          </div>
+          <div class="card" style="padding:0.5rem;text-align:center;border-color:orange;">
+            <div style="font-size:1.8rem;">🟡</div>
+            <strong style="color:orange;">AMBER</strong><br>
+            <small>주의 필요<br>모니터링 강화</small>
+          </div>
+          <div class="card" style="padding:0.5rem;text-align:center;border-color:#00cc66;">
+            <div style="font-size:1.8rem;">🟢</div>
+            <strong style="color:#00cc66;">GREEN</strong><br>
+            <small>정상 진행<br>계획 범위 내</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 14: [6교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">6교시</div>
+      <h2>실습: 의사소통 계획 &amp; 보고서 작성</h2>
+      <p>의사소통 매트릭스 작성 · 주간 상태 보고서 RAG</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 15: 실습 -->
+  <div class="slide">
+    <h2>의사소통 관리 실습</h2>
+    <div class="two-col">
+      <div class="practice-box">
+        <h4>📋 실습 1: 의사소통 매트릭스 작성</h4>
+        <p style="font-size:0.85rem;"><strong>프로젝트</strong>: HR 시스템 고도화 (6개월, 팀 12명)</p>
+        <div class="table-wrapper" style="font-size:0.78rem;">
+          <table>
+            <thead>
+              <tr><th>이해관계자</th><th>필요 정보</th><th>주기</th><th>방법</th><th>담당자</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>최고경영진</td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>HR 부서장</td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>개발팀</td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>IT 보안팀</td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>외부 벤더</td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:0.82rem;margin-top:0.3rem;">채널 수 = 12명 → <strong>?개</strong></p>
+      </div>
+      <div class="practice-box">
+        <h4>📊 실습 2: 주간 상태 보고서 작성</h4>
+        <p style="font-size:0.85rem;"><strong>프로젝트 데이터:</strong></p>
+        <ul style="font-size:0.83rem;margin-bottom:0.5rem;">
+          <li>계획 진도율: 60% | 실적 진도율: 52%</li>
+          <li>계획 예산: 5억 | 실 지출: 4.5억</li>
+          <li>주요 이슈: DB 마이그레이션 2주 지연</li>
+          <li>다음 마일스톤: UAT 시작 (3주 후)</li>
+        </ul>
+        <p style="font-size:0.85rem;"><strong>작성 항목:</strong></p>
+        <ol style="font-size:0.82rem;">
+          <li>전체 RAG 상태 결정 + 근거</li>
+          <li>일정·예산·품질 항목별 RAG</li>
+          <li>주요 이슈 및 조치 계획</li>
+          <li>다음 2주 계획</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 16: 핵심 키워드 -->
+  <div class="slide">
+    <h2>Day 08 핵심 키워드</h2>
+    <div class="keyword-tags">
+      <span class="keyword-tag">의사소통 3개 프로세스</span>
+      <span class="keyword-tag">채널 수 = n(n-1)/2</span>
+      <span class="keyword-tag">의사소통의 5C</span>
+      <span class="keyword-tag">Shannon-Weaver 모델</span>
+      <span class="keyword-tag">잡음(Noise)</span>
+      <span class="keyword-tag">피드백</span>
+      <span class="keyword-tag">Interactive</span>
+      <span class="keyword-tag">Push</span>
+      <span class="keyword-tag">Pull</span>
+      <span class="keyword-tag">공식/비공식 소통</span>
+      <span class="keyword-tag">의사소통 매트릭스</span>
+      <span class="keyword-tag">에스컬레이션</span>
+      <span class="keyword-tag">능동적 경청</span>
+      <span class="keyword-tag">55-38-7 법칙</span>
+      <span class="keyword-tag">Agenda (안건)</span>
+      <span class="keyword-tag">회의록 (Minutes)</span>
+      <span class="keyword-tag">Action Item</span>
+      <span class="keyword-tag">작업 성과 데이터→정보→보고서</span>
+      <span class="keyword-tag">RAG 신호등 보고</span>
+      <span class="keyword-tag">번다운 차트</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 17: 퀴즈 -->
+  <div class="slide">
+    <h2>학습 확인 퀴즈</h2>
+    <div class="quiz-box">
+      <div class="quiz-item">
+        <p><strong>Q1.</strong> 프로젝트 팀원이 6명에서 10명으로 증가했을 때 의사소통 채널 수는 몇 개 증가하는가?</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>6명: 6×5÷2 = <strong>15채널</strong><br>
+          10명: 10×9÷2 = <strong>45채널</strong><br>
+          증가량: 45 - 15 = <strong>30채널 증가</strong><br>
+          4명 추가로 채널이 2배 증가 → 의사소통 복잡도 관리 필요성 강조</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q2.</strong> Push, Pull, Interactive 방법의 차이를 각각 예시 1개와 함께 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>Interactive</strong>: 양방향 실시간 — 예: 화상회의, 긴급 이슈 전화<br>수신 확인이 가장 강력. 복잡한 사안 해결에 적합<br><br>
+          <strong>Push</strong>: 발신자 배포, 수신 선택은 수신자 — 예: 주간 보고서 이메일<br>기록이 남으나 읽었는지 보장 없음<br><br>
+          <strong>Pull</strong>: 수신자가 필요 시 접근 — 예: SharePoint 프로젝트 문서 저장소<br>대용량·다수 배포에 효율적</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q3.</strong> 작업 성과 데이터, 작업 성과 정보, 작업 성과 보고서의 차이를 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>데이터</strong>: 가공 전 원시 수치 — 예: "완료 작업 30개, 지출 3억"<br>
+          <strong>정보</strong>: 분석 후 의미 있는 지표 — 예: "SPI=0.85 (일정 지연), CV=-0.5억"<br>
+          <strong>보고서</strong>: 의사결정을 위한 종합 문서 — 예: "현황판단 + 원인분석 + 권고안"<br>
+          순서: 데이터(실행) → 정보(모니터링) → 보고서(의사결정)</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q4.</strong> 메라비안의 55-38-7 법칙이 PM 의사소통에서 갖는 의미는?</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>말하는 내용(단어)은 전체 인상의 7%만 차지하며, 목소리 톤·속도가 38%, 비언어(표정·자세·제스처)가 55%를 차지합니다.<br>
+          PM 실무 시사점: 이메일/채팅(단어만 전달)은 오해 위험이 높음 → 중요도가 높거나 민감한 사안은 반드시 대면/화상 미팅으로 진행해야 합니다.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 18: 다음 Day 예고 -->
+  <div class="slide">
+    <h2>다음 시간 예고 — Day 09: 리스크 관리</h2>
+    <div class="info-box gold">
+      <h3 style="margin:0 0 0.8rem;color:var(--accent-gold);">📅 Day 09 주요 학습 내용</h3>
+    </div>
+    <div class="card-grid" style="margin-top:1rem;">
+      <div class="card">
+        <div class="card-icon">🎲</div>
+        <h3>리스크 식별</h3>
+        <p>브레인스토밍 · 체크리스트 · SWOT 분석으로 리스크 발굴</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📐</div>
+        <h3>리스크 분석</h3>
+        <p>확률영향 매트릭스 · 리스크 점수 계산 (확률×영향)</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>리스크 대응</h3>
+        <p>회피/전가/완화/수용(능동·수동) — 위협과 기회별 전략</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>리스크 대장</h3>
+        <p>리스크 등록부 작성, 잔여 리스크·예비비 산정</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:1.2rem;">
+      💡 <strong>연결 포인트:</strong> 오늘 배운 보고 체계의 '이슈(Issue)'와<br>
+      내일 배울 '리스크(Risk)'의 차이: 리스크는 아직 발생하지 않은 불확실한 사건, 이슈는 이미 발생한 문제입니다.
+    </div>
+  </div>
+
+</div><!-- /presentation -->
+
+<script src="../js/presentation.js"></script>
+</body>
+</html>

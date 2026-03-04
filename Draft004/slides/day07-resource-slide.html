@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 07: 프로젝트 자원 관리 | PM Expert</title>
+  <link rel="stylesheet" href="../css/presentation.css">
+</head>
+<body>
+
+<div class="presentation">
+
+  <!-- SLIDE 1: 타이틀 -->
+  <div class="slide title-slide">
+    <div class="title-content">
+      <div class="day-badge">Day 07</div>
+      <h1>프로젝트 자원 관리</h1>
+      <p class="subtitle">Project Resource Management<br>
+        RACI · 터크만 5단계 · 갈등 해결 · 동기 부여 · 리더십</p>
+      <div class="title-meta">
+        <span>📅 7일차</span>
+        <span>⏱ 8시간</span>
+        <span>🎯 올바른 팀에 올바른 역할 배분</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: 학습 목표 -->
+  <div class="slide">
+    <h2>학습 목표</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">👥</div>
+        <h3>조직 구조 &amp; RACI</h3>
+        <p>기능형/매트릭스/프로젝트형 PM 권한 차이, RACI 차트를 작성할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌱</div>
+        <h3>터크만 5단계</h3>
+        <p>형성→폭풍→규범→성과→해산 각 단계에서 PM의 역할을 설명할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚖️</div>
+        <h3>갈등 해결 5기법</h3>
+        <p>협력/타협/완화/강요/회피의 선호 순서와 적용 상황을 판단할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💡</div>
+        <h3>동기 부여 이론</h3>
+        <p>매슬로·허즈버그·맥그리거·맥클리랜드 이론을 PM 실무에 연결할 수 있다</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: 오늘의 흐름 -->
+  <div class="slide">
+    <h2>오늘의 흐름 — 6교시 로드맵</h2>
+    <div class="diagram">
+      <div class="step"><span class="step-num">1교시</span><span class="step-label">자원 관리 개요<br>조직 구조</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">2교시</span><span class="step-label">RACI 차트<br>책임 배분</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">3교시</span><span class="step-label">자원 산정<br>자원 확보</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">4교시</span><span class="step-label">팀 개발<br>터크만·동기</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">5교시</span><span class="step-label">팀 관리<br>갈등 해결</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">6교시</span><span class="step-label">실습<br>RACI+갈등</span></div>
+    </div>
+    <div class="info-box gold" style="margin-top:1.5rem;">
+      📅 <strong>Day 06 연결:</strong> 어제 배운 QA(품질 보증)는 팀이 올바른 프로세스를 따르는지 확인합니다.<br>
+      오늘은 그 팀을 어떻게 <strong>구성하고, 동기 부여하고, 갈등을 해결</strong>할지를 배웁니다.
+    </div>
+  </div>
+
+  <!-- SLIDE 4: [1교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">1교시</div>
+      <h2>자원 관리 개요 &amp; 조직 구조</h2>
+      <p>6개 프로세스 · 자원 유형 · 조직 구조별 PM 권한 비교</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: 자원 관리 프로세스 + 조직 구조 -->
+  <div class="slide">
+    <h2>자원 관리 6개 프로세스 &amp; 조직 구조</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">자원 관리 6개 프로세스</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.3rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.83rem;"><strong>9.1</strong> 자원 관리 계획 수립</div>
+          <div class="step" style="width:100%;font-size:0.83rem;"><strong>9.2</strong> 활동 자원 산정 → RBS</div>
+          <div class="step" style="width:100%;font-size:0.83rem;"><strong>9.3</strong> 자원 확보 (Acquire Resources)</div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);"><strong>9.4</strong> 팀 개발 (Develop Team)</div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);"><strong>9.5</strong> 팀 관리 (Manage Team)</div>
+          <div class="step" style="width:100%;font-size:0.83rem;"><strong>9.6</strong> 자원 통제 (Control Resources)</div>
+        </div>
+        <div class="info-box" style="margin-top:0.6rem;font-size:0.82rem;">
+          <strong>자원 유형</strong><br>
+          👥 <strong>팀 자원</strong>: 프로젝트 팀원 (주요 초점)<br>
+          🔧 <strong>물적 자원</strong>: 장비, 재료, 시설, 인프라
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">조직 구조별 PM 권한</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>유형</th><th>PM 권한</th><th>팀원 보고</th><th>특징</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>기능형</strong><br>(Functional)</td>
+                <td><span class="badge">최소</span></td>
+                <td>기능 관리자</td>
+                <td>PM은 조정자 역할. 자원 배정 어려움</td>
+              </tr>
+              <tr>
+                <td><strong>약한 매트릭스</strong></td>
+                <td><span class="badge">낮음</span></td>
+                <td>기능 관리자</td>
+                <td>PM = 조정자, 권한 제한적</td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--accent-gold);">균형 매트릭스</strong></td>
+                <td><span class="badge badge-primary">중간</span></td>
+                <td>PM + 기능관리자</td>
+                <td>권한 공유 — 갈등 가능</td>
+              </tr>
+              <tr>
+                <td><strong>강한 매트릭스</strong></td>
+                <td><span class="badge badge-warning">높음</span></td>
+                <td>PM</td>
+                <td>전담 PM. 현실에서 가장 일반적</td>
+              </tr>
+              <tr>
+                <td><strong>프로젝트형</strong></td>
+                <td><span class="badge badge-success">최대</span></td>
+                <td>PM</td>
+                <td>PM = 경영자급. 완전 독립 팀</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: [2교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">2교시</div>
+      <h2>RACI 차트 &amp; 책임 배분</h2>
+      <p>RAM · RACI 4가지 역할 · 작성 규칙 · 실전 사례</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: RACI 차트 -->
+  <div class="slide">
+    <h2>RACI 차트 — 책임 배분 매트릭스</h2>
+    <div class="two-col">
+      <div>
+        <div class="card-grid" style="grid-template-columns:1fr 1fr;gap:0.5rem;">
+          <div class="card" style="padding:0.8rem;">
+            <div class="card-icon" style="font-size:1.5rem;">R</div>
+            <h3>Responsible</h3>
+            <p style="font-size:0.82rem;">실행 책임자<br>작업을 실제 수행<br>여러 명 가능</p>
+          </div>
+          <div class="card" style="padding:0.8rem;border-color:var(--accent-gold);">
+            <div class="card-icon" style="font-size:1.5rem;color:var(--accent-gold);">A</div>
+            <h3 style="color:var(--accent-gold);">Accountable</h3>
+            <p style="font-size:0.82rem;">최종 책임자<br>승인·의사결정<br><strong>반드시 1명만!</strong></p>
+          </div>
+          <div class="card" style="padding:0.8rem;">
+            <div class="card-icon" style="font-size:1.5rem;">C</div>
+            <h3>Consulted</h3>
+            <p style="font-size:0.82rem;">자문 역할<br>의견을 구함<br>양방향 소통</p>
+          </div>
+          <div class="card" style="padding:0.8rem;">
+            <div class="card-icon" style="font-size:1.5rem;">I</div>
+            <h3>Informed</h3>
+            <p style="font-size:0.82rem;">통보 대상<br>결과만 알림<br>단방향 소통</p>
+          </div>
+        </div>
+        <div class="info-box warning" style="margin-top:0.8rem;font-size:0.83rem;">
+          ⚠️ <strong>RACI 규칙</strong><br>
+          • A는 활동당 반드시 1명<br>
+          • R이 없는 활동 = 실행자 없음 → 금지<br>
+          • C/I가 과도하면 → 의사결정 병목
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">RACI 차트 예시</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.78rem;">
+            <thead>
+              <tr>
+                <th>활동</th>
+                <th>PM</th>
+                <th>개발팀장</th>
+                <th>설계자</th>
+                <th>테스터</th>
+                <th>스폰서</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>요구사항 분석</td>
+                <td style="color:var(--accent-gold);">A</td>
+                <td>C</td>
+                <td>R</td>
+                <td>C</td>
+                <td>I</td>
+              </tr>
+              <tr>
+                <td>아키텍처 설계</td>
+                <td>I</td>
+                <td>A</td>
+                <td>R</td>
+                <td>C</td>
+                <td>I</td>
+              </tr>
+              <tr>
+                <td>코딩</td>
+                <td>I</td>
+                <td>A</td>
+                <td>C</td>
+                <td>I</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>테스트 계획</td>
+                <td>A</td>
+                <td>C</td>
+                <td>C</td>
+                <td>R</td>
+                <td>I</td>
+              </tr>
+              <tr>
+                <td>UAT 승인</td>
+                <td>R</td>
+                <td>I</td>
+                <td>I</td>
+                <td>R</td>
+                <td style="color:var(--accent-gold);">A</td>
+              </tr>
+              <tr>
+                <td>프로젝트 승인</td>
+                <td>R</td>
+                <td>I</td>
+                <td>I</td>
+                <td>I</td>
+                <td style="color:var(--accent-gold);">A</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box gold" style="margin-top:0.6rem;font-size:0.82rem;">
+          💡 스폰서 A = 예산·범위 결정 활동<br>
+          PM A = 일상적 실행·계획 활동<br>
+          개발팀장 A = 기술적 산출물 활동
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: [3교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">3교시</div>
+      <h2>활동 자원 산정 &amp; 자원 확보</h2>
+      <p>RBS · 자원 달력 · 사전 배정 · 협상 · 가상 팀</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: 자원 산정 + 확보 -->
+  <div class="slide">
+    <h2>활동 자원 산정 &amp; 확보 방법</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">자원 산정 도구</h3>
+        <div class="info-box" style="margin-bottom:0.7rem;">
+          <strong>RBS (자원 분류 체계)</strong><br>
+          WBS처럼 자원을 분류·계층화<br>
+          예: 인적자원 > 개발자 > 시니어/주니어<br>
+          물적자원 > 서버 > AWS/Azure
+        </div>
+        <div class="info-box gold">
+          <strong>자원 달력(Resource Calendar)</strong><br>
+          • 팀원별 가용 시간대 기록<br>
+          • 휴가·교육·겸무 반영<br>
+          • CPM 계산의 입력 데이터<br>
+          • 연휴·국경일 반드시 포함
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">자원 확보 4가지 방법</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.4rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.85rem;">
+            <strong>사전 배정 (Pre-assignment)</strong><br>
+            계약의 특정 인력 요건 → 이미 확정된 자원
+          </div>
+          <div class="step" style="width:100%;font-size:0.85rem;">
+            <strong>협상 (Negotiation)</strong><br>
+            기능 관리자와 협의하여 자원 확보<br>
+            매트릭스 조직에서 핵심 스킬
+          </div>
+          <div class="step" style="width:100%;font-size:0.85rem;">
+            <strong>가상 팀 (Virtual Team)</strong><br>
+            원격·분산 팀. 지역·시간대 장벽 극복<br>
+            의사소통 관리 중요도 ↑
+          </div>
+          <div class="step" style="width:100%;font-size:0.85rem;">
+            <strong>외부 조달 (Outsourcing)</strong><br>
+            내부에 없는 전문 기술 확보<br>
+            계약 관리 필요 → Day 10 (조달 관리)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: [4교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">4교시</div>
+      <h2>팀 개발 — 터크만 5단계 &amp; 동기 부여</h2>
+      <p>Tuckman 모델 · 집중 배치 · 매슬로 · 허즈버그 · 맥그리거</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: 터크만 5단계 -->
+  <div class="slide">
+    <h2>터크만 팀 개발 5단계 (Tuckman's Model)</h2>
+    <div class="diagram" style="margin-bottom:1rem;">
+      <div class="step" style="background:rgba(100,200,100,0.1);border-color:#60c060;">
+        <span class="step-num">1</span>
+        <span class="step-label"><strong>형성기</strong><br>Forming<br>소개·역할 파악<br>독립적 행동</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step" style="background:rgba(255,100,100,0.1);border-color:#ff6464;">
+        <span class="step-num">2</span>
+        <span class="step-label"><strong>폭풍기</strong><br>Storming<br>의견 충돌, 갈등<br>가장 어려운 단계!</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step" style="background:rgba(255,215,0,0.1);border-color:var(--accent-gold);">
+        <span class="step-num">3</span>
+        <span class="step-label"><strong>규범기</strong><br>Norming<br>규칙 수립, 신뢰<br>협업 시작</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step" style="background:rgba(0,200,150,0.1);border-color:#00d4aa;">
+        <span class="step-num">4</span>
+        <span class="step-label"><strong>성과기</strong><br>Performing<br>고성과·자율<br>목표 달성</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step" style="background:rgba(150,150,150,0.1);border-color:#aaa;">
+        <span class="step-num">5</span>
+        <span class="step-label"><strong>해산기</strong><br>Adjourning<br>프로젝트 종료<br>팀 해체</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <div class="info-box warning">
+          ⚠️ <strong>폭풍기(Storming) PM 역할</strong><br>
+          • 갈등을 억압하지 말고 건강하게 해결<br>
+          • 팀 워크숍 / 그라운드 룰 수립<br>
+          • 개인 강점 인정, 공동 목표 재확인<br>
+          → 폭풍기를 잘 넘기면 규범기로 빠르게 진입
+        </div>
+      </div>
+      <div>
+        <div class="info-box gold">
+          💡 <strong>팀 개발 기법</strong><br>
+          • <strong>집중 배치 (Collocation/War Room)</strong>: 같은 공간 → 소통 촉진<br>
+          • <strong>가상 팀</strong>: 화상회의, Slack, 협업 도구<br>
+          • <strong>인정과 보상 (R&amp;R)</strong>: 성과 공개 인정<br>
+          • <strong>팀 빌딩</strong>: 워크숍, 해커톤, 야유회
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: 동기 부여 이론 -->
+  <div class="slide">
+    <h2>동기 부여 이론 — PM 실무 적용</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">매슬로 욕구 5단계</h3>
+        <svg viewBox="0 0 300 200" width="100%">
+          <!-- Maslow triangle -->
+          <polygon points="150,10 20,190 280,190" fill="none" stroke="#444" stroke-width="1"/>
+          <!-- Level 5 – Self-actualization -->
+          <polygon points="150,10 120,50 180,50" fill="rgba(255,215,0,0.3)" stroke="#ffd700" stroke-width="1"/>
+          <text x="150" y="40" fill="#ffd700" font-size="9" text-anchor="middle">자아실현</text>
+          <!-- Level 4 – Esteem -->
+          <polygon points="120,50 95,95 205,95 180,50" fill="rgba(108,99,255,0.3)" stroke="#6c63ff" stroke-width="1"/>
+          <text x="150" y="78" fill="#b0acff" font-size="9" text-anchor="middle">존경·인정</text>
+          <!-- Level 3 – Belonging -->
+          <polygon points="95,95 70,135 230,135 205,95" fill="rgba(0,200,150,0.25)" stroke="#00d4aa" stroke-width="1"/>
+          <text x="150" y="120" fill="#80ffe8" font-size="9" text-anchor="middle">소속·사랑 (팀, 동료)</text>
+          <!-- Level 2 – Safety -->
+          <polygon points="70,135 45,175 255,175 230,135" fill="rgba(255,140,0,0.25)" stroke="orange" stroke-width="1"/>
+          <text x="150" y="160" fill="#ffcc88" font-size="9" text-anchor="middle">안전 (고용 안정, 작업 환경)</text>
+          <!-- Level 1 – Physiological -->
+          <polygon points="45,175 20,190 280,190 255,175" fill="rgba(255,80,80,0.25)" stroke="#ff6464" stroke-width="1"/>
+          <text x="150" y="185" fill="#ffaaaa" font-size="9" text-anchor="middle">생리적 욕구 (급여, 기본 근무 환경)</text>
+        </svg>
+      </div>
+      <div>
+        <div class="info-box" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <strong>허즈버그 2요인 이론</strong><br>
+          <span class="badge badge-success">동기요인</span>: 성취감, 인정, 책임감, 성장 → 만족 유발<br>
+          <span class="badge">위생요인</span>: 급여, 근무환경, 회사정책 → 불만 제거 (없으면 불만, 있어도 동기 안 됨)
+        </div>
+        <div class="info-box" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <strong>맥그리거 X-Y 이론</strong><br>
+          <span class="badge badge-warning">X이론</span>: 사람은 게으름 → 지시·통제 필요<br>
+          <span class="badge badge-success">Y이론</span>: 사람은 자율적 → 환경 조성만으로 동기 유발
+        </div>
+        <div class="info-box gold" style="font-size:0.83rem;">
+          <strong>맥클리랜드 성취동기이론</strong><br>
+          • <strong>성취욕구 (nAch)</strong>: 어려운 목표 도전, 결과 피드백 선호<br>
+          • <strong>권력욕구 (nPow)</strong>: 영향력·통제 욕구<br>
+          • <strong>친화욕구 (nAff)</strong>: 인간 관계·협업 중시
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 13: [5교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">5교시</div>
+      <h2>팀 관리 &amp; 갈등 해결</h2>
+      <p>갈등 원인 · 5가지 해결 기법 · 리더십 스타일 · 서번트 리더십</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 14: 갈등 해결 5기법 -->
+  <div class="slide">
+    <h2>갈등 해결 5기법 — 선호 순서</h2>
+    <div class="info-box" style="margin-bottom:1rem;">
+      프로젝트 갈등 주요 원인: <strong>일정 경합 > 우선순위 > 자원 배분 > 기술 의견 > 성격</strong>
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>순위</th><th>기법</th><th>접근</th><th>결과</th><th>적용 상황</th></tr></thead>
+        <tbody>
+          <tr style="background:rgba(0,200,150,0.1);">
+            <td><strong>1위 ★</strong></td>
+            <td><strong>협력/문제해결</strong><br>Collaborate</td>
+            <td>근본 원인 해결</td>
+            <td>Win-Win</td>
+            <td>시간 여유 있을 때, 장기 해결</td>
+          </tr>
+          <tr style="background:rgba(108,99,255,0.08);">
+            <td>2위</td>
+            <td><strong>타협</strong><br>Compromise</td>
+            <td>상호 양보 (Give &amp; Take)</td>
+            <td>Lose-Lose (부분)</td>
+            <td>양측 다 중요할 때, 시간 제한</td>
+          </tr>
+          <tr style="background:rgba(255,215,0,0.08);">
+            <td>3위</td>
+            <td><strong>완화/수용</strong><br>Smooth/Accommodate</td>
+            <td>공통점 강조, 차이 축소</td>
+            <td>임시적 Lose-Win</td>
+            <td>단기 관계 유지 필요 시</td>
+          </tr>
+          <tr style="background:rgba(255,140,0,0.08);">
+            <td>4위</td>
+            <td><strong>강요</strong><br>Force/Direct</td>
+            <td>한쪽 의견 관철</td>
+            <td>Win-Lose</td>
+            <td>긴급 결정, 안전 위협 상황</td>
+          </tr>
+          <tr style="background:rgba(255,100,100,0.08);">
+            <td>5위 (최소)</td>
+            <td><strong>회피</strong><br>Withdraw/Avoid</td>
+            <td>문제 회피, 방치</td>
+            <td>Lose-Lose</td>
+            <td>감정 냉각 시간 필요 시만</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box gold" style="margin-top:0.8rem;">
+      💡 <strong>PM 원칙:</strong> 팀원 간 직접 해결을 먼저 시도 → 해결 안 되면 PM 중재 → 마지막에 강요<br>
+      갈등을 나쁜 것으로 보지 말 것. 건강한 갈등 = 혁신의 원천
+    </div>
+  </div>
+
+  <!-- SLIDE 15: 리더십 스타일 -->
+  <div class="slide">
+    <h2>리더십 스타일 &amp; 서번트 리더십</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">상황적 리더십 (팀 성숙도별)</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.3rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,100,100,0.1);border-color:#ff6464;">
+            <strong>지시적 (Directing)</strong>: 신규/미숙련 팀<br>
+            구체적 지시, 긴밀 감독, 결정 모두 PM
+          </div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,165,0,0.1);border-color:orange;">
+            <strong>코칭 (Coaching)</strong>: 역량 개발 중 팀<br>
+            설명+이유 제공, 질문 장려
+          </div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(108,99,255,0.1);border-color:#6c63ff;">
+            <strong>지원적 (Supporting)</strong>: 유능하나 자신감 부족<br>
+            의사결정 참여, 격려·지지
+          </div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(0,200,150,0.1);border-color:#00d4aa;">
+            <strong>위임 (Delegating)</strong>: 고성숙 팀 (성과기)<br>
+            목표만 설정, 방법은 팀에 위임
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="info-box gold" style="margin-bottom:0.7rem;">
+          <h3 style="color:var(--accent-gold);margin:0 0 0.5rem;">서번트 리더십 (PMBOK 7판 핵심)</h3>
+          "리더는 팀을 섬긴다" — Robert Greenleaf<br><br>
+          <strong>PM의 역할 변화:</strong><br>
+          지시·통제 → <strong>장애 제거, 환경 조성, 성장 지원</strong><br><br>
+          스크럼마스터 = 서번트 리더십의 대표 사례<br>
+          PM의 권위 = "내가 책임자" → "팀이 성공하도록 내가 무엇을 할 수 있나?"
+        </div>
+        <div class="info-box" style="font-size:0.82rem;">
+          <strong>DEI (다양성·형평성·포용성)</strong><br>
+          PMBOK 7판 강조 내용<br>
+          • 무의식적 편향 인식 및 극복<br>
+          • 다양한 관점 = 더 창의적 솔루션<br>
+          • 포용적 팀 문화 구축이 PM 책임
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 16: [6교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">6교시</div>
+      <h2>실습: RACI 차트 &amp; 갈등 해결</h2>
+      <p>IT 시스템 구축 RACI 작성 · 갈등 시나리오 롤플레이</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 17: 실습 -->
+  <div class="slide">
+    <h2>자원 관리 실습</h2>
+    <div class="two-col">
+      <div class="practice-box">
+        <h4>📋 실습 1: RACI 차트 작성</h4>
+        <p style="font-size:0.85rem;">역할: PM, 개발팀장, 설계자, QA, 현업 담당자, 스폰서</p>
+        <div class="table-wrapper" style="font-size:0.78rem;">
+          <table>
+            <thead>
+              <tr><th>활동</th><th>PM</th><th>개발팀장</th><th>설계자</th><th>QA</th><th>현업</th><th>스폰서</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>프로젝트 헌장 승인</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>요구사항 수집</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>DB 스키마 설계</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>코드 리뷰</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td>성능 테스트</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul style="font-size:0.82rem;margin-top:0.5rem;">
+          <li>각 활동의 A는 1명만!</li>
+          <li>모든 활동에 R이 있어야 함</li>
+          <li>완성 후 팀에서 검토·토론</li>
+        </ul>
+      </div>
+      <div class="practice-box">
+        <h4>⚡ 실습 2: 갈등 해결 시뮬레이션</h4>
+        <p style="font-size:0.85rem;"><strong>시나리오 A — 일정 갈등:</strong><br>
+        개발팀장: "API 개발에 3주 필요"<br>
+        PM: "고객과 2주 약속함"<br>어떤 갈등 해결 기법을 사용하겠는가?</p>
+        <hr style="border-color:#333;margin:0.7rem 0;">
+        <p style="font-size:0.85rem;"><strong>시나리오 B — 기술 의견 충돌:</strong><br>
+        시니어 개발자 A: "마이크로서비스 아키텍처"<br>
+        시니어 개발자 B: "모놀리식이 더 빠름"<br>팀이 평행선. PM은 어떻게 중재하는가?</p>
+        <hr style="border-color:#333;margin:0.7rem 0;">
+        <p style="font-size:0.85rem;">각 시나리오에 대해:<br>
+        ① 갈등 유형 분류 ② 선택할 기법 ③ 구체적 접근법 발표</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 18: 핵심 키워드 -->
+  <div class="slide">
+    <h2>Day 07 핵심 키워드</h2>
+    <div class="keyword-tags" style="font-size:0.95rem;">
+      <span class="keyword-tag">자원 관리 6개 프로세스</span>
+      <span class="keyword-tag">기능형/매트릭스/프로젝트형 조직</span>
+      <span class="keyword-tag">RACI 차트</span>
+      <span class="keyword-tag">RAM (책임배분매트릭스)</span>
+      <span class="keyword-tag">RBS (자원분류체계)</span>
+      <span class="keyword-tag">자원 달력</span>
+      <span class="keyword-tag">사전 배정</span>
+      <span class="keyword-tag">가상 팀</span>
+      <span class="keyword-tag">터크만 5단계</span>
+      <span class="keyword-tag">집중 배치 (Collocation)</span>
+      <span class="keyword-tag">매슬로 욕구 5단계</span>
+      <span class="keyword-tag">허즈버그 2요인</span>
+      <span class="keyword-tag">맥그리거 X-Y</span>
+      <span class="keyword-tag">성취/권력/친화 욕구</span>
+      <span class="keyword-tag">갈등 해결 5기법</span>
+      <span class="keyword-tag">협력/문제해결 (Win-Win)</span>
+      <span class="keyword-tag">상황적 리더십</span>
+      <span class="keyword-tag">서번트 리더십</span>
+      <span class="keyword-tag">DEI</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 19: 학습 확인 퀴즈 -->
+  <div class="slide">
+    <h2>학습 확인 퀴즈</h2>
+    <div class="quiz-box">
+      <div class="quiz-item">
+        <p><strong>Q1.</strong> RACI 차트에서 A(Accountable)와 R(Responsible)의 차이를 설명하고, A가 반드시 1명이어야 하는 이유는?</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>R(Responsible)</strong>: 실제 작업을 수행하는 실행 책임자. 여러 명 가능.<br>
+          <strong>A(Accountable)</strong>: 최종 결과에 책임지는 의사결정자. 승인 권한.<br>
+          A가 2명 이상이면 "나는 몰랐다"는 책임 회피가 발생하고 의사결정이 지연됩니다.<br>
+          1명만 지정해야 최종 책임 소재가 명확해집니다.</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q2.</strong> 터크만 5단계 중 폭풍기(Storming)에서 PM이 해야 할 행동 3가지를 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>① 갈등을 억압하지 않고 표면화 — 갈등이 없는 척 하지 않기<br>
+          ② 팀 그라운드 룰 수립 — 의사결정 방식, 커뮤니케이션 규칙 명문화<br>
+          ③ 개인 강점 인정 + 공동 목표 재확인 — 비전을 다시 공유하여 방향 일치<br>
+          폭풍기를 잘 통과하면 팀은 규범기로 빠르게 진입하며 더 강해집니다.</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q3.</strong> 갈등 해결 5기법을 선호 순서대로 나열하고, 각각의 결과(Win/Lose)를 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>① 협력/문제해결: Win-Win — 근본 원인 해결, 가장 이상적<br>
+          ② 타협: Lose-Lose (부분) — 양측 모두 일부 양보<br>
+          ③ 완화: Lose-Win — 공통점 강조, 임시적 봉합<br>
+          ④ 강요: Win-Lose — 한쪽 관철, 긴급 상황에만<br>
+          ⑤ 회피: Lose-Lose — 문제 방치, 가장 비바람직 (감정 냉각 시간만 허용)</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q4.</strong> 허즈버그 2요인 이론에서 급여 인상이 장기적으로 동기 부여에 한계가 있는 이유는?</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>급여는 <strong>위생요인</strong>에 해당합니다. 위생요인은 부재 시 불만을 야기하지만, 충족되어도 동기를 만들지 않습니다.<br>
+          예: 급여가 낮으면 불만이 생기지만, 급여가 매우 높아도 그 자체가 지속적인 동기가 되지는 않습니다.<br>
+          장기적 동기를 위해서는 성취감, 인정, 책임감, 성장 기회 등 <strong>동기요인</strong>을 제공해야 합니다.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 20: 다음 Day 예고 -->
+  <div class="slide">
+    <h2>다음 시간 예고 — Day 08: 의사소통 관리</h2>
+    <div class="info-box gold">
+      <h3 style="margin:0 0 0.8rem;color:var(--accent-gold);">📅 Day 08 주요 학습 내용</h3>
+    </div>
+    <div class="card-grid" style="margin-top:1rem;">
+      <div class="card">
+        <div class="card-icon">📡</div>
+        <h3>의사소통 계획</h3>
+        <p>이해관계자 정보 요구사항 · 의사소통 채널 수 공식 n(n-1)/2</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📢</div>
+        <h3>의사소통 관리</h3>
+        <p>Push/Pull/Interactive 소통 방식 · 보고서 유형 · 회의 관리</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👂</div>
+        <h3>효과적 소통</h3>
+        <p>능동적 경청 · 비언어 소통 55/38/7 규칙 · 피드백 기법</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>디지털 소통</h3>
+        <p>가상 팀 소통 전략 · 문화 차이 · 소통 장벽 제거</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:1.2rem;">
+      💡 <strong>연결 포인트:</strong> 오늘 배운 RACI에서 I(Informed)와 C(Consulted)는<br>
+      내일 배울 의사소통 계획의 핵심 입력 데이터가 됩니다.
+    </div>
+  </div>
+
+</div><!-- /presentation -->
+
+<script src="../js/presentation.js"></script>
+</body>
+</html>

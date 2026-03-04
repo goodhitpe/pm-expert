@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 17: 애자일/스크럼 & PM 도구 | PM 교육</title>
+    <link rel="stylesheet" href="../css/presentation.css">
+</head>
+
+<body>
+    <a href="../index.html" class="home-link">🏠 목차</a>
+    <div class="day-nav"><a href="day16-new-tech.html">← Day 16</a></div>
+    <div class="presentation">
+
+        <!-- 타이틀 슬라이드 -->
+        <div class="slide title-slide">
+            <div class="day-badge">DAY 17 · BONUS</div>
+            <h1>애자일/스크럼 & PM 도구</h1>
+            <p class="subtitle">Agile · Scrum · Kanban · Jira · MS Project</p>
+            <div class="meta">
+                <span>📅 +1일 심화 과정</span>
+                <span>⏱️ 8시간</span>
+                <span>🔧 방법론 + 실습 50%</span>
+            </div>
+        </div>
+
+        <!-- 학습 목표 -->
+        <div class="slide">
+            <h2>🎯 오늘 배우고 나면 할 수 있어요</h2>
+            <div class="two-col">
+                <div>
+                    <h3 style="color:var(--accent-primary);">방법론</h3>
+                    <ul>
+                        <li>애자일 선언문 4가지 가치 설명</li>
+                        <li>스크럼 3역할·5이벤트·3산출물 구분</li>
+                        <li>사용자 스토리 INVEST 기준 작성</li>
+                        <li>칸반 WIP 제한으로 흐름 최적화</li>
+                        <li>워터폴 vs 스크럼 vs 칸반 선택 판단</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color:var(--accent-secondary);">도구</h3>
+                    <ul>
+                        <li>Jira 스크럼 보드 + 번다운 차트 생성</li>
+                        <li>JQL 기초 쿼리 작성</li>
+                        <li>MS Project 간트차트 + EVM 보고서</li>
+                        <li>Trello 칸반 보드 설계</li>
+                        <li>프로젝트 상황별 도구 선택</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 섹션: 애자일 개요 -->
+        <div class="slide section-slide">
+            <div class="section-number">1</div>
+            <h2>애자일 개요 & 선언문</h2>
+            <p style="color: var(--text-secondary); font-size: 1.2rem;">왜 애자일이 등장했는가?</p>
+        </div>
+
+        <!-- 워터폴 문제점 -->
+        <div class="slide">
+            <h2>❌ 워터폴의 함정 — 실제 사례</h2>
+            <div class="info-box" style="background: rgba(231,76,60,0.1); border-left-color: #e74c3c;">
+                <div class="info-title">🏦 모바일 뱅킹 앱 재구축 프로젝트 (2018)</div>
+                <p>12개월 워터폴 → 런칭 당일 "이게 아닌데요…"<br>
+                1,500개 버그 + <strong>6개월 지연 + 예산 150%</strong></p>
+            </div>
+            <div class="two-col" style="margin-top: 20px;">
+                <div class="card" style="border-left: 3px solid #e74c3c;">
+                    <div class="card-title">📉 워터폴 12개월</div>
+                    <div class="card-text">
+                        Month 1–3: 요구사항 (200페이지)<br>
+                        Month 4–9: 개발 (고객 참여 없음)<br>
+                        Month 10: "이게 아닌데요!" 발견<br>
+                        Month 11–12: 긴급 재작업<br>
+                        <strong>→ 고객이 처음 본 건 10개월째</strong>
+                    </div>
+                </div>
+                <div class="card" style="border-left: 3px solid var(--accent-secondary);">
+                    <div class="card-title">✅ 애자일 2주 스프린트</div>
+                    <div class="card-text">
+                        Sprint 1: 로그인 → 고객 시연 → 피드백<br>
+                        Sprint 2: 계좌 조회 → "이게 맞아요!"<br>
+                        Sprint 3: 이체 기능…<br>
+                        <strong>→ 매 2주마다 고객이 확인</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 애자일 선언문 -->
+        <div class="slide">
+            <h2>📜 애자일 선언문 (Agile Manifesto, 2001)</h2>
+            <div class="info-box gold" style="margin-bottom: 20px;">
+                <div class="info-title">4가지 핵심 가치</div>
+                <p>오른쪽도 가치 있지만, <strong>왼쪽을 더 가치 있게 여긴다</strong></p>
+            </div>
+            <table style="width:100%; border-collapse: collapse;">
+                <tr style="background: rgba(0,212,170,0.1);">
+                    <th style="padding:12px; text-align:left; color:var(--accent-secondary);">✅ 더 가치 있는 것</th>
+                    <th style="padding:12px; text-align:center; color:var(--text-muted);">vs</th>
+                    <th style="padding:12px; text-align:right; color:var(--text-muted);">덜 강조하는 것</th>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:12px; font-weight:600;">개인과 상호작용</td>
+                    <td style="padding:12px; text-align:center;">&gt;</td>
+                    <td style="padding:12px; text-align:right; color:var(--text-muted);">프로세스와 도구</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:12px; font-weight:600;">작동하는 소프트웨어</td>
+                    <td style="padding:12px; text-align:center;">&gt;</td>
+                    <td style="padding:12px; text-align:right; color:var(--text-muted);">포괄적인 문서</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:12px; font-weight:600;">고객과의 협력</td>
+                    <td style="padding:12px; text-align:center;">&gt;</td>
+                    <td style="padding:12px; text-align:right; color:var(--text-muted);">계약 협상</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; font-weight:600;">변화에 대응</td>
+                    <td style="padding:12px; text-align:center;">&gt;</td>
+                    <td style="padding:12px; text-align:right; color:var(--text-muted);">계획을 따르기</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 워터폴 vs 애자일 비교 -->
+        <div class="slide">
+            <h2>⚖️ 워터폴 vs 애자일 — 언제 무엇을?</h2>
+            <table style="width:100%; border-collapse: collapse; font-size: 0.9rem;">
+                <tr style="background: var(--card-bg);">
+                    <th style="padding:10px; text-align:left;">구분</th>
+                    <th style="padding:10px; text-align:center; color:var(--accent-primary);">워터폴</th>
+                    <th style="padding:10px; text-align:center; color:var(--accent-secondary);">애자일</th>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">요구사항</td>
+                    <td style="padding:10px; text-align:center;">초기 확정</td>
+                    <td style="padding:10px; text-align:center;">점진적 발견</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">변경</td>
+                    <td style="padding:10px; text-align:center; color: #e74c3c;">통제 대상 (비용↑)</td>
+                    <td style="padding:10px; text-align:center; color: var(--accent-secondary);">환영 대상</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">인도 주기</td>
+                    <td style="padding:10px; text-align:center;">프로젝트 종료 시</td>
+                    <td style="padding:10px; text-align:center;">매 2주</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">고객 참여</td>
+                    <td style="padding:10px; text-align:center;">초기·종료 시</td>
+                    <td style="padding:10px; text-align:center;">매 스프린트</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px;">적합 상황</td>
+                    <td style="padding:10px; text-align:center;">요건 명확·규제 산업</td>
+                    <td style="padding:10px; text-align:center;">불확실·혁신 프로젝트</td>
+                </tr>
+            </table>
+            <div class="info-box" style="margin-top: 16px;">
+                <div class="info-title">💡 40대 PM 인사이트</div>
+                <p>결재 문화가 있어도 괜찮습니다. <strong>팀 내부는 스크럼</strong>으로 개발하고,
+                    <strong>경영진 보고는 워터폴 마일스톤</strong> 형식으로. 이것이 현실적인 하이브리드 접근입니다.</p>
+            </div>
+        </div>
+
+        <!-- 섹션: 스크럼 -->
+        <div class="slide section-slide">
+            <div class="section-number">2</div>
+            <h2>스크럼 프레임워크</h2>
+            <p style="color: var(--text-secondary); font-size: 1.2rem;">3역할 · 5이벤트 · 3산출물</p>
+        </div>
+
+        <!-- 스크럼 3역할 -->
+        <div class="slide">
+            <h2>👥 스크럼 3가지 역할</h2>
+            <div class="three-col">
+                <div class="card" style="border-top: 3px solid var(--accent-primary);">
+                    <div class="card-icon">🎯</div>
+                    <div class="card-title">Product Owner (PO)</div>
+                    <div class="card-text">
+                        <strong>무엇을 만들까?</strong><br>
+                        • 제품 비전 제시<br>
+                        • 백로그 관리·우선순위<br>
+                        • Sprint Review 인수 판단<br>
+                        • ROI 최대화<br>
+                        <br>
+                        <small style="color:var(--accent-gold);">⚠️ PO ≠ PM: 역할 충돌 주의</small>
+                    </div>
+                </div>
+                <div class="card" style="border-top: 3px solid var(--accent-secondary);">
+                    <div class="card-icon">🛡️</div>
+                    <div class="card-title">Scrum Master (SM)</div>
+                    <div class="card-text">
+                        <strong>어떻게 일하나?</strong><br>
+                        • 스크럼 프로세스 코치<br>
+                        • 장애물(Impediment) 제거<br>
+                        • 팀 외부 방해 차단<br>
+                        • 서번트 리더십<br>
+                        <br>
+                        <small style="color:var(--text-muted);">명령이 아닌 섬김과 지원</small>
+                    </div>
+                </div>
+                <div class="card" style="border-top: 3px solid var(--accent-gold);">
+                    <div class="card-icon">⚙️</div>
+                    <div class="card-title">개발 팀</div>
+                    <div class="card-text">
+                        <strong>어떻게 만드나?</strong><br>
+                        • 교차기능(설계·개발·테스트)<br>
+                        • 자기조직화<br>
+                        • 3–9명 권장<br>
+                        • 스프린트 목표 달성<br>
+                        <br>
+                        <small style="color:var(--text-muted);">10명↑ → 팀 분리 고려</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 스크럼 5이벤트 -->
+        <div class="slide">
+            <h2>📅 스크럼 5가지 이벤트</h2>
+            <div class="two-col">
+                <div>
+                    <div class="card" style="margin-bottom:12px;">
+                        <div class="card-title">🏃 스프린트 (Sprint)</div>
+                        <div class="card-text">1–4주 타임박스. 일반적으로 <strong>2주 권장</strong></div>
+                    </div>
+                    <div class="card" style="margin-bottom:12px;">
+                        <div class="card-title">📋 스프린트 계획 (Sprint Planning)</div>
+                        <div class="card-text">스프린트 목표 설정 + 백로그 선정 + 작업 분해<br><small>2주 스프린트 기준 4시간</small></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">☀️ 일일 스크럼 (Daily Scrum)</div>
+                        <div class="card-text"><strong>15분 스탠딩</strong><br>①어제? ②오늘? ③블로커?<br><small>⚠️ 상태보고 회의가 아님</small></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card" style="margin-bottom:12px;">
+                        <div class="card-title">🎉 스프린트 리뷰 (Sprint Review)</div>
+                        <div class="card-text">완성 증분 <strong>직접 시연</strong> (PPT 금지!)<br>이해관계자 피드백 → 백로그 업데이트<br><small>2주 기준 2시간</small></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">🔄 스프린트 회고 (Sprint Retrospective)</div>
+                        <div class="card-text">Start / <span style="color:#e74c3c;">Stop</span> / ✅ Continue<br>프로세스 개선 액션 아이템 도출<br><small>2주 기준 1.5시간</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 사용자 스토리 & INVEST -->
+        <div class="slide">
+            <h2>📝 사용자 스토리 & INVEST 기준</h2>
+            <div class="info-box" style="margin-bottom: 16px;">
+                <div class="info-title">사용자 스토리 형식</div>
+                <p style="font-size: 1.1rem; font-family: monospace;">
+                    As a [<em>사용자 유형</em>],<br>
+                    I want [<em>기능</em>],<br>
+                    So that [<em>가치/이유</em>].
+                </p>
+            </div>
+            <div class="card-grid">
+                <div class="card"><div class="card-title" style="color:var(--accent-secondary);">I — Independent</div><div class="card-text">다른 스토리에 독립적</div></div>
+                <div class="card"><div class="card-title" style="color:var(--accent-secondary);">N — Negotiable</div><div class="card-text">구현 방법은 협상 가능</div></div>
+                <div class="card"><div class="card-title" style="color:var(--accent-secondary);">V — Valuable</div><div class="card-text">사용자/비즈니스 가치</div></div>
+                <div class="card"><div class="card-title" style="color:var(--accent-secondary);">E — Estimable</div><div class="card-text">크기 추정 가능</div></div>
+                <div class="card"><div class="card-title" style="color:var(--accent-secondary);">S — Small</div><div class="card-text">스프린트 내 완료 가능</div></div>
+                <div class="card"><div class="card-title" style="color:var(--accent-secondary);">T — Testable</div><div class="card-text">인수 기준 명확</div></div>
+            </div>
+            <div class="info-box" style="margin-top: 16px;">
+                <div class="info-title">스토리 포인트 (피보나치)</div>
+                <p>1 · 2 · 3 · 5 · 8 · 13 · 21 — 기준 스토리(3pt): "로그인 기능 구현"<br>
+                13pt 이상이면 사용자 스토리를 더 작게 분해하세요.</p>
+            </div>
+        </div>
+
+        <!-- 섹션: 칸반 -->
+        <div class="slide section-slide">
+            <div class="section-number">3</div>
+            <h2>칸반 & 하이브리드</h2>
+            <p style="color: var(--text-secondary); font-size: 1.2rem;">흐름 최적화 · WIP 제한 · 현실적 방법론</p>
+        </div>
+
+        <!-- 칸반 보드 -->
+        <div class="slide">
+            <h2>📊 칸반 보드 & WIP 제한</h2>
+            <div style="background: var(--card-bg); border-radius: 8px; padding: 16px; font-family: monospace; font-size: 0.85rem; margin-bottom: 16px; overflow-x: auto;">
+                <pre style="margin:0; color: var(--text-primary);">
+┌──────────┬──────────┬────────────┬───────────┬──────────┐
+│ Backlog  │  To Do   │ In Progress│  Review   │  Done    │
+│          │          │  (WIP: 3)  │  (WIP: 2) │          │
+├──────────┼──────────┼────────────┼───────────┼──────────┤
+│ [고객관리]│ [결제#1] │ [검색#3]   │ [로그인#1]│ [회원#2] │
+│ [리포트] │ [배송#2] │ [알림#4]   │ [장바구니]│ [상품#5] │
+│ [통계]   │          │ ~~WIP꽉~~  │           │ ...15개  │
+└──────────┴──────────┴────────────┴───────────┴──────────┘</pre>
+            </div>
+            <div class="two-col">
+                <div class="card" style="border-left: 3px solid #e74c3c;">
+                    <div class="card-title">❌ WIP 제한 없을 때</div>
+                    <div class="card-text">10개 작업 병렬 진행<br>→ 컨텍스트 스위칭 비용 누적<br>→ 완료된 것이 없음<br>→ 고객은 아무것도 못 받음</div>
+                </div>
+                <div class="card" style="border-left: 3px solid var(--accent-secondary);">
+                    <div class="card-title">✅ WIP 제한 있을 때</div>
+                    <div class="card-text">최대 3개만 진행<br>→ 1개 완료 → Done → 다음 시작<br>→ 리드타임 단축<br>→ 예측 가능성 향상</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 칸반 vs 스크럼 -->
+        <div class="slide">
+            <h2>⚖️ 스크럼 vs 칸반 — 언제 무엇을?</h2>
+            <table style="width:100%; border-collapse: collapse; font-size: 0.9rem;">
+                <tr style="background: var(--card-bg);">
+                    <th style="padding:10px; text-align:left;">구분</th>
+                    <th style="padding:10px; text-align:center; color:var(--accent-primary);">스크럼</th>
+                    <th style="padding:10px; text-align:center; color:var(--accent-secondary);">칸반</th>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">역할</td>
+                    <td style="padding:10px; text-align:center;">PO / SM / 팀 정의</td>
+                    <td style="padding:10px; text-align:center;">기존 역할 유지</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">주기</td>
+                    <td style="padding:10px; text-align:center;">스프린트 고정</td>
+                    <td style="padding:10px; text-align:center;">연속적 (없음)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">변경 허용</td>
+                    <td style="padding:10px; text-align:center;">스프린트 중 제한</td>
+                    <td style="padding:10px; text-align:center;">언제든 가능</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">성과 지표</td>
+                    <td style="padding:10px; text-align:center;">벨로시티</td>
+                    <td style="padding:10px; text-align:center;">리드타임, 사이클타임</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px;"><strong>적합 상황</strong></td>
+                    <td style="padding:10px; text-align:center;">반복적 신기능 개발</td>
+                    <td style="padding:10px; text-align:center;">운영·유지보수·지원</td>
+                </tr>
+            </table>
+            <div class="info-box gold" style="margin-top: 16px;">
+                <div class="info-title">하이브리드 (Water-Scrum-Fall) — 가장 현실적</div>
+                <p>Phase1 <strong>계획·설계 (워터폴)</strong> → Phase2 <strong>개발 (스크럼 스프린트)</strong> → Phase3 <strong>인수·오픈 (워터폴)</strong></p>
+            </div>
+        </div>
+
+        <!-- 섹션: Jira -->
+        <div class="slide section-slide">
+            <div class="section-number">4</div>
+            <h2>Jira 실습</h2>
+            <p style="color: var(--text-secondary); font-size: 1.2rem;">스크럼 보드 · 번다운 차트 · JQL</p>
+        </div>
+
+        <!-- Jira 개요 -->
+        <div class="slide">
+            <h2>🔧 Jira 핵심 개념</h2>
+            <div class="two-col">
+                <div>
+                    <h3 style="color:var(--accent-primary); margin-bottom: 12px;">이슈 유형 계층</h3>
+                    <div style="font-family: monospace; background: var(--card-bg); padding: 16px; border-radius: 8px; font-size: 0.9rem; line-height: 1.8;">
+                        <span style="color:var(--accent-gold);">Epic</span> (에픽 — 큰 기능)<br>
+                        &nbsp;&nbsp;└─ <span style="color:var(--accent-primary);">Story</span> (사용자 스토리)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ <span style="color:var(--accent-secondary);">Sub-task</span> (작업)<br>
+                        &nbsp;&nbsp;└─ <span style="color:#e74c3c;">Bug</span> (버그)<br>
+                        &nbsp;&nbsp;└─ Task (기타 작업)
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color:var(--accent-primary); margin-bottom: 12px;">스크럼 보드 설정 단계</h3>
+                    <ol style="line-height: 2;">
+                        <li>프로젝트 생성 (소프트웨어 → 스크럼)</li>
+                        <li>제품 백로그 입력 (사용자 스토리 형식)</li>
+                        <li>스프린트 생성 (2주 기간 설정)</li>
+                        <li>백로그 → 스프린트 이동</li>
+                        <li>스프린트 시작 → 보드 확인</li>
+                        <li>번다운 차트 자동 생성 확인</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jira JQL & 보고서 -->
+        <div class="slide">
+            <h2>🔍 JQL & 보고서 활용</h2>
+            <div class="two-col">
+                <div>
+                    <h3 style="color:var(--accent-primary); margin-bottom: 12px;">자주 쓰는 JQL</h3>
+                    <div style="font-family: monospace; background: var(--card-bg); padding: 16px; border-radius: 8px; font-size: 0.8rem; line-height: 2;">
+                        <span style="color:var(--accent-secondary);"># 내 작업 (오픈 스프린트)</span><br>
+                        assignee = currentUser()<br>
+                        AND sprint in openSprints()<br>
+                        <br>
+                        <span style="color:var(--accent-secondary);"># 블로킹된 이슈 (3일 이상 방치)</span><br>
+                        status = "In Progress"<br>
+                        AND updated &lt; -3d<br>
+                        <br>
+                        <span style="color:var(--accent-secondary);"># 이번 주 완료</span><br>
+                        status = Done<br>
+                        AND resolved &gt;= startOfWeek()
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color:var(--accent-primary); margin-bottom: 12px;">보고서 종류 & PM 활용</h3>
+                    <div class="card" style="margin-bottom:8px;"><div class="card-title">번다운 차트</div><div class="card-text">스프린트 진행률 → 지연 조기 발견</div></div>
+                    <div class="card" style="margin-bottom:8px;"><div class="card-title">번업 차트</div><div class="card-text">누적 완료 vs 범위 → 범위 크리프 감지</div></div>
+                    <div class="card" style="margin-bottom:8px;"><div class="card-title">속도(Velocity) 차트</div><div class="card-text">스프린트별 완료 pt → 향후 계획 기준</div></div>
+                    <div class="card"><div class="card-title">스프린트 보고서</div><div class="card-text">완료/미완료 항목 → 스폰서 보고</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 섹션: MS Project & Trello -->
+        <div class="slide section-slide">
+            <div class="section-number">5</div>
+            <h2>MS Project & Trello</h2>
+            <p style="color: var(--text-secondary); font-size: 1.2rem;">간트차트 · EVM · 칸반 도구</p>
+        </div>
+
+        <!-- MS Project -->
+        <div class="slide">
+            <h2>📊 MS Project — 간트차트 & EVM</h2>
+            <div class="two-col">
+                <div>
+                    <h3 style="color:var(--accent-primary); margin-bottom: 12px;">핵심 기능</h3>
+                    <ul style="line-height: 2;">
+                        <li><strong>간트차트</strong>: 작업·기간·의존성 시각화</li>
+                        <li><strong>크리티컬 패스</strong>: 빨간색으로 자동 표시</li>
+                        <li><strong>자원 배정</strong>: 과부하(빨간) 자동 경고</li>
+                        <li><strong>기준선(Baseline)</strong>: 원래 계획 저장 → 비교</li>
+                        <li><strong>EVM 보고서</strong>: PV·EV·AC 자동 계산</li>
+                    </ul>
+                    <div class="info-box" style="margin-top: 12px;">
+                        <div class="info-title">EVM 핵심 지표 복습</div>
+                        <p>CPI = EV/AC &nbsp;(1 이상 = 예산 절감)<br>
+                        SPI = EV/PV &nbsp;(1 이상 = 일정 순조)</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color:var(--accent-primary); margin-bottom: 12px;">실습 순서</h3>
+                    <ol style="line-height: 2; font-size: 0.9rem;">
+                        <li>작업 목록 입력 (7개 단계)</li>
+                        <li>의존성 설정 (FS 관계)</li>
+                        <li>크리티컬 패스 표시 활성화</li>
+                        <li>자원 시트 생성 + 배정</li>
+                        <li>과부하 확인 → 자원 평준화</li>
+                        <li>기준선 0 저장</li>
+                        <li>진척도 입력 → EVM 보고서</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- 도구 선택 가이드 -->
+        <div class="slide">
+            <h2>🗺️ PM 도구 선택 가이드</h2>
+            <table style="width:100%; border-collapse: collapse; font-size: 0.88rem;">
+                <tr style="background: var(--card-bg);">
+                    <th style="padding:10px; text-align:left;">상황</th>
+                    <th style="padding:10px; text-align:center; color:var(--accent-gold);">추천 도구</th>
+                    <th style="padding:10px; text-align:left;">이유</th>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">스크럼 팀 (5–50명)</td>
+                    <td style="padding:10px; text-align:center; font-weight:600;">Jira</td>
+                    <td style="padding:10px;">스프린트/번다운/백로그 통합</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">워터폴·대형 프로젝트</td>
+                    <td style="padding:10px; text-align:center; font-weight:600;">MS Project</td>
+                    <td style="padding:10px;">간트/EVM/자원 관리 강력</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">소규모·개인 업무 (≤5명)</td>
+                    <td style="padding:10px; text-align:center; font-weight:600;">Trello</td>
+                    <td style="padding:10px;">단순·직관적 칸반, 무료</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding:10px;">문서+PM 통합 필요</td>
+                    <td style="padding:10px; text-align:center; font-weight:600;">Jira + Confluence</td>
+                    <td style="padding:10px;">이슈↔문서 완전 연동</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px;">유연한 도구 (비IT 부서)</td>
+                    <td style="padding:10px; text-align:center; font-weight:600;">Notion / Asana</td>
+                    <td style="padding:10px;">직관적 UI, 다목적</td>
+                </tr>
+            </table>
+            <div class="info-box gold" style="margin-top: 16px;">
+                <div class="info-title">결론: 도구는 방법론을 따라야 한다</div>
+                <p>먼저 <strong>방법론(스크럼/칸반/워터폴)</strong>을 결정하고, 그에 맞는 <strong>도구</strong>를 선택하세요.<br>
+                도구가 방법론을 결정하는 역방향이 되면 안 됩니다.</p>
+            </div>
+        </div>
+
+        <!-- 섹션: 종합 실습 -->
+        <div class="slide section-slide">
+            <div class="section-number">6</div>
+            <h2>종합 실습</h2>
+            <p style="color: var(--text-secondary); font-size: 1.2rem;">Jira 프로젝트 구성 + 스프린트 리뷰 발표</p>
+        </div>
+
+        <!-- 종합 실습 -->
+        <div class="slide">
+            <h2>🔬 팀별 Jira 프로젝트 구성 실습</h2>
+            <div class="two-col">
+                <div>
+                    <h3 style="color:var(--accent-primary);">선택 프로젝트</h3>
+                    <div class="card" style="margin-bottom:10px;"><div class="card-title">A) 사내 복리후생 포털</div></div>
+                    <div class="card" style="margin-bottom:10px;"><div class="card-title">B) 고객 CS 자동화 챗봇</div></div>
+                    <div class="card"><div class="card-title">C) 판매 데이터 분석 대시보드</div></div>
+                </div>
+                <div>
+                    <h3 style="color:var(--accent-primary);">필수 구성 항목</h3>
+                    <ul style="line-height: 2;">
+                        <li>✅ 에픽(Epic) 3개 이상</li>
+                        <li>✅ 사용자 스토리 10개 (INVEST 기준)</li>
+                        <li>✅ 스토리 포인트 배분 (플래닝 포커)</li>
+                        <li>✅ 2주 스프린트 1회 계획 (20pt)</li>
+                        <li>✅ 번다운 차트 URL 캡처</li>
+                        <li>✅ <strong>5분 스프린트 리뷰 발표</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top: 16px; display: flex; gap: 20px; flex-wrap: wrap;">
+                <div>📊 스토리 형식 — 20점</div>
+                <div>📐 INVEST 기준 — 20점</div>
+                <div>🎯 스프린트 목표 — 20점</div>
+                <div>⚖️ 포인트 합리성 — 20점</div>
+                <div>🎤 발표 — 20점</div>
+            </div>
+        </div>
+
+        <!-- 17일 전체 정리 -->
+        <div class="slide">
+            <h2>🗺️ 17일 전체 학습 여정 요약</h2>
+            <div class="two-col">
+                <div>
+                    <h3 style="color:var(--accent-primary);">프로젝트 관리 (Day 1–11)</h3>
+                    <ul style="font-size: 0.9rem; line-height: 1.9;">
+                        <li>D1: 오리엔테이션 (Triple Constraint, PMBOK)</li>
+                        <li>D2: 통합 관리 (헌장, CCB, 종료)</li>
+                        <li>D3: 범위 관리 (WBS, Scope Creep)</li>
+                        <li>D4: 일정 관리 (CPM, 간트, Crashing)</li>
+                        <li>D5: 원가 관리 (EVM, CPI, SPI)</li>
+                        <li>D6: 품질 관리 (QA/QC, 6시그마)</li>
+                        <li>D7: 자원 관리 (RACI, 터크만)</li>
+                        <li>D8: 의사소통 관리 (채널, RAG)</li>
+                        <li>D9: 리스크 관리 (P-I, EMV)</li>
+                        <li>D10: 조달 관리 (계약 유형, RFP)</li>
+                        <li>D11: 이해관계자 + 종합 실습</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color:var(--accent-secondary);">기술 이해 (Day 12–16)</h3>
+                    <ul style="font-size: 0.9rem; line-height: 1.9;">
+                        <li>D12: 소프트웨어공학 (SDLC, CI/CD)</li>
+                        <li>D13: 네트워크 (OSI, TCP/IP, REST)</li>
+                        <li>D14: 정보보안 (CIA, OWASP, ISMS)</li>
+                        <li>D15: 데이터베이스 (ERD, SQL, NoSQL)</li>
+                        <li>D16: 신기술 (AI, 클라우드, DevOps)</li>
+                    </ul>
+                    <h3 style="color:var(--accent-gold); margin-top: 16px;">방법론 & 도구 (Day 17)</h3>
+                    <ul style="font-size: 0.9rem; line-height: 1.9;">
+                        <li>D17: 스크럼·칸반·Jira·MS Project</li>
+                    </ul>
+                    <div class="info-box success" style="margin-top:12px;">
+                        <div class="info-title">🎉 다음 단계</div>
+                        <p>• PMP / PSM I 자격증 도전<br>• 현업에 하이브리드 방법론 적용<br>• PM CoP 참여 및 사례 공유</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 수료 슬라이드 -->
+        <div class="slide title-slide">
+            <div class="day-badge">BONUS · DAY 17</div>
+            <h1>17일 완성 PM 전문가 교육과정 🎓</h1>
+            <p class="subtitle">이론 × 기술 × 방법론 × 도구 — 현장 즉시 투입 가능한 PM</p>
+            <div class="meta"><span>🚀 축하합니다! 여러분은 완전한 PM 전문가입니다!</span></div>
+        </div>
+
+    </div>
+    <script src="../js/presentation.js"></script>
+</body>
+
+</html>

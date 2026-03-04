@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 10: 프로젝트 조달 관리 | PM Expert</title>
+  <link rel="stylesheet" href="../css/presentation.css">
+</head>
+<body>
+
+<div class="presentation">
+
+  <!-- SLIDE 1: 타이틀 -->
+  <div class="slide title-slide">
+    <div class="title-content">
+      <div class="day-badge">Day 10</div>
+      <h1>프로젝트 조달 관리</h1>
+      <p class="subtitle">Project Procurement Management<br>
+        Make or Buy · 계약 유형 · RFP · 벤더 선정 · SLA</p>
+      <div class="title-meta">
+        <span>📅 10일차</span>
+        <span>⏱ 8시간</span>
+        <span>🎯 리스크를 계약으로 분배하라!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: 학습 목표 -->
+  <div class="slide">
+    <h2>학습 목표</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">⚖️</div>
+        <h3>Make or Buy</h3>
+        <p>자체 개발과 외부 조달의 의사결정 기준을 비용·역량·리스크 관점에서 분석할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📝</div>
+        <h3>계약 유형</h3>
+        <p>FFP/FPIF, CPFF/CPIF, T&amp;M의 리스크 분담 구조를 설명하고 상황별 선택할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📄</div>
+        <h3>RFP 작성</h3>
+        <p>RFI/RFQ/RFP/IFB의 차이를 구분하고 SOW 포함 RFP 주요 구성요소를 작성할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>벤더 선정 &amp; 관리</h3>
+        <p>가중 점수 기법으로 벤더를 평가하고 SLA 기반 조달 통제를 수행할 수 있다</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: 오늘의 흐름 -->
+  <div class="slide">
+    <h2>오늘의 흐름 — 6교시 로드맵</h2>
+    <div class="diagram">
+      <div class="step"><span class="step-num">1교시</span><span class="step-label">조달 개요<br>Make or Buy</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">2교시</span><span class="step-label">계약 유형<br>FP/CR/T&amp;M</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">3교시</span><span class="step-label">조달 문서<br>RFP·SOW</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">4교시</span><span class="step-label">벤더 선정<br>가중점수</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">5교시</span><span class="step-label">조달 통제<br>SLA·종료</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">6교시</span><span class="step-label">실습<br>RFP 작성</span></div>
+    </div>
+    <div class="info-box gold" style="margin-top:1.5rem;">
+      🔗 <strong>Day 09 연결:</strong> 리스크 전가(Transfer) 전략의 핵심 수단이 계약과 보험입니다.<br>
+      오늘은 그 계약의 유형과 리스크 배분 구조를 깊이 배웁니다.
+    </div>
+  </div>
+
+  <!-- SLIDE 4: [1교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">1교시</div>
+      <h2>조달 관리 개요 &amp; Make or Buy</h2>
+      <p>3개 프로세스 · 구매자/판매자 · 자체개발 vs 외부조달</p>
+      <div class="section-time">⏱ 1시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: 개요 + Make or Buy -->
+  <div class="slide">
+    <h2>조달 관리 개요 &amp; Make or Buy 의사결정</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">3개 프로세스</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.3rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.83rem;"><strong>12.1</strong> 조달 관리 계획 수립<br>Make or Buy, 계약 유형 결정</div>
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);"><strong>12.2</strong> 조달 수행<br>공고 → 입찰 → 벤더 선정 → 계약</div>
+          <div class="step" style="width:100%;font-size:0.83rem;"><strong>12.3</strong> 조달 통제<br>이행 모니터링, 변경 관리, 종료</div>
+        </div>
+        <div class="info-box" style="margin-top:0.6rem;font-size:0.83rem;">
+          <strong>조달 역할</strong><br>
+          🏢 <strong>구매자(Buyer)</strong>: 발주 조직, PM이 속한 곳<br>
+          🤝 <strong>판매자(Seller/Vendor)</strong>: 계약자, 공급업체<br>
+          PM의 역할: 구매자 측의 조달 계획·통제
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">Make or Buy 의사결정</h3>
+        <div class="comparison">
+          <div class="vs-col left">
+            <h4>자체 개발 (Make)</h4>
+            <ul style="font-size:0.82rem;padding-left:1rem;">
+              <li>핵심 역량·경쟁 우위</li>
+              <li>기밀 유지 필요</li>
+              <li>장기적 비용 절감</li>
+              <li>추가 고용 여력</li>
+              <li>완전한 품질 통제</li>
+            </ul>
+          </div>
+          <div class="vs-col right">
+            <h4>외부 조달 (Buy)</h4>
+            <ul style="font-size:0.82rem;padding-left:1rem;">
+              <li>내부 전문성 부족</li>
+              <li>일시적·단기 필요</li>
+              <li>비용 효율성 ↑</li>
+              <li>속도 중요 (Time-to-Market)</li>
+              <li>리스크 전가 필요</li>
+            </ul>
+          </div>
+        </div>
+        <div class="info-box gold" style="margin-top:0.5rem;font-size:0.82rem;">
+          💡 <strong>의사결정 핵심 기준</strong><br>
+          비용 · 기술 역량 · 전략적 중요도 · 리스크 · 속도
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: [2교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">2교시</div>
+      <h2>계약 유형 — 리스크 분담 구조</h2>
+      <p>고정가(FP) · 원가보상(CR) · 시간자재(T&amp;M)</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: 계약 유형 -->
+  <div class="slide">
+    <h2>계약 유형 &amp; 리스크 배분</h2>
+    <div class="table-wrapper" style="margin-bottom:1rem;">
+      <table>
+        <thead>
+          <tr>
+            <th>유형</th><th>계약명</th><th>구매자 리스크</th><th>판매자 리스크</th><th>적용 상황</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:rgba(0,200,150,0.08);">
+            <td rowspan="3"><strong>고정가<br>(Fixed-Price)</strong></td>
+            <td><strong>FFP</strong><br>Firm Fixed Price</td>
+            <td><span class="badge badge-success">최저</span></td>
+            <td><span class="badge badge-warning">최고</span></td>
+            <td>요구사항 명확, 범위 확정</td>
+          </tr>
+          <tr>
+            <td><strong>FPIF</strong><br>FP + Incentive Fee</td>
+            <td><span class="badge badge-success">낮음</span></td>
+            <td><span class="badge badge-primary">높음</span></td>
+            <td>성과 인센티브로 동기 부여</td>
+          </tr>
+          <tr>
+            <td><strong>FP-EPA</strong><br>FP + Price Adjustment</td>
+            <td><span class="badge badge-success">낮음</span></td>
+            <td><span class="badge badge-primary">높음</span></td>
+            <td>장기 계약 (물가 변동 반영)</td>
+          </tr>
+          <tr style="background:rgba(255,80,80,0.06);">
+            <td rowspan="3"><strong>원가보상<br>(Cost-Reimbursable)</strong></td>
+            <td><strong>CPFF</strong><br>CP + Fixed Fee</td>
+            <td><span class="badge badge-warning">최고</span></td>
+            <td><span class="badge badge-success">최저</span></td>
+            <td>R&amp;D, 요구사항 不명확</td>
+          </tr>
+          <tr>
+            <td><strong>CPIF</strong><br>CP + Incentive Fee</td>
+            <td><span class="badge badge-primary">높음</span></td>
+            <td><span class="badge badge-success">낮음</span></td>
+            <td>성과 개선 유인 필요</td>
+          </tr>
+          <tr>
+            <td><strong>CPAF</strong><br>CP + Award Fee</td>
+            <td><span class="badge badge-primary">높음</span></td>
+            <td><span class="badge badge-success">낮음</span></td>
+            <td>주관적 품질 평가 포함</td>
+          </tr>
+          <tr style="background:rgba(255,215,0,0.06);">
+            <td><strong>시간자재<br>(T&amp;M)</strong></td>
+            <td><strong>T&amp;M</strong><br>Time &amp; Material</td>
+            <td><span class="badge badge-primary">중간</span></td>
+            <td><span class="badge badge-primary">중간</span></td>
+            <td>범위 불명확, 전문가 파견</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box gold">
+      ← <strong>구매자 리스크: FFP(최저) ——————————————— CPFF(최고)</strong> →<br>
+      ← <strong>판매자 리스크: CPFF(최저) ——————————————— FFP(최고)</strong> →<br>
+      <em>T&amp;M은 양쪽 모두 중간 위험 — 계약 기간·예산 한도 명시 필수</em>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: [3교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">3교시</div>
+      <h2>조달 문서 &amp; RFP 작성</h2>
+      <p>RFI·RFQ·RFP·IFB 비교 · SOW · 입찰자 회의</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: 조달 문서 -->
+  <div class="slide">
+    <h2>조달 문서 유형 &amp; RFP 구성요소</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">조달 문서 4종류</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>문서</th><th>목적</th><th>사용 시기</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>RFI</strong><br>Request for Info</td>
+                <td>시장 조사, 가능 업체 파악</td>
+                <td>계획 초기<br>(비경쟁)</td>
+              </tr>
+              <tr style="background:rgba(255,215,0,0.08);">
+                <td><strong>RFP</strong><br>Request for Proposal</td>
+                <td>기술방안+가격 종합 평가</td>
+                <td>복잡한 서비스</td>
+              </tr>
+              <tr>
+                <td><strong>RFQ</strong><br>Request for Quotation</td>
+                <td>동일 규격 가격 비교</td>
+                <td>표준 제품·자재</td>
+              </tr>
+              <tr>
+                <td><strong>IFB</strong><br>Invitation for Bid</td>
+                <td>최저가 입찰</td>
+                <td>건설·공공 조달</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box warning" style="margin-top:0.6rem;font-size:0.82rem;">
+          ⚠️ <strong>입찰자 회의(Bidder Conference)</strong><br>
+          모든 잠재 공급자에게 공평한 정보 제공<br>
+          비밀 접촉 금지 → 공정성 보장
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">RFP 구성요소</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.25rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.82rem;"><strong>1. 사업 개요</strong>: 배경, 목적, 기간, 예산 범위</div>
+          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);"><strong>2. SOW (작업 기술서)</strong>: 범위, 산출물, 기술 요구사항, 마일스톤</div>
+          <div class="step" style="width:100%;font-size:0.82rem;"><strong>3. 제안서 작성 지침</strong>: 형식, 분량, 제출 기한</div>
+          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);"><strong>4. 평가 기준 &amp; 배점</strong>: 기술 70% + 가격 30% 등</div>
+          <div class="step" style="width:100%;font-size:0.82rem;"><strong>5. 일반 조건</strong>: 계약 조건, 보안, 지적재산권</div>
+        </div>
+        <div class="info-box gold" style="margin-top:0.5rem;font-size:0.82rem;">
+          <strong>SOW (Statement of Work)</strong><br>
+          조달 범위를 상세히 기술하는 핵심 문서<br>
+          무엇을(What), 얼마나(How Much), 언제(When)<br>
+          모호한 SOW = 추후 분쟁 및 범위 크리프 원인
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: [4교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">4교시</div>
+      <h2>공급업체 선정 &amp; 협상</h2>
+      <p>가중 점수 기법 · BATNA/ZOPA · 계약 체결</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: 벤더 선정 -->
+  <div class="slide">
+    <h2>공급업체 선정 — 가중 점수 기법</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">가중 점수 기법 예시</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.78rem;">
+            <thead>
+              <tr><th>평가 기준</th><th>가중치</th><th>A사</th><th>A×가중</th><th>B사</th><th>B×가중</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>기술력/경험</td>
+                <td>30%</td>
+                <td>90</td>
+                <td><strong>27</strong></td>
+                <td>80</td>
+                <td><strong>24</strong></td>
+              </tr>
+              <tr>
+                <td>제안 방법론</td>
+                <td>25%</td>
+                <td>85</td>
+                <td><strong>21.25</strong></td>
+                <td>90</td>
+                <td><strong>22.5</strong></td>
+              </tr>
+              <tr>
+                <td>금액(가격)</td>
+                <td>25%</td>
+                <td>75</td>
+                <td><strong>18.75</strong></td>
+                <td>88</td>
+                <td><strong>22</strong></td>
+              </tr>
+              <tr>
+                <td>유지보수 역량</td>
+                <td>20%</td>
+                <td>92</td>
+                <td><strong>18.4</strong></td>
+                <td>70</td>
+                <td><strong>14</strong></td>
+              </tr>
+              <tr style="background:rgba(255,215,0,0.1);">
+                <td><strong>합계</strong></td>
+                <td><strong>100%</strong></td>
+                <td>—</td>
+                <td><strong style="color:var(--accent-gold);">85.4</strong></td>
+                <td>—</td>
+                <td><strong>82.5</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box success" style="margin-top:0.5rem;font-size:0.82rem;">
+          ✅ <strong>A사 선정</strong> (85.4 &gt; 82.5)<br>
+          단, 가격이 예산 범위 내인지 최종 확인 필요
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">선별 기법 &amp; 협상</h3>
+        <div class="info-box" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <strong>선별 시스템(Screening System)</strong><br>
+          평가 전 최소 요건 필터링<br>
+          예: ISO 인증 보유, 유사 프로젝트 3건 이상 경험
+        </div>
+        <div class="info-box gold" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <strong>BATNA &amp; ZOPA (협상 전략)</strong><br>
+          <strong>BATNA</strong> (Best Alternative to Negotiated Agreement)<br>
+          협상 결렬 시 최선의 대안 → 협상 최저선 결정<br><br>
+          <strong>ZOPA</strong> (Zone of Possible Agreement)<br>
+          양측이 합의 가능한 범위 → 이 안에서 타결
+        </div>
+        <div class="info-box" style="font-size:0.82rem;">
+          <strong>독립 산정(Independent Estimate)</strong><br>
+          내부적으로 기준 가격 산정<br>
+          → 제안가격의 타당성 검증 기준<br>
+          크게 차이나면 SOW 불명확 신호
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: [5교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">5교시</div>
+      <h2>조달 통제 &amp; IT 조달 유의사항</h2>
+      <p>계약 이행 모니터링 · 클레임 · SLA · 소프트웨어 에스크로</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 13: 조달 통제 + IT 유의사항 -->
+  <div class="slide">
+    <h2>조달 통제 &amp; IT 프로젝트 유의사항</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">조달 통제 활동</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.82rem;">
+            <thead><tr><th>활동</th><th>내용</th></tr></thead>
+            <tbody>
+              <tr><td>계약 모니터링</td><td>마일스톤·KPI 기반 성과 검토</td></tr>
+              <tr><td>변경 관리</td><td>계약 변경 = 양측 서면 합의 필수</td></tr>
+              <tr><td>대금 지급</td><td>산출물 인도 확인 후 지급</td></tr>
+              <tr><td><strong style="color:#ff8888;">클레임(Claim)</strong></td><td>분쟁 발생 시 계약서 근거로 처리<br>ADR (대안적 분쟁 해결) 활용</td></tr>
+              <tr><td>계약 종료</td><td>공식 인수·조달 감사·Lessons Learned</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box warning" style="margin-top:0.6rem;font-size:0.82rem;">
+          ⚠️ <strong>조달 감사(Procurement Audit)</strong><br>
+          계약 전 프로세스 전체에 대한 구조화된 검토<br>
+          성공·실패 요인 → 조직 표준 개선
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">IT 프로젝트 조달 특수 사항</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.4rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.83rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);">
+            <strong>SLA (서비스 수준 협약)</strong><br>
+            가용성(99.9%), 응답시간, 장애복구 시간(RTO/RPO) 명시<br>
+            위반 시 패널티 조항 포함
+          </div>
+          <div class="step" style="width:100%;font-size:0.83rem;">
+            <strong>지적재산권 (IP)</strong><br>
+            납품 코드·데이터의 소유권 귀속 명시<br>
+            커스터마이징 코드는 누구 소유인가?
+          </div>
+          <div class="step" style="width:100%;font-size:0.83rem;">
+            <strong>소스코드 에스크로 (Escrow)</strong><br>
+            벤더 폐업·인수합병 시 소스코드 접근 보장<br>
+            중립 제3자가 소스코드 보관
+          </div>
+          <div class="step" style="width:100%;font-size:0.83rem;">
+            <strong>유지보수 계약</strong><br>
+            하자 보수 기간, 업데이트·패치 포함 여부<br>
+            기술 지원 채널·응답 시간 명시
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 14: [6교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">6교시</div>
+      <h2>실습: RFP 작성</h2>
+      <p>사내 포털 외주 발주 시나리오 · Make or Buy · 가중 점수 설계</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 15: 실습 -->
+  <div class="slide">
+    <h2>조달 관리 실습 — 사내 포털 시스템 구축</h2>
+    <div class="practice-box">
+      <h4>📋 실습 과제: 사내 포털 시스템 외주 발주</h4>
+      <p style="font-size:0.85rem;"><strong>시나리오:</strong> 전사 포털 시스템 구축 (예산 5억, 기간 8개월, 사용자 500명)</p>
+    </div>
+    <div class="two-col" style="margin-top:0.8rem;">
+      <div class="info-box" style="font-size:0.83rem;">
+        <strong>단계 1: Make or Buy 분석</strong><br>
+        • 내부 개발팀 보유? (자원 달력 확인)<br>
+        • 동일 기술 스택 경험 있나?<br>
+        • 8개월 내 가능한가? (일정)<br>
+        • 5억 예산으로 가능한가? (비용)<br>
+        → 분석 결과 및 결론 작성<br><br>
+        <strong>단계 2: 계약 유형 선정</strong><br>
+        • FP / CR / T&amp;M 중 선택 + 사유<br>
+        • 인센티브 조항 포함 여부?
+      </div>
+      <div class="info-box gold" style="font-size:0.83rem;">
+        <strong>단계 3: RFP 핵심 항목 작성</strong><br>
+        ① 사업 개요 (목적·범위 1페이지)<br>
+        ② SOW 초안 (기능 10개 이상)<br>
+        ③ 제안서 평가 기준 설계<br><br>
+        <strong>단계 4: 가중 점수 평가표</strong><br>
+        평가 항목별 가중치 합계 = 100%<br>
+        기술력 / 경험 / 가격 / 유지보수 / PM역량<br>
+        → 설계 후 팀 발표
+      </div>
+    </div>
+    <div class="info-box warning" style="margin-top:0.8rem;font-size:0.83rem;">
+      ⚠️ <strong>실수 방지 체크:</strong> SOW가 구체적인가? · 평가 기준이 객관적인가? · IP 조항 포함됐는가?
+    </div>
+  </div>
+
+  <!-- SLIDE 16: 핵심 키워드 -->
+  <div class="slide">
+    <h2>Day 10 핵심 키워드</h2>
+    <div class="keyword-tags">
+      <span class="keyword-tag">조달 관리 3개 프로세스</span>
+      <span class="keyword-tag">Make or Buy</span>
+      <span class="keyword-tag">구매자 vs 판매자</span>
+      <span class="keyword-tag">FFP (확정 고정가)</span>
+      <span class="keyword-tag">FPIF (고정가+인센티브)</span>
+      <span class="keyword-tag">FP-EPA (경제적 조정)</span>
+      <span class="keyword-tag">CPFF (실비+고정수수료)</span>
+      <span class="keyword-tag">CPIF (실비+인센티브)</span>
+      <span class="keyword-tag">CPAF (실비+포상수수료)</span>
+      <span class="keyword-tag">T&amp;M (시간자재 계약)</span>
+      <span class="keyword-tag">리스크 스펙트럼</span>
+      <span class="keyword-tag">RFI</span>
+      <span class="keyword-tag">RFP</span>
+      <span class="keyword-tag">RFQ</span>
+      <span class="keyword-tag">IFB</span>
+      <span class="keyword-tag">SOW (작업기술서)</span>
+      <span class="keyword-tag">입찰자 회의</span>
+      <span class="keyword-tag">가중 점수 기법</span>
+      <span class="keyword-tag">독립 산정</span>
+      <span class="keyword-tag">BATNA</span>
+      <span class="keyword-tag">ZOPA</span>
+      <span class="keyword-tag">클레임(Claim)</span>
+      <span class="keyword-tag">조달 감사</span>
+      <span class="keyword-tag">SLA</span>
+      <span class="keyword-tag">소스코드 에스크로</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 17: 퀴즈 -->
+  <div class="slide">
+    <h2>학습 확인 퀴즈</h2>
+    <div class="quiz-box">
+      <div class="quiz-item">
+        <p><strong>Q1.</strong> FFP, CPFF, T&amp;M 계약의 리스크 분담을 구매자/판매자 관점에서 설명하고, 각각 어떤 상황에 적합한지 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>FFP</strong>: 구매자 리스크 최저, 판매자 최고. 요구사항 명확·범위 확정 시 사용<br>
+          판매자가 비용 초과를 흡수해야 하므로 불명확한 요구사항에서는 가격이 높아짐<br><br>
+          <strong>CPFF</strong>: 구매자 리스크 최고, 판매자 최저. R&amp;D 또는 요구사항 불명확 시 사용<br>
+          구매자는 실제 원가가 얼마가 될지 불투명. 강력한 감사 필요<br><br>
+          <strong>T&amp;M</strong>: 양쪽 중간. 단기 전문가 파견, 범위 불명확 시 사용. 계약 기간·한도 명시 필수</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q2.</strong> RFP와 RFQ의 차이를 설명하고, IT 시스템 구축에는 어느 것이 더 적합한지 이유와 함께 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>RFQ (Request for Quotation)</strong>: 동일 규격 제품의 가격 비교. 최저가가 기준<br>
+          예: 노트북 100대 구매, 특정 모델 부품 조달<br><br>
+          <strong>RFP (Request for Proposal)</strong>: 기술 방안 + 가격을 종합 평가. 제안 내용 자체가 중요<br>
+          예: ERP 구축, 포털 시스템 개발<br><br>
+          IT 시스템 구축 → <strong>RFP가 적합</strong><br>
+          기술적 접근 방법, 팀 역량, 유지보수 계획이 가격만큼 중요하기 때문</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q3.</strong> 가중 점수 기법으로 A사(92점, 3억)와 B사(85점, 2.5억)를 비교할 때, 가격 가중치를 높이면 결과가 어떻게 달라지는가?</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>가격 가중치가 낮을 때: A사의 높은 기술 점수가 우세하여 A사 선정 가능<br>
+          가격 가중치가 높아질수록: B사의 낮은 가격 점수가 가중되어 B사로 역전 가능<br><br>
+          중요 포인트: 가중치 설계가 선정 결과를 결정합니다.<br>
+          → 가중치는 사전에 이해관계자와 합의 후 공개해야 공정성 확보<br>
+          → 가중치 사후 조정은 편파적 선정 의혹 발생</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q4.</strong> IT 프로젝트 외주 시 SLA에 반드시 포함해야 할 항목을 5가지 이상 나열하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p>① 서비스 가용성 (예: 99.9% = 연간 8.7시간 이내 장애)<br>
+          ② 응답 시간 (예: 일반 요청 &lt;3초, 피크타임 &lt;5초)<br>
+          ③ RTO (Recovery Time Objective): 복구 목표 시간 (예: 4시간 이내)<br>
+          ④ RPO (Recovery Point Objective): 데이터 유실 허용 범위 (예: 1시간 분량)<br>
+          ⑤ 장애 등급별 응답 시간 (Critical: 1시간, Major: 4시간, Minor: 24시간)<br>
+          ⑥ 정기 유지보수 창 (예: 매월 셋째 일요일 새벽 2~4시)<br>
+          ⑦ 위반 시 패널티 및 보상 조항</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 18: 다음 Day 예고 -->
+  <div class="slide">
+    <h2>다음 시간 예고 — Day 11: 이해관계자 관리</h2>
+    <div class="info-box gold">
+      <h3 style="margin:0 0 0.8rem;color:var(--accent-gold);">📅 Day 11 주요 학습 내용</h3>
+    </div>
+    <div class="card-grid" style="margin-top:1rem;">
+      <div class="card">
+        <div class="card-icon">👥</div>
+        <h3>이해관계자 식별</h3>
+        <p>프로젝트에 영향을 주거나 받는 모든 개인·조직을 체계적으로 식별</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>이해관계자 분석</h3>
+        <p>권력/관심도 그리드, 영향력/참여도 매트릭스로 우선순위 결정</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤝</div>
+        <h3>참여도 관리</h3>
+        <p>저항·중립·지지·챔피언 단계별 참여 전략 수립 및 실행</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔗</div>
+        <h3>전체 지식 영역 연결</h3>
+        <p>RACI·의사소통 계획·리스크·조달 — 이해관계자 분석이 모든 계획의 기반</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:1.2rem;">
+      💡 <strong>Day 10 → Day 11 연결:</strong> 오늘 배운 벤더·외주 업체도 이해관계자입니다.<br>
+      내일은 외부 벤더 포함 모든 이해관계자를 어떻게 분석하고 관리할지 배웁니다.
+    </div>
+  </div>
+
+</div><!-- /presentation -->
+
+<script src="../js/presentation.js"></script>
+</body>
+</html>

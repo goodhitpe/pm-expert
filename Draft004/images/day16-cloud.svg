@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg16" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3f"/>
+      <stop offset="100%" style="stop-color:#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="purple16" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c63ff;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#5248c8;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="teal16" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#00a884;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="gold16" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="red16" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:0.9"/>
+    </linearGradient>
+    <marker id="arr16" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c63ff"/>
+    </marker>
+    <marker id="arr16t" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00d4aa"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="560" fill="url(#bg16)" rx="14"/>
+  <rect x="0" y="0" width="720" height="3" rx="1" fill="url(#purple16)"/>
+
+  <!-- Title -->
+  <text x="360" y="36" text-anchor="middle" fill="#e0e0e0" font-size="18" font-weight="700">신기술 트렌드 (AI · Cloud · DevOps)</text>
+  <text x="360" y="56" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="11.5">IaaS / PaaS / SaaS 서비스 모델 &amp; 배포 유형 &amp; AI/ML 파이프라인</text>
+
+  <!-- ===== SERVICE MODEL COLUMNS ===== -->
+  <!-- Section header -->
+  <text x="360" y="83" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-size="12.5" font-weight="700">클라우드 서비스 모델 비교</text>
+
+  <!-- IaaS column -->
+  <rect x="18" y="92" width="210" height="178" rx="10" fill="rgba(108,99,255,0.08)" stroke="rgba(108,99,255,0.4)" stroke-width="1.5"/>
+  <rect x="18" y="92" width="210" height="30" rx="10" fill="url(#purple16)"/>
+  <rect x="18" y="108" width="210" height="14" rx="0" fill="url(#purple16)"/>
+  <text x="123" y="113" text-anchor="middle" fill="white" font-size="13" font-weight="700">IaaS</text>
+  <text x="123" y="130" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="9.5">Infrastructure as a Service</text>
+
+  <!-- IaaS layers -->
+  <rect x="30" y="138" width="186" height="20" rx="4" fill="rgba(108,99,255,0.25)"/>
+  <text x="123" y="152" text-anchor="middle" fill="#9b8fff" font-size="10" font-weight="600">✅ App · Middleware · OS (직접 관리)</text>
+  <rect x="30" y="162" width="186" height="20" rx="4" fill="rgba(108,99,255,0.12)"/>
+  <text x="123" y="176" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="10">☁ 가상화 · 서버 · 스토리지 · 네트워크</text>
+  <text x="123" y="208" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="9.5">AWS EC2, Azure VM, GCP Compute</text>
+  <text x="123" y="225" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9">유연성↑ / 관리부담↑</text>
+  <rect x="38" y="235" width="170" height="28" rx="6" fill="rgba(108,99,255,0.15)" stroke="rgba(108,99,255,0.3)" stroke-width="1"/>
+  <text x="123" y="249" text-anchor="middle" fill="#9b8fff" font-size="9.5">사용 사례: 대규모 맞춤형 인프라</text>
+  <text x="123" y="261" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="9">레거시 마이그레이션 · 빅데이터</text>
+
+  <!-- PaaS column -->
+  <rect x="254" y="92" width="212" height="178" rx="10" fill="rgba(0,212,170,0.06)" stroke="rgba(0,212,170,0.35)" stroke-width="1.5"/>
+  <rect x="254" y="92" width="212" height="30" rx="10" fill="url(#teal16)"/>
+  <rect x="254" y="108" width="212" height="14" rx="0" fill="url(#teal16)"/>
+  <text x="360" y="113" text-anchor="middle" fill="white" font-size="13" font-weight="700">PaaS</text>
+  <text x="360" y="130" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="9.5">Platform as a Service</text>
+
+  <rect x="266" y="138" width="188" height="20" rx="4" fill="rgba(0,212,170,0.25)"/>
+  <text x="360" y="152" text-anchor="middle" fill="#00d4aa" font-size="10" font-weight="600">✅ App (개발자가 코드만 관리)</text>
+  <rect x="266" y="162" width="188" height="20" rx="4" fill="rgba(0,212,170,0.1)"/>
+  <text x="360" y="176" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="10">☁ Middleware · OS · 인프라 전체</text>
+  <text x="360" y="208" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="9.5">Heroku, AWS Elastic Beanstalk, GCP App Engine</text>
+  <text x="360" y="225" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9">개발속도↑ / 플랫폼 종속↑</text>
+  <rect x="274" y="235" width="172" height="28" rx="6" fill="rgba(0,212,170,0.1)" stroke="rgba(0,212,170,0.3)" stroke-width="1"/>
+  <text x="360" y="249" text-anchor="middle" fill="#00d4aa" font-size="9.5">사용 사례: 웹앱 · API · ML 플랫폼</text>
+  <text x="360" y="261" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="9">스타트업 · 빠른 개발 사이클</text>
+
+  <!-- SaaS column -->
+  <rect x="492" y="92" width="210" height="178" rx="10" fill="rgba(243,156,18,0.06)" stroke="rgba(243,156,18,0.35)" stroke-width="1.5"/>
+  <rect x="492" y="92" width="210" height="30" rx="10" fill="url(#gold16)"/>
+  <rect x="492" y="108" width="210" height="14" rx="0" fill="url(#gold16)"/>
+  <text x="597" y="113" text-anchor="middle" fill="white" font-size="13" font-weight="700">SaaS</text>
+  <text x="597" y="130" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="9.5">Software as a Service</text>
+
+  <rect x="504" y="138" width="186" height="20" rx="4" fill="rgba(243,156,18,0.25)"/>
+  <text x="597" y="152" text-anchor="middle" fill="#f39c12" font-size="10" font-weight="600">✅ 데이터 · 설정만 사용자 담당</text>
+  <rect x="504" y="162" width="186" height="20" rx="4" fill="rgba(243,156,18,0.1)"/>
+  <text x="597" y="176" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="10">☁ App · OS · 인프라 전체 CSP 관리</text>
+  <text x="597" y="208" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="9.5">Gmail, Slack, Salesforce, Office365</text>
+  <text x="597" y="225" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9">관리부담↓↓ / 커스터마이징↓↓</text>
+  <rect x="512" y="235" width="170" height="28" rx="6" fill="rgba(243,156,18,0.1)" stroke="rgba(243,156,18,0.3)" stroke-width="1"/>
+  <text x="597" y="249" text-anchor="middle" fill="#f39c12" font-size="9.5">사용 사례: 이메일·협업·CRM</text>
+  <text x="597" y="261" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="9">구독 요금제 · 즉시 사용 가능</text>
+
+  <!-- ===== DEPLOYMENT MODELS ===== -->
+  <text x="360" y="293" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-size="12.5" font-weight="700">배포 모델 &amp; DevOps 루프</text>
+
+  <!-- Public Cloud -->
+  <rect x="18" y="303" width="150" height="72" rx="8" fill="rgba(108,99,255,0.1)" stroke="rgba(108,99,255,0.35)" stroke-width="1.5"/>
+  <text x="93" y="322" text-anchor="middle" fill="#9b8fff" font-size="11" font-weight="700">☁ Public Cloud</text>
+  <text x="93" y="338" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="9.5">AWS · Azure · GCP</text>
+  <text x="93" y="353" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9">공유 인프라 / 비용↓</text>
+  <text x="93" y="367" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="9">보안 책임 공유 모델(CSP+사용자)</text>
+
+  <!-- Private Cloud -->
+  <rect x="178" y="303" width="150" height="72" rx="8" fill="rgba(0,212,170,0.08)" stroke="rgba(0,212,170,0.3)" stroke-width="1.5"/>
+  <text x="253" y="322" text-anchor="middle" fill="#00d4aa" font-size="11" font-weight="700">🏢 Private Cloud</text>
+  <text x="253" y="338" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="9.5">온프레미스 / VMware</text>
+  <text x="253" y="353" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9">보안↑ / 비용↑↑</text>
+  <text x="253" y="367" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="9">금융·공공기관 규제 환경 적합</text>
+
+  <!-- Hybrid Cloud -->
+  <rect x="338" y="303" width="150" height="72" rx="8" fill="rgba(243,156,18,0.08)" stroke="rgba(243,156,18,0.3)" stroke-width="1.5"/>
+  <text x="413" y="322" text-anchor="middle" fill="#f39c12" font-size="11" font-weight="700">🔀 Hybrid Cloud</text>
+  <text x="413" y="338" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="9.5">Public + Private 연동</text>
+  <text x="413" y="353" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9">Cloud Bursting 지원</text>
+  <text x="413" y="367" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="9">피크 트래픽 시 퍼블릭으로 확장</text>
+
+  <!-- Multi-Cloud -->
+  <rect x="498" y="303" width="204" height="72" rx="8" fill="rgba(231,76,60,0.07)" stroke="rgba(231,76,60,0.28)" stroke-width="1.5"/>
+  <text x="600" y="322" text-anchor="middle" fill="#e74c3c" font-size="11" font-weight="700">🌐 Multi-Cloud</text>
+  <text x="600" y="338" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="9.5">복수 CSP 동시 활용</text>
+  <text x="600" y="353" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="9">벤더 종속 회피 / 복잡성↑</text>
+  <text x="600" y="367" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="9">AWS + Azure + GCP 조합 가능</text>
+
+  <!-- ===== DevOps Infinity Loop ===== -->
+  <text x="360" y="403" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-size="12.5" font-weight="700">DevOps 무한루프 &amp; AI/ML 파이프라인</text>
+
+  <!-- DevOps loop — simplified as two semicircle arcs + boxes -->
+  <!-- DEV side boxes -->
+  <rect x="18" y="414" width="95" height="28" rx="6" fill="rgba(108,99,255,0.2)" stroke="rgba(108,99,255,0.5)" stroke-width="1"/>
+  <text x="65" y="430" text-anchor="middle" fill="#9b8fff" font-size="9.5" font-weight="700">Plan</text>
+  <text x="65" y="440" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="8">요구사항·기획</text>
+
+  <rect x="18" y="454" width="95" height="28" rx="6" fill="rgba(108,99,255,0.2)" stroke="rgba(108,99,255,0.5)" stroke-width="1"/>
+  <text x="65" y="470" text-anchor="middle" fill="#9b8fff" font-size="9.5" font-weight="700">Code</text>
+  <text x="65" y="480" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="8">개발·버전관리(Git)</text>
+
+  <rect x="18" y="494" width="95" height="28" rx="6" fill="rgba(108,99,255,0.2)" stroke="rgba(108,99,255,0.5)" stroke-width="1"/>
+  <text x="65" y="510" text-anchor="middle" fill="#9b8fff" font-size="9.5" font-weight="700">Build · Test</text>
+  <text x="65" y="520" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="8">CI 자동 빌드·테스트</text>
+
+  <!-- DEV label -->
+  <text x="65" y="545" text-anchor="middle" fill="#9b8fff" font-size="10" font-weight="700">← DEV</text>
+
+  <!-- Arrows DEV to OPS -->
+  <line x1="113" y1="428" x2="133" y2="428" stroke="#6c63ff" stroke-width="1.5"/>
+  <line x1="113" y1="468" x2="133" y2="468" stroke="#6c63ff" stroke-width="1.5"/>
+  <line x1="113" y1="508" x2="133" y2="508" stroke="#6c63ff" stroke-width="1.5"/>
+  <line x1="123" y1="414" x2="123" y2="534" stroke="rgba(108,99,255,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- OPS side boxes -->
+  <rect x="225" y="414" width="95" height="28" rx="6" fill="rgba(0,212,170,0.15)" stroke="rgba(0,212,170,0.4)" stroke-width="1"/>
+  <text x="272" y="430" text-anchor="middle" fill="#00d4aa" font-size="9.5" font-weight="700">Release</text>
+  <text x="272" y="440" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="8">배포 승인·태깅</text>
+
+  <rect x="225" y="454" width="95" height="28" rx="6" fill="rgba(0,212,170,0.15)" stroke="rgba(0,212,170,0.4)" stroke-width="1"/>
+  <text x="272" y="470" text-anchor="middle" fill="#00d4aa" font-size="9.5" font-weight="700">Deploy</text>
+  <text x="272" y="480" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="8">CD 자동 배포</text>
+
+  <rect x="225" y="494" width="95" height="28" rx="6" fill="rgba(0,212,170,0.15)" stroke="rgba(0,212,170,0.4)" stroke-width="1"/>
+  <text x="272" y="510" text-anchor="middle" fill="#00d4aa" font-size="9.5" font-weight="700">Operate · Monitor</text>
+  <text x="272" y="520" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="8">운영·모니터링·피드백</text>
+  <text x="272" y="545" text-anchor="middle" fill="#00d4aa" font-size="10" font-weight="700">OPS →</text>
+
+  <!-- Feedback arrow (OPS back to DEV) -->
+  <path d="M 320 508 Q 360 540 360 540 Q 360 540 135 540 Q 113 535 113 525" fill="none" stroke="#00d4aa" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr16t)"/>
+
+  <!-- ===== AI/ML Pipeline ===== -->
+  <!-- Vertical mini pipeline on right -->
+  <rect x="360" y="410" width="1" height="130" fill="rgba(255,255,255,0.08)"/>
+
+  <text x="540" y="420" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="11" font-weight="600">AI / ML 파이프라인</text>
+
+  <!-- ML stages horizontal -->
+  <rect x="360" y="428" width="82" height="24" rx="6" fill="rgba(108,99,255,0.18)" stroke="rgba(108,99,255,0.4)" stroke-width="1"/>
+  <text x="401" y="444" text-anchor="middle" fill="#9b8fff" font-size="9" font-weight="700">데이터 수집</text>
+  <line x1="442" y1="440" x2="458" y2="440" stroke="#6c63ff" stroke-width="1.5" marker-end="url(#arr16)"/>
+
+  <rect x="458" y="428" width="82" height="24" rx="6" fill="rgba(108,99,255,0.18)" stroke="rgba(108,99,255,0.4)" stroke-width="1"/>
+  <text x="499" y="444" text-anchor="middle" fill="#9b8fff" font-size="9" font-weight="700">전처리·EDA</text>
+  <line x1="540" y1="440" x2="556" y2="440" stroke="#6c63ff" stroke-width="1.5" marker-end="url(#arr16)"/>
+
+  <rect x="556" y="428" width="82" height="24" rx="6" fill="rgba(108,99,255,0.18)" stroke="rgba(108,99,255,0.4)" stroke-width="1"/>
+  <text x="597" y="444" text-anchor="middle" fill="#9b8fff" font-size="9" font-weight="700">모델 학습</text>
+  <line x1="638" y1="440" x2="654" y2="440" stroke="#6c63ff" stroke-width="1.5" marker-end="url(#arr16)"/>
+
+  <rect x="654" y="428" width="48" height="24" rx="6" fill="rgba(0,212,170,0.15)" stroke="rgba(0,212,170,0.35)" stroke-width="1"/>
+  <text x="678" y="444" text-anchor="middle" fill="#00d4aa" font-size="9" font-weight="700">배포</text>
+
+  <!-- second row -->
+  <rect x="360" y="462" width="82" height="24" rx="6" fill="rgba(243,156,18,0.12)" stroke="rgba(243,156,18,0.3)" stroke-width="1"/>
+  <text x="401" y="472" text-anchor="middle" fill="#f39c12" font-size="9" font-weight="700">LLM &amp; GenAI</text>
+  <text x="401" y="482" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="8">GPT·Gemini·Claude</text>
+
+  <rect x="458" y="462" width="82" height="24" rx="6" fill="rgba(243,156,18,0.12)" stroke="rgba(243,156,18,0.3)" stroke-width="1"/>
+  <text x="499" y="472" text-anchor="middle" fill="#f39c12" font-size="9" font-weight="700">RAG / Fine-tune</text>
+  <text x="499" y="482" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="8">검색증강·미세조정</text>
+
+  <rect x="556" y="462" width="82" height="24" rx="6" fill="rgba(243,156,18,0.12)" stroke="rgba(243,156,18,0.3)" stroke-width="1"/>
+  <text x="597" y="472" text-anchor="middle" fill="#f39c12" font-size="9" font-weight="700">Prompt Engineering</text>
+  <text x="597" y="482" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="8">CoT·Few-shot·Zero-shot</text>
+
+  <rect x="654" y="462" width="48" height="24" rx="6" fill="rgba(243,156,18,0.15)" stroke="rgba(243,156,18,0.3)" stroke-width="1"/>
+  <text x="678" y="472" text-anchor="middle" fill="#f39c12" font-size="9" font-weight="700">서비스</text>
+  <text x="678" y="482" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="8">API화</text>
+
+  <!-- MLOps label -->
+  <rect x="360" y="497" width="342" height="24" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="531" y="514" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10">MLOps = DevOps + ML : 모델 버전관리 · 드리프트 감지 · 재학습 자동화</text>
+
+  <!-- Cloud key points -->
+  <rect x="360" y="528" width="342" height="24" rx="6" fill="rgba(0,212,170,0.06)" stroke="rgba(0,212,170,0.15)" stroke-width="1"/>
+  <text x="531" y="544" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="9.5">PM 시사점: 클라우드 구매 ↔ 계약 유형(SaaS=OpEx/IaaS=CapEx), 보안 책임 범위 계약서 명시 필수</text>
+</svg>

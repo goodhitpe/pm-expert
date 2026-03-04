@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13: 네트워크 | PM 교육</title>
+    <link rel="stylesheet" href="../css/presentation.css">
+</head>
+
+<body>
+    <a href="../index.html" class="home-link">🏠 목차</a>
+    <div class="day-nav"><a href="day12-sw-engineering.html">← Day 12</a><a href="day14-security.html">Day 14 →</a>
+    </div>
+    <div class="presentation">
+        <div class="slide title-slide">
+            <div class="day-badge">DAY 13 · IT 기술</div>
+            <h1>네트워크</h1>
+            <p class="subtitle">Network Fundamentals for PM</p>
+            <div class="meta"><span>📅 교육 13일차</span><span>⏱️ 8시간</span><span>🌐 OSI 7계층 · TCP/IP · REST API ·
+                    클라우드</span></div>
+        </div>
+
+        <div class="slide">
+            <h2>🌐 OSI 7계층 모델</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>계층</th>
+                            <th>이름</th>
+                            <th>핵심 기능</th>
+                            <th>프로토콜/장비</th>
+                            <th>PM 관점</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background:rgba(108,99,255,0.05);">
+                            <td><strong>7</strong></td>
+                            <td>응용(Application)</td>
+                            <td>사용자 인터페이스</td>
+                            <td>HTTP, SMTP, FTP</td>
+                            <td>API, 웹 서비스</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6</strong></td>
+                            <td>표현(Presentation)</td>
+                            <td>데이터 변환/암호화</td>
+                            <td>SSL/TLS, JPEG</td>
+                            <td>보안 인증서</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td>세션(Session)</td>
+                            <td>연결 관리</td>
+                            <td>RPC, NetBIOS</td>
+                            <td>세션 타임아웃</td>
+                        </tr>
+                        <tr style="background:rgba(0,212,170,0.05);">
+                            <td><strong>4</strong></td>
+                            <td>전송(Transport)</td>
+                            <td>신뢰성 있는 전송</td>
+                            <td>TCP, UDP</td>
+                            <td>포트 관리</td>
+                        </tr>
+                        <tr style="background:rgba(255,215,0,0.05);">
+                            <td><strong>3</strong></td>
+                            <td>네트워크(Network)</td>
+                            <td>라우팅, IP 주소</td>
+                            <td>IP, ICMP, Router</td>
+                            <td>서브넷, 방화벽</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>데이터링크</td>
+                            <td>프레임 전송</td>
+                            <td>Ethernet, Switch</td>
+                            <td>VLAN 구성</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>물리(Physical)</td>
+                            <td>전기 신호 전송</td>
+                            <td>케이블, Hub</td>
+                            <td>인프라 구성</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="info-box">
+                <p><strong>PM이 주로 다루는 영역</strong>: L7(애플리케이션), L4(성능), L3(방화벽/보안) 수준의 이해가 중요</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>📡 TCP vs UDP</h2>
+            <div class="comparison">
+                <div class="vs-col left">
+                    <h3 style="text-align:center;">🔒 TCP (Transmission Control Protocol)</h3>
+                    <ul>
+                        <li><strong>연결형</strong> (3-Way Handshake)</li>
+                        <li><strong>신뢰성</strong> 보장 (순서, 재전송)</li>
+                        <li>속도는 상대적으로 느림</li>
+                        <li>흐름 제어, 혼잡 제어</li>
+                    </ul>
+                    <div class="info-box success">
+                        <p>용도: 웹(HTTP), 이메일, 파일 전송, DB 통신</p>
+                    </div>
+                </div>
+                <div class="vs-col right">
+                    <h3 style="text-align:center;">⚡ UDP (User Datagram Protocol)</h3>
+                    <ul>
+                        <li><strong>비연결형</strong> (연결 설정 없음)</li>
+                        <li><strong>속도 우선</strong> (순서 보장 X)</li>
+                        <li>패킷 손실 가능</li>
+                        <li>실시간 전송에 적합</li>
+                    </ul>
+                    <div class="info-box warning">
+                        <p>용도: 동영상 스트리밍, 게임, VoIP, DNS 조회</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🌍 DNS & HTTP</h2>
+            <div class="two-col">
+                <div>
+                    <h3>DNS (Domain Name System)</h3>
+                    <div class="diagram" style="flex-direction:column; gap:6px;">
+                        <div class="step" style="width:100%; padding:10px;">
+                            <div class="step-name" style="font-size:0.9rem;">www.example.com → DNS 서버 → 93.184.216.34
+                            </div>
+                        </div>
+                    </div>
+                    <ul style="margin-top:12px;">
+                        <li>도메인 이름을 <strong>IP 주소로 변환</strong></li>
+                        <li>계층 구조: Root → TLD(.com) → Domain</li>
+                        <li>PM 관점: DNS 전파 시간, 도메인 이전</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>HTTP/HTTPS</h3>
+                    <div class="card-grid" style="grid-template-columns:1fr;">
+                        <div class="card">
+                            <div class="card-title">HTTP 메서드</div>
+                            <div class="card-text"><strong>GET</strong> 조회 | <strong>POST</strong> 생성 |
+                                <strong>PUT</strong> 수정 | <strong>DELETE</strong> 삭제</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">상태 코드</div>
+                            <div class="card-text"><strong>200</strong> OK | <strong>301</strong> Redirect |
+                                <strong>404</strong> Not Found | <strong>500</strong> Server Error</div>
+                        </div>
+                    </div>
+                    <div class="info-box" style="margin-top:8px;">
+                        <p><strong>HTTPS</strong> = HTTP + SSL/TLS 암호화<br>개인정보 취급 시 <strong>필수!</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>🔌 REST API</h2>
+            <div class="info-box gold">
+                <div class="info-title">API (Application Programming Interface)</div>
+                <p>서로 다른 시스템이 <strong>데이터를 주고받는 규약</strong>. 현대 IT 시스템의 핵심 연결고리</p>
+            </div>
+            <h3 style="margin-top:16px;">REST API 핵심 원칙</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-title">🌐 자원 기반 (Resource-based)</div>
+                    <div class="card-text">URL로 자원 식별<br>/api/users/123</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">📋 HTTP 메서드 활용</div>
+                    <div class="card-text">CRUD와 매핑<br>GET·POST·PUT·DELETE</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">🔄 무상태 (Stateless)</div>
+                    <div class="card-text">각 요청은 독립적<br>서버에 상태 저장 X</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">📦 JSON 응답</div>
+                    <div class="card-text">표준 데이터 형식으로<br>시스템 간 연동 용이</div>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top:16px;">
+                <div class="info-title">PM 관점에서 API가 중요한 이유</div>
+                <p>시스템 연동 범위, API 설계 일정, 외부 API 의존성, API 성능 SLA 등이 프로젝트 범위·일정·리스크에 직접 영향!</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>☁️ 클라우드 인프라</h2>
+            <div class="three-col">
+                <div class="card" style="border-top:3px solid var(--accent-primary);">
+                    <div class="card-title">IaaS</div>
+                    <div class="card-text">Infrastructure as a Service<br>서버, 네트워크, 스토리지<br><small>AWS EC2, Azure
+                            VM</small></div>
+                </div>
+                <div class="card" style="border-top:3px solid var(--accent-secondary);">
+                    <div class="card-title">PaaS</div>
+                    <div class="card-text">Platform as a Service<br>개발·배포 플랫폼<br><small>Heroku, Google App
+                            Engine</small></div>
+                </div>
+                <div class="card" style="border-top:3px solid var(--accent-gold);">
+                    <div class="card-title">SaaS</div>
+                    <div class="card-text">Software as a Service<br>완전한 소프트웨어 서비스<br><small>Gmail, Salesforce,
+                            Slack</small></div>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top:16px;">
+                <div class="info-title">PM이 클라우드를 알아야 하는 이유</div>
+                <p>• 인프라 조달 일정 단축 (몇 주 → 몇 분)<br>• 원가 모델 변화 (CAPEX → OPEX)<br>• SLA/가용성 요구사항 정의<br>• 보안·컴플라이언스 고려사항</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>📊 네트워크 성능 지표 & SLA</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>지표</th>
+                            <th>설명</th>
+                            <th>일반적 기준</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>가용성(Availability)</strong></td>
+                            <td>시스템 정상 운영 시간 비율</td>
+                            <td>99.9% (8.7시간/년 다운)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>응답시간(Latency)</strong></td>
+                            <td>요청~응답까지 소요 시간</td>
+                            <td>웹: 2초 이내</td>
+                        </tr>
+                        <tr>
+                            <td><strong>처리량(Throughput)</strong></td>
+                            <td>단위 시간당 처리 건수</td>
+                            <td>TPS 기준 정의</td>
+                        </tr>
+                        <tr>
+                            <td><strong>동시 사용자</strong></td>
+                            <td>동시 접속 지원 수</td>
+                            <td>프로젝트별 정의</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="formula" style="margin-top:16px;">가용성 99.99% (Four Nines) = 연간 <strong>52.6분</strong> 다운타임 허용
+            </div>
+            <div class="quiz-box" style="margin-top:16px;">
+                <div class="quiz-title">❓ 확인 질문</div>
+                <ol>
+                    <li>TCP와 UDP의 차이를 PM 관점에서 설명하시오</li>
+                    <li>REST API에서 HTTP 메서드와 CRUD의 매핑을 설명하시오</li>
+                    <li>IaaS/PaaS/SaaS의 차이를 예시와 함께 설명하시오</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="slide title-slide">
+            <div class="day-badge">DAY 13 마무리</div>
+            <h1>감사합니다</h1>
+            <p class="subtitle">내일은 Day 14: 정보보안</p>
+            <div class="meta"><span>🔒 CIA Triad, OWASP Top 10, ISMS, 개인정보보호</span></div>
+        </div>
+    </div>
+    <script src="../js/presentation.js"></script>
+</body>
+
+</html>

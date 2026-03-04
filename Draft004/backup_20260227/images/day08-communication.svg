@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 440" width="620" height="440">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3f"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="620" height="440" fill="url(#bg)" rx="12"/>
+  <text x="310" y="28" text-anchor="middle" fill="#f39c12" font-size="16" font-family="Arial,sans-serif" font-weight="bold">Day 08 — 의사소통 채널 수 = n(n-1)/2</text>
+
+  <!-- 4명: 6 채널 -->
+  <text x="120" y="65" text-anchor="middle" fill="#00d4aa" font-size="12" font-family="Arial,sans-serif" font-weight="bold">4명 팀</text>
+  <text x="120" y="82" text-anchor="middle" fill="#aaa" font-size="10" font-family="Arial,sans-serif">4×3/2 = 6 채널</text>
+
+  <!-- 4 nodes (square) -->
+  <circle cx="90" cy="130" r="18" fill="#6c63ff"/><text x="90" y="135" text-anchor="middle" fill="white" font-size="9" font-family="Arial,sans-serif">PM</text>
+  <circle cx="150" cy="105" r="18" fill="#00d4aa"/><text x="150" y="110" text-anchor="middle" fill="white" font-size="9" font-family="Arial,sans-serif">A</text>
+  <circle cx="155" cy="175" r="18" fill="#00d4aa"/><text x="155" y="180" text-anchor="middle" fill="white" font-size="9" font-family="Arial,sans-serif">B</text>
+  <circle cx="85" cy="200" r="18" fill="#00d4aa"/><text x="85" y="205" text-anchor="middle" fill="white" font-size="9" font-family="Arial,sans-serif">C</text>
+
+  <!-- 6 channels -->
+  <line x1="90" y1="130" x2="150" y2="105" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <line x1="90" y1="130" x2="155" y2="175" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <line x1="90" y1="130" x2="85" y2="200" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <line x1="150" y1="105" x2="155" y2="175" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <line x1="150" y1="105" x2="85" y2="200" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <line x1="155" y1="175" x2="85" y2="200" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+
+  <!-- 10명: 45 채널 -->
+  <text x="310" y="65" text-anchor="middle" fill="#f39c12" font-size="12" font-family="Arial,sans-serif" font-weight="bold">10명 팀</text>
+  <text x="310" y="82" text-anchor="middle" fill="#aaa" font-size="10" font-family="Arial,sans-serif">10×9/2 = 45 채널</text>
+
+  <!-- 10 nodes in circle -->
+  <!-- Generate 10 nodes : center 310,160 radius 75 -->
+  <circle cx="310" cy="85" r="14" fill="#6c63ff"/><text x="310" y="90" text-anchor="middle" fill="white" font-size="8">PM</text>
+  <circle cx="357" cy="100" r="12" fill="#00d4aa"/>
+  <circle cx="383" cy="142" r="12" fill="#00d4aa"/>
+  <circle cx="378" cy="192" r="12" fill="#00d4aa"/>
+  <circle cx="347" cy="228" r="12" fill="#00d4aa"/>
+  <circle cx="306" cy="238" r="12" fill="#00d4aa"/>
+  <circle cx="265" cy="228" r="12" fill="#00d4aa"/>
+  <circle cx="237" cy="192" r="12" fill="#00d4aa"/>
+  <circle cx="237" cy="142" r="12" fill="#00d4aa"/>
+  <circle cx="263" cy="100" r="12" fill="#00d4aa"/>
+
+  <!-- Connect all - just draw star from center (PM) and ring connections -->
+  <!-- PM to all -->
+  <line x1="310" y1="85" x2="357" y2="100" stroke="rgba(243,156,18,0.4)" stroke-width="1"/>
+  <line x1="310" y1="85" x2="383" y2="142" stroke="rgba(243,156,18,0.4)" stroke-width="1"/>
+  <line x1="310" y1="85" x2="378" y2="192" stroke="rgba(243,156,18,0.4)" stroke-width="1"/>
+  <line x1="310" y1="85" x2="347" y2="228" stroke="rgba(243,156,18,0.4)" stroke-width="1"/>
+  <line x1="310" y1="85" x2="306" y2="238" stroke="rgba(243,156,18,0.4)" stroke-width="1"/>
+  <line x1="310" y1="85" x2="265" y2="228" stroke="rgba(243,156,18,0.4)" stroke-width="1"/>
+  <line x1="310" y1="85" x2="237" y2="192" stroke="rgba(243,156,18,0.4)" stroke-width="1"/>
+  <line x1="310" y1="85" x2="237" y2="142" stroke="rgba(243,156,18,0.4)" stroke-width="1"/>
+  <line x1="310" y1="85" x2="263" y2="100" stroke="rgba(243,156,18,0.4)" stroke-width="1"/>
+  <!-- Ring connections -->
+  <line x1="263" y1="100" x2="357" y2="100" stroke="rgba(0,212,170,0.3)" stroke-width="0.8"/>
+  <line x1="357" y1="100" x2="383" y2="142" stroke="rgba(0,212,170,0.3)" stroke-width="0.8"/>
+  <line x1="383" y1="142" x2="378" y2="192" stroke="rgba(0,212,170,0.3)" stroke-width="0.8"/>
+  <line x1="378" y1="192" x2="347" y2="228" stroke="rgba(0,212,170,0.3)" stroke-width="0.8"/>
+  <line x1="347" y1="228" x2="306" y2="238" stroke="rgba(0,212,170,0.3)" stroke-width="0.8"/>
+  <line x1="306" y1="238" x2="265" y2="228" stroke="rgba(0,212,170,0.3)" stroke-width="0.8"/>
+  <line x1="265" y1="228" x2="237" y2="192" stroke="rgba(0,212,170,0.3)" stroke-width="0.8"/>
+  <line x1="237" y1="192" x2="237" y2="142" stroke="rgba(0,212,170,0.3)" stroke-width="0.8"/>
+  <line x1="237" y1="142" x2="263" y2="100" stroke="rgba(0,212,170,0.3)" stroke-width="0.8"/>
+  <!-- Cross connections (some) -->
+  <line x1="263" y1="100" x2="383" y2="142" stroke="rgba(255,100,100,0.2)" stroke-width="0.8"/>
+  <line x1="357" y1="100" x2="378" y2="192" stroke="rgba(255,100,100,0.2)" stroke-width="0.8"/>
+  <line x1="383" y1="142" x2="347" y2="228" stroke="rgba(255,100,100,0.2)" stroke-width="0.8"/>
+  <line x1="237" y1="142" x2="306" y2="238" stroke="rgba(255,100,100,0.2)" stroke-width="0.8"/>
+  <line x1="237" y1="192" x2="347" y2="228" stroke="rgba(255,100,100,0.2)" stroke-width="0.8"/>
+  <line x1="265" y1="228" x2="378" y2="192" stroke="rgba(255,100,100,0.2)" stroke-width="0.8"/>
+
+  <!-- Channel count formula comparison -->
+  <rect x="480" y="90" width="125" height="160" rx="6" fill="rgba(255,255,255,0.04)" stroke="#444" stroke-width="1"/>
+  <text x="542" y="108" text-anchor="middle" fill="#f39c12" font-size="10" font-family="Arial,sans-serif" font-weight="bold">채널 수 폭발</text>
+  <text x="542" y="126" text-anchor="middle" fill="#e0e0e0" font-size="10" font-family="Arial,sans-serif">n=4 → 6채널</text>
+  <text x="542" y="144" text-anchor="middle" fill="#e0e0e0" font-size="10" font-family="Arial,sans-serif">n=5 → 10채널</text>
+  <text x="542" y="162" text-anchor="middle" fill="#e0e0e0" font-size="10" font-family="Arial,sans-serif">n=10 → 45채널</text>
+  <text x="542" y="180" text-anchor="middle" fill="#e74c3c" font-size="10" font-family="Arial,sans-serif">n=20 → 190채널</text>
+  <text x="542" y="198" text-anchor="middle" fill="#e74c3c" font-size="10" font-family="Arial,sans-serif">n=50 → 1225채널</text>
+  <text x="542" y="218" text-anchor="middle" fill="#888" font-size="8" font-family="Arial,sans-serif">→ 팀 크기가 커질수록</text>
+  <text x="542" y="232" text-anchor="middle" fill="#888" font-size="8" font-family="Arial,sans-serif">소통 복잡도 기하급수↑</text>
+
+  <!-- Communication Plan bottom section -->
+  <rect x="20" y="282" width="580" height="140" rx="8" fill="rgba(0,0,0,0.2)" stroke="#444" stroke-width="1"/>
+  <text x="310" y="302" text-anchor="middle" fill="#f39c12" font-size="12" font-family="Arial,sans-serif" font-weight="bold">의사소통 관리 계획 핵심 항목</text>
+
+  <rect x="36" y="312" width="130" height="96" rx="5" fill="rgba(108,99,255,0.1)" stroke="#6c63ff" stroke-width="1"/>
+  <text x="101" y="328" text-anchor="middle" fill="#9b8fff" font-size="10" font-weight="bold">5W1H</text>
+  <text x="50" y="345" fill="#e0e0e0" font-size="9">Who: 발신자·수신자</text>
+  <text x="50" y="361" fill="#e0e0e0" font-size="9">What: 정보 내용</text>
+  <text x="50" y="377" fill="#e0e0e0" font-size="9">When: 보고 주기</text>
+  <text x="50" y="393" fill="#e0e0e0" font-size="9">How: 이메일/회의</text>
+
+  <rect x="178" y="312" width="130" height="96" rx="5" fill="rgba(0,212,170,0.1)" stroke="#00d4aa" stroke-width="1"/>
+  <text x="243" y="328" text-anchor="middle" fill="#00d4aa" font-size="10" font-weight="bold">보고서 유형</text>
+  <text x="192" y="345" fill="#e0e0e0" font-size="9">진행현황 보고서</text>
+  <text x="192" y="361" fill="#e0e0e0" font-size="9">이슈 로그</text>
+  <text x="192" y="377" fill="#e0e0e0" font-size="9">RAG (Red/Amber/Green)</text>
+  <text x="192" y="393" fill="#e0e0e0" font-size="9">대시보드</text>
+
+  <rect x="320" y="312" width="130" height="96" rx="5" fill="rgba(243,156,18,0.1)" stroke="#f39c12" stroke-width="1"/>
+  <text x="385" y="328" text-anchor="middle" fill="#f39c12" font-size="10" font-weight="bold">소통 장벽</text>
+  <text x="334" y="345" fill="#e0e0e0" font-size="9">언어·문화 차이</text>
+  <text x="334" y="361" fill="#e0e0e0" font-size="9">정보 과부하</text>
+  <text x="334" y="377" fill="#e0e0e0" font-size="9">지위 차이</text>
+  <text x="334" y="393" fill="#e0e0e0" font-size="9">물리적 거리</text>
+
+  <rect x="462" y="312" width="122" height="96" rx="5" fill="rgba(231,76,60,0.1)" stroke="#e74c3c" stroke-width="1"/>
+  <text x="523" y="328" text-anchor="middle" fill="#e74c3c" font-size="10" font-weight="bold">PM 원칙</text>
+  <text x="476" y="345" fill="#e0e0e0" font-size="9">소통 90% 책임</text>
+  <text x="476" y="361" fill="#e0e0e0" font-size="9">PULL > PUSH</text>
+  <text x="476" y="377" fill="#e0e0e0" font-size="9">공식 &gt; 비공식</text>
+  <text x="476" y="393" fill="#e0e0e0" font-size="9">문서 > 구두</text>
+</svg>

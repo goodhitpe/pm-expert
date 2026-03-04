@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 17: 애자일/스크럼 &amp; PM 도구 | PM Expert</title>
+  <link rel="stylesheet" href="../css/presentation.css">
+</head>
+<body>
+
+<div class="presentation">
+
+  <!-- SLIDE 1: 타이틀 -->
+  <div class="slide title-slide">
+    <div class="title-content">
+      <div class="day-badge">Day 17</div>
+      <h1>애자일/스크럼 &amp; PM 도구</h1>
+      <p class="subtitle">Agile · Scrum · Kanban · Hybrid<br>
+        Jira · MS Project · Trello · 전체 과정 총정리</p>
+      <div class="title-meta">
+        <span>📅 17일차 (최종)</span>
+        <span>⏱ 8시간</span>
+        <span>🎓 16일간의 여정 마무리!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: 학습 목표 -->
+  <div class="slide">
+    <h2>학습 목표</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">📜</div>
+        <h3>애자일 선언문</h3>
+        <p>4가지 핵심 가치와 12가지 원칙을 이해하고 워터폴·스크럼·칸반 적합 상황을 판단할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔄</div>
+        <h3>스크럼 프레임워크</h3>
+        <p>3역할·5이벤트·3산출물을 구분하고 사용자 스토리·번다운 차트·벨로시티 개념을 적용할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>칸반 &amp; 하이브리드</h3>
+        <p>칸반 WIP 제한 목적과 리드타임 개념을 이해하고 프로젝트 특성에 맞는 방법론을 선택할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛠️</div>
+        <h3>PM 도구 실습</h3>
+        <p>Jira(스크럼/칸반 보드), MS Project(간트/EVM), Trello(소규모) 핵심 기능과 선택 기준을 설명할 수 있다</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: 오늘의 흐름 -->
+  <div class="slide">
+    <h2>오늘의 흐름 — 7교시 구성</h2>
+    <div class="diagram">
+      <div class="step"><span class="step-num">1교시</span><span class="step-label">애자일 개요<br>선언문</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">2교시</span><span class="step-label">스크럼<br>3·5·3</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">3교시</span><span class="step-label">칸반<br>하이브리드</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">5교시</span><span class="step-label">Jira<br>실습</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">6교시</span><span class="step-label">MS Project<br>Trello</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">7교시</span><span class="step-label">전체 총정리<br>수료</span></div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: [1교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">1교시</div>
+      <h2>애자일 개요 &amp; 선언문</h2>
+      <p>4가지 핵심 가치 · 12가지 원칙 · 워터폴 vs 애자일</p>
+      <div class="section-time">⏱ 1시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: 애자일 선언문 -->
+  <div class="slide">
+    <h2>애자일 선언문 (Agile Manifesto) — 4가지 핵심 가치</h2>
+    <div class="info-box" style="margin-bottom:0.8rem;font-size:0.83rem;">
+      <strong>애자일(Agile)</strong>: 불확실성·변화에 적응하는 반복적·점진적 개발 철학 (2001년 스노버드 회의)
+    </div>
+    <div class="comparison">
+      <div class="vs-col left">
+        <h3 style="font-size:0.9rem;color:#888;">덜 중요하게 여기는 것</h3>
+        <div style="line-height:2.1;font-size:0.85rem;opacity:0.7;">
+          <div>프로세스와 도구</div>
+          <div>포괄적인 문서</div>
+          <div>계약 협상</div>
+          <div>계획을 따르기</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--accent-gold);font-weight:bold;padding:0 0.8rem;min-width:2rem;">
+        →
+      </div>
+      <div class="vs-col right">
+        <h3 style="font-size:0.9rem;color:var(--accent-gold);">더 가치 있게 여기는 것</h3>
+        <div style="line-height:2.1;font-size:0.85rem;font-weight:bold;">
+          <div style="color:var(--accent-secondary);">개인과 상호작용</div>
+          <div style="color:var(--accent-secondary);">작동하는 소프트웨어</div>
+          <div style="color:var(--accent-secondary);">고객과의 협력</div>
+          <div style="color:var(--accent-secondary);">변화에 대응</div>
+        </div>
+      </div>
+    </div>
+    <div class="info-box gold" style="margin-top:0.8rem;font-size:0.82rem;">
+      <strong>12가지 원칙 핵심 요약</strong>: 조기·지속적 가치 인도 / 변경 환영 (늦더라도) / 짧은 주기 인도 /
+      지속 가능한 개발 속도 / 기술적 탁월성 / 단순성 / 자기조직화 팀 / 정기적 회고
+    </div>
+  </div>
+
+  <!-- SLIDE 6: [2교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">2교시</div>
+      <h2>스크럼 프레임워크</h2>
+      <p>3역할 · 5이벤트 · 3산출물 · 사용자 스토리 · 번다운 차트</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: 스크럼 3역할 + 3산출물 -->
+  <div class="slide">
+    <h2>스크럼 — 3역할 &amp; 3산출물</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">3가지 역할 (Roles)</h3>
+        <div class="card-grid" style="grid-template-columns:repeat(1,1fr);gap:0.4rem;">
+          <div class="card" style="padding:0.6rem 0.8rem;">
+            <h3 style="font-size:0.88rem;color:var(--accent-gold);">🎯 Product Owner (PO)</h3>
+            <p style="font-size:0.8rem;">제품 비전 수립 · 제품 백로그 우선순위 결정 · ROI 책임<br>
+            고객/사용자와 개발팀 사이의 연결점</p>
+          </div>
+          <div class="card" style="padding:0.6rem 0.8rem;">
+            <h3 style="font-size:0.88rem;color:var(--accent-secondary);">🛡️ Scrum Master (SM)</h3>
+            <p style="font-size:0.8rem;">프로세스 코치 · 장애물(Impediment) 제거<br>
+            팀 보호 · 애자일 가치 수호자 (관리자 ≠ SM)</p>
+          </div>
+          <div class="card" style="padding:0.6rem 0.8rem;">
+            <h3 style="font-size:0.88rem;">👥 개발 팀 (Development Team)</h3>
+            <p style="font-size:0.8rem;">교차기능(Cross-functional) + 자기조직화 팀<br>
+            3~9명 권장 · 완성 증분(Increment) 생성 책임</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">3가지 산출물 (Artifacts)</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>산출물</th><th>내용</th><th>책임자</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(255,215,0,0.08);">
+                <td><strong>제품 백로그</strong><br>(Product Backlog)</td>
+                <td>우선순위화된 요구사항 목록<br>사용자 스토리 형식</td>
+                <td>PO</td>
+              </tr>
+              <tr>
+                <td><strong>스프린트 백로그</strong><br>(Sprint Backlog)</td>
+                <td>스프린트 선정 항목<br>+ 작업 분해 (태스크 단위)</td>
+                <td>개발팀</td>
+              </tr>
+              <tr style="background:rgba(0,200,150,0.08);">
+                <td><strong>증분 (Increment)</strong></td>
+                <td>DoD(완료 정의) 충족<br>잠재적 출시 가능 상태</td>
+                <td>개발팀</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box" style="margin-top:0.4rem;font-size:0.81rem;">
+          <strong>사용자 스토리 형식</strong><br>
+          "나는 [역할]로서 [기능]을 원한다. 왜냐하면 [비즈니스 가치]이기 때문이다."<br>
+          <strong>INVEST 기준</strong>: Independent·Negotiable·Valuable·Estimable·Small·Testable
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: 스크럼 5이벤트 -->
+  <div class="slide">
+    <h2>스크럼 — 5가지 이벤트 (Sprint Cycle)</h2>
+    <div class="diagram" style="flex-wrap:wrap;gap:0.5rem;">
+      <div class="step" style="flex:1;min-width:120px;font-size:0.82rem;background:rgba(255,215,0,0.1);border-color:#ffd700;">
+        <strong>Sprint</strong><br>1~4주 타임박스<br>목표: 완성 증분 생성<br><span style="color:#aaa;font-size:0.76rem;">스프린트는 변경·취소 불가</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step" style="flex:1;min-width:120px;font-size:0.82rem;">
+        <strong>Sprint Planning</strong><br>스프린트 목표 설정<br>백로그 선정 + 분해<br><span style="color:#aaa;font-size:0.76rem;">최대 8시간 (4주 기준)</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step" style="flex:1;min-width:120px;font-size:0.82rem;">
+        <strong>Daily Scrum</strong><br>매일 15분<br>① 어제 한 일<br>② 오늘 할 일<br>③ 블로커
+      </div>
+      <div class="arrow">→</div>
+      <div class="step" style="flex:1;min-width:120px;font-size:0.82rem;background:rgba(0,200,150,0.08);">
+        <strong>Sprint Review</strong><br>증분 시연<br>이해관계자 피드백<br><span style="color:#aaa;font-size:0.76rem;">최대 4시간 (4주 기준)</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step" style="flex:1;min-width:120px;font-size:0.82rem;background:rgba(108,99,255,0.1);">
+        <strong>Sprint Retrospective</strong><br>팀 프로세스 개선<br>Start / Stop / Continue<br><span style="color:#aaa;font-size:0.76rem;">최대 3시간 (4주 기준)</span>
+      </div>
+    </div>
+    <div class="two-col" style="margin-top:0.8rem;">
+      <div class="info-box gold" style="font-size:0.82rem;">
+        <strong>스토리 포인트 &amp; 플래닝 포커</strong><br>
+        절대 시간이 아닌 상대적 복잡도 추정 (피보나치: 1·2·3·5·8·13)<br>
+        팀 전원 동시에 카드 공개 → 이견 논의 → 합의
+      </div>
+      <div class="info-box" style="font-size:0.82rem;">
+        <strong>번다운 차트 (Burndown Chart)</strong><br>
+        X축: 스프린트 일수 / Y축: 남은 스토리 포인트<br>
+        이상 추세선 vs 실제 추세 비교 → 리스크 조기 감지<br>
+        <strong>벨로시티(Velocity)</strong>: 스프린트별 완료 포인트 평균 (속도 기준)
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: [3교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">3교시</div>
+      <h2>칸반 &amp; 하이브리드 방법론</h2>
+      <p>WIP 제한 · 리드타임 · 워터폴 vs 스크럼 vs 칸반 · SAFe</p>
+      <div class="section-time">⏱ 1시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: 칸반 + 방법론 비교 -->
+  <div class="slide">
+    <h2>칸반 &amp; 방법론 3종 비교</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">칸반(Kanban) — 흐름 기반</h3>
+        <div class="info-box" style="font-size:0.82rem;margin-bottom:0.5rem;">
+          <strong>칸반 보드 컬럼 구조</strong><br>
+          Backlog → To Do → <strong>In Progress</strong> → Review → Done
+        </div>
+        <div class="info-box warning" style="font-size:0.82rem;margin-bottom:0.5rem;">
+          <strong>WIP(Work In Progress) 제한</strong><br>
+          동시 진행 작업 수를 제한 (예: In Progress ≤ 3)<br>
+          목적: 병목 방지, 흐름 최적화, 집중도 향상
+        </div>
+        <div class="info-box gold" style="font-size:0.82rem;">
+          <strong>리드타임 vs 사이클타임</strong><br>
+          <strong>리드타임</strong>: 작업 요청 → 완료까지 총 시간<br>
+          <strong>사이클타임</strong>: 작업 시작 → 완료까지 시간
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">방법론 3종 비교</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.76rem;">
+            <thead><tr><th>항목</th><th>워터폴</th><th>스크럼</th><th>칸반</th></tr></thead>
+            <tbody>
+              <tr><td>요구사항</td><td>초기 확정</td><td>점진적 발견</td><td>지속 변화</td></tr>
+              <tr><td>인도 주기</td><td>프로젝트 종료</td><td>스프린트(2주)</td><td>연속적</td></tr>
+              <tr><td>변경 대응</td><td>통제 대상</td><td>스프린트 경계</td><td>언제든 가능</td></tr>
+              <tr><td>성과 지표</td><td>마일스톤</td><td>벨로시티</td><td>리드타임</td></tr>
+              <tr style="background:rgba(255,215,0,0.06);">
+                <td>적합 상황</td>
+                <td>요건 명확한<br>대형 프로젝트</td>
+                <td>불확실·반복<br>소프트웨어 개발</td>
+                <td>운영·유지보수<br>지속적 서비스</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box" style="margin-top:0.4rem;font-size:0.8rem;">
+          <strong>하이브리드 (Hybrid)</strong>: Water-Scrum-Fall 패턴<br>
+          계획→스크럼 개발→통합 릴리스 — 레거시 조직에서 전환기에 활용<br>
+          <strong>SAFe</strong>: 100명+ 대규모 조직의 애자일 확장 프레임워크
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: [5교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">5~6교시</div>
+      <h2>PM 도구 — Jira &amp; MS Project &amp; Trello</h2>
+      <p>스크럼 보드 · 간트차트 · JQL · 도구 선택 기준</p>
+      <div class="section-time">⏱ 3시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: Jira -->
+  <div class="slide">
+    <h2>Jira — 애자일 PM 도구의 표준</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">Jira 핵심 개념</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>개념</th><th>설명</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Issue (이슈)</strong></td><td>작업 단위 — Epic/Story/Task/Bug</td></tr>
+              <tr><td><strong>Board</strong></td><td>스크럼 보드 / 칸반 보드</td></tr>
+              <tr><td><strong>Backlog</strong></td><td>우선순위화된 이슈 목록</td></tr>
+              <tr><td><strong>Sprint</strong></td><td>기간·목표 설정 후 백로그 이슈 이동</td></tr>
+              <tr><td><strong>Workflow</strong></td><td>이슈 상태 전환 규칙 (커스터마이징 가능)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box gold" style="margin-top:0.4rem;font-size:0.81rem;">
+          <strong>JQL (Jira Query Language)</strong><br>
+          <code style="background:rgba(0,0,0,0.3);padding:0.1rem 0.3rem;border-radius:3px;font-size:0.8rem;">
+            project = PM AND status = "In Progress"<br>
+            AND assignee = currentUser()
+          </code>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">Jira 주요 보고서</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>보고서</th><th>용도</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(255,215,0,0.06);">
+                <td><strong>번다운 차트</strong></td>
+                <td>스프린트 진척도 — 남은 작업 추적</td>
+              </tr>
+              <tr>
+                <td><strong>번업 차트</strong></td>
+                <td>완료된 작업 누적 추세</td>
+              </tr>
+              <tr>
+                <td><strong>속도 차트</strong></td>
+                <td>스프린트별 벨로시티 비교 — 예측에 활용</td>
+              </tr>
+              <tr>
+                <td><strong>스프린트 보고서</strong></td>
+                <td>완료·미완료·추가 항목 정리</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box" style="margin-top:0.4rem;font-size:0.82rem;">
+          <strong>Jira 실습 순서</strong><br>
+          ① 프로젝트 생성 → ② 백로그 입력 (사용자 스토리)<br>
+          ③ 스프린트 생성 + 이슈 이동 → ④ 스프린트 시작<br>
+          ⑤ 보드 상태 업데이트 → ⑥ 번다운 차트 확인
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 13: MS Project + Trello + 도구 선택 -->
+  <div class="slide">
+    <h2>MS Project &amp; Trello — 도구 선택 기준</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">📊 MS Project — 워터폴 표준 도구</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.79rem;">
+            <thead><tr><th>기능</th><th>내용</th></tr></thead>
+            <tbody>
+              <tr><td>간트 차트</td><td>작업·기간·의존성(FS/SS/FF/SF)</td></tr>
+              <tr style="background:rgba(255,215,0,0.06);">
+                <td>크리티컬 패스</td><td>CPM 자동 시각화 — 여유 시간 0인 경로</td>
+              </tr>
+              <tr><td>자원 배정</td><td>팀원별 과부하(Overallocation) 경고</td></tr>
+              <tr><td>기준선 (Baseline)</td><td>계획 대비 실적 추적 — EVM 연계</td></tr>
+              <tr><td>EVM 보고서</td><td>CPI·SPI 자동 계산 — Day05 연계</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 style="color:var(--accent-secondary);margin:0.6rem 0 0.3rem;">📌 Trello — 경량 칸반 도구</h3>
+        <div class="info-box" style="font-size:0.8rem;">
+          <strong>구조</strong>: 보드 → 리스트 → 카드 (직관적 드래그 &amp; 드롭)<br>
+          <strong>기능</strong>: 체크리스트 · 마감일 · 담당자 · 레이블<br>
+          <strong>Power-Up</strong>: 자동화(Butler) · 캘린더 · Jira 연동<br>
+          소규모·개인 업무 관리에 최적
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">PM 도구 선택 가이드</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.79rem;">
+            <thead><tr><th>상황</th><th>추천 도구</th><th>이유</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(108,99,255,0.08);">
+                <td>스크럼 팀 (5~50명)</td>
+                <td><strong>Jira</strong></td>
+                <td>스프린트·백로그 통합, 보고서 자동화</td>
+              </tr>
+              <tr style="background:rgba(0,200,150,0.06);">
+                <td>워터폴·대형 프로젝트</td>
+                <td><strong>MS Project</strong></td>
+                <td>간트/EVM/자원 배정·과부하 관리</td>
+              </tr>
+              <tr>
+                <td>소규모·개인 업무</td>
+                <td><strong>Trello</strong></td>
+                <td>단순·직관적, 비개발자도 즉시 사용</td>
+              </tr>
+              <tr style="background:rgba(255,215,0,0.06);">
+                <td>하이브리드 팀</td>
+                <td><strong>Jira + Confluence</strong></td>
+                <td>PM 도구 + 문서화 (지식 베이스) 통합</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box gold" style="margin-top:0.4rem;font-size:0.81rem;">
+          <strong>도구 ≠ 방법론</strong>: Jira는 칸반과 스크럼 모두 지원.<br>
+          도구 선택 전 방법론(워터폴/스크럼/칸반)을 먼저 결정하는 것이 원칙!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 14: [최종] 17일 전체 총정리 Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">📚 총정리</div>
+      <h2>17일 전체 과정 핵심 복습</h2>
+      <p>PM 10대 지식영역 + IT 기술 5과목 연계 통합 정리</p>
+      <div class="section-time">⏱ 마지막 강의</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 15: 17일 과정 복습표 -->
+  <div class="slide">
+    <h2>17일 과정 전체 핵심 키워드 총정리</h2>
+    <div class="table-wrapper">
+      <table style="font-size:0.73rem;">
+        <thead>
+          <tr><th>Day</th><th>지식영역 / 과목</th><th>핵심 키워드</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>D01</td><td>오리엔테이션</td><td>Triple Constraint, 5 프로세스 그룹, 10 지식영역, PMP</td></tr>
+          <tr><td>D02</td><td>통합 관리</td><td>프로젝트 헌장, 관리 계획서, CCB, 변경 통제, PM 역할</td></tr>
+          <tr><td>D03</td><td>범위 관리</td><td>WBS, Scope Creep, 범위 기준선, 요구사항 수집 5기법</td></tr>
+          <tr style="background:rgba(255,215,0,0.06);">
+            <td>D04</td><td>일정 관리</td><td>CPM, 간트차트, Fast-Tracking, Crashing, 네트워크 다이어그램</td></tr>
+          <tr><td>D05</td><td>원가 관리</td><td>EVM(EV/PV/AC), CPI, SPI, EAC, ETC 공식 체계</td></tr>
+          <tr><td>D06</td><td>품질 관리</td><td>QA vs QC, 7대 품질 도구, COQ, 6시그마, CMMI</td></tr>
+          <tr style="background:rgba(255,215,0,0.06);">
+            <td>D07</td><td>자원 관리</td><td>RACI, 터크만 팀 발달 5단계, Maslow·Herzberg, 갈등 관리</td></tr>
+          <tr><td>D08</td><td>의사소통 관리</td><td>N(N-1)/2 채널, RAG 지위 보고, 방법론·기술·매체 선택</td></tr>
+          <tr><td>D09</td><td>리스크 관리</td><td>P-I 매트릭스, EMV, SWOT, 회피/전가/완화/수용</td></tr>
+          <tr style="background:rgba(255,215,0,0.06);">
+            <td>D10</td><td>조달 관리</td><td>FFP/CPFF/T&M 계약, RFP/RFQ, 공급업체 선정, 클로징</td></tr>
+          <tr><td>D11</td><td>이해관계자 관리</td><td>권력-관심도 매트릭스, 현저성 모델, 참여도 C/D 갭</td></tr>
+          <tr><td>D12</td><td>소프트웨어공학</td><td>SDLC, V-모델, MoSCoW, Kano, CI/CD, DORA 4지표</td></tr>
+          <tr style="background:rgba(255,215,0,0.06);">
+            <td>D13</td><td>네트워크</td><td>OSI 7계층, TCP vs UDP, DNS, REST API, IaaS/PaaS/SaaS</td></tr>
+          <tr><td>D14</td><td>정보보안</td><td>CIA Triad, OWASP Top 10, MFA, RPO/RTO, ISMS, GDPR</td></tr>
+          <tr><td>D15</td><td>데이터베이스</td><td>ACID, PK/FK, ERD/Crow's Foot, JOIN 4종, 정규화, NoSQL</td></tr>
+          <tr style="background:rgba(255,215,0,0.06);">
+            <td>D16</td><td>신기술</td><td>ML 3유형, 생성형 AI, 6R 마이그레이션, 빅데이터 5V, DevOps</td></tr>
+          <tr style="background:rgba(108,99,255,0.1);">
+            <td><strong>D17</strong></td><td><strong>애자일 &amp; PM 도구</strong></td><td><strong>애자일 4가치, 스크럼 3·5·3, 칸반 WIP, Jira/MS Project</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SLIDE 16: 핵심 키워드 -->
+  <div class="slide">
+    <h2>Day 17 핵심 키워드</h2>
+    <div class="keyword-tags">
+      <span class="keyword-tag">애자일 선언문 4가지 가치</span>
+      <span class="keyword-tag">12가지 원칙</span>
+      <span class="keyword-tag">Product Owner (PO)</span>
+      <span class="keyword-tag">Scrum Master (SM)</span>
+      <span class="keyword-tag">교차기능·자기조직화 팀</span>
+      <span class="keyword-tag">제품 백로그</span>
+      <span class="keyword-tag">스프린트 백로그</span>
+      <span class="keyword-tag">증분 (Increment)</span>
+      <span class="keyword-tag">DoD (완료 정의)</span>
+      <span class="keyword-tag">Sprint Planning</span>
+      <span class="keyword-tag">Daily Scrum (15분)</span>
+      <span class="keyword-tag">Sprint Review</span>
+      <span class="keyword-tag">Sprint Retrospective</span>
+      <span class="keyword-tag">사용자 스토리 / INVEST</span>
+      <span class="keyword-tag">스토리 포인트</span>
+      <span class="keyword-tag">벨로시티 (Velocity)</span>
+      <span class="keyword-tag">번다운 차트</span>
+      <span class="keyword-tag">칸반 보드</span>
+      <span class="keyword-tag">WIP 제한</span>
+      <span class="keyword-tag">리드타임 / 사이클타임</span>
+      <span class="keyword-tag">SAFe (대규모 애자일)</span>
+      <span class="keyword-tag">Water-Scrum-Fall</span>
+      <span class="keyword-tag">Jira / JQL</span>
+      <span class="keyword-tag">MS Project / 기준선</span>
+      <span class="keyword-tag">Trello</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 17: 퀴즈 -->
+  <div class="slide">
+    <h2>학습 확인 퀴즈</h2>
+    <div class="quiz-box">
+      <div class="quiz-item">
+        <p><strong>Q1.</strong> 스크럼의 3가지 역할·5가지 이벤트·3가지 산출물을 모두 나열하고, PO와 SM의 역할 차이를 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>역할 3가지</strong>: Product Owner (PO), Scrum Master (SM), 개발팀<br>
+          <strong>이벤트 5가지</strong>: Sprint, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective<br>
+          <strong>산출물 3가지</strong>: 제품 백로그, 스프린트 백로그, 증분(Increment)<br><br>
+          <strong>PO vs SM 차이</strong>:<br>
+          PO: "무엇을 만들 것인가" — 제품 비전·백로그 우선순위·ROI 책임. 고객·사용자·비즈니스 대변자<br>
+          SM: "어떻게 만들 것인가" — 프로세스 코치, 장애물 제거, 팀 보호. 애자일 가치를 조직에 적용하는 촉진자 (관리자 역할 ≠ SM)</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q2.</strong> 칸반의 WIP 제한이 왜 필요한지 설명하고, 워터폴·스크럼·칸반 중 각각 적합한 프로젝트 사례를 하나씩 들어 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>WIP 제한 필요 이유</strong>: 동시 작업이 많아지면 컨텍스트 전환(Context Switching) 비용 증가, 특정 단계에서 병목 발생. WIP를 제한하면 팀이 현재 작업에 집중하고, 병목이 가시화되어 즉각 대응 가능. 결과적으로 리드타임 단축<br><br>
+          <strong>워터폴</strong>: 건설·제조·국방 시스템 — 요구사항이 법·규정으로 확정되고, 중간 변경이 막대한 비용을 유발하는 프로젝트<br>
+          <strong>스크럼</strong>: 신규 앱·서비스 개발 — 사용자 요구가 불확실하고, 빠른 가치 인도와 피드백 반영이 핵심인 프로젝트<br>
+          <strong>칸반</strong>: IT 운영팀·헬프데스크·유지보수 — 작업이 불규칙적으로 유입되고 스프린트 리듬보다 지속적 처리가 중요한 환경</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q3.</strong> EVM 지표 중 CPI = 0.8의 의미를 설명하고, Jira와 MS Project 중 이를 추적하기에 적합한 도구와 이유를 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>CPI = 0.8의 의미</strong>: 비용 성과 지수(Cost Performance Index) = EV/AC = 0.8<br>
+          1달러(원) 예산에 0.8달러어치 가치만 생산 → 20% 비용 초과 상태<br>
+          1보다 작을수록 예산 낭비. 조기 경고 시그널로 EAC = BAC/CPI 공식으로 완료 시 예측 비용 계산 가능<br><br>
+          <strong>적합 도구</strong>: <strong>MS Project</strong><br>
+          이유: MS Project는 기준선(Baseline) 저장 후 실제 진척 입력 시 EVM 지표(CPI·SPI·EAC·ETC)를 자동 계산하고 보고서를 생성함. Jira는 스토리 포인트 기반 번다운 차트에 특화되어 있어 비용 기반 EVM 추적에는 MS Project가 더 적합함</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 18: 향후 학습 로드맵 + 수료 -->
+  <div class="slide">
+    <h2>🎓 수료 — 향후 학습 로드맵</h2>
+    <div class="info-box gold" style="margin-bottom:1rem;text-align:center;">
+      <h3 style="margin:0;color:var(--accent-gold);">17일간의 PM Expert 과정 완료를 축하합니다!</h3>
+      <p style="margin:0.3rem 0 0;font-size:0.85rem;">PM 10대 지식영역 + IT 기술 5과목 = 비즈니스-IT 통합 PM 역량 완성</p>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🏆</div>
+        <h3>PMP (권장)</h3>
+        <p>PMI 국제 자격증<br>학사+36개월 경험<br>4,500시간 이상<br>가장 공신력 있는 PM 자격</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🥇</div>
+        <h3>CAPM (입문)</h3>
+        <p>PMP 전단계<br>경험 없어도 응시 가능<br>PM 취업·이직 준비용</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔄</div>
+        <h3>애자일 자격증</h3>
+        <p>PSM I (Scrum.org)<br>CSM (Scrum Alliance)<br>SAFe Agilist<br>PMI-ACP</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">☁️</div>
+        <h3>기술 PM 자격증</h3>
+        <p>AWS SAA<br>Azure AZ-900<br>ITIL 4 Foundation<br>기술적 PM으로 차별화</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /presentation -->
+
+<script src="../js/presentation.js"></script>
+</body>
+</html>

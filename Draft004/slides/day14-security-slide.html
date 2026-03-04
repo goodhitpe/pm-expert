@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 14: 정보보안 | PM Expert</title>
+  <link rel="stylesheet" href="../css/presentation.css">
+</head>
+<body>
+
+<div class="presentation">
+
+  <!-- SLIDE 1: 타이틀 -->
+  <div class="slide title-slide">
+    <div class="title-content">
+      <div class="day-badge">Day 14</div>
+      <h1>정보보안</h1>
+      <p class="subtitle">Information Security<br>
+        CIA Triad · 암호화 · ISMS · 개인정보보호 · BCP/DR</p>
+      <div class="title-meta">
+        <span>📅 14일차</span>
+        <span>⏱ 8시간</span>
+        <span>🛡️ 보안은 프로젝트 전 생애주기에!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: 학습 목표 -->
+  <div class="slide">
+    <h2>학습 목표</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🔐</div>
+        <h3>CIA Triad</h3>
+        <p>정보보안 3요소(기밀성·무결성·가용성)의 정의와 각각의 구현 기술을 설명할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚠️</div>
+        <h3>위협 & 공격</h3>
+        <p>네트워크 공격·OWASP Top 10·악성코드·사회공학 공격 유형을 식별하고 대응 원칙을 설명할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏛️</div>
+        <h3>보안 관리 체계</h3>
+        <p>ISMS·ISO 27001·접근통제 정책(DAC/MAC/RBAC)과 최소 권한 원칙을 이해할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📜</div>
+        <h3>법규 & PM 적용</h3>
+        <p>개인정보보호법·GDPR·RPO/RTO를 이해하고 프로젝트 보안 요구사항 반영 방법을 적용할 수 있다</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: 오늘의 흐름 -->
+  <div class="slide">
+    <h2>오늘의 흐름 — 6교시 구성</h2>
+    <div class="diagram">
+      <div class="step"><span class="step-num">1교시</span><span class="step-label">정보보안 개요<br>CIA Triad</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">2교시</span><span class="step-label">위협·공격 유형<br>OWASP 10</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">3교시</span><span class="step-label">암호화·인증<br>PKI·MFA</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">4교시</span><span class="step-label">보안 관리체계<br>ISMS·접근통제</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">5교시</span><span class="step-label">개인정보보호<br>GDPR·사고대응</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="step-num">6교시</span><span class="step-label">PM 보안 통합<br>BCP/DR</span></div>
+    </div>
+    <div class="info-box gold" style="margin-top:1.5rem;">
+      💡 보안은 프로젝트가 끝난 후의 일이 아닙니다.<br>
+      <strong>Security by Design</strong> — 기획 단계부터 보안 요구사항을 내장해야 합니다.
+    </div>
+  </div>
+
+  <!-- SLIDE 4: [1교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">1교시</div>
+      <h2>정보보안 개요 &amp; CIA Triad</h2>
+      <p>기밀성 · 무결성 · 가용성 · 추가 보안 속성</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: CIA Triad -->
+  <div class="slide">
+    <h2>정보보안 3요소 — CIA Triad</h2>
+    <div class="three-col" style="gap:1rem;">
+      <div class="info-box" style="padding:1rem;font-size:0.83rem;">
+        <h3 style="color:var(--accent-gold);margin:0 0 0.6rem;">🔒 기밀성 (Confidentiality)</h3>
+        <p><strong>인가된 사용자만</strong> 정보에 접근 가능</p>
+        <p style="margin-top:0.5rem;font-size:0.78rem;color:#aaa;">구현 방법:</p>
+        <p style="font-size:0.78rem;">• 암호화 (AES, RSA)<br>
+        • 접근 통제 (ACL)<br>
+        • 정보 분류 체계<br>
+        • 사용자 인증</p>
+        <p style="margin-top:0.6rem;font-size:0.78rem;color:#aaa;">침해 사례: 데이터 유출<br>미승인 데이터베이스 접근</p>
+      </div>
+      <div class="info-box gold" style="padding:1rem;font-size:0.83rem;">
+        <h3 style="color:var(--accent-gold);margin:0 0 0.6rem;">✅ 무결성 (Integrity)</h3>
+        <p><strong>비인가된 변경 없이</strong> 정확하고 완전하게 유지</p>
+        <p style="margin-top:0.5rem;font-size:0.78rem;color:#aaa;">구현 방법:</p>
+        <p style="font-size:0.78rem;">• 해시 함수 (SHA-256)<br>
+        • 디지털 서명<br>
+        • 체크섬<br>
+        • 감사 로그</p>
+        <p style="margin-top:0.6rem;font-size:0.78rem;color:#aaa;">침해 사례: 데이터 변조<br>SQL Injection으로 DB 수정</p>
+      </div>
+      <div class="info-box" style="padding:1rem;font-size:0.83rem;">
+        <h3 style="color:var(--accent-gold);margin:0 0 0.6rem;">⚡ 가용성 (Availability)</h3>
+        <p><strong>인가된 사용자가 필요할 때</strong> 접근 가능</p>
+        <p style="margin-top:0.5rem;font-size:0.78rem;color:#aaa;">구현 방법:</p>
+        <p style="font-size:0.78rem;">• 이중화 (HA Cluster)<br>
+        • 백업 및 복구<br>
+        • DR(재해복구)<br>
+        • DDoS 방어</p>
+        <p style="margin-top:0.6rem;font-size:0.78rem;color:#aaa;">침해 사례: DDoS 공격<br>서버 다운으로 서비스 불가</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:0.8rem;font-size:0.82rem;">
+      <strong>추가 보안 속성</strong>: 인증(Authentication — 신원확인) / 인가(Authorization — 권한부여) / <strong>부인방지(Non-repudiation)</strong> — 행위 부인 방지 / 책임추적성(Accountability)
+    </div>
+  </div>
+
+  <!-- SLIDE 6: [2교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">2교시</div>
+      <h2>보안 위협 &amp; 공격 유형</h2>
+      <p>네트워크 공격 · OWASP Top 10 · 악성코드 · 사회공학</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: 공격 유형 -->
+  <div class="slide">
+    <h2>주요 보안 위협 &amp; 공격 유형</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.4rem;">웹 공격 — OWASP Top 10 주요 항목</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>공격</th><th>원리</th><th>대응</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(255,80,80,0.06);">
+                <td><strong>SQL Injection</strong></td>
+                <td>악의적 SQL 쿼리를 입력창에 삽입<br>DB 무단 조회·수정·삭제</td>
+                <td>Prepared Statement<br>입력값 검증</td>
+              </tr>
+              <tr>
+                <td><strong>XSS</strong><br><small>Cross-Site Scripting</small></td>
+                <td>악성 스크립트를 웹페이지에 삽입<br>사용자 브라우저에서 실행</td>
+                <td>출력 인코딩<br>CSP 정책</td>
+              </tr>
+              <tr>
+                <td><strong>CSRF</strong><br><small>Cross-Site Request Forgery</small></td>
+                <td>인증된 사용자 행위를 악용<br>사용자 모르게 요청 전송</td>
+                <td>CSRF 토큰<br>SameSite 쿠키</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box warning" style="margin-top:0.5rem;font-size:0.8rem;">
+          <strong>악성코드 유형</strong><br>
+          바이러스(기생) · 웜(자가복제+전파) · 트로이목마(정상SW 위장)<br>
+          <strong>랜섬웨어</strong>(데이터 암호화 후 금전 요구) · 스파이웨어(정보 수집)
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.4rem;">사회공학 공격 (Social Engineering)</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>유형</th><th>방법</th></tr></thead>
+            <tbody>
+              <tr><td><strong>피싱(Phishing)</strong></td><td>가짜 이메일·사이트로 정보 탈취</td></tr>
+              <tr><td><strong>스피어 피싱</strong></td><td>특정 개인·조직 맞춤형 피싱</td></tr>
+              <tr><td><strong>보이스 피싱(Vishing)</strong></td><td>전화를 이용한 사기</td></tr>
+              <tr><td><strong>테일게이팅</strong></td><td>물리적 출입 보안 우회<br>뒤따라 들어가기</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box gold" style="margin-top:0.5rem;font-size:0.8rem;">
+          <strong>🎯 보안의 가장 취약한 고리 = 사람</strong><br>
+          기술적 보안 아무리 강해도<br>내부자·사회공학에 의한 침해가 가장 많음<br>
+          PM → 보안 인식 교육을 프로젝트 팀 필수 활동으로 포함
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: [3교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">3교시</div>
+      <h2>암호화 &amp; 인증 기술</h2>
+      <p>대칭키 vs 비대칭키 · 해시 · PKI · MFA</p>
+      <div class="section-time">⏱ 1시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: 암호화 -->
+  <div class="slide">
+    <h2>암호화 방식 비교 &amp; 인증 기술</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">암호화 3가지 방식</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>방식</th><th>특징</th><th>알고리즘</th><th>용도</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(255,215,0,0.06);">
+                <td><strong>대칭키</strong><br>Symmetric</td>
+                <td>동일 키로<br>암호화·복호화<br>빠름</td>
+                <td>AES, DES</td>
+                <td>대용량<br>데이터 암호화</td>
+              </tr>
+              <tr>
+                <td><strong>비대칭키</strong><br>Asymmetric</td>
+                <td>공개키·개인키 쌍<br>느림<br>키 배포 용이</td>
+                <td>RSA, ECC</td>
+                <td>키 교환<br>디지털 서명</td>
+              </tr>
+              <tr>
+                <td><strong>해시 함수</strong><br>Hash</td>
+                <td>단방향 변환<br>복호화 불가</td>
+                <td>SHA-256<br>MD5</td>
+                <td>무결성 검증<br>패스워드 저장</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box" style="margin-top:0.5rem;font-size:0.82rem;">
+          <strong>HTTPS 동작 원리</strong><br>
+          ① 서버가 공개키(인증서) 제공<br>
+          ② 클라이언트가 대칭 세션키를 공개키로 암호화 전송<br>
+          ③ 이후 세션키(대칭키)로 빠르게 통신<br>
+          → 비대칭키의 안전성 + 대칭키의 속도 결합
+        </div>
+      </div>
+      <div>
+        <div class="info-box gold" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <strong>PKI (Public Key Infrastructure)</strong><br>
+          CA(인증기관): 공개키 인증서 발급·관리<br>
+          인증서 = 공개키 + 소유자 정보 + CA 서명<br>
+          HTTPS 자물쇠 = 인증서가 유효함을 의미
+        </div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">인증 기술 3요소 (MFA)</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>인증 요소</th><th>예시</th></tr></thead>
+            <tbody>
+              <tr><td><strong>지식 기반 (What you know)</strong></td><td>패스워드, PIN, 보안 질문</td></tr>
+              <tr><td><strong>소유 기반 (What you have)</strong></td><td>OTP, 보안카드, 스마트카드</td></tr>
+              <tr><td><strong>생체 기반 (What you are)</strong></td><td>지문, 홍채, 안면 인식</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box warning" style="margin-top:0.5rem;font-size:0.82rem;">
+          <strong>MFA (다중 인증)</strong>: 2가지 이상 인증 요소 조합<br>
+          예: 패스워드 + OTP = 2요소 인증(2FA)<br>
+          → 패스워드 유출이 되어도 추가 방어선 확보<br>
+          PM: 중요 시스템은 MFA 필수 요구사항으로 명시
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: [4교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">4교시</div>
+      <h2>보안 관리 체계</h2>
+      <p>ISMS · ISO 27001 · 접근통제 3방식 · 최소 권한 원칙</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: 보안 관리 체계 -->
+  <div class="slide">
+    <h2>보안 관리 체계 &amp; 접근 통제 정책</h2>
+    <div class="two-col">
+      <div>
+        <div class="info-box" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <strong>ISMS (정보보호 관리체계)</strong><br>
+          한국 인증 제도 (KISA 주관)<br>
+          ISMS: IT 보안 중심<br>
+          ISMS-P: 개인정보보호까지 포함<br><br>
+          관리적 · 기술적 · 물리적 보안 3분야
+        </div>
+        <div class="info-box gold" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <strong>ISO 27001</strong><br>
+          국제 정보보안 관리 표준 (PDCA 기반)<br>
+          14개 도메인, 114개 통제 항목<br><br>
+          보안 정책 계층:<br>
+          정책(Policy) → 표준(Standard) → 지침(Guideline) → 절차(Procedure)
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">접근 통제 3방식</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>방식</th><th>결정 주체</th><th>특징</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>DAC</strong><br>임의적 접근통제</td>
+                <td>소유자 재량</td>
+                <td>유연하나 보안 취약<br>일반 파일 시스템</td>
+              </tr>
+              <tr style="background:rgba(255,215,0,0.06);">
+                <td><strong>MAC</strong><br>강제적 접근통제</td>
+                <td>시스템(정책)</td>
+                <td>엄격한 레벨 기반<br>군사·정부 시스템</td>
+              </tr>
+              <tr style="background:rgba(255,215,0,0.06);">
+                <td><strong>RBAC</strong><br>역할 기반 접근통제</td>
+                <td>역할(Role)</td>
+                <td>실무에서 가장 일반적<br>직책별 권한 부여</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box warning" style="margin-top:0.5rem;font-size:0.82rem;">
+          <strong>보안 핵심 원칙 2가지</strong><br>
+          ① <strong>최소 권한 원칙(Least Privilege)</strong>: 업무에 필요한 최소한의 권한만 부여<br>
+          ② <strong>직무 분리(Separation of Duties)</strong>: 중요 작업을 한 사람이 혼자 수행 금지<br>
+          예: 개발자와 배포 담당자 분리
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: [5교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">5교시</div>
+      <h2>개인정보보호 &amp; 컴플라이언스</h2>
+      <p>개인정보보호법 · GDPR · 사고 대응 6단계 · BCP/DR</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 13: 개인정보 + RPO/RTO -->
+  <div class="slide">
+    <h2>개인정보보호법 &amp; GDPR &amp; BCP/DR</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">개인정보보호법 (한국) vs GDPR (EU)</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.79rem;">
+            <thead><tr><th>항목</th><th>개인정보보호법</th><th>GDPR</th></tr></thead>
+            <tbody>
+              <tr><td>적용 범위</td><td>한국 내 개인정보 처리</td><td>EU 거주자 데이터 처리<br>(위치 무관)</td></tr>
+              <tr><td>핵심 원칙</td><td>수집·이용·제공·파기<br>원칙 준수</td><td>동의 기반, 잊힐 권리,<br>데이터 이동권</td></tr>
+              <tr><td>침해 신고</td><td>72시간 내 공지 의무</td><td>72시간 내 감독기관 통보</td></tr>
+              <tr><td>정보주체 권리</td><td>열람·정정·삭제·처리정지</td><td>동일 + 자동화 결정 반대권</td></tr>
+              <tr><td>위반 제재</td><td>과태료·과징금·시정조치</td><td>연매출 4% 또는 2000만 유로</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">BCP/DR — RPO & RTO</h3>
+        <div class="info-box gold" style="margin-bottom:0.7rem;font-size:0.83rem;">
+          <strong>RPO (Recovery Point Objective)</strong><br>
+          데이터 손실 <strong>허용 시점</strong><br>
+          "몇 시간 전 데이터까지 잃어도 되는가?"<br>
+          RPO = 1시간 → 1시간마다 백업 필요<br><br>
+          <strong>RTO (Recovery Time Objective)</strong><br>
+          서비스 복구 <strong>목표 시간</strong><br>
+          "장애 후 몇 시간 내 복구가 목표인가?"<br>
+          RTO = 4시간 → 4시간 내 서비스 재개 목표
+        </div>
+        <div class="info-box" style="font-size:0.82rem;">
+          <strong>보안 사고 대응 6단계</strong><br>
+          준비 → 식별 → 억제 → 제거 → 복구 → 교훈<br>
+          <span style="color:#aaa;font-size:0.78rem;">Preparation → Identification → Containment<br>→ Eradication → Recovery → Lessons Learned</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 14: [6교시] PM + 보안 통합 -->
+  <div class="slide">
+    <h2>PM 관점의 보안 통합</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">프로젝트 단계별 보안 적용</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>SDLC 단계</th><th>보안 활동</th></tr></thead>
+            <tbody>
+              <tr><td><strong>기획·요구사항</strong></td><td>보안 요구사항 도출 (CIA·MFA·암호화 등)</td></tr>
+              <tr style="background:rgba(255,215,0,0.06);">
+                <td><strong>설계</strong></td>
+                <td>보안 아키텍처 검토 (Security by Design)<br>DMZ·방화벽·데이터 흐름도</td>
+              </tr>
+              <tr><td><strong>개발</strong></td><td>시큐어 코딩 가이드 준수<br>코드 리뷰에 보안 검토 포함</td></tr>
+              <tr>
+                <td><strong>테스트</strong></td>
+                <td>보안 취약점 점검 (OWASP)<br>침투 테스트(Penetration Test)</td>
+              </tr>
+              <tr><td><strong>운영</strong></td><td>보안 모니터링·패치 관리<br>정기 취약점 스캔</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="info-box gold" style="margin-bottom:0.6rem;font-size:0.83rem;">
+          <strong>PM이 반드시 반영할 보안 요구사항 5가지</strong><br>
+          ① 인증·인가 (MFA 필요 여부)<br>
+          ② 데이터 암호화 (저장·전송 모두)<br>
+          ③ 개인정보보호 컴플라이언스 (개보법·GDPR)<br>
+          ④ 접근 통제 수준 (RBAC 설계)<br>
+          ⑤ BCP/DR — RPO/RTO 목표 정의
+        </div>
+        <div class="info-box warning" style="font-size:0.83rem;">
+          <strong>보안 리스크 관련 항목 (Day09 연계)</strong><br>
+          • 데이터 유출 → 확률·영향·대응 전략 등록<br>
+          • 랜섬웨어 감염 → 우발사태 예비비 계획<br>
+          • 규제 미준수 → 법적 제재 리스크<br>
+          • 내부자 유출 → 직무 분리·접근 로그 감시
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 15: 핵심 키워드 -->
+  <div class="slide">
+    <h2>Day 14 핵심 키워드</h2>
+    <div class="keyword-tags">
+      <span class="keyword-tag">CIA Triad</span>
+      <span class="keyword-tag">기밀성 (Confidentiality)</span>
+      <span class="keyword-tag">무결성 (Integrity)</span>
+      <span class="keyword-tag">가용성 (Availability)</span>
+      <span class="keyword-tag">부인방지 (Non-repudiation)</span>
+      <span class="keyword-tag">SQL Injection</span>
+      <span class="keyword-tag">XSS (Cross-Site Scripting)</span>
+      <span class="keyword-tag">CSRF</span>
+      <span class="keyword-tag">OWASP Top 10</span>
+      <span class="keyword-tag">랜섬웨어</span>
+      <span class="keyword-tag">사회공학·피싱</span>
+      <span class="keyword-tag">대칭키 (AES)</span>
+      <span class="keyword-tag">비대칭키 (RSA)</span>
+      <span class="keyword-tag">해시 (SHA-256)</span>
+      <span class="keyword-tag">PKI · CA</span>
+      <span class="keyword-tag">MFA (다중 인증)</span>
+      <span class="keyword-tag">ISMS · ISMS-P</span>
+      <span class="keyword-tag">ISO 27001</span>
+      <span class="keyword-tag">RBAC (역할 기반)</span>
+      <span class="keyword-tag">최소 권한 원칙</span>
+      <span class="keyword-tag">직무 분리</span>
+      <span class="keyword-tag">개인정보보호법</span>
+      <span class="keyword-tag">GDPR</span>
+      <span class="keyword-tag">RPO / RTO</span>
+      <span class="keyword-tag">BCP / DR</span>
+      <span class="keyword-tag">Security by Design</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 16: 퀴즈 -->
+  <div class="slide">
+    <h2>학습 확인 퀴즈</h2>
+    <div class="quiz-box">
+      <div class="quiz-item">
+        <p><strong>Q1.</strong> CIA Triad의 각 요소를 정의하고 IT 시스템 침해 사례를 하나씩 예시로 드시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>기밀성(C)</strong>: 인가된 사용자만 접근 가능 / 침해 사례: 해킹으로 고객 DB 유출<br>
+          <strong>무결성(I)</strong>: 비인가된 변경 없이 정확·완전 유지 / 침해 사례: SQL Injection으로 DB 데이터 변조<br>
+          <strong>가용성(A)</strong>: 인가된 사용자가 필요할 때 접근 가능 / 침해 사례: DDoS 공격으로 서비스 마비</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q2.</strong> 대칭키 암호화와 비대칭키 암호화의 차이점과 HTTPS에서 두 방식이 어떻게 함께 사용되는지 설명하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>대칭키</strong>: 동일 키로 암호화·복호화. 빠르지만 키 배포 문제 (AES)<br>
+          <strong>비대칭키</strong>: 공개키로 암호화, 개인키로 복호화. 느리지만 키 안전 배포 가능 (RSA)<br><br>
+          <strong>HTTPS 결합 방식</strong>:<br>
+          ① 서버가 비대칭키 공개키(인증서) 제공<br>
+          ② 클라이언트가 대칭 세션키를 공개키로 암호화 전송 (비대칭키 = 키 교환용)<br>
+          ③ 이후 세션키(대칭키 AES)로 빠른 통신<br>
+          → 비대칭키의 안전성 + 대칭키의 속도를 동시에 확보</p>
+        </details>
+      </div>
+      <div class="quiz-item">
+        <p><strong>Q3.</strong> RPO와 RTO의 차이를 설명하고, PM이 프로젝트 기획 단계에서 이를 어떻게 요구사항으로 정의해야 하는지 서술하시오.</p>
+        <details>
+          <summary>▶ 모범 답안</summary>
+          <p><strong>RPO(Recovery Point Objective)</strong>: 데이터 손실 허용 시점 — "몇 시간 전 데이터까지 잃어도 되는가?"<br>
+          <strong>RTO(Recovery Time Objective)</strong>: 서비스 복구 목표 시간 — "장애 후 몇 시간 내 복구가 목표인가?"<br><br>
+          <strong>PM 요구사항 정의 방법</strong>:<br>
+          ① 이해관계자(비즈니스 담당자, CIO)와 RPO/RTO 목표값 합의 (0시간 RPO는 매우 비용이 높음)<br>
+          ② NFR(비기능 요구사항)으로 명시: "시스템은 RPO 1시간, RTO 4시간을 보장해야 한다"<br>
+          ③ SLA에 의무적으로 포함하고 위반 시 패널티 조항 추가<br>
+          ④ RFP에 DR 구축 요구사항으로 명시 (Day10 조달 연계)</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 17: 다음 Day 예고 -->
+  <div class="slide">
+    <h2>다음 시간 예고 — Day 15: 데이터베이스</h2>
+    <div class="info-box gold">
+      <h3 style="margin:0 0 0.8rem;color:var(--accent-gold);">📅 Day 15 주요 학습 내용 — 데이터의 심장, 데이터베이스!</h3>
+    </div>
+    <div class="card-grid" style="margin-top:1rem;">
+      <div class="card">
+        <div class="card-icon">🗄️</div>
+        <h3>RDB 기초</h3>
+        <p>관계형 DB 개념 · 테이블·키·인덱스 · 정규화 1NF~3NF · ER 다이어그램</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <h3>SQL</h3>
+        <p>SELECT/INSERT/UPDATE/DELETE · JOIN 4종 · GROUP BY · 트랜잭션·ACID</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>NoSQL &amp; 빅데이터</h3>
+        <p>RDB vs NoSQL 비교 · 문서·키-값·그래프 DB · CAP 정리 · 빅데이터 개요</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>DB 성능 & PM</h3>
+        <p>인덱스 최적화 · 쿼리 튜닝 · DB 용량 계획 · 백업·복구 전략 · SLA 연계</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /presentation -->
+
+<script src="../js/presentation.js"></script>
+</body>
+</html>
