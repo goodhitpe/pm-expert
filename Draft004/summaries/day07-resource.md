@@ -132,7 +132,7 @@
 | 매트릭스 조직 | PM과 기능관리자가 권한 공유 |
 | RBS | 자원 분류 체계 |
 | 집중 배치 | Co-location, War Room |
-| DEI | 다양성(Diversity)·형평성(Equity)·포용성(Inclusion) 팅의(PM 실무 적용) |
+| DEI | 다양성(Diversity)·형평성(Equity)·포용성(Inclusion), 팀의 PM 실무 적용 |
 | 서번트 리더십 | 7판 Team 도메인 핵심; 장애 제거·환경 조성·성장 지원 |
 
 ---

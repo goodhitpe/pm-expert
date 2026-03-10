@@ -162,7 +162,7 @@
 | D10 | 조달 관리 | 계약 유형 (FFP/CPFF/T&M), RFP |
 | D11 | 이해관계자 관리 | 권력-관심도 매트릭스, 참여도 C/D |
 | D12 | 소프트웨어공학 | SDLC, 애자일, CI/CD, 레트로스펙티브 |
-| D13 | 네트워크 | OSI 7계층, TCP/IP, REST API |
+| D13 | 네트워크+VPC | IP/CIDR, VPC, Security Group, NAT |
 | D14 | 정보보안 | CIA Triad, OWASP Top 10, ISMS |
 | D15 | 데이터베이스 | ERD, SQL, 정규화, NoSQL |
 | D16 | 신기술 | AI/ML, 클라우드, DevOps, 블록체인 |

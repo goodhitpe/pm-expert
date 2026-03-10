@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 13: 네트워크 | PM Expert</title>
+  <title>Day 13: 네트워크 기초 &amp; 클라우드 VPC | PM Expert</title>
   <link rel="stylesheet" href="../css/presentation.css">
 </head>
 <body>
@@ -14,13 +14,13 @@
   <div class="slide title-slide">
     <div class="title-content">
       <div class="day-badge">Day 13</div>
-      <h1>네트워크 &amp; IT 인프라</h1>
-      <p class="subtitle">Network &amp; IT Infrastructure<br>
-        OSI 7계층 · TCP/IP · DNS · 클라우드 · 보안</p>
+      <h1>네트워크 기초 &amp; 클라우드 VPC</h1>
+      <p class="subtitle">Network Fundamentals &amp; Cloud VPC<br>
+        IP/CIDR · DNS · HTTP · 네트워크 장비 · VPC · Security Group · NACL</p>
       <div class="title-meta">
         <span>📅 13일차</span>
         <span>⏱ 8시간</span>
-        <span>🌐 인프라가 PM의 눈에 들어온다!</span>
+        <span>🌐 인프라 팀과 같은 언어로 소통하자!</span>
       </div>
     </div>
   </div>
@@ -30,24 +30,34 @@
     <h2>학습 목표</h2>
     <div class="card-grid">
       <div class="card">
-        <div class="card-icon">🔌</div>
-        <h3>OSI 7계층</h3>
-        <p>7계층 모델의 각 계층 역할과 데이터 캡슐화(Encapsulation) 개념을 설명할 수 있다</p>
+        <div class="card-icon">🔢</div>
+        <h3>IP / CIDR</h3>
+        <p>IP 주소 체계와 CIDR 서브넷 표기법을 이해하고, 네트워크 다이어그램을 읽을 수 있다</p>
       </div>
       <div class="card">
-        <div class="card-icon">📡</div>
-        <h3>TCP/IP 프로토콜</h3>
-        <p>TCP vs UDP 차이, IPv4/IPv6, 핵심 포트 번호를 이해하고 PM 요구사항 정의에 활용할 수 있다</p>
+        <div class="card-icon">🌐</div>
+        <h3>DNS / HTTP / TCP</h3>
+        <p>DNS·HTTP/HTTPS·TCP vs UDP의 역할을 설명하고 장애 상황에서 원인을 추론할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🖧</div>
+        <h3>네트워크 장비</h3>
+        <p>라우터·스위치·방화벽의 역할을 구분하고 온프레미스 네트워크 아키텍처를 해석할 수 있다</p>
       </div>
       <div class="card">
         <div class="card-icon">☁️</div>
-        <h3>클라우드 인프라</h3>
-        <p>IaaS·PaaS·SaaS를 구분하고 온프레미스 vs 클라우드의 비용·리스크를 PM 관점으로 분석할 수 있다</p>
+        <h3>VPC 설계</h3>
+        <p>VPC 핵심 구성 요소(서브넷·IGW·NAT·라우팅 테이블)를 설명하고 3계층 VPC 아키텍처를 설계할 수 있다</p>
       </div>
       <div class="card">
         <div class="card-icon">🛡️</div>
-        <h3>네트워크 보안</h3>
-        <p>방화벽·DMZ·IDS/IPS의 역할을 이해하고 SLA + 보안 요구사항을 프로젝트 인수 기준에 반영할 수 있다</p>
+        <h3>Security Group / NACL</h3>
+        <p>Security Group(Stateful)과 NACL(Stateless)의 차이를 이해하고 프로젝트 보안 요구사항에 적용할 수 있다</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔗</div>
+        <h3>온프레미스 ↔ VPC</h3>
+        <p>AWS VPN과 Direct Connect의 차이를 비교하고 하이브리드 클라우드 요구사항을 정의할 수 있다</p>
       </div>
     </div>
   </div>
@@ -56,21 +66,21 @@
   <div class="slide">
     <h2>오늘의 흐름 — 6교시 구성</h2>
     <div class="diagram">
-      <div class="step"><span class="step-num">1교시</span><span class="step-label">네트워크<br>개요·분류</span></div>
+      <div class="step"><span class="step-num">1교시</span><span class="step-label">네트워크 기초<br>IP·CIDR·포트</span></div>
       <div class="arrow">→</div>
-      <div class="step"><span class="step-num">2교시</span><span class="step-label">OSI 7계층<br>캡슐화</span></div>
+      <div class="step"><span class="step-num">2교시</span><span class="step-label">인터넷 통신<br>DNS·HTTP·TCP</span></div>
       <div class="arrow">→</div>
-      <div class="step"><span class="step-num">3교시</span><span class="step-label">TCP/IP<br>프로토콜</span></div>
+      <div class="step"><span class="step-num">3교시</span><span class="step-label">네트워크 장비<br>&amp;아키텍처</span></div>
       <div class="arrow">→</div>
-      <div class="step"><span class="step-num">4교시</span><span class="step-label">DNS·HTTP<br>REST API</span></div>
+      <div class="step"><span class="step-num">4교시</span><span class="step-label">온프레미스 vs<br>클라우드·6R</span></div>
       <div class="arrow">→</div>
-      <div class="step"><span class="step-num">5교시</span><span class="step-label">장비·클라우드<br>IaaS/PaaS/SaaS</span></div>
+      <div class="step"><span class="step-num">5교시</span><span class="step-label">VPC 핵심<br>서브넷·IGW·NAT</span></div>
       <div class="arrow">→</div>
-      <div class="step"><span class="step-num">6교시</span><span class="step-label">네트워크 보안<br>PM 통합</span></div>
+      <div class="step"><span class="step-num">6교시</span><span class="step-label">VPC 보안<br>SG·NACL·실습</span></div>
     </div>
     <div class="info-box gold" style="margin-top:1.5rem;">
-      💡 <strong>PM에게 네트워크 지식이 필요한 이유:</strong><br>
-      성능 요구사항(응답시간·가용성)의 현실성 판단 · 인프라 리스크 식별 · 클라우드 vs 온프레미스 의사결정 지원
+      💡 <strong>PM에게 네트워크·VPC 지식이 필요한 이유</strong><br>
+      인프라 팀과 소통 · 클라우드 프로젝트 리스크 식별 · SLA(가용성·응답시간) 요구사항 정의 · 보안 요구사항 RFP 반영
     </div>
   </div>
 
@@ -78,64 +88,57 @@
   <div class="slide section-slide">
     <div class="section-content">
       <div class="section-num">1교시</div>
-      <h2>네트워크 개요</h2>
-      <p>LAN/WAN/VPN · 네트워크 토폴로지 · PM 활용 이유</p>
-      <div class="section-time">⏱ 1시간</div>
+      <h2>네트워크 기초 개념</h2>
+      <p>IP 주소 · 사설 IP vs 공인 IP · NAT · CIDR · 포트 · TCP vs UDP</p>
+      <div class="section-time">⏱ 1.5시간</div>
     </div>
   </div>
 
-  <!-- SLIDE 5: 네트워크 분류와 토폴로지 -->
+  <!-- SLIDE 5: IP / CIDR / NAT -->
   <div class="slide">
-    <h2>네트워크 분류 &amp; 토폴로지</h2>
+    <h2>IP 주소 체계 &amp; CIDR 서브넷</h2>
     <div class="two-col">
       <div>
-        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">네트워크 범위별 분류</h3>
-        <div class="table-wrapper">
-          <table style="font-size:0.82rem;">
-            <thead><tr><th>종류</th><th>범위</th><th>예시</th></tr></thead>
-            <tbody>
-              <tr><td><strong>LAN</strong></td><td>건물·층 단위</td><td>사무실 내부망</td></tr>
-              <tr><td><strong>WAN</strong></td><td>지역·국가·글로벌</td><td>인터넷, 전용선</td></tr>
-              <tr><td><strong>MAN</strong></td><td>도시 단위</td><td>지하철 와이파이망</td></tr>
-              <tr><td><strong>WLAN</strong></td><td>무선 네트워크</td><td>Wi-Fi</td></tr>
-              <tr><td><strong>VPN</strong></td><td>가상 사설망</td><td>재택근무 원격 접속</td></tr>
-            </tbody>
-          </table>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">IP 주소 기초</h3>
+        <div class="info-box" style="font-size:0.82rem;margin-bottom:0.6rem;">
+          <strong>IPv4 구조</strong>: 32비트, 4옥텟 (0–255)<br>
+          예: <code style="background:rgba(0,0,0,0.3);padding:0.1rem 0.3rem;border-radius:3px;">192.168.1.10</code><br><br>
+          <strong>사설 IP (내부 전용)</strong><br>
+          10.0.0.0/8 · 172.16.0.0/12 · 192.168.0.0/16<br>
+          인터넷에서 직접 접근 불가 → NAT으로 공인 IP 연결<br><br>
+          <strong>NAT (Network Address Translation)</strong><br>
+          사설 IP ↔ 공인 IP 변환<br>
+          공유기·클라우드 NAT GW가 수행
+        </div>
+        <div class="info-box warning" style="font-size:0.8rem;">
+          <strong>핵심 포트 번호</strong><br>
+          22: SSH · 80: HTTP · 443: HTTPS<br>
+          3306: MySQL · 5432: PostgreSQL<br>
+          6379: Redis · 27017: MongoDB · 8080: 개발용 HTTP
         </div>
       </div>
       <div>
-        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">PM이 알아야 할 토폴로지</h3>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">CIDR 서브넷 표기법</h3>
         <div class="table-wrapper">
-          <table style="font-size:0.82rem;">
-            <thead><tr><th>형태</th><th>특징</th><th>장단점</th></tr></thead>
+          <table style="font-size:0.8rem;">
+            <thead><tr><th>CIDR</th><th>호스트 수</th><th>활용 예</th></tr></thead>
             <tbody>
+              <tr><td><strong>/8</strong></td><td>약 1,677만</td><td>대형 기업 내부망</td></tr>
               <tr style="background:rgba(255,215,0,0.06);">
-                <td><strong>스타(Star)</strong></td>
-                <td>중앙 허브 연결</td>
-                <td>관리 쉬움<br>허브 단일 실패점</td>
-              </tr>
-              <tr>
-                <td><strong>버스(Bus)</strong></td>
-                <td>단일 케이블 공유</td>
-                <td>저렴<br>충돌·단절 취약</td>
-              </tr>
-              <tr>
-                <td><strong>링(Ring)</strong></td>
-                <td>순환 연결</td>
-                <td>순서 전달<br>단절 시 전체 장애</td>
-              </tr>
+                <td><strong>/16</strong></td><td>약 65,534</td><td>VPC 전체 대역</td></tr>
+              <tr><td><strong>/24</strong></td><td>254</td><td>일반 서브넷</td></tr>
               <tr style="background:rgba(255,215,0,0.06);">
-                <td><strong>메시(Mesh)</strong></td>
-                <td>모든 노드 연결</td>
-                <td>고가용성<br>비용 높음</td>
-              </tr>
+                <td><strong>/25</strong></td><td>126</td><td>서브넷 절반 분할</td></tr>
+              <tr><td><strong>/28</strong></td><td>14</td><td>소규모 격리 서브넷</td></tr>
+              <tr><td><strong>/32</strong></td><td>1</td><td>단일 IP 지정 (SG 규칙)</td></tr>
             </tbody>
           </table>
         </div>
-        <div class="info-box" style="margin-top:0.5rem;font-size:0.82rem;">
-          💡 메시 토폴로지 = SPOF(단일 실패점) 없음<br>
-          → 고가용성(HA) 요구 시스템에 적합<br>
-          PM: SLA 99.99% 요건 시 메시/이중화 요구
+        <div class="info-box gold" style="margin-top:0.5rem;font-size:0.81rem;">
+          <strong>계산 공식</strong>: 2^(32-prefix) = 총 IP<br>
+          /24 → 2^8 = 256 → 실사용 254개 (네트워크·브로드캐스트 제외)<br><br>
+          <strong>PM 활용</strong>: 방화벽 정책 요청서에 <br>
+          "웹서버 서브넷 10.0.1.0/24, DB 서브넷 10.0.2.0/28" 명시
         </div>
       </div>
     </div>
@@ -145,71 +148,63 @@
   <div class="slide section-slide">
     <div class="section-content">
       <div class="section-num">2교시</div>
-      <h2>OSI 7계층 모델</h2>
-      <p>7계층 역할 · 데이터 캡슐화 · 암기법</p>
+      <h2>인터넷 통신 원리</h2>
+      <p>DNS · HTTP/HTTPS · TCP vs UDP · 로드밸런서 · CDN</p>
       <div class="section-time">⏱ 1.5시간</div>
     </div>
   </div>
 
-  <!-- SLIDE 7: OSI 7계층 -->
+  <!-- SLIDE 7: DNS / HTTP / TCP / CDN -->
   <div class="slide">
-    <h2>OSI 7계층 — 역할 &amp; 비유</h2>
+    <h2>DNS · HTTP/HTTPS · TCP vs UDP · CDN</h2>
     <div class="two-col">
       <div>
-        <div class="table-wrapper">
-          <table style="font-size:0.8rem;">
-            <thead>
-              <tr><th>#</th><th>계층</th><th>기능</th><th>비유</th></tr>
-            </thead>
-            <tbody>
-              <tr style="background:rgba(255,215,0,0.1);">
-                <td><strong>7</strong></td><td><strong>응용(Application)</strong></td>
-                <td>HTTP, FTP, SMTP</td><td>✉️ 편지 내용</td>
-              </tr>
-              <tr>
-                <td>6</td><td>표현(Presentation)</td>
-                <td>암호화·압축·인코딩</td><td>🔐 봉투·암호화</td>
-              </tr>
-              <tr>
-                <td>5</td><td>세션(Session)</td>
-                <td>연결 수립·유지·종료</td><td>☎️ 전화 관리</td>
-              </tr>
-              <tr style="background:rgba(108,99,255,0.08);">
-                <td><strong>4</strong></td><td><strong>전송(Transport)</strong></td>
-                <td>TCP/UDP, 포트</td><td>📦 등기 vs 일반 택배</td>
-              </tr>
-              <tr>
-                <td><strong>3</strong></td><td><strong>네트워크(Network)</strong></td>
-                <td>IP주소, 라우팅</td><td>🗺️ 내비게이션</td>
-              </tr>
-              <tr>
-                <td><strong>2</strong></td><td><strong>데이터 링크(Data Link)</strong></td>
-                <td>MAC주소, 스위치</td><td>🏘️ 단지 내 배달</td>
-              </tr>
-              <tr>
-                <td><strong>1</strong></td><td><strong>물리(Physical)</strong></td>
-                <td>전기신호·케이블·허브</td><td>🚗 도로 자체</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="info-box" style="margin-bottom:0.6rem;font-size:0.82rem;">
+          <strong>DNS (Domain Name System)</strong> — 인터넷 전화번호부<br>
+          도메인 이름 → IP 주소 변환<br>
+          example.com → 93.184.216.34<br><br>
+          <strong>⚠️ PM 중요: DNS TTL 전파 지연</strong><br>
+          TTL=3600 → 캐시 최대 1시간 유지<br>
+          도메인 이전·IP 변경 → 일정에 <strong>최대 48시간 버퍼 포함</strong>
+        </div>
+        <div class="info-box gold" style="font-size:0.8rem;margin-bottom:0.6rem;">
+          <strong>HTTP 상태 코드 PM 활용</strong><br>
+          200: 정상 · 201: 생성 성공<br>
+          301/302: 리다이렉트 (도메인 이전 시)<br>
+          404: 없음 (API 개발 전 호출 시)<br>
+          500: 서버 오류 (배포 후 모니터링)
+        </div>
+        <div class="info-box warning" style="font-size:0.8rem;">
+          <strong>로드밸런서 &amp; CDN</strong><br>
+          <strong>LB</strong>: 트래픽 분산, 1대 장애 시 자동 전환 → HA<br>
+          <strong>CDN</strong>: 사용자 근처 엣지 서버에 정적 캐싱 → 글로벌 응답 속도 개선
         </div>
       </div>
       <div>
-        <div class="info-box gold" style="margin-bottom:0.7rem;font-size:0.83rem;">
-          <strong>암기법 (영문 — 7→1 방향)</strong><br>
-          <em>"<strong>A</strong>ll <strong>P</strong>eople <strong>S</strong>eem <strong>T</strong>o <strong>N</strong>eed <strong>D</strong>ata <strong>P</strong>rocessing"</em><br>
-          Application → Physical
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">TCP vs UDP</h3>
+        <div class="comparison">
+          <div class="vs-col left">
+            <h4 style="color:var(--accent-gold);">TCP (신뢰성)</h4>
+            <p>연결 지향</p>
+            <p>3-Way Handshake</p>
+            <p>순서 보장</p>
+            <p>오류 재전송</p>
+            <p style="font-size:0.78rem;color:#aaa;">HTTP, 이메일, 파일전송<br>DB 접속, 금융 거래</p>
+          </div>
+          <div class="vs-col right">
+            <h4 style="color:var(--accent-secondary);">UDP (속도)</h4>
+            <p>비연결</p>
+            <p>Handshake 없음</p>
+            <p>순서 미보장</p>
+            <p>오류 무시</p>
+            <p style="font-size:0.78rem;color:#aaa;">실시간 스트리밍<br>게임, VoIP, DNS</p>
+          </div>
         </div>
-        <div class="info-box" style="margin-bottom:0.7rem;font-size:0.83rem;">
-          <strong>한글 암기법 (7→1)</strong><br>
-          <strong>물데네전세표응</strong><br>
-          물리-데이터링크-네트워크-전송-세션-표현-응용
-        </div>
-        <div class="info-box warning" style="font-size:0.82rem;">
-          <strong>데이터 캡슐화 (송신 → 수신)</strong><br>
-          데이터 → 세그먼트(4계층) → 패킷(3계층)<br>
-          → 프레임(2계층) → 비트(1계층)<br><br>
-          수신 시: 역순으로 디캡슐화
+        <div class="info-box" style="margin-top:0.5rem;font-size:0.8rem;">
+          <strong>3-Way Handshake</strong><br>
+          SYN → SYN-ACK → ACK<br>
+          ※ SYN Flood(DDoS 공격): Step ①만 대량 전송 → 서버 자원 소진<br>
+          PM: 고트래픽 서비스 → DDoS 방어 요구사항 명시 필수
         </div>
       </div>
     </div>
@@ -219,341 +214,396 @@
   <div class="slide section-slide">
     <div class="section-content">
       <div class="section-num">3교시</div>
-      <h2>TCP/IP 프로토콜</h2>
-      <p>TCP vs UDP · IPv4/IPv6 · NAT · 핵심 포트</p>
-      <div class="section-time">⏱ 1.5시간</div>
-    </div>
-  </div>
-
-  <!-- SLIDE 9: TCP vs UDP + IP -->
-  <div class="slide">
-    <h2>TCP vs UDP &amp; IP 주소 체계</h2>
-    <div class="two-col">
-      <div>
-        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">TCP vs UDP 비교</h3>
-        <div class="comparison">
-          <div class="vs-col left">
-            <h4 style="color:var(--accent-gold);">TCP (신뢰성)</h4>
-            <p>연결 지향</p>
-            <p>3-Way Handshake</p>
-            <p>순서 보장</p>
-            <p>오류 재전송</p>
-            <p>느리지만 확실</p>
-            <p style="font-size:0.78rem;color:#aaa;">HTTP, 이메일, 파일전송<br>금융 거래, DB 접속</p>
-          </div>
-          <div class="vs-col right">
-            <h4 style="color:var(--accent-secondary);">UDP (속도)</h4>
-            <p>비연결</p>
-            <p>Handshake 없음</p>
-            <p>순서 미보장</p>
-            <p>오류 무시</p>
-            <p>빠르지만 불안정</p>
-            <p style="font-size:0.78rem;color:#aaa;">실시간 스트리밍<br>DNS, 게임, VoIP</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="info-box" style="margin-bottom:0.7rem;font-size:0.82rem;">
-          <strong>IPv4 vs IPv6</strong><br>
-          IPv4: 32비트 (0~255.0~255.0~255.0~255)<br>
-          약 43억 개 주소 → 고갈<br><br>
-          IPv6: 128비트, 사실상 무한 주소<br><br>
-          <strong>사설 IP 대역 (내부망 전용)</strong><br>
-          10.0.0.0/8 · 172.16~31.0.0/12 · 192.168.0.0/16<br>
-          → NAT으로 공인 IP 1개와 연결
-        </div>
-        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">핵심 Well-Known 포트</h3>
-        <div class="table-wrapper">
-          <table style="font-size:0.8rem;">
-            <thead><tr><th>포트</th><th>서비스</th><th>프로토콜</th></tr></thead>
-            <tbody>
-              <tr><td><strong>21</strong></td><td>FTP (파일 전송)</td><td>TCP</td></tr>
-              <tr><td><strong>22</strong></td><td>SSH (보안 원격접속)</td><td>TCP</td></tr>
-              <tr><td><strong>25</strong></td><td>SMTP (이메일 발송)</td><td>TCP</td></tr>
-              <tr><td><strong>53</strong></td><td>DNS</td><td>TCP/UDP</td></tr>
-              <tr><td><strong>80</strong></td><td>HTTP</td><td>TCP</td></tr>
-              <tr><td><strong>443</strong></td><td>HTTPS</td><td>TCP</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SLIDE 10: [4교시] DNS + HTTP + REST -->
-  <div class="slide">
-    <h2>DNS · HTTP · REST API</h2>
-    <div class="two-col">
-      <div>
-        <div class="info-box" style="margin-bottom:0.7rem;font-size:0.83rem;">
-          <strong>DNS (Domain Name System)</strong><br>
-          도메인 이름 → IP 주소 변환 "인터넷 전화번호부"<br><br>
-          <span style="font-size:0.78rem;">example.com → 93.184.216.34</span><br><br>
-          <strong>DNS 계층</strong>: 루트(.) → TLD(.com/.kr) → SLD(example) → 호스트(www)<br><br>
-          <strong>주요 레코드</strong>:<br>
-          A: 도메인→IPv4 · AAAA: 도메인→IPv6<br>
-          CNAME: 별칭 · MX: 메일서버<br>
-          TXT: 텍스트(SPF, 도메인 인증)
-        </div>
-        <div class="info-box warning" style="font-size:0.8rem;">
-          <strong>HTTP 상태 코드 분류</strong><br>
-          2xx = 성공 (200 OK, 201 Created)<br>
-          3xx = 리다이렉트 (301 영구이동)<br>
-          4xx = 클라이언트 오류 (404 Not Found)<br>
-          5xx = 서버 오류 (500 Internal Server Error)
-        </div>
-      </div>
-      <div>
-        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">REST API — PM이 알아야 할 수준</h3>
-        <div class="table-wrapper">
-          <table style="font-size:0.8rem;">
-            <thead><tr><th>HTTP 메서드</th><th>의미</th><th>예시</th></tr></thead>
-            <tbody>
-              <tr><td><strong>GET</strong></td><td>데이터 조회</td><td>사용자 목록 조회</td></tr>
-              <tr><td><strong>POST</strong></td><td>데이터 생성</td><td>신규 주문 등록</td></tr>
-              <tr><td><strong>PUT</strong></td><td>전체 수정</td><td>사용자 정보 전체 수정</td></tr>
-              <tr><td><strong>PATCH</strong></td><td>부분 수정</td><td>이름만 변경</td></tr>
-              <tr><td><strong>DELETE</strong></td><td>데이터 삭제</td><td>계정 삭제</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="info-box gold" style="margin-top:0.5rem;font-size:0.82rem;">
-          <strong>PM이 REST API를 알아야 하는 이유</strong><br>
-          • 시스템 간 연동 범위 파악<br>
-          • API 인터페이스 수 = WBS 작업 패키지 분해 기준<br>
-          • API 호출 실패율 = SLA 지표로 관리<br>
-          • 외부 API 조달 계약 시 명세 검토
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SLIDE 11: [5교시] Section -->
-  <div class="slide section-slide">
-    <div class="section-content">
-      <div class="section-num">5교시</div>
-      <h2>네트워크 장비 &amp; 클라우드 인프라</h2>
-      <p>라우터·스위치·방화벽·로드밸런서 · IaaS/PaaS/SaaS</p>
-      <div class="section-time">⏱ 1.5시간</div>
-    </div>
-  </div>
-
-  <!-- SLIDE 12: 장비 + 클라우드 -->
-  <div class="slide">
-    <h2>핵심 네트워크 장비 &amp; 클라우드 서비스 모델</h2>
-    <div class="two-col">
-      <div>
-        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">핵심 네트워크 장비 (OSI 계층별)</h3>
-        <div class="table-wrapper">
-          <table style="font-size:0.8rem;">
-            <thead><tr><th>장비</th><th>OSI</th><th>기능</th></tr></thead>
-            <tbody>
-              <tr><td><strong>허브(Hub)</strong></td><td>L1</td><td>모든 포트 브로드캐스트 (구식)</td></tr>
-              <tr style="background:rgba(255,215,0,0.06);"><td><strong>스위치(Switch)</strong></td><td>L2</td><td>MAC 주소 기반 포워딩 (LAN 핵심)</td></tr>
-              <tr style="background:rgba(255,215,0,0.06);"><td><strong>라우터(Router)</strong></td><td>L3</td><td>IP 기반 라우팅 (인터넷 연결)</td></tr>
-              <tr><td><strong>방화벽(Firewall)</strong></td><td>L3~7</td><td>패킷 필터링, 상태 검사, 침입 차단</td></tr>
-              <tr><td><strong>로드 밸런서</strong></td><td>L4~7</td><td>트래픽 부하 분산</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div>
-        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">클라우드 서비스 3계층</h3>
-        <div class="diagram" style="flex-direction:column;gap:0.3rem;align-items:stretch;">
-          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(255,215,0,0.12);border-color:var(--accent-gold);">
-            <strong>SaaS</strong> (Software as a Service)<br>
-            완성 SW 사용: Gmail, Slack, Salesforce, Office 365<br>
-            <span style="color:#aaa;font-size:0.76rem;">PM이 가장 쉽게 활용 가능 — 가입 후 즉시 사용</span>
-          </div>
-          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(108,99,255,0.1);border-color:#6c63ff;">
-            <strong>PaaS</strong> (Platform as a Service)<br>
-            개발 플랫폼: Heroku, Google App Engine, Azure App Service<br>
-            <span style="color:#aaa;font-size:0.76rem;">서버/OS 관리 없이 앱만 개발</span>
-          </div>
-          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(0,200,150,0.08);border-color:#00d4aa;">
-            <strong>IaaS</strong> (Infrastructure as a Service)<br>
-            가상 서버·스토리지: AWS EC2, Azure VM, GCP Compute<br>
-            <span style="color:#aaa;font-size:0.76rem;">인프라만 빌림 — OS·SW는 직접 관리</span>
-          </div>
-        </div>
-        <div class="info-box gold" style="margin-top:0.5rem;font-size:0.8rem;">
-          온프레미스 vs 클라우드 PM 비교:<br>
-          초기투자 높음↔낮음 · 자본비(CAPEX)↔운영비(OPEX)<br>
-          확장성 제한↔유연·자동 · 보안 내부 통제↔공동 책임
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SLIDE 13: [6교시] Section -->
-  <div class="slide section-slide">
-    <div class="section-content">
-      <div class="section-num">6교시</div>
-      <h2>네트워크 보안 &amp; PM 통합</h2>
-      <p>방화벽 정책 · DMZ · IDS/IPS · 공격 유형 · SLA 요구사항</p>
+      <h2>네트워크 장비 &amp; 아키텍처</h2>
+      <p>라우터 · 스위치 · 방화벽 · 프록시 · DMZ · VPN · VLAN</p>
       <div class="section-time">⏱ 1시간</div>
     </div>
   </div>
 
-  <!-- SLIDE 14: 네트워크 보안 -->
+  <!-- SLIDE 9: 장비 + 온프레미스 구성 패턴 -->
   <div class="slide">
-    <h2>네트워크 보안 &amp; PM 적용</h2>
+    <h2>핵심 네트워크 장비 &amp; 온프레미스 구성 패턴</h2>
     <div class="two-col">
       <div>
-        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">핵심 보안 개념</h3>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">핵심 네트워크 장비</h3>
         <div class="table-wrapper">
           <table style="font-size:0.8rem;">
-            <thead><tr><th>개념</th><th>설명</th></tr></thead>
+            <thead><tr><th>장비</th><th>역할</th><th>PM 포인트</th></tr></thead>
             <tbody>
-              <tr>
-                <td><strong>방화벽</strong><br>Firewall</td>
-                <td>화이트리스트(허용 목록 기반) vs 블랙리스트(차단 목록 기반)</td>
-              </tr>
               <tr style="background:rgba(255,215,0,0.06);">
-                <td><strong>DMZ</strong><br>DeMilitarized Zone</td>
-                <td>외부 접근 허용 영역 (웹서버·이메일 서버 위치)<br>내부망과 분리하여 피해 최소화</td>
-              </tr>
+                <td><strong>라우터</strong></td><td>서로 다른 네트워크 간 경로 결정</td><td>WAN 연결·인터넷 GW</td></tr>
               <tr>
-                <td><strong>IDS</strong><br>침입 탐지</td>
-                <td>이상 패턴 <strong>탐지 후 경보</strong>만 발송<br>직접 차단 불가</td>
-              </tr>
+                <td><strong>스위치</strong></td><td>동일 네트워크 내 장치 연결<br>MAC 주소 기반</td><td>LAN 내부 통신</td></tr>
+              <tr style="background:rgba(255,215,0,0.06);">
+                <td><strong>방화벽</strong></td><td>허용/차단 정책 기반<br>트래픽 필터링</td><td>보안 요구사항 RFP 명시</td></tr>
               <tr>
-                <td><strong>IPS</strong><br>침입 방지</td>
-                <td>이상 패턴 탐지 + <strong>자동 차단</strong><br>IDS보다 적극적 방어</td>
-              </tr>
+                <td><strong>프록시</strong></td><td>중개·캐싱·접근 제어</td><td>콘텐츠 필터링</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box" style="margin-top:0.5rem;font-size:0.8rem;">
+          <strong>VLAN</strong>: 물리적 분리 없이 논리적 네트워크 분리<br>
+          업무망 / 개발망 / 게스트망 분리 → 보안·성능 향상<br><br>
+          <strong>VPN</strong>: 공인 인터넷 위 암호화 사설 터널<br>
+          재택근무↔사무실 / 본사↔지사 연결
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">온프레미스 네트워크 구성 패턴</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.3rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(255,100,100,0.08);border-color:#ff6464;">
+            🌐 <strong>인터넷</strong>
+          </div>
+          <div style="text-align:center;color:#aaa;font-size:0.85rem;">↓</div>
+          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);">
+            🔒 <strong>방화벽 #1</strong> (외부 공격 1차 차단)
+          </div>
+          <div style="text-align:center;color:#aaa;font-size:0.85rem;">↓</div>
+          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(108,99,255,0.1);border-color:#6c63ff;">
+            🖥️ <strong>DMZ</strong> — 웹서버 · API 서버 (외부 접근 허용 영역)
+          </div>
+          <div style="text-align:center;color:#aaa;font-size:0.85rem;">↓ 방화벽 #2</div>
+          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(0,200,150,0.08);border-color:#00d4aa;">
+            🗄️ <strong>내부망</strong> — DB · ERP (외부 직접 접근 완전 차단)
+          </div>
+        </div>
+        <div class="info-box gold" style="margin-top:0.5rem;font-size:0.8rem;">
+          <strong>PM 네트워크 변경 관리 포인트</strong><br>
+          네트워크 구성 변경 = <strong>CCB (변경통제위원회)</strong> 승인 대상<br>
+          장애 발생 시 업무 영향도 평가 → 리스크 등록부 반영
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: [4교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">4교시</div>
+      <h2>온프레미스 vs 클라우드 네트워크</h2>
+      <p>CapEx vs OpEx · 리전/AZ · 마이그레이션 6R 전략</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: 온프레미스 vs 클라우드 + 6R -->
+  <div class="slide">
+    <h2>온프레미스 vs 클라우드 &amp; 마이그레이션 6R</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">온프레미스 vs 클라우드 PM 비교</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.79rem;">
+            <thead><tr><th>항목</th><th>온프레미스</th><th>클라우드</th></tr></thead>
+            <tbody>
+              <tr><td>비용 구조</td><td>CapEx — 초기 투자↑</td><td>OpEx — 사용량 과금</td></tr>
+              <tr><td>확장성</td><td>서버 구매 필요, 시간↑</td><td>수 분 내 자동 확장</td></tr>
+              <tr><td>가용성</td><td>이중화 직접 구성</td><td>Multi-AZ 기본 제공</td></tr>
+              <tr><td>보안 책임</td><td>전체 내부 통제</td><td>공동 책임 모델</td></tr>
+              <tr style="background:rgba(255,100,100,0.06);">
+                <td>PM 리스크</td><td colspan="2">데이터 전송 비용·레이턴시·인증 변경·벤더 Lock-in</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box" style="margin-top:0.5rem;font-size:0.8rem;">
+          <strong>리전 &amp; AZ</strong><br>
+          리전: 지리적 데이터센터 집합 (ap-northeast-2 = 서울)<br>
+          AZ: 리전 내 독립 데이터센터 (서울 = 4개 AZ)<br>
+          <strong>Multi-AZ</strong> = 1개 AZ 장애 시 다른 AZ 자동 서비스 유지
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">마이그레이션 6R 전략</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.25rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.81rem;background:rgba(255,215,0,0.1);border-color:var(--accent-gold);">
+            <strong>1. Rehost</strong> (Lift &amp; Shift) — 가장 빠름<br>
+            <span style="font-size:0.75rem;color:#aaa;">기존 서버를 클라우드 VM으로 그대로 이전</span>
+          </div>
+          <div class="step" style="width:100%;font-size:0.81rem;">
+            <strong>2. Replatform</strong> (Lift, Tinker &amp; Shift)<br>
+            <span style="font-size:0.75rem;color:#aaa;">소폭 최적화 후 이전 (예: DB → 관리형 RDS)</span>
+          </div>
+          <div class="step" style="width:100%;font-size:0.81rem;background:rgba(108,99,255,0.1);border-color:#6c63ff;">
+            <strong>3. Refactor</strong> (Re-architect) — 효과 최고<br>
+            <span style="font-size:0.75rem;color:#aaa;">클라우드 네이티브로 재설계 (MSA·서버리스)</span>
+          </div>
+          <div class="step" style="width:100%;font-size:0.81rem;">
+            <strong>4. Repurchase</strong> — SaaS로 교체<br>
+            <span style="font-size:0.75rem;color:#aaa;">자체 이메일서버 → Gmail/M365 (Day10 조달 연계)</span>
+          </div>
+          <div class="step" style="width:100%;font-size:0.81rem;">
+            <strong>5. Retire</strong> — 미사용 시스템 폐기
+          </div>
+          <div class="step" style="width:100%;font-size:0.81rem;">
+            <strong>6. Retain</strong> — 현재 이전 보류<br>
+            <span style="font-size:0.75rem;color:#aaa;">규제·레이턴시 이유로 온프레미스 유지</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: [5교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">5교시</div>
+      <h2>VPC 핵심 개념</h2>
+      <p>서브넷 · IGW · NAT 게이트웨이 · 라우팅 테이블 · 3계층 아키텍처 · VPC Peering</p>
+      <div class="section-time">⏱ 1.5시간</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 13: VPC 구성 요소 + 3계층 -->
+  <div class="slide">
+    <h2>VPC 핵심 구성 요소 &amp; 3계층 아키텍처</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">VPC 핵심 구성 요소</h3>
+        <div class="info-box" style="font-size:0.82rem;margin-bottom:0.5rem;">
+          <strong>VPC (Virtual Private Cloud)</strong><br>
+          클라우드 내 논리적으로 격리된 사설 네트워크<br>
+          내가 정의: IP 범위(CIDR), 서브넷, 라우팅, 게이트웨이<br>
+          예: VPC CIDR = 10.0.0.0/16
+        </div>
+        <div class="table-wrapper">
+          <table style="font-size:0.79rem;">
+            <thead><tr><th>구성 요소</th><th>역할</th></tr></thead>
+            <tbody>
+              <tr style="background:rgba(255,215,0,0.08);">
+                <td><strong>퍼블릭 서브넷</strong></td>
+                <td>IGW 연결, 외부 접근 가능<br>웹서버·LB 배치</td></tr>
               <tr>
-                <td><strong>SSL/TLS</strong></td>
-                <td>데이터 전송 암호화<br>HTTPS = HTTP + TLS</td>
-              </tr>
+                <td><strong>프라이빗 서브넷</strong></td>
+                <td>외부 직접 접근 불가<br>앱서버·DB 배치</td></tr>
+              <tr style="background:rgba(0,200,150,0.06);">
+                <td><strong>IGW</strong> (인터넷 GW)</td>
+                <td>VPC ↔ 인터넷 <strong>양방향</strong></td></tr>
+              <tr>
+                <td><strong>NAT 게이트웨이</strong></td>
+                <td>프라이빗 → 인터넷 <strong>단방향</strong><br>(아웃바운드만, 외부→내부 차단)</td></tr>
+              <tr style="background:rgba(108,99,255,0.08);">
+                <td><strong>라우팅 테이블</strong></td>
+                <td>트래픽 경로 정의<br>서브넷별 독립 설정</td></tr>
             </tbody>
           </table>
         </div>
       </div>
       <div>
-        <div class="info-box warning" style="margin-bottom:0.7rem;font-size:0.83rem;">
-          <strong>주요 네트워크 공격 유형</strong><br>
-          • <strong>DDoS</strong>: 대량 요청으로 서버 마비<br>
-          • <strong>MITM</strong>: 중간자 공격 — 통신 중간 도청·변조<br>
-          • <strong>ARP 스푸핑</strong>: MAC 주소 위조로 패킷 가로채기<br>
-          • <strong>DNS 하이재킹</strong>: DNS 응답 위조로 악성 사이트 유도
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.5rem;">VPC 표준 3계층 아키텍처</h3>
+        <div class="diagram" style="flex-direction:column;gap:0.3rem;align-items:stretch;">
+          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(255,100,100,0.08);border-color:#ff6464;">
+            🌐 <strong>인터넷</strong> ↕ <strong>IGW</strong>
+          </div>
+          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(255,215,0,0.12);border-color:var(--accent-gold);">
+            🔵 <strong>Public Tier</strong> — 퍼블릭 서브넷<br>
+            <span style="font-size:0.76rem;color:#aaa;">ALB(로드밸런서) · Bastion Host · NAT GW</span>
+          </div>
+          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(108,99,255,0.1);border-color:#6c63ff;">
+            🟣 <strong>Private Tier</strong> — 프라이빗 서브넷<br>
+            <span style="font-size:0.76rem;color:#aaa;">앱 서버 · API 서버 (인터넷 직접 접근 차단)</span>
+          </div>
+          <div class="step" style="width:100%;font-size:0.82rem;background:rgba(0,200,150,0.08);border-color:#00d4aa;">
+            🟢 <strong>Data Tier</strong> — 격리 서브넷<br>
+            <span style="font-size:0.76rem;color:#aaa;">RDS · ElastiCache (가장 엄격한 보안)</span>
+          </div>
         </div>
-        <div class="info-box gold" style="font-size:0.82rem;">
-          <strong>PM이 네트워크 지식을 쓰는 현장</strong><br>
-          ① 인프라 아키텍처 설계 리뷰 참여<br>
-          ② SLA 정의 — 응답시간, 가용성(99.9%/99.99%)<br>
-          ③ 클라우드 vs 온프레미스 Make or Buy (Day10)<br>
-          ④ 네트워크 지연/단절 = 리스크 등록부 항목 (Day09)<br>
-          ⑤ 방화벽·DMZ·VPN 요구사항 → RFP에 명시 (Day10)
+        <div class="info-box gold" style="margin-top:0.5rem;font-size:0.8rem;">
+          <strong>Multi-AZ 배치</strong>: 각 Tier를 2개 이상 AZ에 분산<br>
+          → AZ 장애 시 자동 failover → HA 확보 → SLA 99.99%<br><br>
+          <strong>Bastion Host</strong>: 프라이빗 서브넷 EC2에 SSH 접속 시<br>
+          퍼블릭 서브넷 경유 → 단일 진입점으로 보안 강화
         </div>
       </div>
     </div>
   </div>
 
-  <!-- SLIDE 15: 핵심 키워드 -->
-  <div class="slide">
-    <h2>Day 13 핵심 키워드</h2>
-    <div class="keyword-tags">
-      <span class="keyword-tag">LAN / WAN / VPN</span>
-      <span class="keyword-tag">OSI 7계층</span>
-      <span class="keyword-tag">물데네전세표응</span>
-      <span class="keyword-tag">데이터 캡슐화</span>
-      <span class="keyword-tag">TCP (신뢰성·연결 지향)</span>
-      <span class="keyword-tag">UDP (속도·비연결)</span>
-      <span class="keyword-tag">3-Way Handshake</span>
-      <span class="keyword-tag">IPv4 (32bit) / IPv6 (128bit)</span>
-      <span class="keyword-tag">사설 IP · NAT</span>
-      <span class="keyword-tag">Well-Known 포트 80·443·22</span>
-      <span class="keyword-tag">DNS 도메인-IP 변환</span>
-      <span class="keyword-tag">HTTP 메서드 GET/POST</span>
-      <span class="keyword-tag">REST API</span>
-      <span class="keyword-tag">스위치(L2) · 라우터(L3)</span>
-      <span class="keyword-tag">방화벽 · DMZ</span>
-      <span class="keyword-tag">IDS(탐지) vs IPS(탐지+차단)</span>
-      <span class="keyword-tag">IaaS / PaaS / SaaS</span>
-      <span class="keyword-tag">온프레미스 vs 클라우드</span>
-      <span class="keyword-tag">CAPEX vs OPEX</span>
-      <span class="keyword-tag">DDoS · MITM · DNS 하이재킹</span>
-      <span class="keyword-tag">SLA 가용성 99.9%/99.99%</span>
+  <!-- SLIDE 14: [6교시] Section -->
+  <div class="slide section-slide">
+    <div class="section-content">
+      <div class="section-num">6교시</div>
+      <h2>VPC 보안 &amp; 실습</h2>
+      <p>Security Group · Network ACL · VPN · Direct Connect · VPC 설계 실습</p>
+      <div class="section-time">⏱ 1시간</div>
     </div>
   </div>
 
-  <!-- SLIDE 16: 퀴즈 -->
+  <!-- SLIDE 15: Security Group vs NACL -->
+  <div class="slide">
+    <h2>Security Group vs Network ACL &amp; 온프레미스↔VPC 연결</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.4rem;">Security Group vs NACL 비교</h3>
+        <div class="table-wrapper">
+          <table style="font-size:0.79rem;">
+            <thead><tr><th>비교 항목</th><th>Security Group</th><th>Network ACL</th></tr></thead>
+            <tbody>
+              <tr><td>적용 범위</td><td>인스턴스(EC2)</td><td>서브넷</td></tr>
+              <tr style="background:rgba(0,200,150,0.06);">
+                <td>상태 추적</td>
+                <td>✅ <strong>Stateful</strong><br>응답 자동 허용</td>
+                <td>❌ <strong>Stateless</strong><br>요청·응답 각각 규칙</td></tr>
+              <tr><td>규칙 유형</td><td>허용(Allow)만</td><td>허용 + 차단(Deny)</td></tr>
+              <tr><td>규칙 평가</td><td>전체 규칙 평가</td><td>번호 순서 (낮을수록 우선)</td></tr>
+              <tr style="background:rgba(255,215,0,0.06);">
+                <td>활용 전략</td>
+                <td>인스턴스별 세밀 제어<br>포트·소스 CIDR 지정</td>
+                <td>서브넷 단위 IP 차단<br>공격 IP 블랙리스트</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-box" style="margin-top:0.5rem;font-size:0.8rem;">
+          <strong>심층 방어 (Defense in Depth)</strong><br>
+          NACL → 서브넷 진입 필터링<br>
+          Security Group → 인스턴스 진입 추가 검증<br>
+          2중 방어선으로 보안 침해 시 피해 최소화
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--accent-secondary);margin-bottom:0.4rem;">온프레미스 ↔ VPC 연결</h3>
+        <div class="comparison">
+          <div class="vs-col left">
+            <h4 style="color:var(--accent-gold);">AWS VPN</h4>
+            <p>인터넷 암호화 터널</p>
+            <p>즉시 구축 가능</p>
+            <p>인터넷 품질 의존</p>
+            <p>비용 낮음</p>
+            <p style="font-size:0.78rem;color:#aaa;">소규모·긴급<br>재해복구 백업 연결</p>
+          </div>
+          <div class="vs-col right">
+            <h4 style="color:var(--accent-secondary);">Direct Connect</h4>
+            <p>전용 물리 회선</p>
+            <p>구축 수주~수개월</p>
+            <p>안정적 대역폭</p>
+            <p>비용 높음</p>
+            <p style="font-size:0.78rem;color:#aaa;">대용량·미션크리티컬<br>SLA 99.9% 이상 요건</p>
+          </div>
+        </div>
+        <div class="info-box gold" style="margin-top:0.5rem;font-size:0.8rem;">
+          <strong>PM 선택 기준</strong><br>
+          SLA 99.9% 이상 + 대용량 데이터 → Direct Connect<br>
+          유연성·속도 우선·소규모 → VPN<br>
+          두 방법 병행 = VPN을 Direct Connect 장애 시 백업으로 활용
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 16: 핵심 키워드 -->
+  <div class="slide">
+    <h2>Day 13 핵심 키워드</h2>
+    <div class="keyword-tags">
+      <span class="keyword-tag">사설 IP (10/172/192)</span>
+      <span class="keyword-tag">공인 IP</span>
+      <span class="keyword-tag">NAT (사설↔공인 변환)</span>
+      <span class="keyword-tag">CIDR (/24 = 254 호스트)</span>
+      <span class="keyword-tag">포트 22·80·443·3306</span>
+      <span class="keyword-tag">TCP (신뢰성·3-Way Handshake)</span>
+      <span class="keyword-tag">UDP (속도·비연결)</span>
+      <span class="keyword-tag">DNS TTL 전파 지연 (최대 48h)</span>
+      <span class="keyword-tag">HTTP 상태 코드</span>
+      <span class="keyword-tag">로드밸런서 (HA)</span>
+      <span class="keyword-tag">CDN 엣지 캐싱</span>
+      <span class="keyword-tag">방화벽 / DMZ</span>
+      <span class="keyword-tag">VLAN 논리 분리</span>
+      <span class="keyword-tag">VPN (암호화 터널)</span>
+      <span class="keyword-tag">CapEx vs OpEx</span>
+      <span class="keyword-tag">리전 / AZ (Multi-AZ)</span>
+      <span class="keyword-tag">마이그레이션 6R</span>
+      <span class="keyword-tag">VPC (논리 격리 사설망)</span>
+      <span class="keyword-tag">퍼블릭 / 프라이빗 서브넷</span>
+      <span class="keyword-tag">IGW (양방향)</span>
+      <span class="keyword-tag">NAT GW (단방향 아웃바운드)</span>
+      <span class="keyword-tag">라우팅 테이블</span>
+      <span class="keyword-tag">VPC 3계층 (Public·Private·Data)</span>
+      <span class="keyword-tag">Bastion Host</span>
+      <span class="keyword-tag">Security Group (Stateful·인스턴스)</span>
+      <span class="keyword-tag">NACL (Stateless·서브넷)</span>
+      <span class="keyword-tag">Direct Connect (전용회선)</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 17: 퀴즈 -->
   <div class="slide">
     <h2>학습 확인 퀴즈</h2>
     <div class="quiz-box">
       <div class="quiz-item">
-        <p><strong>Q1.</strong> OSI 7계층을 1번(물리)부터 7번(응용)까지 순서대로 나열하고, 4번(전송) 계층과 3번(네트워크) 계층의 핵심 차이를 설명하시오.</p>
+        <p><strong>Q1.</strong> 192.168.1.0/24 서브넷에서 사용 가능한 호스트 수를 구하고, /25 두 개로 분할 시 각 서브넷 호스트 수와 IP 범위를 계산하시오.</p>
         <details>
           <summary>▶ 모범 답안</summary>
-          <p>1-물리 / 2-데이터 링크 / 3-네트워크 / 4-전송 / 5-세션 / 6-표현 / 7-응용<br>
-          (암기: 물데네전세표응)<br><br>
-          <strong>3계층(네트워크)</strong>: IP 주소 기반 라우팅 — "어느 컴퓨터로 보낼지" (경로 결정), 라우터 사용<br>
-          <strong>4계층(전송)</strong>: TCP/UDP, 포트 번호 기반 — "어느 프로그램으로 보낼지" (신뢰성·순서 보장), 소켓 통신</p>
+          <p>/24 → 2^8=256, 네트워크·브로드캐스트 제외 = <strong>254개</strong><br>
+          /25 → 2^7=128, 제외 2개 = <strong>각 126개 호스트</strong><br>
+          첫 번째: 192.168.1.0/25 (0~127) — 호스트 192.168.1.1~126<br>
+          두 번째: 192.168.1.128/25 (128~255) — 호스트 192.168.1.129~254</p>
         </details>
       </div>
       <div class="quiz-item">
-        <p><strong>Q2.</strong> TCP와 UDP를 비교하고, 각각이 적합한 서비스 유형을 2가지씩 예시와 함께 설명하시오.</p>
+        <p><strong>Q2.</strong> DNS TTL=3600인 서비스의 도메인 IP를 신규 서버로 변경할 때, 프로젝트 일정 계획에서 고려해야 할 사항을 설명하시오.</p>
         <details>
           <summary>▶ 모범 답안</summary>
-          <p><strong>TCP</strong>: 연결 지향, 3-Way Handshake, 순서 보장, 오류 재전송 — 신뢰성 높지만 느림<br>
-          적합 서비스: ①은행 거래 시스템 (데이터 누락 절대 불가) ②이메일(SMTP) (순서·완전성 중요)<br><br>
-          <strong>UDP</strong>: 비연결, Handshake 없음, 빠르지만 신뢰성 없음<br>
-          적합 서비스: ①화상회의/실시간 스트리밍 (약간의 패킷 손실보다 지연이 더 나쁨) ②DNS (빠른 응답 우선)</p>
+          <p>TTL=3600 → 기존 DNS 캐시 최대 1시간 유지.<br>
+          ① 변경 2~3일 전 TTL을 300(5분)으로 낮추고 전파 대기<br>
+          ② IP 변경 적용<br>
+          ③ 일정 버퍼: <strong>DNS 전파 최대 48시간</strong>을 일정에 포함<br>
+          ④ 서비스 중단 리스크 = 리스크 등록부 항목 (Day09 연계)<br>
+          ⑤ Blue-Green 배포 전환 시에도 동일하게 적용</p>
         </details>
       </div>
       <div class="quiz-item">
-        <p><strong>Q3.</strong> IaaS, PaaS, SaaS의 차이를 설명하고, IT 프로젝트에서 PM이 각 모델 선택 시 고려해야 할 사항을 기술하시오.</p>
+        <p><strong>Q3.</strong> VPC 프라이빗 서브넷의 앱 서버가 소프트웨어 업데이트(인터넷 필요)를 받으려면 어떤 구성 요소가 필요한지 설명하시오.</p>
         <details>
           <summary>▶ 모범 답안</summary>
-          <p><strong>IaaS</strong>: 가상 서버/스토리지만 제공 (AWS EC2, Azure VM) — OS·미들웨어·SW 직접 관리. PM 고려: 인프라 관리 팀 역량, 운영 인력 비용 포함<br><br>
-          <strong>PaaS</strong>: 개발 플랫폼 제공 (Heroku) — 애플리케이션 개발만 집중. PM 고려: 특정 플랫폼 벤더 종속(Lock-in) 리스크, 확장성 한계<br><br>
-          <strong>SaaS</strong>: 완성 SW 사용 (Slack, Gmail) — 별도 개발 불필요. PM 고려: 커스터마이징 제한, 데이터 이관 계획, 계약·SLA 검토<br><br>
-          공통 고려 사항: CAPEX(온프레미스) vs OPEX(클라우드) 비용 구조, 데이터 보안·규정 준수, 가용성 SLA</p>
+          <p>프라이빗 서브넷 = 인터넷 직접 접근 불가. 필요 구성:<br>
+          ① <strong>NAT 게이트웨이</strong>: 퍼블릭 서브넷에 위치, 아웃바운드 트래픽을 인터넷으로 전달 (단방향)<br>
+          ② 프라이빗 서브넷 <strong>라우팅 테이블</strong>에 0.0.0.0/0 → NAT GW 경로 추가<br>
+          ③ <strong>Security Group</strong>: 아웃바운드 HTTPS(443) 허용<br>
+          NAT GW = 외부에서 시작된 연결 차단 → 보안 유지</p>
         </details>
       </div>
       <div class="quiz-item">
-        <p><strong>Q4.</strong> IDS와 IPS의 차이를 설명하고, PM이 이를 보안 요구사항 정의 시 어떻게 활용하는지 서술하시오.</p>
+        <p><strong>Q4.</strong> Security Group과 NACL을 함께 사용하는 이유를 계층적 보안(심층 방어) 관점에서 설명하시오.</p>
         <details>
           <summary>▶ 모범 답안</summary>
-          <p><strong>IDS (침입 탐지 시스템)</strong>: 이상 패턴을 탐지하여 경보만 발송. 직접 차단 불가 — 사람이 확인 후 조치 필요<br><br>
-          <strong>IPS (침입 방지 시스템)</strong>: 이상 패턴 탐지 + 자동 차단. 실시간 방어 가능 — 오탐(False Positive) 시 정상 트래픽 차단 위험<br><br>
-          <strong>PM 활용법</strong>:<br>
-          ① 보안 요구사항 단계에서 "IDS/IPS 구축 요구"를 NFR로 명시 (Day12 연계)<br>
-          ② RFP에 IDS/IPS 요구사항 포함 (Day10 조달 연계)<br>
-          ③ 도입 후 경보 응답 시간 = SLA 지표로 관리<br>
-          ④ IPS 오탐으로 인한 서비스 중단 = 리스크 등록부에 포함 (Day09 연계)</p>
+          <p><strong>Defense in Depth (심층 방어)</strong>: 단일 보안 계층에 의존 않고 계층별 독립 방어선 구축<br><br>
+          <strong>NACL</strong>: 서브넷 수준에서 Deny 규칙으로 공격 IP 즉시 차단. Stateless라 요청·응답 각각 제어 가능<br>
+          <strong>Security Group</strong>: 인스턴스 수준에서 Stateful 방화벽으로 세밀한 포트·소스 제어. Allow만 가능<br><br>
+          NACL이 1차로 서브넷 진입 필터링 → Security Group이 2차로 인스턴스 진입 검증<br>
+          → 둘 중 하나 미설정 실수 시에도 나머지가 보호 → 보안 침해 피해 최소화</p>
         </details>
       </div>
     </div>
   </div>
 
-  <!-- SLIDE 17: 다음 Day 예고 -->
+  <!-- SLIDE 18: 다음 Day 예고 -->
   <div class="slide">
-    <h2>다음 시간 예고 — Day 14: 정보 보안</h2>
+    <h2>다음 시간 예고 — Day 14: 정보보안</h2>
     <div class="info-box gold">
-      <h3 style="margin:0 0 0.8rem;color:var(--accent-gold);">📅 Day 14 주요 학습 내용 — 보안은 모든 IT 프로젝트의 필수 요소!</h3>
+      <h3 style="margin:0 0 0.8rem;color:var(--accent-gold);">🛡️ Day 14 — 보안은 프로젝트 전 생애주기에 내장해야 합니다!</h3>
     </div>
     <div class="card-grid" style="margin-top:1rem;">
       <div class="card">
         <div class="card-icon">🔐</div>
-        <h3>암호화</h3>
-        <p>대칭 vs 비대칭 암호화 · AES · RSA · 공개키/개인키 · 디지털 서명</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🏛️</div>
-        <h3>보안 프레임워크</h3>
-        <p>CIA 3요소(기밀성·무결성·가용성) · ISMS · ISO 27001 · NIST CSF</p>
+        <h3>CIA Triad</h3>
+        <p>기밀성(Confidentiality) · 무결성(Integrity) · 가용성(Availability) — 정보보안 3요소와 구현 기술</p>
       </div>
       <div class="card">
         <div class="card-icon">⚠️</div>
-        <h3>취약점 & 공격</h3>
-        <p>OWASP Top 10 · SQL Injection · XSS · CSRF · 사회공학 · 랜섬웨어</p>
+        <h3>공격 유형</h3>
+        <p>OWASP Top 10 · SQL Injection · XSS · CSRF · 랜섬웨어 · 사회공학 공격</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏛️</div>
+        <h3>보안 관리체계</h3>
+        <p>ISMS · ISO 27001 · RBAC · MFA(다중인증) · PKI · 암호화 (대칭·비대칭)</p>
       </div>
       <div class="card">
         <div class="card-icon">📜</div>
-        <h3>보안 규정</h3>
-        <p>개인정보보호법 · GDPR · PCI-DSS · 정보보호 인증 — PM 컴플라이언스 관리</p>
+        <h3>법규 &amp; BCP/DR</h3>
+        <p>개인정보보호법 · GDPR · RPO/RTO · 재해복구(DR) — PM 컴플라이언스 관리</p>
       </div>
+    </div>
+    <div class="info-box" style="margin-top:1rem;font-size:0.83rem;">
+      💡 <strong>Day13 → Day14 연결:</strong> 오늘 배운 VPC Security Group · NACL · DMZ 구성 →
+      Day14 정보보안의 <strong>네트워크 기반 보안 요구사항 정의 및 RFP 반영</strong>으로 직접 연계됩니다.
     </div>
   </div>
 

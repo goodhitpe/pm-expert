@@ -122,7 +122,7 @@
 | Fast-tracking | 순차적 활동의 병행 수행 |
 | PERT | 3점 산정 기반 확률적 일정 기법 |
 | 간트차트 | 막대그래프 형태의 일정 시각화 도구 |
-| Critical Chain PM | TOC 기반, 프로젝트·공욈¹·자원 버퍼 3종으로 CPM 결함 보완 |
+| Critical Chain PM | TOC 기반, 프로젝트·공급(feeding)·자원 버퍼 3종으로 CPM 결함 보완 |
 
 ---
 
