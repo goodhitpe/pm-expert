@@ -100,6 +100,14 @@
 
 ## 1교시: 소프트웨어공학 개요 및 SDLC (1.5시간) <!-- 슬라이드 #1~#3 -->
 
+<div align="center">
+
+![SDLC 소프트웨어 개발 생명주기](../images/day12-sdlc-flow.svg)
+
+*▲ SDLC 7단계 프로세스와 단계별 주요 산출물*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 소프트웨어공학(Software Engineering)이란?
@@ -888,6 +896,14 @@ PM이 주의할 점:
 ---
 
 ## 2교시: 개발 방법론 비교 (1.5시간) <!-- 슬라이드 #4~#5 -->
+
+<div align="center">
+
+![소프트웨어 개발 방법론 비교](../images/day12-sdlc-comparison.svg)
+
+*▲ Waterfall · Agile · Spiral · RAD 방법론 비교와 PM 선택 가이드*
+
+</div>
 
 ### 이론 (50분)
 
@@ -2022,6 +2038,14 @@ Sprint Retrospective는 팀이 지난 Sprint를 돌아보며 프로세스와 팀
 ---
 
 ## 3교시: 요구사항 분석 상세 (1시간) <!-- 슬라이드 #7 -->
+
+<div align="center">
+
+![기능적 vs 비기능적 요구사항](../images/day12-fr-vs-nfr.svg)
+
+*▲ 기능적(FR) vs 비기능적(NFR) 요구사항 분류와 PM 핵심 인사이트*
+
+</div>
 
 ### 이론 (50분)
 

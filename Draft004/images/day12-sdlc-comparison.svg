@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="29" text-anchor="middle" fill="#e0e0ff" font-size="16" font-weight="bold">소프트웨어 개발 방법론 비교</text>
+  <text x="360" y="47" text-anchor="middle" fill="#9090c0" font-size="10.5">Waterfall · Agile · Spiral · RAD — PM 선택 기준</text>
+
+  <!-- Header row -->
+  <rect x="10"  y="57" width="95"  height="30" rx="5" fill="#1a1a4a" stroke="#3a3a7a" stroke-width="1"/>
+  <rect x="115" y="57" width="145" height="30" rx="5" fill="#1a2a5c" stroke="#3a5aac" stroke-width="1"/>
+  <rect x="270" y="57" width="145" height="30" rx="5" fill="#1a3a2a" stroke="#3aac6a" stroke-width="1"/>
+  <rect x="425" y="57" width="138" height="30" rx="5" fill="#2a1a5c" stroke="#7a3aac" stroke-width="1"/>
+  <rect x="573" y="57" width="138" height="30" rx="5" fill="#3a2a1a" stroke="#ac7a3a" stroke-width="1"/>
+
+  <text x="57"  y="77" text-anchor="middle" fill="#9090c0" font-size="10" font-weight="bold">구분</text>
+  <text x="187" y="77" text-anchor="middle" fill="#7ab8ff" font-size="11" font-weight="bold">Waterfall</text>
+  <text x="342" y="77" text-anchor="middle" fill="#7dff9a" font-size="11" font-weight="bold">Agile (Scrum)</text>
+  <text x="494" y="77" text-anchor="middle" fill="#c084f5" font-size="11" font-weight="bold">Spiral</text>
+  <text x="642" y="77" text-anchor="middle" fill="#ffa040" font-size="11" font-weight="bold">RAD</text>
+
+  <!-- Row helper function: draw rows -->
+  <!-- Row 1: 개발 흐름 -->
+  <rect x="10"  y="91" width="95"  height="42" rx="0" fill="#12122a" opacity="0.7"/>
+  <rect x="115" y="91" width="145" height="42" rx="0" fill="#12182a" opacity="0.7"/>
+  <rect x="270" y="91" width="145" height="42" rx="0" fill="#121e16" opacity="0.7"/>
+  <rect x="425" y="91" width="138" height="42" rx="0" fill="#16121e" opacity="0.7"/>
+  <rect x="573" y="91" width="138" height="42" rx="0" fill="#1e1812" opacity="0.7"/>
+  <text x="57"  y="110" text-anchor="middle" fill="#c0c0e0" font-size="9" font-weight="bold">개발 흐름</text>
+  <text x="57"  y="125" text-anchor="middle" fill="#8080a0" font-size="8">접근 방식</text>
+  <text x="187" y="108" text-anchor="middle" fill="#90b8e0" font-size="9">순차적 단계별 진행</text>
+  <text x="187" y="120" text-anchor="middle" fill="#90b8e0" font-size="9">계획→요구→설계</text>
+  <text x="187" y="132" text-anchor="middle" fill="#90b8e0" font-size="9">→구현→테스트→배포</text>
+  <text x="342" y="108" text-anchor="middle" fill="#80d090" font-size="9">반복/점진적 스프린트</text>
+  <text x="342" y="120" text-anchor="middle" fill="#80d090" font-size="9">2~4주 단위 반복</text>
+  <text x="342" y="132" text-anchor="middle" fill="#80d090" font-size="9">MVP 우선 출시</text>
+  <text x="494" y="108" text-anchor="middle" fill="#b090e0" font-size="9">리스크 중심 나선형</text>
+  <text x="494" y="120" text-anchor="middle" fill="#b090e0" font-size="9">계획→리스크→개발</text>
+  <text x="494" y="132" text-anchor="middle" fill="#b090e0" font-size="9">→평가 반복</text>
+  <text x="642" y="108" text-anchor="middle" fill="#e0a060" font-size="9">고속 프로토타이핑</text>
+  <text x="642" y="120" text-anchor="middle" fill="#e0a060" font-size="9">60~90일 단기 목표</text>
+  <text x="642" y="132" text-anchor="middle" fill="#e0a060" font-size="9">사용자 참여 극대화</text>
+
+  <!-- Row 2: 요구사항 변경 -->
+  <rect x="10"  y="137" width="95"  height="36" rx="0" fill="#12122a" opacity="0.5"/>
+  <rect x="115" y="137" width="145" height="36" rx="0" fill="#12182a" opacity="0.5"/>
+  <rect x="270" y="137" width="145" height="36" rx="0" fill="#121e16" opacity="0.5"/>
+  <rect x="425" y="137" width="138" height="36" rx="0" fill="#16121e" opacity="0.5"/>
+  <rect x="573" y="137" width="138" height="36" rx="0" fill="#1e1812" opacity="0.5"/>
+  <text x="57"  y="156" text-anchor="middle" fill="#c0c0e0" font-size="9" font-weight="bold">변경 대응</text>
+  <text x="57"  y="168" text-anchor="middle" fill="#8080a0" font-size="8">유연성</text>
+  <text x="187" y="158" text-anchor="middle" fill="#ff7070" font-size="9" font-weight="bold">🔴 낮음</text>
+  <text x="187" y="169" text-anchor="middle" fill="#c07070" font-size="8.5">변경 비용 매우 높음</text>
+  <text x="342" y="158" text-anchor="middle" fill="#70ff90" font-size="9" font-weight="bold">🟢 매우 높음</text>
+  <text x="342" y="169" text-anchor="middle" fill="#70c080" font-size="8.5">스프린트별 우선순위</text>
+  <text x="494" y="158" text-anchor="middle" fill="#ffa040" font-size="9" font-weight="bold">🟡 중간</text>
+  <text x="494" y="169" text-anchor="middle" fill="#c07030" font-size="8.5">단계별 리스크 검토</text>
+  <text x="642" y="158" text-anchor="middle" fill="#70d0ff" font-size="9" font-weight="bold">🔵 높음</text>
+  <text x="642" y="169" text-anchor="middle" fill="#50a0c0" font-size="8.5">사용자 피드백 즉시</text>
+
+  <!-- Row 3: 문서화 -->
+  <rect x="10"  y="177" width="95"  height="36" rx="0" fill="#12122a" opacity="0.65"/>
+  <rect x="115" y="177" width="145" height="36" rx="0" fill="#12182a" opacity="0.65"/>
+  <rect x="270" y="177" width="145" height="36" rx="0" fill="#121e16" opacity="0.65"/>
+  <rect x="425" y="177" width="138" height="36" rx="0" fill="#16121e" opacity="0.65"/>
+  <rect x="573" y="177" width="138" height="36" rx="0" fill="#1e1812" opacity="0.65"/>
+  <text x="57"  y="196" text-anchor="middle" fill="#c0c0e0" font-size="9" font-weight="bold">문서화</text>
+  <text x="57"  y="208" text-anchor="middle" fill="#8080a0" font-size="8">산출물 수준</text>
+  <text x="187" y="195" text-anchor="middle" fill="#90b8e0" font-size="8.5">매우 중요·상세</text>
+  <text x="187" y="207" text-anchor="middle" fill="#7090b0" font-size="8">각 단계 완전한 산출물</text>
+  <text x="342" y="195" text-anchor="middle" fill="#80d090" font-size="8.5">작동 SW 우선</text>
+  <text x="342" y="207" text-anchor="middle" fill="#60a070" font-size="8">최소 문서 + 유저 스토리</text>
+  <text x="494" y="195" text-anchor="middle" fill="#b090e0" font-size="8.5">중간 수준</text>
+  <text x="494" y="207" text-anchor="middle" fill="#8060c0" font-size="8">리스크 분석 문서 중시</text>
+  <text x="642" y="195" text-anchor="middle" fill="#e0a060" font-size="8.5">최소 문서화</text>
+  <text x="642" y="207" text-anchor="middle" fill="#a07040" font-size="8">프로토타입이 문서 대체</text>
+
+  <!-- Row 4: 프로젝트 규모 -->
+  <rect x="10"  y="217" width="95"  height="36" rx="0" fill="#12122a" opacity="0.5"/>
+  <rect x="115" y="217" width="145" height="36" rx="0" fill="#12182a" opacity="0.5"/>
+  <rect x="270" y="217" width="145" height="36" rx="0" fill="#121e16" opacity="0.5"/>
+  <rect x="425" y="217" width="138" height="36" rx="0" fill="#16121e" opacity="0.5"/>
+  <rect x="573" y="217" width="138" height="36" rx="0" fill="#1e1812" opacity="0.5"/>
+  <text x="57"  y="236" text-anchor="middle" fill="#c0c0e0" font-size="9" font-weight="bold">프로젝트</text>
+  <text x="57"  y="248" text-anchor="middle" fill="#c0c0e0" font-size="9" font-weight="bold">규모</text>
+  <text x="187" y="234" text-anchor="middle" fill="#90b8e0" font-size="8.5">대형·복잡 시스템</text>
+  <text x="187" y="246" text-anchor="middle" fill="#7090b0" font-size="8">항공·금융·국방</text>
+  <text x="342" y="234" text-anchor="middle" fill="#80d090" font-size="8.5">중소형, 빠른 변화</text>
+  <text x="342" y="246" text-anchor="middle" fill="#60a070" font-size="8">SaaS·웹·모바일</text>
+  <text x="494" y="234" text-anchor="middle" fill="#b090e0" font-size="8.5">중대형, 고위험</text>
+  <text x="494" y="246" text-anchor="middle" fill="#8060c0" font-size="8">R&amp;D·혁신 프로젝트</text>
+  <text x="642" y="234" text-anchor="middle" fill="#e0a060" font-size="8.5">소형, 단기</text>
+  <text x="642" y="246" text-anchor="middle" fill="#a07040" font-size="8">UI/업무 자동화</text>
+
+  <!-- Row 5: 리스크 관리 -->
+  <rect x="10"  y="257" width="95"  height="36" rx="0" fill="#12122a" opacity="0.65"/>
+  <rect x="115" y="257" width="145" height="36" rx="0" fill="#12182a" opacity="0.65"/>
+  <rect x="270" y="257" width="145" height="36" rx="0" fill="#121e16" opacity="0.65"/>
+  <rect x="425" y="257" width="138" height="36" rx="0" fill="#16121e" opacity="0.65"/>
+  <rect x="573" y="257" width="138" height="36" rx="0" fill="#1e1812" opacity="0.65"/>
+  <text x="57"  y="276" text-anchor="middle" fill="#c0c0e0" font-size="9" font-weight="bold">리스크</text>
+  <text x="57"  y="288" text-anchor="middle" fill="#c0c0e0" font-size="9" font-weight="bold">관리</text>
+  <text x="187" y="274" text-anchor="middle" fill="#ff7070" font-size="8.5">후반부 집중</text>
+  <text x="187" y="286" text-anchor="middle" fill="#c07070" font-size="8">테스트 단계 발견 多</text>
+  <text x="342" y="274" text-anchor="middle" fill="#70ff90" font-size="8.5">지속적 스프린트 검토</text>
+  <text x="342" y="286" text-anchor="middle" fill="#60a070" font-size="8">회고를 통한 개선</text>
+  <text x="494" y="274" text-anchor="middle" fill="#ffa040" font-size="8.5" font-weight="bold">⭐ 가장 강력</text>
+  <text x="494" y="286" text-anchor="middle" fill="#c07030" font-size="8">매 사이클 리스크 분석</text>
+  <text x="642" y="274" text-anchor="middle" fill="#e0a060" font-size="8.5">사용자 피드백</text>
+  <text x="642" y="286" text-anchor="middle" fill="#a07040" font-size="8">반복 프로토타입 검증</text>
+
+  <!-- PM Decision Guide -->
+  <rect x="10" y="305" width="700" height="102" rx="10" fill="#1a1a3a" opacity="0.85" stroke="#3a3a7a" stroke-width="1.2"/>
+  <text x="360" y="322" text-anchor="middle" fill="#d0d8ff" font-size="12" font-weight="bold">PM 방법론 선택 가이드</text>
+
+  <rect x="20"  y="330" width="165" height="68" rx="6" fill="#12182a" opacity="0.8"/>
+  <text x="102" y="345" text-anchor="middle" fill="#7ab8ff" font-size="9.5" font-weight="bold">Waterfall 선택</text>
+  <text x="102" y="360" text-anchor="middle" fill="#8090b0" font-size="8">✅ 요구사항 명확·고정</text>
+  <text x="102" y="372" text-anchor="middle" fill="#8090b0" font-size="8">✅ 규제·감사 환경</text>
+  <text x="102" y="384" text-anchor="middle" fill="#8090b0" font-size="8">✅ 계약 기반 외주</text>
+  <text x="102" y="393" text-anchor="middle" fill="#8090b0" font-size="8">(공공·금융·제조업)</text>
+
+  <rect x="195" y="330" width="165" height="68" rx="6" fill="#121e16" opacity="0.8"/>
+  <text x="277" y="345" text-anchor="middle" fill="#7dff9a" font-size="9.5" font-weight="bold">Agile 선택</text>
+  <text x="277" y="360" text-anchor="middle" fill="#6a9070" font-size="8">✅ 요구사항 자주 변경</text>
+  <text x="277" y="372" text-anchor="middle" fill="#6a9070" font-size="8">✅ 빠른 비즈니스 피드백</text>
+  <text x="277" y="384" text-anchor="middle" fill="#6a9070" font-size="8">✅ 작은 기능 반복 출시</text>
+  <text x="277" y="393" text-anchor="middle" fill="#6a9070" font-size="8">(스타트업·IT서비스)</text>
+
+  <rect x="370" y="330" width="165" height="68" rx="6" fill="#16121e" opacity="0.8"/>
+  <text x="452" y="345" text-anchor="middle" fill="#c084f5" font-size="9.5" font-weight="bold">Spiral 선택</text>
+  <text x="452" y="360" text-anchor="middle" fill="#8060a0" font-size="8">✅ 불확실성 높은 R&amp;D</text>
+  <text x="452" y="372" text-anchor="middle" fill="#8060a0" font-size="8">✅ 리스크 식별이 핵심</text>
+  <text x="452" y="384" text-anchor="middle" fill="#8060a0" font-size="8">✅ 단계별 투자 결정</text>
+  <text x="452" y="393" text-anchor="middle" fill="#8060a0" font-size="8">(국방·항공우주·바이오)</text>
+
+  <rect x="545" y="330" width="155" height="68" rx="6" fill="#1e1812" opacity="0.8"/>
+  <text x="622" y="345" text-anchor="middle" fill="#ffa040" font-size="9.5" font-weight="bold">RAD 선택</text>
+  <text x="622" y="360" text-anchor="middle" fill="#a07040" font-size="8">✅ 시간 압박 단기 프로젝트</text>
+  <text x="622" y="372" text-anchor="middle" fill="#a07040" font-size="8">✅ 사용자 상시 참여 가능</text>
+  <text x="622" y="384" text-anchor="middle" fill="#a07040" font-size="8">✅ UI 위주 업무 시스템</text>
+  <text x="622" y="393" text-anchor="middle" fill="#a07040" font-size="8">(사내 업무 시스템)</text>
+</svg>

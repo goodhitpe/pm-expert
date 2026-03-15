@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="layerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#1a4a7a"/>
+      <stop offset="100%" stop-color="#1a2a5c"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="460" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="360" y="35" text-anchor="middle" fill="#e0e0ff" font-size="17" font-weight="bold">Day 13 — 네트워크 기초 핵심 개념</text>
+
+  <!-- IP/Subnet section -->
+  <rect x="30" y="50" width="320" height="185" rx="10" fill="#1a2a4a" opacity="0.8" stroke="#3a5a8a" stroke-width="1"/>
+  <text x="190" y="74" text-anchor="middle" fill="#58c4f6" font-size="13" font-weight="bold">🌐 IP 주소 &amp; 서브넷</text>
+
+  <rect x="50" y="84" width="280" height="24" rx="5" fill="#0f3a5a" opacity="0.9"/>
+  <text x="190" y="101" text-anchor="middle" fill="#c0e8ff" font-size="11">192.168.1.0 / 24 → 호스트 256개 (사용 254개)</text>
+
+  <text x="50" y="128" fill="#a0c0e0" font-size="11">CIDR 표기</text>
+  <text x="190" y="128" text-anchor="middle" fill="#ffffff" font-size="11">네트워크/호스트 비트 분리</text>
+
+  <text x="50" y="153" fill="#a0c0e0" font-size="11">서브넷 마스크</text>
+  <text x="190" y="153" text-anchor="middle" fill="#ffcc55" font-size="11">/24 = 255.255.255.0</text>
+
+  <text x="50" y="178" fill="#a0c0e0" font-size="11">게이트웨이</text>
+  <text x="190" y="178" text-anchor="middle" fill="#7dff9a" font-size="11">서브넷 첫 번째 IP (.1)</text>
+
+  <text x="50" y="203" fill="#a0c0e0" font-size="11">브로드캐스트</text>
+  <text x="190" y="203" text-anchor="middle" fill="#ff8888" font-size="11">서브넷 마지막 IP (.255)</text>
+
+  <text x="50" y="228" fill="#a0c0e0" font-size="11">NAT</text>
+  <text x="190" y="228" text-anchor="middle" fill="#c0d8ff" font-size="11">사설IP → 공인IP 변환 (인터넷 출구)</text>
+
+  <!-- DNS section -->
+  <rect x="370" y="50" width="320" height="185" rx="10" fill="#2a1a4a" opacity="0.8" stroke="#7a3a8a" stroke-width="1"/>
+  <text x="530" y="74" text-anchor="middle" fill="#c084f5" font-size="13" font-weight="bold">🔍 DNS &amp; HTTP</text>
+
+  <rect x="390" y="84" width="280" height="24" rx="5" fill="#3a0f5a" opacity="0.9"/>
+  <text x="530" y="101" text-anchor="middle" fill="#e0c0ff" font-size="11">도메인 → IP 변환 / 계층적 분산 구조</text>
+
+  <text x="390" y="128" fill="#c0a0e0" font-size="11">DNS 조회</text>
+  <text x="530" y="128" text-anchor="middle" fill="#ffffff" font-size="11">브라우저 → OS 캐시 → ISP → Root</text>
+
+  <text x="390" y="153" fill="#c0a0e0" font-size="11">TTL</text>
+  <text x="530" y="153" text-anchor="middle" fill="#ffcc55" font-size="11">캐시 유지 시간 (전파 지연의 원인)</text>
+
+  <text x="390" y="178" fill="#c0a0e0" font-size="11">HTTP 상태코드</text>
+  <text x="530" y="178" text-anchor="middle" fill="#7dff9a" font-size="11">2xx 성공 / 3xx 리다이렉트</text>
+
+  <text x="390" y="203" fill="#c0a0e0" font-size="11"></text>
+  <text x="530" y="203" text-anchor="middle" fill="#ff8888" font-size="11">4xx 클라이언트 오류 / 5xx 서버 오류</text>
+
+  <text x="390" y="228" fill="#c0a0e0" font-size="11">HTTPS</text>
+  <text x="530" y="228" text-anchor="middle" fill="#c0d8ff" font-size="11">TLS 암호화 + 포트 443</text>
+
+  <!-- Load Balancer / CDN section -->
+  <rect x="30" y="248" width="320" height="165" rx="10" fill="#1a3a2a" opacity="0.8" stroke="#3a8a5a" stroke-width="1"/>
+  <text x="190" y="271" text-anchor="middle" fill="#7dff9a" font-size="13" font-weight="bold">⚖️ 로드밸런서 &amp; CDN</text>
+
+  <text x="50" y="298" fill="#a0c0a0" font-size="11">L4 LB</text>
+  <text x="190" y="298" text-anchor="middle" fill="#c0e8c0" font-size="11">TCP/UDP 레벨 (포트 기반 분산)</text>
+
+  <text x="50" y="320" fill="#a0c0a0" font-size="11">L7 LB</text>
+  <text x="190" y="320" text-anchor="middle" fill="#c0e8c0" font-size="11">HTTP 헤더/URL 기반 스마트 분산</text>
+
+  <text x="50" y="342" fill="#a0c0a0" font-size="11">Round Robin</text>
+  <text x="190" y="342" text-anchor="middle" fill="#ffcc55" font-size="11">순서대로 균등 분배 (기본 알고리즘)</text>
+
+  <text x="50" y="364" fill="#a0c0a0" font-size="11">CDN</text>
+  <text x="190" y="364" text-anchor="middle" fill="#7dff9a" font-size="11">엣지 캐싱 → 지연 단축 + 트래픽 절감</text>
+
+  <text x="50" y="386" fill="#a0c0a0" font-size="11">Failover</text>
+  <text x="190" y="386" text-anchor="middle" fill="#ff8888" font-size="11">헬스체크 실패 → 자동 트래픽 우회</text>
+
+  <text x="50" y="407" fill="#a0c0a0" font-size="11">Origin Shield</text>
+  <text x="190" y="407" text-anchor="middle" fill="#c0e8c0" font-size="11">CDN ↔ 원본 서버 요청 최소화</text>
+
+  <!-- Firewall / Security section -->
+  <rect x="370" y="248" width="320" height="165" rx="10" fill="#3a1a1a" opacity="0.8" stroke="#8a3a3a" stroke-width="1"/>
+  <text x="530" y="271" text-anchor="middle" fill="#ff9898" font-size="13" font-weight="bold">🔒 방화벽 &amp; 포트</text>
+
+  <text x="390" y="298" fill="#e0c0c0" font-size="11">방화벽</text>
+  <text x="530" y="298" text-anchor="middle" fill="#f0d0d0" font-size="11">패킷 필터링 (IP/포트 허용·차단)</text>
+
+  <text x="390" y="320" fill="#e0c0c0" font-size="11">Stateful</text>
+  <text x="530" y="320" text-anchor="middle" fill="#ffcc55" font-size="11">연결 상태 추적 → 자동 응답 허용</text>
+
+  <text x="390" y="342" fill="#e0c0c0" font-size="11">Well-known 포트</text>
+  <text x="530" y="342" text-anchor="middle" fill="#c0d8ff" font-size="11">80 HTTP / 443 HTTPS / 22 SSH</text>
+
+  <text x="390" y="364" fill="#e0c0c0" font-size="11">VPN</text>
+  <text x="530" y="364" text-anchor="middle" fill="#7dff9a" font-size="11">암호화 터널 (사설망 ↔ 클라우드)</text>
+
+  <text x="390" y="386" fill="#e0c0c0" font-size="11">WAF</text>
+  <text x="530" y="386" text-anchor="middle" fill="#ff8888" font-size="11">웹 애플리케이션 방화벽 (L7 보호)</text>
+
+  <text x="390" y="407" fill="#e0c0c0" font-size="11">Zero Trust</text>
+  <text x="530" y="407" text-anchor="middle" fill="#e0c0ff" font-size="11">항상 검증 — 내부 트래픽도 신뢰 안함</text>
+
+  <!-- Footer -->
+  <text x="360" y="445" text-anchor="middle" fill="#6a6a9a" font-size="10">PM 관점: 네트워크 기초 개념은 클라우드 인프라 구성과 장애 대응 의사결정의 언어입니다</text>
+</svg>

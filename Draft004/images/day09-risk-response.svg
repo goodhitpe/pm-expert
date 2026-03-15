@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="440" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="360" y="33" text-anchor="middle" fill="#e0e0ff" font-size="17" font-weight="bold">Day 09 — 리스크 대응 전략 4가지</text>
+  <text x="360" y="52" text-anchor="middle" fill="#9090c0" font-size="11">부정적 리스크(위협) 대응 전략 — PMBOK 기준</text>
+
+  <!-- 4 Strategy boxes -->
+
+  <!-- Avoid -->
+  <rect x="30" y="65" width="320" height="148" rx="12" fill="#3a1a0a" opacity="0.85" stroke="#cc5500" stroke-width="2"/>
+  <text x="190" y="90" text-anchor="middle" fill="#ff8840" font-size="16" font-weight="bold">① 회피 (Avoid)</text>
+  <text x="50"  y="115" fill="#f0c090" font-size="12">목적</text>
+  <text x="110" y="115" fill="#ffffff" font-size="12">리스크 자체를 제거 (원인 제거)</text>
+  <text x="50"  y="138" fill="#f0c090" font-size="12">방법</text>
+  <text x="110" y="138" fill="#e8d0b0" font-size="11">범위 축소, 일정 변경,</text>
+  <text x="110" y="153" fill="#e8d0b0" font-size="11">기술 변경, 프로젝트 중단</text>
+  <text x="50"  y="175" fill="#f0c090" font-size="12">적용</text>
+  <text x="110" y="175" fill="#ffcc80" font-size="11">발생 확률·영향이 모두 높을 때</text>
+  <text x="50"  y="198" fill="#f0c090" font-size="12">예시</text>
+  <text x="110" y="198" fill="#e8d0b0" font-size="11">미검증 기술 사용 계획 → 검증된 스택으로 변경</text>
+
+  <!-- Transfer -->
+  <rect x="370" y="65" width="320" height="148" rx="12" fill="#1a1a4a" opacity="0.85" stroke="#3a3acc" stroke-width="2"/>
+  <text x="530" y="90" text-anchor="middle" fill="#6080ff" font-size="16" font-weight="bold">② 전가 (Transfer)</text>
+  <text x="390" y="115" fill="#90a0f0" font-size="12">목적</text>
+  <text x="450" y="115" fill="#ffffff" font-size="12">리스크 책임을 제3자에게 이전</text>
+  <text x="390" y="138" fill="#90a0f0" font-size="12">방법</text>
+  <text x="450" y="138" fill="#c0c8f0" font-size="11">보험, 계약(고정가격),</text>
+  <text x="450" y="153" fill="#c0c8f0" font-size="11">아웃소싱, 보증</text>
+  <text x="390" y="175" fill="#90a0f0" font-size="12">적용</text>
+  <text x="450" y="175" fill="#a0c8ff" font-size="11">재무적 위험이 클 때 (영향↑, 확률↓)</text>
+  <text x="390" y="198" fill="#90a0f0" font-size="12">예시</text>
+  <text x="450" y="198" fill="#c0c8f0" font-size="11">사이버 보험, 고정가 하도급 계약</text>
+
+  <!-- Mitigate -->
+  <rect x="30" y="228" width="320" height="148" rx="12" fill="#1a3a1a" opacity="0.85" stroke="#3acc3a" stroke-width="2"/>
+  <text x="190" y="253" text-anchor="middle" fill="#60dd60" font-size="16" font-weight="bold">③ 완화 (Mitigate)</text>
+  <text x="50"  y="278" fill="#90d090" font-size="12">목적</text>
+  <text x="110" y="278" fill="#ffffff" font-size="12">확률 또는 영향을 감소시킴</text>
+  <text x="50"  y="301" fill="#90d090" font-size="12">방법</text>
+  <text x="110" y="301" fill="#c0e8c0" font-size="11">프로토타입 제작, 테스트 강화,</text>
+  <text x="110" y="316" fill="#c0e8c0" font-size="11">이중화, 백업, 교육·훈련</text>
+  <text x="50"  y="338" fill="#90d090" font-size="12">적용</text>
+  <text x="110" y="338" fill="#a0e8a0" font-size="11">가장 일반적 전략 (실무 빈도 최고)</text>
+  <text x="50"  y="361" fill="#90d090" font-size="12">예시</text>
+  <text x="110" y="361" fill="#c0e8c0" font-size="11">핵심 기능 조기 구현 → 후반 리스크 감소</text>
+
+  <!-- Accept -->
+  <rect x="370" y="228" width="320" height="148" rx="12" fill="#2a2a2a" opacity="0.85" stroke="#888888" stroke-width="2"/>
+  <text x="530" y="253" text-anchor="middle" fill="#c8c8c8" font-size="16" font-weight="bold">④ 수용 (Accept)</text>
+  <text x="390" y="278" fill="#b0b0b0" font-size="12">목적</text>
+  <text x="450" y="278" fill="#ffffff" font-size="12">리스크를 인정하고 결과 감수</text>
+  <text x="390" y="301" fill="#b0b0b0" font-size="12">유형</text>
+  <text x="450" y="301" fill="#e0e0e0" font-size="11">능동적: 우발사태 예비비 확보</text>
+  <text x="450" y="316" fill="#e0e0e0" font-size="11">수동적: 그냥 감수 (저위험)</text>
+  <text x="390" y="338" fill="#b0b0b0" font-size="12">적용</text>
+  <text x="450" y="338" fill="#c0c0c0" font-size="11">회피·전가·완화가 불가능할 때</text>
+  <text x="390" y="361" fill="#b0b0b0" font-size="12">예시</text>
+  <text x="450" y="361" fill="#e0e0e0" font-size="11">시장 환율 변동 → 예비비 10% 적립</text>
+
+  <!-- Bottom summary -->
+  <rect x="30" y="390" width="660" height="34" rx="8" fill="#0f1a3a" opacity="0.9" stroke="#2a3a6a" stroke-width="1"/>
+  <text x="360" y="403" text-anchor="middle" fill="#a0b8e0" font-size="11" font-weight="bold">긍정적 리스크(기회) 대응: 활용(Exploit) · 공유(Share) · 강화(Enhance) · 수용(Accept)</text>
+  <text x="360" y="420" text-anchor="middle" fill="#6a6a9a" font-size="10">PM 관점: 대응 전략 선택은 리스크 우선순위·비용·잔여 리스크를 함께 고려해야 합니다</text>
+</svg>

@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="26" text-anchor="middle" fill="#e0e0ff" font-size="14" font-weight="bold">데이터베이스 정규화 (Normalization) — 1NF → 2NF → 3NF → BCNF</text>
+  <text x="360" y="43" text-anchor="middle" fill="#9090c0" font-size="9.5">이상(Anomaly) 제거 · 함수 종속성 제거 · 데이터 무결성 확보</text>
+
+  <!-- NF progression flow -->
+  <!-- 비정규화 -->
+  <rect x="12" y="54" width="130" height="130" rx="8" fill="#3a1010" opacity="0.85" stroke="#9a2020" stroke-width="1.5"/>
+  <text x="77" y="70" text-anchor="middle" fill="#ff8080" font-size="9" font-weight="bold">비정규화 테이블</text>
+  <text x="77" y="84" text-anchor="middle" fill="#c05050" font-size="7.5">(이상 현상 발생)</text>
+  <!-- Sample table visual -->
+  <rect x="20" y="91" width="114" height="12" rx="2" fill="#1a0a0a"/>
+  <text x="77" y="101" text-anchor="middle" fill="#a06060" font-size="6.5">주문ID | 고객 | 제품1,2,3 | 도시</text>
+  <rect x="20" y="105" width="114" height="10" rx="2" fill="#2a1010" opacity="0.6"/>
+  <text x="77" y="114" text-anchor="middle" fill="#906060" font-size="6">1 | 김철수 | 노트북,마우스 | 서울</text>
+  <rect x="20" y="117" width="114" height="10" rx="2" fill="#2a1010"/>
+  <text x="77" y="126" text-anchor="middle" fill="#906060" font-size="6">2 | 이영희 | 키보드 | 부산</text>
+  <text x="77" y="142" text-anchor="middle" fill="#c05050" font-size="7.5">⚠ 다중값 속성</text>
+  <text x="77" y="154" text-anchor="middle" fill="#c05050" font-size="7.5">⚠ 삽입·삭제 이상</text>
+  <text x="77" y="166" text-anchor="middle" fill="#c05050" font-size="7.5">⚠ 갱신 이상</text>
+  <text x="77" y="178" text-anchor="middle" fill="#a04040" font-size="7">반복 그룹 존재</text>
+
+  <!-- Arrow -->
+  <polygon points="142,119 150,113 158,119 150,125" fill="#4a6adc"/>
+  <text x="150" y="108" text-anchor="middle" fill="#4a6adc" font-size="9" font-weight="bold">1NF</text>
+
+  <!-- 1NF -->
+  <rect x="158" y="54" width="130" height="130" rx="8" fill="#1a2a5c" opacity="0.85" stroke="#4a6adc" stroke-width="1.5"/>
+  <text x="223" y="70" text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="bold">제1정규형 (1NF)</text>
+  <text x="223" y="83" text-anchor="middle" fill="#5070a0" font-size="7.5">원자값만 허용</text>
+  <rect x="166" y="91" width="114" height="12" rx="2" fill="#0e1430"/>
+  <text x="223" y="101" text-anchor="middle" fill="#6080c0" font-size="6.5">주문ID | 고객 | 제품 | 도시</text>
+  <rect x="166" y="105" width="114" height="10" rx="2" fill="#1a2040" opacity="0.6"/>
+  <text x="223" y="114" text-anchor="middle" fill="#5070a0" font-size="6">1 | 김철수 | 노트북 | 서울</text>
+  <rect x="166" y="117" width="114" height="10" rx="2" fill="#1a2040"/>
+  <text x="223" y="126" text-anchor="middle" fill="#5070a0" font-size="6">1 | 김철수 | 마우스 | 서울</text>
+  <rect x="166" y="129" width="114" height="10" rx="2" fill="#1a2040" opacity="0.6"/>
+  <text x="223" y="138" text-anchor="middle" fill="#5070a0" font-size="6">2 | 이영희 | 키보드 | 부산</text>
+  <text x="223" y="153" text-anchor="middle" fill="#7ab8ff" font-size="7.5">✓ 반복 그룹 제거</text>
+  <text x="223" y="165" text-anchor="middle" fill="#7ab8ff" font-size="7.5">✓ 원자값 보장</text>
+  <text x="223" y="177" text-anchor="middle" fill="#5070c0" font-size="7">PK: (주문ID, 제품)</text>
+
+  <!-- Arrow -->
+  <polygon points="288,119 296,113 304,119 296,125" fill="#2a9a5a"/>
+  <text x="296" y="108" text-anchor="middle" fill="#2a9a5a" font-size="9" font-weight="bold">2NF</text>
+
+  <!-- 2NF -->
+  <rect x="304" y="54" width="130" height="130" rx="8" fill="#1a3a2a" opacity="0.85" stroke="#2a9a5a" stroke-width="1.5"/>
+  <text x="369" y="70" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">제2정규형 (2NF)</text>
+  <text x="369" y="83" text-anchor="middle" fill="#40a060" font-size="7.5">부분 함수 종속 제거</text>
+  <rect x="312" y="91" width="114" height="10" rx="2" fill="#0a1810"/>
+  <text x="369" y="100" text-anchor="middle" fill="#50a070" font-size="6.5">주문(주문ID, 제품, 수량)</text>
+  <rect x="312" y="103" width="114" height="10" rx="2" fill="#0a1810" opacity="0.8"/>
+  <text x="369" y="112" text-anchor="middle" fill="#50a070" font-size="6.5">고객(주문ID, 고객명, 도시)</text>
+  <text x="369" y="128" text-anchor="middle" fill="#7dff9a" font-size="7.5">✓ 부분 의존성 제거</text>
+  <text x="369" y="140" text-anchor="middle" fill="#7dff9a" font-size="7.5">✓ 테이블 분리</text>
+  <text x="369" y="155" text-anchor="middle" fill="#40a060" font-size="7.5">X→Y (부분 종속)</text>
+  <text x="369" y="167" text-anchor="middle" fill="#40a060" font-size="7.5">→ 별도 테이블로</text>
+  <text x="369" y="179" text-anchor="middle" fill="#205030" font-size="7">복합PK 일부에만 종속 제거</text>
+
+  <!-- Arrow -->
+  <polygon points="434,119 442,113 450,119 442,125" fill="#ca8a2a"/>
+  <text x="442" y="108" text-anchor="middle" fill="#ca8a2a" font-size="9" font-weight="bold">3NF</text>
+
+  <!-- 3NF -->
+  <rect x="450" y="54" width="130" height="130" rx="8" fill="#3a2a10" opacity="0.85" stroke="#ca8a2a" stroke-width="1.5"/>
+  <text x="515" y="70" text-anchor="middle" fill="#ffc070" font-size="9" font-weight="bold">제3정규형 (3NF)</text>
+  <text x="515" y="83" text-anchor="middle" fill="#a06020" font-size="7.5">이행 함수 종속 제거</text>
+  <rect x="458" y="91" width="114" height="10" rx="2" fill="#1a0e00"/>
+  <text x="515" y="100" text-anchor="middle" fill="#c09040" font-size="6.5">주문(주문ID, 제품, 수량)</text>
+  <rect x="458" y="103" width="114" height="10" rx="2" fill="#1a0e00" opacity="0.8"/>
+  <text x="515" y="112" text-anchor="middle" fill="#c09040" font-size="6.5">고객(주문ID, 고객ID)</text>
+  <rect x="458" y="115" width="114" height="10" rx="2" fill="#1a0e00"/>
+  <text x="515" y="124" text-anchor="middle" fill="#c09040" font-size="6.5">지역(고객ID, 도시, 우편번호)</text>
+  <text x="515" y="140" text-anchor="middle" fill="#ffc070" font-size="7.5">✓ 이행 종속 제거</text>
+  <text x="515" y="152" text-anchor="middle" fill="#ffc070" font-size="7.5">A→B→C 제거</text>
+  <text x="515" y="166" text-anchor="middle" fill="#a06020" font-size="7.5">주문ID→고객ID→도시</text>
+  <text x="515" y="178" text-anchor="middle" fill="#a06020" font-size="7">이행 종속 분리</text>
+
+  <!-- Arrow -->
+  <polygon points="580,119 588,113 596,119 588,125" fill="#9a2acc"/>
+  <text x="588" y="108" text-anchor="middle" fill="#9a2acc" font-size="9" font-weight="bold">BCNF</text>
+
+  <!-- BCNF -->
+  <rect x="596" y="54" width="112" height="130" rx="8" fill="#2a1a5c" opacity="0.85" stroke="#7a3acc" stroke-width="1.5"/>
+  <text x="652" y="70" text-anchor="middle" fill="#c084f5" font-size="8.5" font-weight="bold">BCNF</text>
+  <text x="652" y="83" text-anchor="middle" fill="#8060c0" font-size="7.5">Boyce-Codd NF</text>
+  <text x="652" y="97" text-anchor="middle" fill="#a080d0" font-size="7.5">모든 결정자가</text>
+  <text x="652" y="109" text-anchor="middle" fill="#a080d0" font-size="7.5">후보키여야 함</text>
+  <text x="652" y="125" text-anchor="middle" fill="#c084f5" font-size="7.5">✓ 3NF 강화</text>
+  <text x="652" y="137" text-anchor="middle" fill="#c084f5" font-size="7.5">✓ 모든 FD에서</text>
+  <text x="652" y="149" text-anchor="middle" fill="#c084f5" font-size="7.5">X→Y이면 X는</text>
+  <text x="652" y="161" text-anchor="middle" fill="#c084f5" font-size="7.5">반드시 수퍼키</text>
+  <text x="652" y="175" text-anchor="middle" fill="#604090" font-size="7">3NF 만족 but</text>
+  <text x="652" y="183" text-anchor="middle" fill="#604090" font-size="7">BCNF 불만족 가능</text>
+
+  <!-- Anomaly types -->
+  <rect x="12" y="198" width="696" height="90" rx="10" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="360" y="215" text-anchor="middle" fill="#d0d0ff" font-size="11" font-weight="bold">정규화로 제거하는 3가지 이상 현상 (Anomaly)</text>
+
+  <rect x="22"  y="223" width="210" height="58" rx="7" fill="#3a1010" opacity="0.8"/>
+  <rect x="248" y="223" width="210" height="58" rx="7" fill="#1a3a10" opacity="0.8"/>
+  <rect x="474" y="223" width="224" height="58" rx="7" fill="#1a1a5c" opacity="0.8"/>
+
+  <text x="127" y="239" text-anchor="middle" fill="#ff8080" font-size="9.5" font-weight="bold">삽입 이상 (Insert Anomaly)</text>
+  <text x="127" y="253" text-anchor="middle" fill="#d06060" font-size="8">새 데이터를 삽입하려면</text>
+  <text x="127" y="265" text-anchor="middle" fill="#d06060" font-size="8">불필요한 데이터도 함께 삽입</text>
+  <text x="127" y="276" text-anchor="middle" fill="#a04040" font-size="7.5">예: 제품 없이 고객 등록 불가</text>
+
+  <text x="353" y="239" text-anchor="middle" fill="#80ff80" font-size="9.5" font-weight="bold">삭제 이상 (Delete Anomaly)</text>
+  <text x="353" y="253" text-anchor="middle" fill="#60c060" font-size="8">특정 데이터 삭제 시</text>
+  <text x="353" y="265" text-anchor="middle" fill="#60c060" font-size="8">필요한 다른 데이터도 소실</text>
+  <text x="353" y="276" text-anchor="middle" fill="#408040" font-size="7.5">예: 주문 삭제 → 고객 정보도 소실</text>
+
+  <text x="586" y="239" text-anchor="middle" fill="#8080ff" font-size="9.5" font-weight="bold">갱신 이상 (Update Anomaly)</text>
+  <text x="586" y="253" text-anchor="middle" fill="#6060c0" font-size="8">한 데이터 수정 시</text>
+  <text x="586" y="265" text-anchor="middle" fill="#6060c0" font-size="8">여러 행을 일괄 수정해야 함</text>
+  <text x="586" y="276" text-anchor="middle" fill="#4040a0" font-size="7.5">예: 도시 변경 → 모든 행 수정</text>
+
+  <!-- PM Perspective -->
+  <rect x="12" y="298" width="696" height="94" rx="10" fill="#0e0e2a" opacity="0.85" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="360" y="315" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">PM 관점 — 정규화 수준 선택</text>
+  <text x="184" y="332" text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="bold">3NF까지 정규화 권장</text>
+  <text x="184" y="346" text-anchor="middle" fill="#5070a0" font-size="8">데이터 무결성 + 중복 최소화</text>
+  <text x="184" y="358" text-anchor="middle" fill="#5070a0" font-size="8">ERP · 금융 · 회계 시스템 표준</text>
+  <text x="184" y="371" text-anchor="middle" fill="#3050a0" font-size="7.5">유지보수 비용↓  품질↑</text>
+  <text x="184" y="383" text-anchor="middle" fill="#3050a0" font-size="7.5">→ 요구사항·스펙 문서에 명시 필요</text>
+  <text x="530" y="332" text-anchor="middle" fill="#ffa040" font-size="9" font-weight="bold">비정규화 (De-Normalization) 고려</text>
+  <text x="530" y="346" text-anchor="middle" fill="#c07030" font-size="8">읽기 성능이 최우선인 경우</text>
+  <text x="530" y="358" text-anchor="middle" fill="#c07030" font-size="8">분석DB (Data Warehouse) · 보고용 DB</text>
+  <text x="530" y="371" text-anchor="middle" fill="#a05020" font-size="7.5">JOIN 비용 줄이기 위한 의도적 중복</text>
+  <text x="530" y="383" text-anchor="middle" fill="#a05020" font-size="7.5">→ 트레이드오프 분석 후 결정</text>
+</svg>

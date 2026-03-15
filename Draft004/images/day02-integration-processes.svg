@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+  <text x="360" y="26" text-anchor="middle" fill="#e0e0ff" font-size="14" font-weight="bold">PMBOK 통합 관리 — 7대 프로세스</text>
+  <text x="360" y="43" text-anchor="middle" fill="#9090c0" font-size="9.5">프로젝트 전 생명주기를 하나로 통합하는 핵심 지식 영역</text>
+
+  <!-- 7 processes as linked boxes -->
+  <!-- Row 1: 4 processes -->
+  <rect x="20"  y="60" width="145" height="66" rx="8" fill="#1a2060" opacity="0.9" stroke="#4a6adc" stroke-width="1.5"/>
+  <text x="92"  y="78"  text-anchor="middle" fill="#7ab8ff" font-size="9"  font-weight="bold">4.1</text>
+  <text x="92"  y="91"  text-anchor="middle" fill="#7ab8ff" font-size="9"  font-weight="bold">프로젝트 헌장</text>
+  <text x="92"  y="103" text-anchor="middle" fill="#7ab8ff" font-size="8.5">개발</text>
+  <text x="92"  y="116" text-anchor="middle" fill="#3555a0" font-size="7.5">착수 프로세스 그룹</text>
+
+  <rect x="185" y="60" width="145" height="66" rx="8" fill="#1a3040" opacity="0.9" stroke="#2a7aac" stroke-width="1.5"/>
+  <text x="257"  y="78"  text-anchor="middle" fill="#7ad8ff" font-size="9"  font-weight="bold">4.2</text>
+  <text x="257"  y="91"  text-anchor="middle" fill="#7ad8ff" font-size="9"  font-weight="bold">프로젝트 관리</text>
+  <text x="257"  y="103" text-anchor="middle" fill="#7ad8ff" font-size="8.5">계획서 수립</text>
+  <text x="257"  y="116" text-anchor="middle" fill="#2a6080" font-size="7.5">기획 프로세스 그룹</text>
+
+  <rect x="350" y="60" width="145" height="66" rx="8" fill="#1a3a20" opacity="0.9" stroke="#2a9a5a" stroke-width="1.5"/>
+  <text x="422"  y="78"  text-anchor="middle" fill="#7dff9a" font-size="9"  font-weight="bold">4.3</text>
+  <text x="422"  y="91"  text-anchor="middle" fill="#7dff9a" font-size="9"  font-weight="bold">프로젝트 작업</text>
+  <text x="422"  y="103" text-anchor="middle" fill="#7dff9a" font-size="8.5">지시 및 관리</text>
+  <text x="422"  y="116" text-anchor="middle" fill="#2a7040" font-size="7.5">실행 프로세스 그룹</text>
+
+  <rect x="515" y="60" width="185" height="66" rx="8" fill="#2a2a10" opacity="0.9" stroke="#9aaa2a" stroke-width="1.5"/>
+  <text x="607"  y="78"  text-anchor="middle" fill="#ddf070" font-size="9"  font-weight="bold">4.4</text>
+  <text x="607"  y="91"  text-anchor="middle" fill="#ddf070" font-size="9"  font-weight="bold">프로젝트 지식</text>
+  <text x="607"  y="103" text-anchor="middle" fill="#ddf070" font-size="8.5">관리</text>
+  <text x="607"  y="116" text-anchor="middle" fill="#6a7a20" font-size="7.5">실행 프로세스 그룹</text>
+
+  <!-- Row 2: 3 processes -->
+  <rect x="88"  y="145" width="175" height="66" rx="8" fill="#3a2a10" opacity="0.9" stroke="#ca8a2a" stroke-width="1.5"/>
+  <text x="175"  y="163"  text-anchor="middle" fill="#ffc070" font-size="9"  font-weight="bold">4.5</text>
+  <text x="175"  y="176"  text-anchor="middle" fill="#ffc070" font-size="9"  font-weight="bold">프로젝트 작업</text>
+  <text x="175"  y="188" text-anchor="middle" fill="#ffc070" font-size="8.5">감시 및 통제</text>
+  <text x="175"  y="201" text-anchor="middle" fill="#806020" font-size="7.5">감시/통제 프로세스 그룹</text>
+
+  <rect x="283" y="145" width="175" height="66" rx="8" fill="#3a1a10" opacity="0.9" stroke="#ca4a2a" stroke-width="1.5"/>
+  <text x="370"  y="163"  text-anchor="middle" fill="#ff9060" font-size="9"  font-weight="bold">4.6</text>
+  <text x="370"  y="176"  text-anchor="middle" fill="#ff9060" font-size="9"  font-weight="bold">통합 변경 통제</text>
+  <text x="370"  y="188" text-anchor="middle" fill="#ff9060" font-size="8.5">수행</text>
+  <text x="370"  y="201" text-anchor="middle" fill="#802020" font-size="7.5">감시/통제 프로세스 그룹</text>
+
+  <rect x="478" y="145" width="175" height="66" rx="8" fill="#2a1a5c" opacity="0.9" stroke="#7a3acc" stroke-width="1.5"/>
+  <text x="565"  y="163"  text-anchor="middle" fill="#c084f5" font-size="9"  font-weight="bold">4.7</text>
+  <text x="565"  y="176"  text-anchor="middle" fill="#c084f5" font-size="9"  font-weight="bold">프로젝트 또는</text>
+  <text x="565"  y="188" text-anchor="middle" fill="#c084f5" font-size="8.5">단계 종료</text>
+  <text x="565"  y="201" text-anchor="middle" fill="#5030a0" font-size="7.5">종료 프로세스 그룹</text>
+
+  <!-- Arrows row1 -->
+  <line x1="165" y1="92" x2="185" y2="92" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="185,89 192,92 185,95" fill="#4a6adc"/>
+  <line x1="330" y1="92" x2="350" y2="92" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="350,89 357,92 350,95" fill="#4a6adc"/>
+  <line x1="495" y1="92" x2="515" y2="92" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="515,89 522,92 515,95" fill="#4a6adc"/>
+
+  <!-- Downward arrows -->
+  <line x1="175" y1="126" x2="175" y2="145" stroke="#4a8adc" stroke-width="1.5"/>
+  <polygon points="172,145 175,152 178,145" fill="#4a8adc"/>
+  <line x1="370" y1="126" x2="370" y2="145" stroke="#4a8adc" stroke-width="1.5"/>
+  <polygon points="367,145 370,152 373,145" fill="#4a8adc"/>
+  <line x1="565" y1="126" x2="565" y2="145" stroke="#4a8adc" stroke-width="1.5"/>
+  <polygon points="562,145 565,152 568,145" fill="#4a8adc"/>
+
+  <!-- Key concepts -->
+  <rect x="12" y="226" width="340" height="96" rx="9" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="182" y="243" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">통합 관리 핵심 문서</text>
+  <rect x="22" y="251" width="150" height="62" rx="5" fill="#1a2060" opacity="0.8"/>
+  <rect x="182" y="251" width="162" height="62" rx="5" fill="#1a3a10" opacity="0.8"/>
+  <text x="97" y="264" text-anchor="middle" fill="#7ab8ff" font-size="8.5" font-weight="bold">프로젝트 헌장</text>
+  <text x="97" y="276" text-anchor="middle" fill="#5070a0" font-size="7.5">• 프로젝트 공식 승인 문서</text>
+  <text x="97" y="287" text-anchor="middle" fill="#5070a0" font-size="7.5">• 스폰서 → PM에게 권한 부여</text>
+  <text x="97" y="298" text-anchor="middle" fill="#5070a0" font-size="7.5">• 목적·범위·예산·이해관계자</text>
+  <text x="97" y="309" text-anchor="middle" fill="#5070a0" font-size="7.5">• 착수 전 반드시 존재</text>
+  <text x="263" y="264" text-anchor="middle" fill="#7dff9a" font-size="8.5" font-weight="bold">변경 로그 (Change Log)</text>
+  <text x="263" y="276" text-anchor="middle" fill="#40a060" font-size="7.5">• 모든 변경 요청 추적</text>
+  <text x="263" y="287" text-anchor="middle" fill="#40a060" font-size="7.5">• 상태: 승인/보류/거절</text>
+  <text x="263" y="298" text-anchor="middle" fill="#40a060" font-size="7.5">• CCB 결정 사항 기록</text>
+  <text x="263" y="309" text-anchor="middle" fill="#40a060" font-size="7.5">• 교훈(Lessons Learned) 연결</text>
+
+  <!-- Change control -->
+  <rect x="366" y="226" width="342" height="96" rx="9" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="537" y="243" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">PM 역할 — 통합 관리자</text>
+  <text x="537" y="260" text-anchor="middle" fill="#9090c0" font-size="8">"PM은 전체 프로젝트를 하나의 시스템으로 바라본다"</text>
+  <rect x="376" y="267" width="152" height="48" rx="5" fill="#1a2060" opacity="0.8"/>
+  <rect x="538" y="267" width="162" height="48" rx="5" fill="#2a1a5c" opacity="0.8"/>
+  <text x="452" y="280" text-anchor="middle" fill="#7ab8ff" font-size="8.5" font-weight="bold">수직 통합</text>
+  <text x="452" y="292" text-anchor="middle" fill="#5070a0" font-size="7.5">스폰서 ↔ PM ↔ 팀</text>
+  <text x="452" y="303" text-anchor="middle" fill="#5070a0" font-size="7.5">의사결정 체계 수립</text>
+  <text x="452" y="314" text-anchor="middle" fill="#5070a0" font-size="7.5">에스컬레이션 경로 명확화</text>
+  <text x="619" y="280" text-anchor="middle" fill="#c084f5" font-size="8.5" font-weight="bold">수평 통합</text>
+  <text x="619" y="292" text-anchor="middle" fill="#8060b0" font-size="7.5">범위↔일정↔비용↔품질</text>
+  <text x="619" y="303" text-anchor="middle" fill="#8060b0" font-size="7.5">10대 지식영역 상호작용</text>
+  <text x="619" y="314" text-anchor="middle" fill="#8060b0" font-size="7.5">트레이드오프 의사결정</text>
+
+  <!-- Bottom summary -->
+  <rect x="12" y="332" width="696" height="60" rx="10" fill="#0e0e2a" opacity="0.85" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="360" y="350" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">통합 관리 = 모든 지식 영역의 조정자 (Orchestrator)</text>
+  <text x="180" y="367" text-anchor="middle" fill="#7ab8ff" font-size="8">착수 → 기획 → 실행</text>
+  <text x="360" y="367" text-anchor="middle" fill="#ffc070" font-size="8">감시/통제 → 변경 통제</text>
+  <text x="560" y="367" text-anchor="middle" fill="#c084f5" font-size="8">종료 → 교훈 문서화</text>
+  <text x="180" y="381" text-anchor="middle" fill="#5070a0" font-size="7.5">헌장 → 관리 계획서</text>
+  <text x="360" y="381" text-anchor="middle" fill="#806020" font-size="7.5">CCB · 변경 로그 · 이슈 로그</text>
+  <text x="560" y="381" text-anchor="middle" fill="#5030a0" font-size="7.5">최종 보고서 · 자원 해제</text>
+</svg>

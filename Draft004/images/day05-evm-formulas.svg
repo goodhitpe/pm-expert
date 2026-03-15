@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="440" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="28" text-anchor="middle" fill="#e0e0ff" font-size="15" font-weight="bold">EVM 핵심 공식 대시보드</text>
+  <text x="360" y="45" text-anchor="middle" fill="#9090c0" font-size="10">Earned Value Management — 비용·일정 성과 통합 측정 지표</text>
+
+  <!-- Base Values Row -->
+  <text x="360" y="65" text-anchor="middle" fill="#a0a8d0" font-size="11" font-weight="bold">— 3대 기준 값 —</text>
+  <rect x="15"  y="72" width="214" height="64" rx="9" fill="#1a2a5c" opacity="0.88" stroke="#3a5aac" stroke-width="1.5"/>
+  <text x="122" y="91"  text-anchor="middle" fill="#7ab8ff" font-size="11" font-weight="bold">PV (계획 가치)</text>
+  <text x="122" y="104" text-anchor="middle" fill="#4a78ac" font-size="8">Planned Value</text>
+  <text x="122" y="120" text-anchor="middle" fill="#80b8e0" font-size="9">이 시점까지 계획된 작업의 예산</text>
+  <text x="122" y="133" text-anchor="middle" fill="#6090c0" font-size="8">= 기준선 예산 × 계획 완료율</text>
+
+  <rect x="253" y="72" width="214" height="64" rx="9" fill="#1a3a2a" opacity="0.88" stroke="#3aac6a" stroke-width="1.5"/>
+  <text x="360" y="91"  text-anchor="middle" fill="#7dff9a" font-size="11" font-weight="bold">EV (획득 가치)</text>
+  <text x="360" y="104" text-anchor="middle" fill="#3a8a5a" font-size="8">Earned Value</text>
+  <text x="360" y="120" text-anchor="middle" fill="#80d090" font-size="9">완료된 작업의 계획된 가치</text>
+  <text x="360" y="133" text-anchor="middle" fill="#60a070" font-size="8">= 기준선 예산 × 실제 완료율</text>
+
+  <rect x="491" y="72" width="214" height="64" rx="9" fill="#3a1a1a" opacity="0.88" stroke="#ac3a3a" stroke-width="1.5"/>
+  <text x="598" y="91"  text-anchor="middle" fill="#ff7070" font-size="11" font-weight="bold">AC (실제 원가)</text>
+  <text x="598" y="104" text-anchor="middle" fill="#8a2a2a" font-size="8">Actual Cost</text>
+  <text x="598" y="120" text-anchor="middle" fill="#e07070" font-size="9">완료된 작업에 실제 지출된 비용</text>
+  <text x="598" y="133" text-anchor="middle" fill="#c05050" font-size="8">실제 지출 데이터에서 직접 산출</text>
+
+  <!-- Variance Row -->
+  <text x="360" y="154" text-anchor="middle" fill="#a0a8d0" font-size="11" font-weight="bold">— 편차(Variance) 지표 —</text>
+
+  <rect x="15"  y="161" width="335" height="80" rx="9" fill="#1a2a4a" opacity="0.85" stroke="#4a6aac" stroke-width="1.5"/>
+  <text x="182" y="179" text-anchor="middle" fill="#80a8ff" font-size="11" font-weight="bold">CV (원가 편차)</text>
+  <text x="182" y="192" text-anchor="middle" fill="#4a68ac" font-size="8">Cost Variance</text>
+  <rect x="70"  y="197" width="224" height="24" rx="5" fill="#0e1630" opacity="0.9"/>
+  <text x="182" y="213" text-anchor="middle" fill="#c0d8ff" font-size="14" font-weight="bold">CV = EV − AC</text>
+  <text x="85"  y="234" text-anchor="middle" fill="#70ff70" font-size="9">CV &gt; 0 : 예산보다 적게 사용 ✅</text>
+  <text x="280" y="234" text-anchor="middle" fill="#ff7070" font-size="9">CV &lt; 0 : 원가 초과 ⚠️</text>
+
+  <rect x="370" y="161" width="335" height="80" rx="9" fill="#1a2a4a" opacity="0.85" stroke="#4a6aac" stroke-width="1.5"/>
+  <text x="537" y="179" text-anchor="middle" fill="#80a8ff" font-size="11" font-weight="bold">SV (일정 편차)</text>
+  <text x="537" y="192" text-anchor="middle" fill="#4a68ac" font-size="8">Schedule Variance</text>
+  <rect x="422" y="197" width="231" height="24" rx="5" fill="#0e1630" opacity="0.9"/>
+  <text x="537" y="213" text-anchor="middle" fill="#c0d8ff" font-size="14" font-weight="bold">SV = EV − PV</text>
+  <text x="435" y="234" text-anchor="middle" fill="#70ff70" font-size="9">SV &gt; 0 : 일정 선행 ✅</text>
+  <text x="625" y="234" text-anchor="middle" fill="#ff7070" font-size="9">SV &lt; 0 : 일정 지연 ⚠️</text>
+
+  <!-- Index Row -->
+  <text x="360" y="256" text-anchor="middle" fill="#a0a8d0" font-size="11" font-weight="bold">— 성과 지수(Performance Index) —</text>
+
+  <rect x="15"  y="263" width="335" height="80" rx="9" fill="#1a3a1a" opacity="0.85" stroke="#3aac5a" stroke-width="1.5"/>
+  <text x="182" y="281" text-anchor="middle" fill="#7dff9a" font-size="11" font-weight="bold">CPI (원가 성과 지수)</text>
+  <text x="182" y="294" text-anchor="middle" fill="#3a8a4a" font-size="8">Cost Performance Index</text>
+  <rect x="68"  y="299" width="228" height="24" rx="5" fill="#0e180e" opacity="0.9"/>
+  <text x="182" y="315" text-anchor="middle" fill="#c0ffc0" font-size="14" font-weight="bold">CPI = EV ÷ AC</text>
+  <text x="90"  y="336" text-anchor="middle" fill="#70ff70" font-size="9">CPI &gt; 1.0 : 효율적 ✅</text>
+  <text x="270" y="336" text-anchor="middle" fill="#ff7070" font-size="9">CPI &lt; 1.0 : 비효율 ⚠️</text>
+
+  <rect x="370" y="263" width="335" height="80" rx="9" fill="#1a3a1a" opacity="0.85" stroke="#3aac5a" stroke-width="1.5"/>
+  <text x="537" y="281" text-anchor="middle" fill="#7dff9a" font-size="11" font-weight="bold">SPI (일정 성과 지수)</text>
+  <text x="537" y="294" text-anchor="middle" fill="#3a8a4a" font-size="8">Schedule Performance Index</text>
+  <rect x="420" y="299" width="232" height="24" rx="5" fill="#0e180e" opacity="0.9"/>
+  <text x="537" y="315" text-anchor="middle" fill="#c0ffc0" font-size="14" font-weight="bold">SPI = EV ÷ PV</text>
+  <text x="443" y="336" text-anchor="middle" fill="#70ff70" font-size="9">SPI &gt; 1.0 : 일정 선행 ✅</text>
+  <text x="626" y="336" text-anchor="middle" fill="#ff7070" font-size="9">SPI &lt; 1.0 : 일정 지연 ⚠️</text>
+
+  <!-- Forecasting Row -->
+  <text x="360" y="357" text-anchor="middle" fill="#a0a8d0" font-size="11" font-weight="bold">— 예측 공식(Forecasting) —</text>
+
+  <rect x="15"  y="363" width="214" height="62" rx="9" fill="#2a1a5c" opacity="0.85" stroke="#7a3aac" stroke-width="1.5"/>
+  <text x="122" y="380" text-anchor="middle" fill="#c084f5" font-size="10.5" font-weight="bold">EAC (완료 시 예측 원가)</text>
+  <rect x="23"  y="385" width="198" height="22" rx="5" fill="#14082a" opacity="0.9"/>
+  <text x="122" y="400" text-anchor="middle" fill="#e0b0ff" font-size="11" font-weight="bold">EAC = BAC ÷ CPI</text>
+  <text x="122" y="419" text-anchor="middle" fill="#9060d0" font-size="8">(성과율 유지 가정)</text>
+
+  <rect x="253" y="363" width="214" height="62" rx="9" fill="#2a1a5c" opacity="0.85" stroke="#7a3aac" stroke-width="1.5"/>
+  <text x="360" y="380" text-anchor="middle" fill="#c084f5" font-size="10.5" font-weight="bold">ETC (잔여 예측 원가)</text>
+  <rect x="261" y="385" width="198" height="22" rx="5" fill="#14082a" opacity="0.9"/>
+  <text x="360" y="400" text-anchor="middle" fill="#e0b0ff" font-size="11" font-weight="bold">ETC = EAC − AC</text>
+  <text x="360" y="419" text-anchor="middle" fill="#9060d0" font-size="8">(남은 작업 비용 예측)</text>
+
+  <rect x="491" y="363" width="214" height="62" rx="9" fill="#2a1a5c" opacity="0.85" stroke="#7a3aac" stroke-width="1.5"/>
+  <text x="598" y="380" text-anchor="middle" fill="#c084f5" font-size="10.5" font-weight="bold">VAC (완료 시 편차)</text>
+  <rect x="499" y="385" width="198" height="22" rx="5" fill="#14082a" opacity="0.9"/>
+  <text x="598" y="400" text-anchor="middle" fill="#e0b0ff" font-size="11" font-weight="bold">VAC = BAC − EAC</text>
+  <text x="598" y="419" text-anchor="middle" fill="#9060d0" font-size="8">VAC &lt; 0 : 예산 초과 예상</text>
+</svg>

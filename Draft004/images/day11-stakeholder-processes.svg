@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="29" text-anchor="middle" fill="#e0e0ff" font-size="16" font-weight="bold">이해관계자 관리 4 프로세스</text>
+  <text x="360" y="46" text-anchor="middle" fill="#9090c0" font-size="10.5">PMBOK 13장 — Identify → Plan → Manage → Monitor Stakeholders</text>
+
+  <!-- Process 1 -->
+  <rect x="10"  y="60" width="165" height="176" rx="10" fill="#1a2a5c" opacity="0.85" stroke="#3a5aac" stroke-width="1.5"/>
+  <text x="92"  y="80"  text-anchor="middle" fill="#7ab8ff" font-size="11" font-weight="bold">① 이해관계자 식별</text>
+  <text x="92"  y="93"  text-anchor="middle" fill="#4a78ac" font-size="9">13.1 Identify</text>
+  <line x1="20" y1="99" x2="165" y2="99" stroke="#3a5aac" stroke-width="0.7" opacity="0.5"/>
+  <text x="18" y="114" fill="#80a8e0" font-size="8.5">📥 입력:</text>
+  <text x="18" y="128" fill="#7090b0" font-size="8">• 프로젝트 헌장</text>
+  <text x="18" y="141" fill="#7090b0" font-size="8">• 비즈니스 문서</text>
+  <text x="18" y="154" fill="#7090b0" font-size="8">• 기업 환경 요소</text>
+  <text x="18" y="171" fill="#60a0d0" font-size="8.5" font-weight="bold">🔧 기법:</text>
+  <text x="18" y="184" fill="#6080a0" font-size="8">파워/이해도 그리드</text>
+  <text x="18" y="197" fill="#6080a0" font-size="8">이해관계자 큐브</text>
+  <text x="18" y="210" fill="#6080a0" font-size="8">살리언스 모델</text>
+  <text x="92" y="228" text-anchor="middle" fill="#4080c0" font-size="8" font-weight="bold">✅ 이해관계자 등록부</text>
+
+  <!-- arrow 1→2 -->
+  <polygon points="177,148 190,143 190,153" fill="#6080c0"/>
+  <line x1="176" y1="148" x2="190" y2="148" stroke="#6080c0" stroke-width="1.8"/>
+
+  <!-- Process 2 -->
+  <rect x="192" y="60" width="165" height="176" rx="10" fill="#1a3a2a" opacity="0.85" stroke="#3aac6a" stroke-width="1.5"/>
+  <text x="274" y="80"  text-anchor="middle" fill="#7dff9a" font-size="11" font-weight="bold">② 참여 계획 수립</text>
+  <text x="274" y="93"  text-anchor="middle" fill="#3a8a5a" font-size="9">13.2 Plan Engagement</text>
+  <line x1="202" y1="99" x2="347" y2="99" stroke="#3aac6a" stroke-width="0.7" opacity="0.5"/>
+  <text x="200" y="114" fill="#60c080" font-size="8.5">📥 입력:</text>
+  <text x="200" y="128" fill="#6a9070" font-size="8">• 이해관계자 등록부</text>
+  <text x="200" y="141" fill="#6a9070" font-size="8">• 프로젝트 관리 계획서</text>
+  <text x="200" y="154" fill="#6a9070" font-size="8">• 리스크 등록부</text>
+  <text x="200" y="171" fill="#40a060" font-size="8.5" font-weight="bold">🔧 기법:</text>
+  <text x="200" y="184" fill="#50a070" font-size="8">참여 수준 평가 매트릭스</text>
+  <text x="200" y="197" fill="#50a070" font-size="8">가정 및 제약 분석</text>
+  <text x="200" y="210" fill="#50a070" font-size="8">우선순위화 기법</text>
+  <text x="274" y="228" text-anchor="middle" fill="#30a060" font-size="8" font-weight="bold">✅ 이해관계자 참여 계획서</text>
+
+  <!-- arrow 2→3 -->
+  <polygon points="359,148 372,143 372,153" fill="#6080c0"/>
+  <line x1="358" y1="148" x2="372" y2="148" stroke="#6080c0" stroke-width="1.8"/>
+
+  <!-- Process 3 -->
+  <rect x="374" y="60" width="165" height="176" rx="10" fill="#2a1a5c" opacity="0.85" stroke="#7a3aac" stroke-width="1.5"/>
+  <text x="456" y="80"  text-anchor="middle" fill="#c084f5" font-size="11" font-weight="bold">③ 참여 관리</text>
+  <text x="456" y="93"  text-anchor="middle" fill="#6a3a9a" font-size="9">13.3 Manage Engagement</text>
+  <line x1="384" y1="99" x2="529" y2="99" stroke="#7a3aac" stroke-width="0.7" opacity="0.5"/>
+  <text x="382" y="114" fill="#a080d0" font-size="8.5">📥 입력:</text>
+  <text x="382" y="128" fill="#8060a0" font-size="8">• 이해관계자 참여 계획서</text>
+  <text x="382" y="141" fill="#8060a0" font-size="8">• 의사소통 관리 계획서</text>
+  <text x="382" y="154" fill="#8060a0" font-size="8">• 변경 로그·이슈 로그</text>
+  <text x="382" y="171" fill="#8060b0" font-size="8.5" font-weight="bold">🔧 기법:</text>
+  <text x="382" y="184" fill="#9060c0" font-size="8">대인관계 기술</text>
+  <text x="382" y="197" fill="#9060c0" font-size="8">갈등 해결</text>
+  <text x="382" y="210" fill="#9060c0" font-size="8">변화 관리 기법</text>
+  <text x="456" y="228" text-anchor="middle" fill="#7040a0" font-size="8" font-weight="bold">✅ 변경 요청·교훈 등록부</text>
+
+  <!-- arrow 3→4 -->
+  <polygon points="541,148 554,143 554,153" fill="#6080c0"/>
+  <line x1="540" y1="148" x2="554" y2="148" stroke="#6080c0" stroke-width="1.8"/>
+
+  <!-- Process 4 -->
+  <rect x="556" y="60" width="154" height="176" rx="10" fill="#3a2a1a" opacity="0.85" stroke="#ac7a3a" stroke-width="1.5"/>
+  <text x="633" y="80"  text-anchor="middle" fill="#ffa040" font-size="11" font-weight="bold">④ 참여 감시</text>
+  <text x="633" y="93"  text-anchor="middle" fill="#8a5a1a" font-size="9">13.4 Monitor Engagement</text>
+  <line x1="566" y1="99" x2="700" y2="99" stroke="#ac7a3a" stroke-width="0.7" opacity="0.5"/>
+  <text x="564" y="114" fill="#d09050" font-size="8.5">📥 입력:</text>
+  <text x="564" y="128" fill="#c08050" font-size="8">• 작업 성과 데이터</text>
+  <text x="564" y="141" fill="#c08050" font-size="8">• 이해관계자 참여 계획서</text>
+  <text x="564" y="154" fill="#c08050" font-size="8">• 의사소통 관리 계획서</text>
+  <text x="564" y="171" fill="#d09030" font-size="8.5" font-weight="bold">🔧 기법:</text>
+  <text x="564" y="184" fill="#d08040" font-size="8">성과 검토 회의</text>
+  <text x="564" y="197" fill="#d08040" font-size="8">감정·태도 조사</text>
+  <text x="564" y="210" fill="#d08040" font-size="8">EEF 업데이트</text>
+  <text x="633" y="228" text-anchor="middle" fill="#c06020" font-size="8" font-weight="bold">✅ 작업 성과 정보</text>
+
+  <!-- Feedback loop -->
+  <path d="M 633 236 Q 633 270 360 270 Q 92 270 92 236" fill="none" stroke="#4060a0" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polygon points="92,232 89,242 98,239" fill="#4060a0"/>
+  <text x="360" y="284" text-anchor="middle" fill="#5060a0" font-size="9">← 참여 수준 갱신 피드백 루프 (등록부·계획서 업데이트)</text>
+
+  <!-- Engagement level matrix -->
+  <rect x="10" y="300" width="700" height="88" rx="10" fill="#1a1a3a" opacity="0.85" stroke="#3a3a6a" stroke-width="1.2"/>
+  <text x="360" y="317" text-anchor="middle" fill="#d0d0ff" font-size="12" font-weight="bold">참여 수준 평가 매트릭스 — 현재 vs 목표</text>
+
+  <!-- 5 levels -->
+  <rect x="22"  y="325" width="125" height="55" rx="5" fill="#2a1a1a" opacity="0.9" stroke="#6a2a2a" stroke-width="1"/>
+  <text x="84"  y="340" text-anchor="middle" fill="#ff7070" font-size="10" font-weight="bold">Unaware</text>
+  <text x="84"  y="354" text-anchor="middle" fill="#c05050" font-size="8">무인지</text>
+  <text x="84"  y="369" text-anchor="middle" fill="#904040" font-size="7.5">정보 제공 전략</text>
+
+  <rect x="156" y="325" width="125" height="55" rx="5" fill="#2a2a1a" opacity="0.9" stroke="#6a6a2a" stroke-width="1"/>
+  <text x="218" y="340" text-anchor="middle" fill="#ffdd44" font-size="10" font-weight="bold">Resistant</text>
+  <text x="218" y="354" text-anchor="middle" fill="#c0c040" font-size="8">저항</text>
+  <text x="218" y="369" text-anchor="middle" fill="#909030" font-size="7.5">변화 관리·설득</text>
+
+  <rect x="290" y="325" width="140" height="55" rx="5" fill="#1a1a2a" opacity="0.9" stroke="#5a5aac" stroke-width="1"/>
+  <text x="360" y="340" text-anchor="middle" fill="#80a8ff" font-size="10" font-weight="bold">Neutral</text>
+  <text x="360" y="354" text-anchor="middle" fill="#6080c0" font-size="8">중립</text>
+  <text x="360" y="369" text-anchor="middle" fill="#506090" font-size="7.5">참여 유인 전략</text>
+
+  <rect x="439" y="325" width="125" height="55" rx="5" fill="#1a2a1a" opacity="0.9" stroke="#3aac6a" stroke-width="1"/>
+  <text x="501" y="340" text-anchor="middle" fill="#7dff9a" font-size="10" font-weight="bold">Supportive</text>
+  <text x="501" y="354" text-anchor="middle" fill="#60c070" font-size="8">지지</text>
+  <text x="501" y="369" text-anchor="middle" fill="#40a060" font-size="7.5">역할 확대 기회</text>
+
+  <rect x="573" y="325" width="128" height="55" rx="5" fill="#1a1a2a" opacity="0.9" stroke="#7a7aac" stroke-width="1"/>
+  <text x="637" y="340" text-anchor="middle" fill="#c0c0ff" font-size="10" font-weight="bold">Leading</text>
+  <text x="637" y="354" text-anchor="middle" fill="#9090d0" font-size="8">주도</text>
+  <text x="637" y="369" text-anchor="middle" fill="#6060a0" font-size="7.5">챔피언으로 활용</text>
+</svg>

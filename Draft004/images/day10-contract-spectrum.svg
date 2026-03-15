@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="360" y="32" text-anchor="middle" fill="#e0e0ff" font-size="17" font-weight="bold">계약 유형 스펙트럼 (Contract Spectrum)</text>
+  <text x="360" y="50" text-anchor="middle" fill="#9090c0" font-size="11">구매자 ↔ 공급자 리스크 분담 — 범위 명확도에 따른 선택</text>
+
+  <!-- Spectrum bar -->
+  <defs>
+    <linearGradient id="specGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#7dff9a"/>
+      <stop offset="50%"  stop-color="#f0f060"/>
+      <stop offset="100%" stop-color="#ff8888"/>
+    </linearGradient>
+  </defs>
+  <rect x="40" y="60" width="640" height="22" rx="11" fill="url(#specGrad)" opacity="0.7"/>
+  <text x="40"  y="98" text-anchor="start"  fill="#7dff9a" font-size="10">구매자 리스크 低</text>
+  <text x="680" y="98" text-anchor="end"    fill="#ff8888" font-size="10">구매자 리스크 高</text>
+  <text x="360" y="98" text-anchor="middle" fill="#f0f060" font-size="10">공급자와 위험 공유</text>
+  <text x="40"  y="110" text-anchor="start" fill="#ff8888" font-size="10">공급자 리스크 高</text>
+  <text x="680" y="110" text-anchor="end"   fill="#7dff9a" font-size="10">공급자 리스크 低</text>
+
+  <!-- Contract type blocks -->
+  <!-- FFP -->
+  <rect x="20" y="118" width="185" height="200" rx="10" fill="#1a3a1a" opacity="0.85" stroke="#3aac3a" stroke-width="1.5"/>
+  <text x="112" y="136" text-anchor="middle" fill="#7dff9a" font-size="12" font-weight="bold">FFP</text>
+  <text x="112" y="150" text-anchor="middle" fill="#7dff9a" font-size="10">Firm Fixed Price</text>
+  <text x="112" y="163" text-anchor="middle" fill="#80d090" font-size="9">확정 고정가</text>
+  <line x1="35" y1="170" x2="190" y2="170" stroke="#3a8a3a" stroke-width="0.8" opacity="0.6"/>
+  <text x="112" y="184" text-anchor="middle" fill="#58c4d0" font-size="9" font-weight="bold">구매자 입장</text>
+  <text x="112" y="197" text-anchor="middle" fill="#80c0c8" font-size="9">✅ 예산 확실</text>
+  <text x="112" y="210" text-anchor="middle" fill="#80c0c8" font-size="9">✅ 관리 부담 적음</text>
+  <text x="112" y="223" text-anchor="middle" fill="#80c0c8" font-size="9">⚠️ 변경 요청 비쌈</text>
+  <text x="112" y="241" text-anchor="middle" fill="#c0a060" font-size="9" font-weight="bold">공급자 입장</text>
+  <text x="112" y="254" text-anchor="middle" fill="#c0a060" font-size="9">⚠️ 범위 변경 리스크</text>
+  <text x="112" y="267" text-anchor="middle" fill="#c0a060" font-size="9">⚠️ 원가 초과 손실</text>
+  <text x="112" y="285" text-anchor="middle" fill="#a0ffa0" font-size="9" font-weight="bold">적합 상황</text>
+  <text x="112" y="298" text-anchor="middle" fill="#80d0a0" font-size="9">요건이 명확히 정의된</text>
+  <text x="112" y="311" text-anchor="middle" fill="#80d0a0" font-size="9">프로젝트</text>
+
+  <!-- FPIF -->
+  <rect x="215" y="118" width="155" height="200" rx="10" fill="#2a3a1a" opacity="0.85" stroke="#6aac3a" stroke-width="1.5"/>
+  <text x="292" y="136" text-anchor="middle" fill="#b8ff88" font-size="12" font-weight="bold">FPIF</text>
+  <text x="292" y="150" text-anchor="middle" fill="#b8ff88" font-size="10">Fixed Price Incentive</text>
+  <text x="292" y="163" text-anchor="middle" fill="#90d060" font-size="9">고정가 인센티브</text>
+  <line x1="228" y1="170" x2="360" y2="170" stroke="#6a8a3a" stroke-width="0.8" opacity="0.6"/>
+  <text x="292" y="184" text-anchor="middle" fill="#58c4d0" font-size="9" font-weight="bold">구조</text>
+  <text x="292" y="197" text-anchor="middle" fill="#a0c8a0" font-size="9">목표 원가 + 인센티브</text>
+  <text x="292" y="210" text-anchor="middle" fill="#a0c8a0" font-size="9">초과 절감 시 보너스</text>
+  <text x="292" y="223" text-anchor="middle" fill="#a0c8a0" font-size="9">PTA (최대 요금) 설정</text>
+  <text x="292" y="241" text-anchor="middle" fill="#a0ffa0" font-size="9" font-weight="bold">적합 상황</text>
+  <text x="292" y="254" text-anchor="middle" fill="#80d0a0" font-size="9">범위 대부분 확정,</text>
+  <text x="292" y="267" text-anchor="middle" fill="#80d0a0" font-size="9">성과 개선 동기 부여</text>
+
+  <!-- T&M -->
+  <rect x="380" y="118" width="155" height="200" rx="10" fill="#3a3a1a" opacity="0.85" stroke="#aaaa3a" stroke-width="1.5"/>
+  <text x="457" y="136" text-anchor="middle" fill="#f0f070" font-size="12" font-weight="bold">T&amp;M</text>
+  <text x="457" y="150" text-anchor="middle" fill="#f0f070" font-size="10">Time &amp; Material</text>
+  <text x="457" y="163" text-anchor="middle" fill="#d0d050" font-size="9">시간 자재비</text>
+  <line x1="393" y1="170" x2="525" y2="170" stroke="#8a8a3a" stroke-width="0.8" opacity="0.6"/>
+  <text x="457" y="184" text-anchor="middle" fill="#58c4d0" font-size="9" font-weight="bold">특징</text>
+  <text x="457" y="197" text-anchor="middle" fill="#c8c080" font-size="9">시간당 요율 × 실 작업</text>
+  <text x="457" y="210" text-anchor="middle" fill="#c8c080" font-size="9">유연하나 예산 불확실</text>
+  <text x="457" y="223" text-anchor="middle" fill="#c8c080" font-size="9">NTE(최대 비용 상한)</text>
+  <text x="457" y="241" text-anchor="middle" fill="#a0ffa0" font-size="9" font-weight="bold">적합 상황</text>
+  <text x="457" y="254" text-anchor="middle" fill="#d8d880" font-size="9">범위 불명확,</text>
+  <text x="457" y="267" text-anchor="middle" fill="#d8d880" font-size="9">유지보수·컨설팅</text>
+
+  <!-- CPFF -->
+  <rect x="545" y="118" width="155" height="200" rx="10" fill="#3a1a1a" opacity="0.85" stroke="#ac3a3a" stroke-width="1.5"/>
+  <text x="622" y="136" text-anchor="middle" fill="#ff9090" font-size="12" font-weight="bold">CPFF</text>
+  <text x="622" y="150" text-anchor="middle" fill="#ff9090" font-size="10">Cost Plus Fixed Fee</text>
+  <text x="622" y="163" text-anchor="middle" fill="#d07070" font-size="9">원가 가산 고정 보수</text>
+  <line x1="558" y1="170" x2="690" y2="170" stroke="#8a3a3a" stroke-width="0.8" opacity="0.6"/>
+  <text x="622" y="184" text-anchor="middle" fill="#58c4d0" font-size="9" font-weight="bold">구조</text>
+  <text x="622" y="197" text-anchor="middle" fill="#e0b0b0" font-size="9">실비 + 고정 수수료</text>
+  <text x="622" y="210" text-anchor="middle" fill="#e0b0b0" font-size="9">구매자가 원가 부담</text>
+  <text x="622" y="223" text-anchor="middle" fill="#e0b0b0" font-size="9">CPAF/CPIF 변형 존재</text>
+  <text x="622" y="241" text-anchor="middle" fill="#a0ffa0" font-size="9" font-weight="bold">적합 상황</text>
+  <text x="622" y="254" text-anchor="middle" fill="#ffa0a0" font-size="9">R&amp;D · 탐색적 개발,</text>
+  <text x="622" y="267" text-anchor="middle" fill="#ffa0a0" font-size="9">범위 매우 불확실</text>
+
+  <!-- Selection guide bottom row -->
+  <rect x="20" y="330" width="680" height="50" rx="10" fill="#1a1a4a" opacity="0.85" stroke="#3a3a8a" stroke-width="1"/>
+  <text x="360" y="346" text-anchor="middle" fill="#a0b8e0" font-size="11" font-weight="bold">계약 유형 선택 원칙</text>
+  <text x="200" y="362" text-anchor="middle" fill="#7dff9a" font-size="10">범위 명확 → FFP</text>
+  <text x="360" y="362" text-anchor="middle" fill="#f0f060" font-size="10">성과 인센티브 → FPIF/CPIF</text>
+  <text x="520" y="362" text-anchor="middle" fill="#ff9090" font-size="10">범위 불확실 → CPFF / T&amp;M</text>
+  <text x="360" y="376" text-anchor="middle" fill="#6a8ab0" font-size="9">PM 시험 핵심: 구매자↔공급자 리스크 방향 암기 | FFP=공급자 최대 리스크 | CPFF=구매자 최대 리스크</text>
+</svg>

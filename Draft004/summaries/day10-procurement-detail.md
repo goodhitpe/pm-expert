@@ -43,6 +43,14 @@
 
 ## 1교시: 조달 관리 개요 (1시간) <!-- 슬라이드 #1~#2 -->
 
+<div align="center">
+
+![조달 관리 프로세스 흐름](../images/day10-procurement-flow.svg)
+
+*▲ 조달 관리 4단계 — 계획 수립 · 조달 수행 · 조달 통제 · 종료 + 핵심 문서(SOW·RFP·SLA)*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 조달(Procurement)의 정의
@@ -76,7 +84,15 @@
 - 조달 관계 관리, 성과 모니터링, 변경 및 시정 조치
 - 산출물: 종료된 조달, 작업 성과 정보
 
-#### 3. Make or Buy 의사결정
+#### 3. Make or Buy 의오결정
+
+<div align="center">
+
+![Make or Buy 의사결정 프레임워크](../images/day10-make-or-buy.svg)
+
+*▲ Make or Buy 단계별 판단 틀 — 핵심역량·비용·리스크 종합 분석*
+
+</div>
 
 **Make (자체 개발)**
 
@@ -230,6 +246,14 @@ D) 장기적으로 내재화 가치가 높은 경우
 ---
 
 ## 2교시: 계약 유형 (1.5시간) <!-- 슬라이드 #3~#4 -->
+
+<div align="center">
+
+![계약 유형 스펙트럼](../images/day10-contract-spectrum.svg)
+
+*▲ FFP·FPIF·T&M·CPFF 비교 — 범위 명확도에 따른 구매자↔공급자 리스크 분담 스펙트럼*
+
+</div>
 
 ### 이론 (50분)
 

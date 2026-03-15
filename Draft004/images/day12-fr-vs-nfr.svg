@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="29" text-anchor="middle" fill="#e0e0ff" font-size="16" font-weight="bold">기능적 vs 비기능적 요구사항</text>
+  <text x="360" y="47" text-anchor="middle" fill="#9090c0" font-size="10.5">Functional Requirements vs Non-Functional Requirements (NFR)</text>
+
+  <!-- FR panel -->
+  <rect x="18" y="60" width="330" height="250" rx="10" fill="#1a2a5c" opacity="0.82" stroke="#3a5aac" stroke-width="1.5"/>
+  <text x="183" y="80"  text-anchor="middle" fill="#7ab8ff" font-size="13" font-weight="bold">🔵 기능적 요구사항 (FR)</text>
+  <text x="183" y="95"  text-anchor="middle" fill="#5a8ac0" font-size="9">Functional Requirements — "무엇을 해야 하는가?"</text>
+  <line x1="30" y1="102" x2="336" y2="102" stroke="#3a5aac" stroke-width="0.8" opacity="0.6"/>
+
+  <text x="30"  y="120" fill="#80b8f0" font-size="9.5" font-weight="bold">정의:</text>
+  <text x="75"  y="120" fill="#9090c0" font-size="9">시스템이 수행해야 할 특정 동작·기능</text>
+  <text x="183" y="135" text-anchor="middle" fill="#9090c0" font-size="9">사용자의 비즈니스 니즈·프로세스 표현</text>
+
+  <text x="30"  y="155" fill="#6090b0" font-size="9" font-weight="bold">예시 (로그인 시스템):</text>
+  <rect x="28"  y="160" width="310" height="20" rx="4" fill="#12182e" opacity="0.7"/>
+  <text x="36"  y="173" fill="#90c8e0" font-size="9">① 사용자가 이메일과 비밀번호로 로그인할 수 있다</text>
+  <rect x="28"  y="183" width="310" height="20" rx="4" fill="#12182e" opacity="0.7"/>
+  <text x="36"  y="196" fill="#90c8e0" font-size="9">② 비밀번호를 5회 오입력 시 계정이 잠긴다</text>
+  <rect x="28"  y="206" width="310" height="20" rx="4" fill="#12182e" opacity="0.7"/>
+  <text x="36"  y="219" fill="#90c8e0" font-size="9">③ 사용자가 장바구니에 상품을 추가할 수 있다</text>
+  <rect x="28"  y="229" width="310" height="20" rx="4" fill="#12182e" opacity="0.7"/>
+  <text x="36"  y="242" fill="#90c8e0" font-size="9">④ 관리자가 사용자 권한을 변경할 수 있다</text>
+  <rect x="28"  y="252" width="310" height="20" rx="4" fill="#12182e" opacity="0.7"/>
+  <text x="36"  y="265" fill="#90c8e0" font-size="9">⑤ 시스템이 주문 완료 시 이메일을 발송한다</text>
+
+  <text x="183" y="297" text-anchor="middle" fill="#60a0d0" font-size="9">📋 검증: 단위·통합·UAT 테스트로 확인 가능</text>
+
+  <!-- NFR panel -->
+  <rect x="372" y="60" width="330" height="250" rx="10" fill="#1a3a2a" opacity="0.82" stroke="#3aac6a" stroke-width="1.5"/>
+  <text x="537" y="80"  text-anchor="middle" fill="#7dff9a" font-size="13" font-weight="bold">🟢 비기능적 요구사항 (NFR)</text>
+  <text x="537" y="95"  text-anchor="middle" fill="#3a8a5a" font-size="9">Non-Functional Requirements — "어떻게 동작해야 하는가?"</text>
+  <line x1="384" y1="102" x2="690" y2="102" stroke="#3aac6a" stroke-width="0.8" opacity="0.6"/>
+
+  <text x="384" y="120" fill="#60c080" font-size="9.5" font-weight="bold">정의:</text>
+  <text x="430" y="120" fill="#9090c0" font-size="9">시스템의 품질 속성·제약 조건·성능 기준</text>
+  <text x="537" y="135" text-anchor="middle" fill="#9090c0" font-size="9">기능의 구현 방식·환경·한계를 정의</text>
+
+  <text x="384" y="155" fill="#40a060" font-size="9" font-weight="bold">FURPS+ 분류:</text>
+  <rect x="382" y="160" width="148" height="20" rx="4" fill="#12201a" opacity="0.7"/>
+  <text x="390" y="173" fill="#80d090" font-size="9">⚡ 성능: 응답 &lt;2초, TPS 1000</text>
+  <rect x="382" y="183" width="148" height="20" rx="4" fill="#12201a" opacity="0.7"/>
+  <text x="390" y="196" fill="#80d090" font-size="9">🔒 보안: 암호화, 접근제어</text>
+  <rect x="382" y="206" width="148" height="20" rx="4" fill="#12201a" opacity="0.7"/>
+  <text x="390" y="219" fill="#80d090" font-size="9">🛡️ 신뢰성: 가용성 99.9%</text>
+  <rect x="382" y="229" width="148" height="20" rx="4" fill="#12201a" opacity="0.7"/>
+  <text x="390" y="242" fill="#80d090" font-size="9">📈 확장성: 동시접속 10만</text>
+  <rect x="382" y="252" width="148" height="20" rx="4" fill="#12201a" opacity="0.7"/>
+  <text x="390" y="265" fill="#80d090" font-size="9">🔧 유지보수성: 코드 커버리지</text>
+
+  <rect x="540" y="160" width="152" height="20" rx="4" fill="#12201a" opacity="0.7"/>
+  <text x="548" y="173" fill="#80d090" font-size="9">♿ 사용성: WCAG 2.1 준수</text>
+  <rect x="540" y="183" width="152" height="20" rx="4" fill="#12201a" opacity="0.7"/>
+  <text x="548" y="196" fill="#80d090" font-size="9">🌐 호환성: 크로스 브라우저</text>
+  <rect x="540" y="206" width="152" height="20" rx="4" fill="#12201a" opacity="0.7"/>
+  <text x="548" y="219" fill="#80d090" font-size="9">⚖️ 법규 준수: GDPR, 개보법</text>
+  <rect x="540" y="229" width="152" height="20" rx="4" fill="#12201a" opacity="0.7"/>
+  <text x="548" y="242" fill="#80d090" font-size="9">🔄 복구: RTO &lt;4h, RPO &lt;1h</text>
+  <rect x="540" y="252" width="152" height="20" rx="4" fill="#12201a" opacity="0.7"/>
+  <text x="548" y="265" fill="#80d090" font-size="9">📦 이식성: 클라우드 배포</text>
+
+  <text x="537" y="297" text-anchor="middle" fill="#40a060" font-size="9">📋 검증: 성능 테스트·보안 감사·부하 테스트</text>
+
+  <!-- PM Priority Tips -->
+  <rect x="18" y="322" width="684" height="66" rx="10" fill="#1a1a3a" opacity="0.85" stroke="#3a3a6a" stroke-width="1.2"/>
+  <text x="360" y="340" text-anchor="middle" fill="#d0d0ff" font-size="12" font-weight="bold">PM 핵심 인사이트 — 요구사항 관리 실패의 주원인</text>
+  <rect x="28"  y="348" width="206" height="32" rx="5" fill="#1e122a" opacity="0.7"/>
+  <text x="131" y="362" text-anchor="middle" fill="#c084f5" font-size="9" font-weight="bold">⚠️ NFR 누락 → 납품 후 장애</text>
+  <text x="131" y="376" text-anchor="middle" fill="#806090" font-size="8">성능 미달·보안 취약점이 재작업 원인 1위</text>
+  <rect x="244" y="348" width="232" height="32" rx="5" fill="#1e221a" opacity="0.7"/>
+  <text x="360" y="362" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">✅ 우선순위: MoSCoW 기법 활용</text>
+  <text x="360" y="376" text-anchor="middle" fill="#608060" font-size="8">Must / Should / Could / Won't 분류로 범위 관리</text>
+  <rect x="486" y="348" width="206" height="32" rx="5" fill="#1e1a12" opacity="0.7"/>
+  <text x="589" y="362" text-anchor="middle" fill="#ffa040" font-size="9" font-weight="bold">📌 SRS(요구사항 명세서) 필수</text>
+  <text x="589" y="376" text-anchor="middle" fill="#806040" font-size="8">서명된 SRS = 범위 분쟁 방지 기준선</text>
+</svg>

@@ -45,6 +45,14 @@
 
 ## 1교시: 자원 관리 개요 (1.5시간) <!-- 슬라이드 #1~#2 -->
 
+<div align="center">
+
+![자원 관리 프로세스 흐름](../images/day07-resource-processes.svg)
+
+*▲ 자원 관리 5 프로세스 — 계획 → 조달 → 개발 → 관리 → 통제 순환 구조*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 자원 관리(Resource Management)란?
@@ -164,6 +172,14 @@ A) PM과 기능 관리자가 권한 공유 B) 이중 보고 라인 C) PM이 100%
 
 ## 2교시: 자원 관리 계획 및 RACI 차트 (1.5시간) <!-- 슬라이드 #3 -->
 
+<div align="center">
+
+![조직 구조 유형 비교](../images/day07-org-structure.svg)
+
+*▲ 조직 구조 3유형 — 기능형 · 매트릭스형(약·중·강) · 프로젝트형, PM 권한과 자원 확보 방식 비교*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 자원 관리 계획서 (Resource Management Plan)
@@ -201,6 +217,14 @@ A) PM과 기능 관리자가 권한 공유 B) 이중 보고 라인 C) PM이 100%
 - 예산 배분
 
 #### 2. RACI 차트 (Responsibility Assignment Matrix)
+
+<div align="center">
+
+![RACI 책임 배정 매트릭스](../images/day07-raci-matrix.svg)
+
+*▲ RACI 매트릭스 — R(수행) · A(책임 1인) · C(자문) · I(통보), 역할 모호성 제거 핵심 도구*
+
+</div>
 
 **RACI란?**
 - 프로젝트 활동에 대한 책임자를 명확히 정의하는 매트릭스

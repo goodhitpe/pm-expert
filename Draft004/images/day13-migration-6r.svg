@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="480" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="360" y="35" text-anchor="middle" fill="#e0e0ff" font-size="17" font-weight="bold">Day 13 — 클라우드 마이그레이션 6R 전략</text>
+  <text x="360" y="55" text-anchor="middle" fill="#a0a8d0" font-size="12">AWS의 6가지 마이그레이션 경로 — PM이 알아야 할 전략적 선택 기준</text>
+
+  <!-- 6R boxes (2 rows × 3 cols) -->
+
+  <!-- R1: Rehost -->
+  <rect x="30" y="70" width="210" height="115" rx="10" fill="#1a3a5c" opacity="0.85" stroke="#3a7aac" stroke-width="1.5"/>
+  <text x="135" y="93" text-anchor="middle" fill="#58c4f6" font-size="14" font-weight="bold">① Rehost</text>
+  <text x="135" y="110" text-anchor="middle" fill="#a0c8e8" font-size="11">(Lift &amp; Shift)</text>
+  <text x="45" y="132" fill="#c0d8f0" font-size="10.5">• 그대로 클라우드로 이전</text>
+  <text x="45" y="149" fill="#c0d8f0" font-size="10.5">• 변경 최소, 속도 최우선</text>
+  <text x="45" y="166" fill="#ffcc55" font-size="10.5">▶ 초기 마이그레이션, 레거시</text>
+
+  <!-- R2: Replatform -->
+  <rect x="255" y="70" width="210" height="115" rx="10" fill="#1a4a2a" opacity="0.85" stroke="#3aac7a" stroke-width="1.5"/>
+  <text x="360" y="93" text-anchor="middle" fill="#7dff9a" font-size="14" font-weight="bold">② Replatform</text>
+  <text x="360" y="110" text-anchor="middle" fill="#90c8a0" font-size="11">(Lift, Tinker &amp; Shift)</text>
+  <text x="270" y="132" fill="#c0f0d0" font-size="10.5">• 일부 최적화 후 이전</text>
+  <text x="270" y="149" fill="#c0f0d0" font-size="10.5">• DB → RDS 관리형 서비스</text>
+  <text x="270" y="166" fill="#ffcc55" font-size="10.5">▶ 중간 노력, 빠른 이점</text>
+
+  <!-- R3: Repurchase -->
+  <rect x="480" y="70" width="210" height="115" rx="10" fill="#3a2a1a" opacity="0.85" stroke="#ac7a3a" stroke-width="1.5"/>
+  <text x="585" y="93" text-anchor="middle" fill="#ffa040" font-size="14" font-weight="bold">③ Repurchase</text>
+  <text x="585" y="110" text-anchor="middle" fill="#c8a080" font-size="11">(Drop &amp; Shop)</text>
+  <text x="495" y="132" fill="#f0d0b0" font-size="10.5">• SaaS로 제품 교체</text>
+  <text x="495" y="149" fill="#f0d0b0" font-size="10.5">• 온프레미스 CRM → Salesforce</text>
+  <text x="495" y="166" fill="#ffcc55" font-size="10.5">▶ 라이선스 재검토 필요</text>
+
+  <!-- R4: Refactor -->
+  <rect x="30" y="200" width="210" height="115" rx="10" fill="#3a1a5c" opacity="0.85" stroke="#9a3aec" stroke-width="1.5"/>
+  <text x="135" y="223" text-anchor="middle" fill="#c084f5" font-size="14" font-weight="bold">④ Refactor</text>
+  <text x="135" y="240" text-anchor="middle" fill="#b090d0" font-size="11">(Re-architect)</text>
+  <text x="45" y="262" fill="#e0c0f0" font-size="10.5">• 클라우드 네이티브로 재설계</text>
+  <text x="45" y="279" fill="#e0c0f0" font-size="10.5">• 모놀리식 → 마이크로서비스</text>
+  <text x="45" y="296" fill="#ffcc55" font-size="10.5">▶ 비용·기간 최대, 효과 최대</text>
+
+  <!-- R5: Retire -->
+  <rect x="255" y="200" width="210" height="115" rx="10" fill="#3a1a1a" opacity="0.85" stroke="#ac3a3a" stroke-width="1.5"/>
+  <text x="360" y="223" text-anchor="middle" fill="#ff8888" font-size="14" font-weight="bold">⑤ Retire</text>
+  <text x="360" y="240" text-anchor="middle" fill="#c08080" font-size="11">(폐기)</text>
+  <text x="270" y="262" fill="#f0c0c0" font-size="10.5">• 불필요 시스템 폐기</text>
+  <text x="270" y="279" fill="#f0c0c0" font-size="10.5">• 포트폴리오 10~20%가 대상</text>
+  <text x="270" y="296" fill="#ffcc55" font-size="10.5">▶ TCO 절감 효과 즉각</text>
+
+  <!-- R6: Retain -->
+  <rect x="480" y="200" width="210" height="115" rx="10" fill="#2a2a2a" opacity="0.85" stroke="#7a7a7a" stroke-width="1.5"/>
+  <text x="585" y="223" text-anchor="middle" fill="#d0d0d0" font-size="14" font-weight="bold">⑥ Retain</text>
+  <text x="585" y="240" text-anchor="middle" fill="#b0b0b0" font-size="11">(현상 유지)</text>
+  <text x="495" y="262" fill="#e0e0e0" font-size="10.5">• 이전 시기 미도래 시스템</text>
+  <text x="495" y="279" fill="#e0e0e0" font-size="10.5">• 규정·컴플라이언스 이슈</text>
+  <text x="495" y="296" fill="#ffcc55" font-size="10.5">▶ 재평가 일정 명시 필수</text>
+
+  <!-- Decision Flow -->
+  <rect x="30" y="330" width="660" height="110" rx="10" fill="#0f1a3a" opacity="0.9" stroke="#2a3a6a" stroke-width="1"/>
+  <text x="360" y="352" text-anchor="middle" fill="#a0b8e0" font-size="12" font-weight="bold">PM 의사결정 프레임워크</text>
+
+  <!-- flow items -->
+  <rect x="50"  y="362" width="120" height="32" rx="6" fill="#1a3a5c" opacity="0.85"/>
+  <text x="110" y="375" text-anchor="middle" fill="#58c4f6" font-size="10" font-weight="bold">비즈니스 가치</text>
+  <text x="110" y="388" text-anchor="middle" fill="#90b8d8" font-size="9">이전 가치 있나?</text>
+
+  <text x="182" y="382" text-anchor="middle" fill="#606090" font-size="16">→</text>
+
+  <rect x="195" y="362" width="120" height="32" rx="6" fill="#1a4a2a" opacity="0.85"/>
+  <text x="255" y="375" text-anchor="middle" fill="#7dff9a" font-size="10" font-weight="bold">기술 복잡도</text>
+  <text x="255" y="388" text-anchor="middle" fill="#90c8a0" font-size="9">재설계 가능한가?</text>
+
+  <text x="327" y="382" text-anchor="middle" fill="#606090" font-size="16">→</text>
+
+  <rect x="340" y="362" width="120" height="32" rx="6" fill="#3a2a1a" opacity="0.85"/>
+  <text x="400" y="375" text-anchor="middle" fill="#ffa040" font-size="10" font-weight="bold">일정·예산</text>
+  <text x="400" y="388" text-anchor="middle" fill="#c0a080" font-size="9">속도 vs 최적화</text>
+
+  <text x="472" y="382" text-anchor="middle" fill="#606090" font-size="16">→</text>
+
+  <rect x="485" y="362" width="120" height="32" rx="6" fill="#2a1a3a" opacity="0.85"/>
+  <text x="545" y="375" text-anchor="middle" fill="#c084f5" font-size="10" font-weight="bold">규정·보안</text>
+  <text x="545" y="388" text-anchor="middle" fill="#b090d0" font-size="9">컴플라이언스 확인</text>
+
+  <text x="617" y="382" text-anchor="middle" fill="#606090" font-size="16">→</text>
+
+  <rect x="628" y="362" width="45" height="32" rx="6" fill="#1a3a5c" opacity="0.85"/>
+  <text x="650" y="382" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">6R</text>
+
+  <text x="360" y="428" text-anchor="middle" fill="#a0a0c0" font-size="10">단계적 접근: Rehost로 빠르게 이전 후 → Refactor로 점진적 최적화 (Wave Planning)</text>
+
+  <!-- Footer -->
+  <text x="360" y="463" text-anchor="middle" fill="#6a6a9a" font-size="10">PM 관점: 6R 전략 선택은 ROI·위험·일정의 3중 최적화 문제 — 단계별 Wave Planning이 현실적</text>
+</svg>

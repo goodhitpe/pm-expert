@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 410" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7a9ad8"/>
+    </marker>
+  </defs>
+  <rect width="720" height="410" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="360" y="32" text-anchor="middle" fill="#e0e0ff" font-size="17" font-weight="bold">조달 관리 프로세스 흐름</text>
+  <text x="360" y="50" text-anchor="middle" fill="#9090c0" font-size="11">PMBOK 7판 — 계획 수립 → 조달 수행 → 조달 통제 → 조달 종료</text>
+
+  <!-- Phase 1: 계획 수립 -->
+  <rect x="20" y="64" width="155" height="260" rx="10" fill="#1a2a5c" opacity="0.85" stroke="#3a5aac" stroke-width="1.5"/>
+  <text x="97" y="82" text-anchor="middle" fill="#58c4f6" font-size="12" font-weight="bold">① 계획 수립</text>
+  <text x="97" y="96" text-anchor="middle" fill="#4a90c0" font-size="9">Plan Procurement Mgmt</text>
+  <line x1="35" y1="103" x2="163" y2="103" stroke="#3a5aac" stroke-width="0.8" opacity="0.6"/>
+  <text x="97" y="116" text-anchor="middle" fill="#a0c8ff" font-size="10" font-weight="bold">주요 활동</text>
+  <text x="97" y="130" text-anchor="middle" fill="#90b8e0" font-size="9">Make or Buy 결정</text>
+  <text x="97" y="144" text-anchor="middle" fill="#90b8e0" font-size="9">계약 유형 선정</text>
+  <text x="97" y="158" text-anchor="middle" fill="#90b8e0" font-size="9">SOW 작성</text>
+  <text x="97" y="172" text-anchor="middle" fill="#90b8e0" font-size="9">기준 및 평가 기준표</text>
+  <line x1="35" y1="182" x2="163" y2="182" stroke="#3a5aac" stroke-width="0.8" opacity="0.4"/>
+  <text x="97" y="196" text-anchor="middle" fill="#a0c8ff" font-size="10" font-weight="bold">산출물</text>
+  <text x="97" y="210" text-anchor="middle" fill="#80b0e0" font-size="9">조달 관리 계획서</text>
+  <text x="97" y="224" text-anchor="middle" fill="#80b0e0" font-size="9">조달 SOW (작업기술서)</text>
+  <text x="97" y="238" text-anchor="middle" fill="#80b0e0" font-size="9">공급업체 선정 기준</text>
+  <text x="97" y="252" text-anchor="middle" fill="#80b0e0" font-size="9">Make or Buy 결정서</text>
+  <text x="97" y="290" text-anchor="middle" fill="#58c490" font-size="9">도구: 시장 조사</text>
+  <text x="97" y="305" text-anchor="middle" fill="#58c490" font-size="9">전문가 판단</text>
+
+  <line x1="177" y1="194" x2="200" y2="194" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Phase 2: 조달 수행 -->
+  <rect x="202" y="64" width="155" height="260" rx="10" fill="#1a3a2a" opacity="0.85" stroke="#3aac6a" stroke-width="1.5"/>
+  <text x="279" y="82" text-anchor="middle" fill="#7dff9a" font-size="12" font-weight="bold">② 조달 수행</text>
+  <text x="279" y="96" text-anchor="middle" fill="#4a9a6a" font-size="9">Conduct Procurements</text>
+  <line x1="217" y1="103" x2="345" y2="103" stroke="#3aac6a" stroke-width="0.8" opacity="0.6"/>
+  <text x="279" y="116" text-anchor="middle" fill="#a0ffb8" font-size="10" font-weight="bold">주요 활동</text>
+  <text x="279" y="130" text-anchor="middle" fill="#90d0a0" font-size="9">RFP / RFQ / RFI 발송</text>
+  <text x="279" y="144" text-anchor="middle" fill="#90d0a0" font-size="9">입찰자 회의 개최</text>
+  <text x="279" y="158" text-anchor="middle" fill="#90d0a0" font-size="9">제안서 평가·점수화</text>
+  <text x="279" y="172" text-anchor="middle" fill="#90d0a0" font-size="9">공급업체 선정</text>
+  <line x1="217" y1="182" x2="345" y2="182" stroke="#3aac6a" stroke-width="0.8" opacity="0.4"/>
+  <text x="279" y="196" text-anchor="middle" fill="#a0ffb8" font-size="10" font-weight="bold">산출물</text>
+  <text x="279" y="210" text-anchor="middle" fill="#80d090" font-size="9">선정된 공급업체</text>
+  <text x="279" y="224" text-anchor="middle" fill="#80d090" font-size="9">계약(Contract)</text>
+  <text x="279" y="238" text-anchor="middle" fill="#80d090" font-size="9">체결된 계약서</text>
+  <text x="279" y="252" text-anchor="middle" fill="#80d090" font-size="9">계약 관련 문서 일체</text>
+  <text x="279" y="290" text-anchor="middle" fill="#58c490" font-size="9">도구: 입찰자 회의</text>
+  <text x="279" y="305" text-anchor="middle" fill="#58c490" font-size="9">제안 평가 기술</text>
+
+  <line x1="359" y1="194" x2="382" y2="194" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Phase 3: 조달 통제 -->
+  <rect x="384" y="64" width="155" height="260" rx="10" fill="#3a2a1a" opacity="0.85" stroke="#ac7a3a" stroke-width="1.5"/>
+  <text x="461" y="82" text-anchor="middle" fill="#ffa040" font-size="12" font-weight="bold">③ 조달 통제</text>
+  <text x="461" y="96" text-anchor="middle" fill="#9a6030" font-size="9">Control Procurements</text>
+  <line x1="399" y1="103" x2="527" y2="103" stroke="#ac7a3a" stroke-width="0.8" opacity="0.6"/>
+  <text x="461" y="116" text-anchor="middle" fill="#ffd090" font-size="10" font-weight="bold">주요 활동</text>
+  <text x="461" y="130" text-anchor="middle" fill="#e0b080" font-size="9">계약 이행 모니터링</text>
+  <text x="461" y="144" text-anchor="middle" fill="#e0b080" font-size="9">성과 검토 회의</text>
+  <text x="461" y="158" text-anchor="middle" fill="#e0b080" font-size="9">변경 요청 처리 (CCB)</text>
+  <text x="461" y="172" text-anchor="middle" fill="#e0b080" font-size="9">지불 승인</text>
+  <line x1="399" y1="182" x2="527" y2="182" stroke="#ac7a3a" stroke-width="0.8" opacity="0.4"/>
+  <text x="461" y="196" text-anchor="middle" fill="#ffd090" font-size="10" font-weight="bold">산출물</text>
+  <text x="461" y="210" text-anchor="middle" fill="#d0a070" font-size="9">계약 변경 요청</text>
+  <text x="461" y="224" text-anchor="middle" fill="#d0a070" font-size="9">이슈 로그 업데이트</text>
+  <text x="461" y="238" text-anchor="middle" fill="#d0a070" font-size="9">검사·수락 문서</text>
+  <text x="461" y="252" text-anchor="middle" fill="#d0a070" font-size="9">지불 완료 기록</text>
+  <text x="461" y="290" text-anchor="middle" fill="#58c490" font-size="9">도구: 계약 성과</text>
+  <text x="461" y="305" text-anchor="middle" fill="#58c490" font-size="9">검토 / 클레임 관리</text>
+
+  <line x1="541" y1="194" x2="564" y2="194" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Phase 4: 조달 종료 -->
+  <rect x="566" y="64" width="134" height="260" rx="10" fill="#2a1a3a" opacity="0.85" stroke="#7a3aac" stroke-width="1.5"/>
+  <text x="633" y="82" text-anchor="middle" fill="#c084f5" font-size="12" font-weight="bold">④ 종료</text>
+  <text x="633" y="96" text-anchor="middle" fill="#6a3a9a" font-size="9">Close Procurements</text>
+  <line x1="581" y1="103" x2="686" y2="103" stroke="#7a3aac" stroke-width="0.8" opacity="0.6"/>
+  <text x="633" y="116" text-anchor="middle" fill="#e0a8ff" font-size="10" font-weight="bold">활동</text>
+  <text x="633" y="130" text-anchor="middle" fill="#c090e0" font-size="9">납품물 검사·수락</text>
+  <text x="633" y="144" text-anchor="middle" fill="#c090e0" font-size="9">미결 클레임 해결</text>
+  <text x="633" y="158" text-anchor="middle" fill="#c090e0" font-size="9">최종 지불 처리</text>
+  <text x="633" y="172" text-anchor="middle" fill="#c090e0" font-size="9">계약 성과 평가</text>
+  <line x1="581" y1="182" x2="686" y2="182" stroke="#7a3aac" stroke-width="0.8" opacity="0.4"/>
+  <text x="633" y="196" text-anchor="middle" fill="#e0a8ff" font-size="10" font-weight="bold">산출물</text>
+  <text x="633" y="210" text-anchor="middle" fill="#b080d8" font-size="9">종료된 조달 계약</text>
+  <text x="633" y="224" text-anchor="middle" fill="#b080d8" font-size="9">최종 성과 보고서</text>
+  <text x="633" y="238" text-anchor="middle" fill="#b080d8" font-size="9">교훈 업데이트</text>
+  <text x="633" y="252" text-anchor="middle" fill="#b080d8" font-size="9">조달 파일 보관</text>
+  <text x="633" y="290" text-anchor="middle" fill="#58c490" font-size="9">도구: 조달 감사</text>
+  <text x="633" y="305" text-anchor="middle" fill="#58c490" font-size="9">협상</text>
+
+  <!-- Key documents row -->
+  <rect x="20" y="340" width="680" height="52" rx="10" fill="#1a1a3a" opacity="0.85" stroke="#3a3a7a" stroke-width="1"/>
+  <text x="360" y="357" text-anchor="middle" fill="#a0b8e0" font-size="11" font-weight="bold">핵심 조달 문서</text>
+  <text x="120" y="372" text-anchor="middle" fill="#7addff" font-size="10" font-weight="bold">SOW</text>
+  <text x="120" y="384" text-anchor="middle" fill="#60a0c0" font-size="9">작업기술서</text>
+  <text x="270" y="372" text-anchor="middle" fill="#7addff" font-size="10" font-weight="bold">RFP</text>
+  <text x="270" y="384" text-anchor="middle" fill="#60a0c0" font-size="9">제안요청서</text>
+  <text x="400" y="372" text-anchor="middle" fill="#7addff" font-size="10" font-weight="bold">NDA</text>
+  <text x="400" y="384" text-anchor="middle" fill="#60a0c0" font-size="9">비밀유지협약</text>
+  <text x="530" y="372" text-anchor="middle" fill="#7addff" font-size="10" font-weight="bold">SLA</text>
+  <text x="530" y="384" text-anchor="middle" fill="#60a0c0" font-size="9">서비스수준협약</text>
+  <text x="648" y="372" text-anchor="middle" fill="#7addff" font-size="10" font-weight="bold">MOU</text>
+  <text x="648" y="384" text-anchor="middle" fill="#60a0c0" font-size="9">양해각서</text>
+</svg>

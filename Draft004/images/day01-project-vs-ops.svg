@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+  <text x="360" y="26" text-anchor="middle" fill="#e0e0ff" font-size="14" font-weight="bold">프로젝트 vs 운영 — 3대 특성 비교</text>
+  <text x="360" y="43" text-anchor="middle" fill="#9090c0" font-size="9.5">PMBOK® 정의 기반 ∙ 독창성·임시성·점진적 구체화 ∙ 프로젝트 예시</text>
+
+  <!-- Project side -->
+  <rect x="12" y="56" width="334" height="222" rx="9" fill="#1a2060" opacity="0.85" stroke="#4a6adc" stroke-width="1.5"/>
+  <text x="179" y="76" text-anchor="middle" fill="#7ab8ff" font-size="12" font-weight="bold">프로젝트 (Project)</text>
+
+  <!-- 3 characteristics -->
+  <rect x="22"  y="85"  width="314" height="54" rx="7" fill="#0e1840" opacity="0.9" stroke="#3a5acc" stroke-width="1"/>
+  <text x="37"  y="103" fill="#7ad8ff" font-size="9.5" font-weight="bold">① 임시성 (Temporary)</text>
+  <text x="37"  y="117" fill="#5070a0" font-size="8">명확한 시작 · 종료 날짜 존재 · 목표 달성 시 해체</text>
+  <text x="37"  y="129" fill="#3555a0" font-size="7.5">예: 앱 개발 프로젝트 → 출시 후 프로젝트 팀 해산</text>
+
+  <rect x="22"  y="143" width="314" height="54" rx="7" fill="#0e1840" opacity="0.9" stroke="#3a5acc" stroke-width="1"/>
+  <text x="37"  y="161" fill="#7ab8ff" font-size="9.5" font-weight="bold">② 독창성 (Unique)</text>
+  <text x="37"  y="175" fill="#5070a0" font-size="8">반복이 아닌 새로운 제품·서비스·결과를 창출</text>
+  <text x="37"  y="187" fill="#3555a0" font-size="7.5">예: 세계 최초 달 탐사 — 똑같은 건물은 없다</text>
+
+  <rect x="22"  y="201" width="314" height="66" rx="7" fill="#0e1840" opacity="0.9" stroke="#3a5acc" stroke-width="1"/>
+  <text x="37"  y="219" fill="#7ad8ff" font-size="9.5" font-weight="bold">③ 점진적 구체화 (Progressive Elaboration)</text>
+  <text x="37"  y="233" fill="#5070a0" font-size="8">초기엔 대략적 정의 → 진행하며 상세화</text>
+  <text x="37"  y="245" fill="#3555a0" font-size="7.5">예: Day 1에 개략 계획, Week 3에 상세 WBS 확정</text>
+  <text x="37"  y="257" fill="#3555a0" font-size="7.5">롤링 웨이브 기획(Rolling Wave Planning)과 연계</text>
+
+  <!-- Operations side -->
+  <rect x="374" y="56" width="334" height="222" rx="9" fill="#1a3a20" opacity="0.85" stroke="#2a9a5a" stroke-width="1.5"/>
+  <text x="541" y="76" text-anchor="middle" fill="#7dff9a" font-size="12" font-weight="bold">运영 (Operations)</text>
+
+  <rect x="384" y="85"  width="314" height="54" rx="7" fill="#102810" opacity="0.9" stroke="#1a7a3a" stroke-width="1"/>
+  <text x="399" y="103" fill="#60d080" font-size="9.5" font-weight="bold">① 지속성 (Ongoing)</text>
+  <text x="399" y="117" fill="#40a060" font-size="8">종료 없이 반복적·지속적 수행</text>
+  <text x="399" y="129" fill="#205040" font-size="7.5">예: 고객센터 운영 · 서버 유지보수 · 월급 지급</text>
+
+  <rect x="384" y="143" width="314" height="54" rx="7" fill="#102810" opacity="0.9" stroke="#1a7a3a" stroke-width="1"/>
+  <text x="399" y="161" fill="#7dff9a" font-size="9.5" font-weight="bold">② 반복성 (Repetitive)</text>
+  <text x="399" y="175" fill="#40a060" font-size="8">표준화된 절차를 반복 수행</text>
+  <text x="399" y="187" fill="#205040" font-size="7.5">예: 매월 동일한 재무 보고서 작성 프로세스</text>
+
+  <rect x="384" y="201" width="314" height="66" rx="7" fill="#102810" opacity="0.9" stroke="#1a7a3a" stroke-width="1"/>
+  <text x="399" y="219" fill="#60d080" font-size="9.5" font-weight="bold">③ 효율성 추구 (Efficiency-focused)</text>
+  <text x="399" y="233" fill="#40a060" font-size="8">비용 절감·품질 유지·표준 준수가 목표</text>
+  <text x="399" y="245" fill="#205040" font-size="7.5">예: ITIL 기반 IT 서비스 관리</text>
+  <text x="399" y="257" fill="#205040" font-size="7.5">프로젝트 완료 → 운영으로 이관 (Transition)</text>
+
+  <!-- Center divide + vs -->
+  <text x="360" y="178" text-anchor="middle" fill="#9090c0" font-size="16" font-weight="bold">VS</text>
+
+  <!-- Bottom comparison table -->
+  <rect x="12" y="288" width="696" height="104" rx="10" fill="#0e0e2a" opacity="0.85" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="360" y="306" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">주요 비교 항목</text>
+  <!-- Header -->
+  <rect x="22"  y="312" width="100" height="20" rx="3" fill="#1a1a40"/>
+  <rect x="128" y="312" width="268" height="20" rx="3" fill="#1a2060"/>
+  <rect x="400" y="312" width="300" height="20" rx="3" fill="#0e2010"/>
+  <text x="72"  y="325" text-anchor="middle" fill="#9090c0" font-size="8" font-weight="bold">항목</text>
+  <text x="262" y="325" text-anchor="middle" fill="#7ab8ff" font-size="8" font-weight="bold">프로젝트</text>
+  <text x="550" y="325" text-anchor="middle" fill="#7dff9a" font-size="8" font-weight="bold">운영</text>
+  <!-- Rows -->
+  <text x="72"  y="344" text-anchor="middle" fill="#9090c0" font-size="7.5">목표</text>
+  <text x="262" y="344" text-anchor="middle" fill="#7ab8ff" font-size="7.5">새로운 결과물 창출</text>
+  <text x="550" y="344" text-anchor="middle" fill="#7dff9a" font-size="7.5">기존 프로세스 유지·개선</text>
+  <text x="72"  y="359" text-anchor="middle" fill="#9090c0" font-size="7.5">기간</text>
+  <text x="262" y="359" text-anchor="middle" fill="#7ab8ff" font-size="7.5">한시적 (시작~종료 있음)</text>
+  <text x="550" y="359" text-anchor="middle" fill="#7dff9a" font-size="7.5">지속적 (종료 없음)</text>
+  <text x="72"  y="374" text-anchor="middle" fill="#9090c0" font-size="7.5">성과 측정</text>
+  <text x="262" y="374" text-anchor="middle" fill="#7ab8ff" font-size="7.5">목표 달성여부 (범위/일정/비용)</text>
+  <text x="550" y="374" text-anchor="middle" fill="#7dff9a" font-size="7.5">KPI · SLA · 효율성 지표</text>
+  <text x="72"  y="386" text-anchor="middle" fill="#9090c0" font-size="7.5">예시</text>
+  <text x="262" y="386" text-anchor="middle" fill="#5070a0" font-size="7.5">ERP 구축, 신규 앱 개발, 공장 증설</text>
+  <text x="550" y="386" text-anchor="middle" fill="#205040" font-size="7.5">IT 운영팀, 회계부서, 콜센터</text>
+</svg>

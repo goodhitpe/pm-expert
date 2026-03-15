@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+  <text x="360" y="26" text-anchor="middle" fill="#e0e0ff" font-size="14" font-weight="bold">빅데이터 — 5V 특성 &amp; 람다 아키텍처</text>
+  <text x="360" y="43" text-anchor="middle" fill="#9090c0" font-size="9.5">빅데이터 정의·처리 아키텍처·PM 리스크 관리 포인트</text>
+
+  <!-- 5V Left -->
+  <rect x="12" y="56" width="320" height="196" rx="9" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="172" y="74" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">빅데이터 5V 특성</text>
+
+  <rect x="22"  y="81"  width="300" height="30" rx="5" fill="#1a2060" opacity="0.8"/>
+  <text x="37"  y="101" fill="#7ab8ff" font-size="9" font-weight="bold">Volume (규모)</text>
+  <text x="320" y="101" text-anchor="end" fill="#5070a0" font-size="8">TB ~ PB ~ EB 이상 · 기존 DBMS 처리 불가</text>
+
+  <rect x="22"  y="114" width="300" height="30" rx="5" fill="#1a3040" opacity="0.8"/>
+  <text x="37"  y="134" fill="#7ad8ff" font-size="9" font-weight="bold">Velocity (속도)</text>
+  <text x="320" y="134" text-anchor="end" fill="#406080" font-size="8">실시간 스트리밍 · 배치처리 · 마이크로배치</text>
+
+  <rect x="22"  y="147" width="300" height="30" rx="5" fill="#1a3a20" opacity="0.8"/>
+  <text x="37"  y="167" fill="#7dff9a" font-size="9" font-weight="bold">Variety (다양성)</text>
+  <text x="320" y="167" text-anchor="end" fill="#40a060" font-size="8">정형(SQL) · 반정형(JSON) · 비정형(텍스트/영상)</text>
+
+  <rect x="22"  y="180" width="300" height="30" rx="5" fill="#3a2a10" opacity="0.8"/>
+  <text x="37"  y="200" fill="#ffc070" font-size="9" font-weight="bold">Veracity (정확성)</text>
+  <text x="320" y="200" text-anchor="end" fill="#906030" font-size="8">노이즈·결측·불확실성 관리 · 데이터 품질</text>
+
+  <rect x="22"  y="213" width="300" height="30" rx="5" fill="#2a1a5c" opacity="0.8"/>
+  <text x="37"  y="233" fill="#c084f5" font-size="9" font-weight="bold">Value (가치)</text>
+  <text x="320" y="233" text-anchor="end" fill="#8060b0" font-size="8">분석을 통한 비즈니스 가치 창출 (핵심 목적)</text>
+
+  <!-- Lambda Architecture right -->
+  <rect x="346" y="56" width="362" height="196" rx="9" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="527" y="74" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">람다 아키텍처 (Lambda Architecture)</text>
+
+  <!-- Data source -->
+  <rect x="356" y="82" width="76" height="36" rx="5" fill="#1a2060" opacity="0.9" stroke="#4a6adc" stroke-width="1"/>
+  <text x="394" y="103" text-anchor="middle" fill="#7ab8ff" font-size="8" font-weight="bold">Data Source</text>
+
+  <line x1="432" y1="100" x2="442" y2="100" stroke="#4a6adc" stroke-width="1.2"/>
+  <polygon points="447,97 454,100 447,103" fill="#4a6adc"/>
+
+  <!-- Batch Layer -->
+  <rect x="452" y="82" width="110" height="36" rx="5" fill="#1a3a20" opacity="0.9" stroke="#2a9a5a" stroke-width="1"/>
+  <text x="507" y="97"  text-anchor="middle" fill="#7dff9a" font-size="8" font-weight="bold">Batch Layer</text>
+  <text x="507" y="109" text-anchor="middle" fill="#40a060" font-size="7.5">MapReduce/Spark</text>
+
+  <!-- Speed Layer -->
+  <rect x="452" y="130" width="110" height="36" rx="5" fill="#3a2a10" opacity="0.9" stroke="#ca8a2a" stroke-width="1"/>
+  <text x="507" y="145" text-anchor="middle" fill="#ffc070" font-size="8" font-weight="bold">Speed Layer</text>
+  <text x="507" y="157" text-anchor="middle" fill="#906030" font-size="7.5">Kafka/Flink 실시간</text>
+
+  <!-- Serving Layer -->
+  <rect x="578" y="106" width="122" height="36" rx="5" fill="#2a1a5c" opacity="0.9" stroke="#7a3acc" stroke-width="1"/>
+  <text x="639" y="121" text-anchor="middle" fill="#c084f5" font-size="8" font-weight="bold">Serving Layer</text>
+  <text x="639" y="133" text-anchor="middle" fill="#8060b0" font-size="7.5">HBase / Druid / API</text>
+
+  <line x1="562" y1="100" x2="578" y2="118" stroke="#4a6adc" stroke-width="1.2"/>
+  <line x1="562" y1="148" x2="578" y2="128" stroke="#4a6adc" stroke-width="1.2"/>
+
+  <!-- Arrow from source to both layers -->
+  <path d="M447,100 Q449,148 452,148" fill="none" stroke="#4a6adc" stroke-width="1.2"/>
+
+  <!-- Hadoop ecosystem -->
+  <rect x="356" y="174" width="342" height="70" rx="6" fill="#0e0e2a" opacity="0.8"/>
+  <text x="527" y="191" text-anchor="middle" fill="#d0d0ff" font-size="9" font-weight="bold">빅데이터 기술 스택</text>
+  <rect x="366" y="197" width="70" height="40" rx="4" fill="#1a2060" opacity="0.8"/>
+  <rect x="444" y="197" width="70" height="40" rx="4" fill="#1a3040" opacity="0.8"/>
+  <rect x="522" y="197" width="70" height="40" rx="4" fill="#1a3a20" opacity="0.8"/>
+  <rect x="600" y="197" width="90" height="40" rx="4" fill="#2a1a5c" opacity="0.8"/>
+  <text x="401" y="211" text-anchor="middle" fill="#7ab8ff" font-size="7.5" font-weight="bold">Storage</text>
+  <text x="401" y="223" text-anchor="middle" fill="#5070a0" font-size="7">HDFS</text>
+  <text x="401" y="233" text-anchor="middle" fill="#5070a0" font-size="7">S3/GCS</text>
+  <text x="479" y="211" text-anchor="middle" fill="#7ad8ff" font-size="7.5" font-weight="bold">Processing</text>
+  <text x="479" y="223" text-anchor="middle" fill="#406080" font-size="7">Spark</text>
+  <text x="479" y="233" text-anchor="middle" fill="#406080" font-size="7">Hadoop MR</text>
+  <text x="557" y="211" text-anchor="middle" fill="#7dff9a" font-size="7.5" font-weight="bold">Streaming</text>
+  <text x="557" y="223" text-anchor="middle" fill="#40a060" font-size="7">Kafka</text>
+  <text x="557" y="233" text-anchor="middle" fill="#40a060" font-size="7">Flink/Storm</text>
+  <text x="645" y="211" text-anchor="middle" fill="#c084f5" font-size="7.5" font-weight="bold">Visualization</text>
+  <text x="645" y="223" text-anchor="middle" fill="#8060b0" font-size="7">Tableau</text>
+  <text x="645" y="233" text-anchor="middle" fill="#8060b0" font-size="7">Power BI / ELK</text>
+
+  <!-- PM Bottom panel -->
+  <rect x="12" y="262" width="696" height="130" rx="10" fill="#0e0e2a" opacity="0.85" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="360" y="280" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">PM 빅데이터 프로젝트 관리 포인트</text>
+  <rect x="22"  y="288" width="155" height="96" rx="6" fill="#1a2060" opacity="0.8"/>
+  <rect x="187" y="288" width="155" height="96" rx="6" fill="#1a3a20" opacity="0.8"/>
+  <rect x="352" y="288" width="155" height="96" rx="6" fill="#3a2a10" opacity="0.8"/>
+  <rect x="517" y="288" width="183" height="96" rx="6" fill="#2a1a5c" opacity="0.8"/>
+  <text x="99"  y="303" text-anchor="middle" fill="#7ab8ff" font-size="8.5" font-weight="bold">데이터 거버넌스</text>
+  <text x="99"  y="316" text-anchor="middle" fill="#5070a0" font-size="7.5">• 소유권·접근 권한</text>
+  <text x="99"  y="327" text-anchor="middle" fill="#5070a0" font-size="7.5">• 개인정보보호(GDPR)</text>
+  <text x="99"  y="338" text-anchor="middle" fill="#5070a0" font-size="7.5">• 데이터 품질 기준</text>
+  <text x="99"  y="349" text-anchor="middle" fill="#5070a0" font-size="7.5">• 보존기간·파기 정책</text>
+  <text x="99"  y="360" text-anchor="middle" fill="#5070a0" font-size="7.5">• 메타데이터 관리</text>
+  <text x="264" y="303" text-anchor="middle" fill="#7dff9a" font-size="8.5" font-weight="bold">기술 리스크</text>
+  <text x="264" y="316" text-anchor="middle" fill="#40a060" font-size="7.5">• 인프라 비용 급증</text>
+  <text x="264" y="327" text-anchor="middle" fill="#40a060" font-size="7.5">• 기술 전문인력 부족</text>
+  <text x="264" y="338" text-anchor="middle" fill="#40a060" font-size="7.5">• 벤더 락인 위험</text>
+  <text x="264" y="349" text-anchor="middle" fill="#40a060" font-size="7.5">• 데이터 레이크 수렁</text>
+  <text x="264" y="360" text-anchor="middle" fill="#40a060" font-size="7.5">  (Data Swamp) 위험</text>
+  <text x="429" y="303" text-anchor="middle" fill="#ffc070" font-size="8.5" font-weight="bold">성공 기준 정의</text>
+  <text x="429" y="316" text-anchor="middle" fill="#906030" font-size="7.5">• 비즈니스 KPI 연계</text>
+  <text x="429" y="327" text-anchor="middle" fill="#906030" font-size="7.5">• POC → MVP → 운영</text>
+  <text x="429" y="338" text-anchor="middle" fill="#906030" font-size="7.5">• ROI 측정 방법 사전 정의</text>
+  <text x="429" y="349" text-anchor="middle" fill="#906030" font-size="7.5">• 이해관계자 기대 관리</text>
+  <text x="429" y="360" text-anchor="middle" fill="#906030" font-size="7.5">• 실험 실패 = 학습 인정</text>
+  <text x="608" y="303" text-anchor="middle" fill="#c084f5" font-size="8.5" font-weight="bold">조직 변화 관리</text>
+  <text x="608" y="316" text-anchor="middle" fill="#8060b0" font-size="7.5">• 데이터 기반 의사결정 문화</text>
+  <text x="608" y="327" text-anchor="middle" fill="#8060b0" font-size="7.5">• 현업 부서 협력 필수</text>
+  <text x="608" y="338" text-anchor="middle" fill="#8060b0" font-size="7.5">• 임원 스폰서십 확보</text>
+  <text x="608" y="349" text-anchor="middle" fill="#8060b0" font-size="7.5">• 분석가·엔지니어·도메인</text>
+  <text x="608" y="360" text-anchor="middle" fill="#8060b0" font-size="7.5">  전문가 협업팀 구성</text>
+</svg>

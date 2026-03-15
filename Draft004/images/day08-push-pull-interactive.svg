@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="380" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="32" text-anchor="middle" fill="#e0e0ff" font-size="17" font-weight="bold">Push · Pull · Interactive 의사소통 비교</text>
+  <text x="360" y="50" text-anchor="middle" fill="#9090c0" font-size="11">상황에 맞는 채널 선택이 PM의 핵심 역량</text>
+
+  <!-- Interactive -->
+  <rect x="20" y="60" width="215" height="240" rx="10" fill="#1a2a5c" opacity="0.85" stroke="#3a5aac" stroke-width="1.5"/>
+  <text x="127" y="80"  text-anchor="middle" fill="#58c4f6" font-size="13" font-weight="bold">🔄 Interactive</text>
+  <text x="127" y="95"  text-anchor="middle" fill="#4a88d0" font-size="10">양방향 실시간 소통</text>
+  <line x1="35" y1="103" x2="222" y2="103" stroke="#3a5aac" stroke-width="0.8" opacity="0.6"/>
+  <text x="127" y="117" text-anchor="middle" fill="#7ab8f8" font-size="10" font-weight="bold">특징</text>
+  <text x="127" y="131" text-anchor="middle" fill="#90b8e0" font-size="9">즉각 피드백 · 오해 즉시 해소</text>
+  <text x="127" y="145" text-anchor="middle" fill="#90b8e0" font-size="9">가장 효과적인 소통 방식</text>
+  <text x="127" y="159" text-anchor="middle" fill="#90b8e0" font-size="9">참여자 모두 실시간 참여</text>
+  <line x1="35" y1="168" x2="222" y2="168" stroke="#3a5aac" stroke-width="0.8" opacity="0.4"/>
+  <text x="127" y="182" text-anchor="middle" fill="#7ab8f8" font-size="10" font-weight="bold">채널 예시</text>
+  <text x="127" y="196" text-anchor="middle" fill="#80a8d8" font-size="9">회의 · 전화 · 화상회의</text>
+  <text x="127" y="210" text-anchor="middle" fill="#80a8d8" font-size="9">1:1 면담 · 브레인스토밍</text>
+  <line x1="35" y1="220" x2="222" y2="220" stroke="#3a5aac" stroke-width="0.8" opacity="0.4"/>
+  <text x="127" y="234" text-anchor="middle" fill="#7ab8f8" font-size="10" font-weight="bold">사용 시점</text>
+  <text x="127" y="248" text-anchor="middle" fill="#80a8d8" font-size="9">의사결정 · 복잡한 이슈</text>
+  <text x="127" y="262" text-anchor="middle" fill="#80a8d8" font-size="9">갈등 해결 · 킥오프 미팅</text>
+  <text x="127" y="278" text-anchor="middle" fill="#ff9898" font-size="9">⚠️ 기록 없음 → 회의록 필수</text>
+
+  <!-- Push -->
+  <rect x="252" y="60" width="215" height="240" rx="10" fill="#1a3a2a" opacity="0.85" stroke="#3aac6a" stroke-width="1.5"/>
+  <text x="359" y="80"  text-anchor="middle" fill="#7dff9a" font-size="13" font-weight="bold">📤 Push</text>
+  <text x="359" y="95"  text-anchor="middle" fill="#4a9a6a" font-size="10">발신자가 수신자에게 전달</text>
+  <line x1="267" y1="103" x2="454" y2="103" stroke="#3aac6a" stroke-width="0.8" opacity="0.6"/>
+  <text x="359" y="117" text-anchor="middle" fill="#a0ffb8" font-size="10" font-weight="bold">특징</text>
+  <text x="359" y="131" text-anchor="middle" fill="#80d090" font-size="9">발신자가 수신자를 선택</text>
+  <text x="359" y="145" text-anchor="middle" fill="#80d090" font-size="9">공식 기록 남음</text>
+  <text x="359" y="159" text-anchor="middle" fill="#80d090" font-size="9">수신자 자발적 읽기 필요</text>
+  <line x1="267" y1="168" x2="454" y2="168" stroke="#3aac6a" stroke-width="0.8" opacity="0.4"/>
+  <text x="359" y="182" text-anchor="middle" fill="#a0ffb8" font-size="10" font-weight="bold">채널 예시</text>
+  <text x="359" y="196" text-anchor="middle" fill="#70c090" font-size="9">이메일 · 공문 · 보고서</text>
+  <text x="359" y="210" text-anchor="middle" fill="#70c090" font-size="9">메모 · 프레스 릴리즈</text>
+  <text x="359" y="224" text-anchor="middle" fill="#70c090" font-size="9">슬랙/Teams 메시지 (단방향)</text>
+  <line x1="267" y1="234" x2="454" y2="234" stroke="#3aac6a" stroke-width="0.8" opacity="0.4"/>
+  <text x="359" y="248" text-anchor="middle" fill="#a0ffb8" font-size="10" font-weight="bold">사용 시점</text>
+  <text x="359" y="262" text-anchor="middle" fill="#70c090" font-size="9">공식 통보 · 상태 보고</text>
+  <text x="359" y="276" text-anchor="middle" fill="#70c090" font-size="9">진행 업데이트 · 의사결정 통보</text>
+  <text x="359" y="291" text-anchor="middle" fill="#ffd888" font-size="9">📋 수신자 확인 어려움</text>
+
+  <!-- Pull -->
+  <rect x="484" y="60" width="216" height="240" rx="10" fill="#3a2a1a" opacity="0.85" stroke="#ac7a3a" stroke-width="1.5"/>
+  <text x="592" y="80"  text-anchor="middle" fill="#ffa040" font-size="13" font-weight="bold">📥 Pull</text>
+  <text x="592" y="95"  text-anchor="middle" fill="#9a6030" font-size="10">수신자가 필요 시 가져감</text>
+  <line x1="499" y1="103" x2="687" y2="103" stroke="#ac7a3a" stroke-width="0.8" opacity="0.6"/>
+  <text x="592" y="117" text-anchor="middle" fill="#ffd090" font-size="10" font-weight="bold">특징</text>
+  <text x="592" y="131" text-anchor="middle" fill="#d0a060" font-size="9">수신자가 능동적으로 접근</text>
+  <text x="592" y="145" text-anchor="middle" fill="#d0a060" font-size="9">대량 정보 · 공용 저장소</text>
+  <text x="592" y="159" text-anchor="middle" fill="#d0a060" font-size="9">발신자 부담 최소화</text>
+  <line x1="499" y1="168" x2="687" y2="168" stroke="#ac7a3a" stroke-width="0.8" opacity="0.4"/>
+  <text x="592" y="182" text-anchor="middle" fill="#ffd090" font-size="10" font-weight="bold">채널 예시</text>
+  <text x="592" y="196" text-anchor="middle" fill="#c09050" font-size="9">위키(Wiki) · SharePoint</text>
+  <text x="592" y="210" text-anchor="middle" fill="#c09050" font-size="9">프로젝트 포털 · 인트라넷</text>
+  <text x="592" y="224" text-anchor="middle" fill="#c09050" font-size="9">지식 베이스 · Confluence</text>
+  <line x1="499" y1="234" x2="687" y2="234" stroke="#ac7a3a" stroke-width="0.8" opacity="0.4"/>
+  <text x="592" y="248" text-anchor="middle" fill="#ffd090" font-size="10" font-weight="bold">사용 시점</text>
+  <text x="592" y="262" text-anchor="middle" fill="#c09050" font-size="9">참고 자료 · 방법론 문서</text>
+  <text x="592" y="276" text-anchor="middle" fill="#c09050" font-size="9">대규모 팀 정보 공유</text>
+  <text x="592" y="291" text-anchor="middle" fill="#ff9898" font-size="9">⚠️ 최신 유지 관리 필요</text>
+
+  <!-- Bottom guidance -->
+  <rect x="20" y="314" width="680" height="50" rx="8" fill="#1a1a3a" opacity="0.8" stroke="#3a3a6a" stroke-width="1"/>
+  <text x="360" y="330" text-anchor="middle" fill="#a0b8e0" font-size="11" font-weight="bold">PM 실무 선택 가이드</text>
+  <text x="120" y="348" text-anchor="middle" fill="#58c4f6" font-size="9.5">의사결정 필요 → Interactive</text>
+  <text x="360" y="348" text-anchor="middle" fill="#7dff9a" font-size="9.5">공식 기록 필요 → Push</text>
+  <text x="596" y="348" text-anchor="middle" fill="#ffa040" font-size="9.5">자율 참조·대량 문서 → Pull</text>
+  <text x="360" y="362" text-anchor="middle" fill="#6a6a9a" font-size="9">중요 사항은 Interactive → Push (이메일 후속) → Pull (문서 보관) 3단계 조합 권장</text>
+</svg>

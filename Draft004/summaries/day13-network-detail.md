@@ -35,6 +35,14 @@
 
 ## 1교시: 네트워크 기초 개념 (1.5시간) <!-- 슬라이드 #1~#8 -->
 
+<div align="center">
+
+![Day 13 네트워크 기초 핵심 개념](../images/day13-network-basics.svg)
+
+*▲ IP 주소 · DNS · HTTP · 로드밸런서 · 방화벽 — PM이 알아야 할 네트워크 기초 4가지 영역*
+
+</div>
+
 ### 이론 (55분)
 
 #### 1. 네트워크(Network)란?
@@ -193,6 +201,14 @@ PM (오늘 수업 후): "어제 포트 443, 8080 인바운드 허용
 ```
 
 **TCP vs UDP:**
+
+<div align="center">
+
+![TCP vs UDP 비교](../images/day13-tcp-vs-udp.svg)
+
+*▲ TCP vs UDP — 실시간성(UDP) vs 신뢰성(TCP) 트레이드오프, 서비스 특성에 맞는 프로토콜 선택*
+
+</div>
 
 | 구분 | TCP | UDP |
 |------|-----|-----|
@@ -690,6 +706,14 @@ CDN 있을 때:
 
 #### 3. 마이그레이션 전략 6R
 
+<div align="center">
+
+![클라우드 마이그레이션 6R 전략](../images/day13-migration-6r.svg)
+
+*▲ 6R 전략 — Rehost / Replatform / Repurchase / Refactor / Retire / Retain, PM 의사결정 프레임워크*
+
+</div>
+
 ```
 온프레미스 → 클라우드 마이그레이션 6가지 전략:
 
@@ -780,6 +804,14 @@ Phase 3 (6~12개월): 최적화 + 전환 완료
 ---
 
 ## 5교시: VPC 핵심 개념 (1.5시간) <!-- 슬라이드 #34~#43 -->
+
+<div align="center">
+
+![VPC 3계층 아키텍처](../images/day13-vpc-architecture.svg)
+
+*▲ VPC 3계층 아키텍처 — Public · Private · Data Subnet, IGW / NAT GW / Direct Connect 연결 구조*
+
+</div>
 
 ### 이론 (60분)
 
@@ -1141,6 +1173,14 @@ Bastion Host Security Group:
 
 ---
 
+<div align="center">
+
+![VPC 구성 요소 관계도](../images/day13-vpc-architecture.svg)
+
+*▲ VPC 구성 요소 — Subnet / SG / NACL / IGW / NAT GW 상호 관계 정리*
+
+</div>
+
 ### 🔨 실습 (20분) — VPC 아키텍처 다이어그램 설계
 
 **팀별 과제 (4~5인)**
@@ -1173,6 +1213,14 @@ Bastion Host Security Group:
 ---
 
 ## 📊 핵심 개념 총정리
+
+<div align="center">
+
+![Day 13 VPC 아키텍처 총정리](../images/day13-vpc-architecture.svg)
+
+*▲ Day 13 핵심 — VPC 3계층 구조와 보안 제어(SG + NACL) 총정리*
+
+</div>
 
 ### 네트워크 기초 한눈에 보기
 

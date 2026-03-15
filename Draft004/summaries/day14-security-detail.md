@@ -32,6 +32,14 @@
 
 ## 1교시: 정보보안 개요 (이론 + 예시 + 실습 + 퀴즈)
 
+<div align="center">
+
+![보안 관리 프로세스 흐름](../images/day14-security-processes.svg)
+
+*▲ 보안 관리 5단계 — 계획·평가·구현·모니터링·대응 + DevSecOps Shift Left*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 정보보안이란?
@@ -340,6 +348,14 @@
 
 #### 2. 웹 애플리케이션 공격 (OWASP Top 10)
 
+<div align="center">
+
+![OWASP Top 10 2021](../images/day14-owasp-top10.svg)
+
+*▲ OWASP Top 10 (2021) — 가장 위험한 웹 보안 취약점 10선 + PM 보안 체크리스트*
+
+</div>
+
 **A. SQL Injection**
 ```sql
 -- 정상 쿼리
@@ -600,6 +616,14 @@ $stmt->execute();
 </div>
 
 ## 3교시: 암호화 및 인증 기술 (이론 + 예시 + 실습 + 퀴즈)
+
+<div align="center">
+
+![암호화 기술 비교](../images/day14-encryption-types.svg)
+
+*▲ 대칭키 · 비대칭키 · 해시 함수 비교 — TLS는 세 방식을 결합하여 HTTPS를 구현*
+
+</div>
 
 ### 이론 (50분)
 

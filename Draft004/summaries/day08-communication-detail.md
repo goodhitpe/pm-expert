@@ -44,6 +44,14 @@
 
 ## 1교시: 의사소통 관리 개요 (1.5시간) <!-- 슬라이드 #1~#2 -->
 
+<div align="center">
+
+![Push·Pull·Interactive 의사소통 방식 비교](../images/day08-push-pull-interactive.svg)
+
+*▲ Push·Pull·Interactive 의사소통 방식 비교*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 의사소통의 중요성
@@ -250,6 +258,14 @@ D) 전화로 이슈 해결 논의
 ---
 
 ## 2교시: 의사소통 모델 및 방법 (1.5시간) <!-- 슬라이드 #3 -->
+
+<div align="center">
+
+![Shannon-Weaver 의사소통 모델](../images/day08-comm-model.svg)
+
+*▲ Shannon-Weaver 의사소통 모델과 노이즈 제거 전략*
+
+</div>
 
 ### 이론 (50분)
 
@@ -907,6 +923,14 @@ D) 비언어적 신호에 주의 집중
 ---
 
 ## 5교시: 프로젝트 보고 체계 (1.5시간) <!-- 슬라이드 #5 -->
+
+<div align="center">
+
+![효과적인 회의 운영 가이드](../images/day08-meeting-guide.svg)
+
+*▲ 회의 유형별 운영 원칙과 회의록 필수 항목*
+
+</div>
 
 ### 이론 (50분)
 

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="360" y="33" text-anchor="middle" fill="#e0e0ff" font-size="17" font-weight="bold">Day 07 — 조직 구조 유형 비교</text>
+  <text x="360" y="52" text-anchor="middle" fill="#9090c0" font-size="11">기능형 · 프로젝트형 · 매트릭스형 — PM 권한과 자원 확보 측면 비교</text>
+
+  <!-- Header row -->
+  <rect x="30"  y="65" width="135" height="32" rx="6" fill="#1a1a3a"/>
+  <text x="97"  y="86" text-anchor="middle" fill="#9090c0" font-size="12" font-weight="bold">비교 항목</text>
+
+  <rect x="172" y="65" width="155" height="32" rx="6" fill="#1a3a5c" opacity="0.9"/>
+  <text x="249" y="86" text-anchor="middle" fill="#58c4f6" font-size="12" font-weight="bold">기능형</text>
+
+  <rect x="334" y="65" width="155" height="32" rx="6" fill="#1a3a2a" opacity="0.9"/>
+  <text x="411" y="86" text-anchor="middle" fill="#7dff9a" font-size="12" font-weight="bold">매트릭스형</text>
+
+  <rect x="496" y="65" width="195" height="32" rx="6" fill="#3a1a5c" opacity="0.9"/>
+  <text x="593" y="86" text-anchor="middle" fill="#c084f5" font-size="12" font-weight="bold">프로젝트형</text>
+
+  <!-- Row 1: PM 권한 -->
+  <text x="30" y="120" fill="#b0b0d0" font-size="11">PM 권한</text>
+  <rect x="172" y="103" width="155" height="26" rx="4" fill="#0f2a40" opacity="0.8"/>
+  <text x="249" y="121" text-anchor="middle" fill="#ff8888" font-size="11">거의 없음</text>
+  <rect x="334" y="103" width="155" height="26" rx="4" fill="#0f3a2a" opacity="0.8"/>
+  <text x="411" y="121" text-anchor="middle" fill="#ffcc55" font-size="11">약→보통→강 (3단계)</text>
+  <rect x="496" y="103" width="195" height="26" rx="4" fill="#2a0f4a" opacity="0.8"/>
+  <text x="593" y="121" text-anchor="middle" fill="#a0ff90" font-size="11">최대 (전권)</text>
+
+  <!-- Row 2: 자원 배정 -->
+  <text x="30" y="148" fill="#b0b0d0" font-size="11">자원 배정</text>
+  <rect x="172" y="131" width="155" height="26" rx="4" fill="#0f2a40" opacity="0.8"/>
+  <text x="249" y="149" text-anchor="middle" fill="#ff8888" font-size="11">기능 관리자 결정</text>
+  <rect x="334" y="131" width="155" height="26" rx="4" fill="#0f3a2a" opacity="0.8"/>
+  <text x="411" y="149" text-anchor="middle" fill="#ffcc55" font-size="11">공유 (협의 필요)</text>
+  <rect x="496" y="131" width="195" height="26" rx="4" fill="#2a0f4a" opacity="0.8"/>
+  <text x="593" y="149" text-anchor="middle" fill="#a0ff90" font-size="11">PM 전용</text>
+
+  <!-- Row 3: 팀원 보고 -->
+  <text x="30" y="176" fill="#b0b0d0" font-size="11">팀원 보고</text>
+  <rect x="172" y="159" width="155" height="26" rx="4" fill="#0f2a40" opacity="0.8"/>
+  <text x="249" y="177" text-anchor="middle" fill="#80b8ff" font-size="11">기능 관리자에게</text>
+  <rect x="334" y="159" width="155" height="26" rx="4" fill="#0f3a2a" opacity="0.8"/>
+  <text x="411" y="177" text-anchor="middle" fill="#ffcc55" font-size="11">이중 보고 (PM + 기능)</text>
+  <rect x="496" y="159" width="195" height="26" rx="4" fill="#2a0f4a" opacity="0.8"/>
+  <text x="593" y="177" text-anchor="middle" fill="#c084f5" font-size="11">PM에게</text>
+
+  <!-- Row 4: 프로젝트 중심 -->
+  <text x="30" y="204" fill="#b0b0d0" font-size="11">중심</text>
+  <rect x="172" y="187" width="155" height="26" rx="4" fill="#0f2a40" opacity="0.8"/>
+  <text x="249" y="205" text-anchor="middle" fill="#80b8ff" font-size="11">기능 부서 업무</text>
+  <rect x="334" y="187" width="155" height="26" rx="4" fill="#0f3a2a" opacity="0.8"/>
+  <text x="411" y="205" text-anchor="middle" fill="#ffcc55" font-size="11">프로젝트 + 기능 혼합</text>
+  <rect x="496" y="187" width="195" height="26" rx="4" fill="#2a0f4a" opacity="0.8"/>
+  <text x="593" y="205" text-anchor="middle" fill="#c084f5" font-size="11">프로젝트 목표</text>
+
+  <!-- Row 5: 갈등 -->
+  <text x="30" y="232" fill="#b0b0d0" font-size="11">갈등 위험</text>
+  <rect x="172" y="215" width="155" height="26" rx="4" fill="#0f2a40" opacity="0.8"/>
+  <text x="249" y="233" text-anchor="middle" fill="#80b8ff" font-size="11">낮음</text>
+  <rect x="334" y="215" width="155" height="26" rx="4" fill="#0f3a2a" opacity="0.8"/>
+  <text x="411" y="233" text-anchor="middle" fill="#ff8888" font-size="11">높음 (이중 보고 마찰)</text>
+  <rect x="496" y="215" width="195" height="26" rx="4" fill="#2a0f4a" opacity="0.8"/>
+  <text x="593" y="233" text-anchor="middle" fill="#a0ff90" font-size="11">낮음</text>
+
+  <!-- Row 6: 적합 프로젝트 -->
+  <text x="30" y="260" fill="#b0b0d0" font-size="11">적합 유형</text>
+  <rect x="172" y="243" width="155" height="26" rx="4" fill="#0f2a40" opacity="0.8"/>
+  <text x="249" y="261" text-anchor="middle" fill="#80b8ff" font-size="11">반복업무, 유지보수</text>
+  <rect x="334" y="243" width="155" height="26" rx="4" fill="#0f3a2a" opacity="0.8"/>
+  <text x="411" y="261" text-anchor="middle" fill="#ffcc55" font-size="11">대부분의 기업 프로젝트</text>
+  <rect x="496" y="243" width="195" height="26" rx="4" fill="#2a0f4a" opacity="0.8"/>
+  <text x="593" y="261" text-anchor="middle" fill="#c084f5" font-size="11">건설, 국방, 일회성</text>
+
+  <!-- Row 7: 예시 -->
+  <text x="30" y="288" fill="#b0b0d0" font-size="11">기업 예시</text>
+  <rect x="172" y="271" width="155" height="26" rx="4" fill="#0f2a40" opacity="0.8"/>
+  <text x="249" y="289" text-anchor="middle" fill="#80b8ff" font-size="11">전통 제조사, 은행</text>
+  <rect x="334" y="271" width="155" height="26" rx="4" fill="#0f3a2a" opacity="0.8"/>
+  <text x="411" y="289" text-anchor="middle" fill="#ffcc55" font-size="11">IT 기업, 컨설팅 회사</text>
+  <rect x="496" y="271" width="195" height="26" rx="4" fill="#2a0f4a" opacity="0.8"/>
+  <text x="593" y="289" text-anchor="middle" fill="#c084f5" font-size="11">건설사, PMO 중심 조직</text>
+
+  <!-- Matrix detail -->
+  <rect x="30" y="308" width="660" height="72" rx="10" fill="#0f1a3a" opacity="0.9" stroke="#2a3a6a" stroke-width="1"/>
+  <text x="360" y="327" text-anchor="middle" fill="#a0b8e0" font-size="12" font-weight="bold">매트릭스형 3단계 세분화</text>
+  <rect x="55"  y="337" width="155" height="28" rx="6" fill="#1a2a40" opacity="0.85"/>
+  <text x="132" y="349" text-anchor="middle" fill="#ff8888" font-size="10.5" font-weight="bold">Weak Matrix (약)</text>
+  <text x="132" y="362" text-anchor="middle" fill="#c0a0a0" font-size="10">기능 관리자 우세</text>
+
+  <rect x="283" y="337" width="155" height="28" rx="6" fill="#1a3a2a" opacity="0.85"/>
+  <text x="360" y="349" text-anchor="middle" fill="#ffcc55" font-size="10.5" font-weight="bold">Balanced Matrix (중)</text>
+  <text x="360" y="362" text-anchor="middle" fill="#c0c0a0" font-size="10">권한 균형, 갈등 최대</text>
+
+  <rect x="511" y="337" width="155" height="28" rx="6" fill="#2a0f4a" opacity="0.85"/>
+  <text x="588" y="349" text-anchor="middle" fill="#a0ff90" font-size="10.5" font-weight="bold">Strong Matrix (강)</text>
+  <text x="588" y="362" text-anchor="middle" fill="#a0c0a0" font-size="10">PM 우세, 프로젝트형 근접</text>
+
+  <!-- Footer -->
+  <text x="360" y="407" text-anchor="middle" fill="#6a6a9a" font-size="10">PM 관점: 조직 구조를 파악하면 자원 확보 전략과 이해관계자 관리 방향이 결정됩니다</text>
+</svg>

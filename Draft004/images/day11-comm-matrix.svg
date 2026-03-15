@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="28" text-anchor="middle" fill="#e0e0ff" font-size="15" font-weight="bold">의사소통 관리 매트릭스 (Communication Matrix)</text>
+  <text x="360" y="46" text-anchor="middle" fill="#9090c0" font-size="10">이해관계자별 의사소통 계획 — Who / What / When / How / Why</text>
+
+  <!-- Header row -->
+  <rect x="10"  y="57" width="88" height="28" rx="4" fill="#12122a"/>
+  <rect x="105" y="57" width="110" height="28" rx="4" fill="#12122a"/>
+  <rect x="222" y="57" width="110" height="28" rx="4" fill="#12122a"/>
+  <rect x="339" y="57" width="100" height="28" rx="4" fill="#12122a"/>
+  <rect x="446" y="57" width="120" height="28" rx="4" fill="#12122a"/>
+  <rect x="573" y="57" width="140" height="28" rx="4" fill="#12122a"/>
+  <text x="54"  y="75" text-anchor="middle" fill="#7090c0" font-size="9.5" font-weight="bold">대상(Who)</text>
+  <text x="160" y="75" text-anchor="middle" fill="#7090c0" font-size="9.5" font-weight="bold">내용(What)</text>
+  <text x="277" y="75" text-anchor="middle" fill="#7090c0" font-size="9.5" font-weight="bold">주기(When)</text>
+  <text x="389" y="75" text-anchor="middle" fill="#7090c0" font-size="9.5" font-weight="bold">방법(How)</text>
+  <text x="506" y="75" text-anchor="middle" fill="#7090c0" font-size="9.5" font-weight="bold">형식(Format)</text>
+  <text x="643" y="75" text-anchor="middle" fill="#7090c0" font-size="9.5" font-weight="bold">목적(Why)</text>
+
+  <!-- Row 1: 프로젝트 스폰서 -->
+  <rect x="10"  y="89" width="88"  height="48" rx="4" fill="#1a2a5c" opacity="0.8"/>
+  <rect x="105" y="89" width="110" height="48" rx="4" fill="#12182e" opacity="0.7"/>
+  <rect x="222" y="89" width="110" height="48" rx="4" fill="#12182e" opacity="0.7"/>
+  <rect x="339" y="89" width="100" height="48" rx="4" fill="#12182e" opacity="0.7"/>
+  <rect x="446" y="89" width="120" height="48" rx="4" fill="#12182e" opacity="0.7"/>
+  <rect x="573" y="89" width="140" height="48" rx="4" fill="#12182e" opacity="0.7"/>
+  <text x="54"  y="106" text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="bold">프로젝트</text>
+  <text x="54"  y="119" text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="bold">스폰서</text>
+  <text x="54"  y="132" text-anchor="middle" fill="#5080c0" font-size="8">관리 긴밀</text>
+  <text x="160" y="104" text-anchor="middle" fill="#80a8e0" font-size="8">• 전체 진행 현황</text>
+  <text x="160" y="117" text-anchor="middle" fill="#80a8e0" font-size="8">• 주요 리스크</text>
+  <text x="160" y="130" text-anchor="middle" fill="#80a8e0" font-size="8">• 예산 상태</text>
+  <text x="277" y="110" text-anchor="middle" fill="#9090c0" font-size="9">월간 정기</text>
+  <text x="277" y="125" text-anchor="middle" fill="#9090c0" font-size="9">+ 긴급 시 즉시</text>
+  <text x="389" y="110" text-anchor="middle" fill="#9090c0" font-size="9">대면 회의</text>
+  <text x="389" y="125" text-anchor="middle" fill="#9090c0" font-size="9">이메일 보고</text>
+  <text x="506" y="110" text-anchor="middle" fill="#9090c0" font-size="9">월간 경영보고서</text>
+  <text x="506" y="125" text-anchor="middle" fill="#9090c0" font-size="9">대시보드</text>
+  <text x="643" y="110" text-anchor="middle" fill="#9090c0" font-size="9">투자 승인·</text>
+  <text x="643" y="125" text-anchor="middle" fill="#9090c0" font-size="9">의사결정 지원</text>
+
+  <!-- Row 2: 프로젝트 팀원 -->
+  <rect x="10"  y="141" width="88"  height="48" rx="4" fill="#1a3a2a" opacity="0.8"/>
+  <rect x="105" y="141" width="110" height="48" rx="4" fill="#12201a" opacity="0.7"/>
+  <rect x="222" y="141" width="110" height="48" rx="4" fill="#12201a" opacity="0.7"/>
+  <rect x="339" y="141" width="100" height="48" rx="4" fill="#12201a" opacity="0.7"/>
+  <rect x="446" y="141" width="120" height="48" rx="4" fill="#12201a" opacity="0.7"/>
+  <rect x="573" y="141" width="140" height="48" rx="4" fill="#12201a" opacity="0.7"/>
+  <text x="54"  y="158" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">프로젝트</text>
+  <text x="54"  y="171" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">팀원</text>
+  <text x="54"  y="184" text-anchor="middle" fill="#408060" font-size="8">정보 제공</text>
+  <text x="160" y="156" text-anchor="middle" fill="#70c080" font-size="8">• 작업 지시·우선순위</text>
+  <text x="160" y="169" text-anchor="middle" fill="#70c080" font-size="8">• 기술적 결정</text>
+  <text x="160" y="182" text-anchor="middle" fill="#70c080" font-size="8">• 이슈·변경 공지</text>
+  <text x="277" y="162" text-anchor="middle" fill="#9090c0" font-size="9">매일 (스탠드업)</text>
+  <text x="277" y="177" text-anchor="middle" fill="#9090c0" font-size="9">주간 (팀 회의)</text>
+  <text x="389" y="162" text-anchor="middle" fill="#9090c0" font-size="9">스탠드업·</text>
+  <text x="389" y="177" text-anchor="middle" fill="#9090c0" font-size="9">슬랙/Teams</text>
+  <text x="506" y="162" text-anchor="middle" fill="#9090c0" font-size="9">이슈 트래커</text>
+  <text x="506" y="177" text-anchor="middle" fill="#9090c0" font-size="9">칸반 보드</text>
+  <text x="643" y="162" text-anchor="middle" fill="#9090c0" font-size="9">팀 조율·</text>
+  <text x="643" y="177" text-anchor="middle" fill="#9090c0" font-size="9">작업 실행 지원</text>
+
+  <!-- Row 3: 고객 -->
+  <rect x="10"  y="193" width="88"  height="48" rx="4" fill="#3a1a1a" opacity="0.8"/>
+  <rect x="105" y="193" width="110" height="48" rx="4" fill="#2a1010" opacity="0.7"/>
+  <rect x="222" y="193" width="110" height="48" rx="4" fill="#2a1010" opacity="0.7"/>
+  <rect x="339" y="193" width="100" height="48" rx="4" fill="#2a1010" opacity="0.7"/>
+  <rect x="446" y="193" width="120" height="48" rx="4" fill="#2a1010" opacity="0.7"/>
+  <rect x="573" y="193" width="140" height="48" rx="4" fill="#2a1010" opacity="0.7"/>
+  <text x="54"  y="210" text-anchor="middle" fill="#ffa040" font-size="9" font-weight="bold">고객 /</text>
+  <text x="54"  y="223" text-anchor="middle" fill="#ffa040" font-size="9" font-weight="bold">핵심사용자</text>
+  <text x="54"  y="236" text-anchor="middle" fill="#806030" font-size="8">긴밀 관리</text>
+  <text x="160" y="208" text-anchor="middle" fill="#d09050" font-size="8">• 수용 기준 진행</text>
+  <text x="160" y="221" text-anchor="middle" fill="#d09050" font-size="8">• 기능 데모</text>
+  <text x="160" y="234" text-anchor="middle" fill="#d09050" font-size="8">• 변경 요청 처리</text>
+  <text x="277" y="214" text-anchor="middle" fill="#9090c0" font-size="9">스프린트 리뷰</text>
+  <text x="277" y="229" text-anchor="middle" fill="#9090c0" font-size="9">마일스톤 시</text>
+  <text x="389" y="214" text-anchor="middle" fill="#9090c0" font-size="9">데모·발표회</text>
+  <text x="389" y="229" text-anchor="middle" fill="#9090c0" font-size="9">이메일</text>
+  <text x="506" y="214" text-anchor="middle" fill="#9090c0" font-size="9">데모 자료</text>
+  <text x="506" y="229" text-anchor="middle" fill="#9090c0" font-size="9">변경 요청서</text>
+  <text x="643" y="214" text-anchor="middle" fill="#9090c0" font-size="9">요구사항 확인·</text>
+  <text x="643" y="229" text-anchor="middle" fill="#9090c0" font-size="9">인수 승인</text>
+
+  <!-- Row 4: 규제기관 -->
+  <rect x="10"  y="245" width="88"  height="48" rx="4" fill="#2a1a5c" opacity="0.8"/>
+  <rect x="105" y="245" width="110" height="48" rx="4" fill="#1a1230" opacity="0.7"/>
+  <rect x="222" y="245" width="110" height="48" rx="4" fill="#1a1230" opacity="0.7"/>
+  <rect x="339" y="245" width="100" height="48" rx="4" fill="#1a1230" opacity="0.7"/>
+  <rect x="446" y="245" width="120" height="48" rx="4" fill="#1a1230" opacity="0.7"/>
+  <rect x="573" y="245" width="140" height="48" rx="4" fill="#1a1230" opacity="0.7"/>
+  <text x="54"  y="262" text-anchor="middle" fill="#c084f5" font-size="9" font-weight="bold">규제기관</text>
+  <text x="54"  y="275" text-anchor="middle" fill="#c084f5" font-size="9" font-weight="bold">/ 감사자</text>
+  <text x="54"  y="288" text-anchor="middle" fill="#806090" font-size="8">충족 유지</text>
+  <text x="160" y="260" text-anchor="middle" fill="#a080d0" font-size="8">• 컴플라이언스</text>
+  <text x="160" y="273" text-anchor="middle" fill="#a080d0" font-size="8">• 법규 준수 현황</text>
+  <text x="160" y="286" text-anchor="middle" fill="#a080d0" font-size="8">• 감사 결과</text>
+  <text x="277" y="266" text-anchor="middle" fill="#9090c0" font-size="9">요청 시 / 분기</text>
+  <text x="277" y="281" text-anchor="middle" fill="#9090c0" font-size="9">또는 법정 기한</text>
+  <text x="389" y="266" text-anchor="middle" fill="#9090c0" font-size="9">공식 보고서</text>
+  <text x="389" y="281" text-anchor="middle" fill="#9090c0" font-size="9">감사 미팅</text>
+  <text x="506" y="266" text-anchor="middle" fill="#9090c0" font-size="9">규정 양식</text>
+  <text x="506" y="281" text-anchor="middle" fill="#9090c0" font-size="9">법적 서류</text>
+  <text x="643" y="266" text-anchor="middle" fill="#9090c0" font-size="9">법규 준수·</text>
+  <text x="643" y="281" text-anchor="middle" fill="#9090c0" font-size="9">리스크 감소</text>
+
+  <!-- PM Tip -->
+  <rect x="10" y="305" width="700" height="82" rx="10" fill="#1a1a3a" opacity="0.85" stroke="#3a3a6a" stroke-width="1.2"/>
+  <text x="360" y="323" text-anchor="middle" fill="#d0d0ff" font-size="11" font-weight="bold">의사소통 매트릭스 작성 원칙 — 5W1H</text>
+  <text x="80"  y="344" text-anchor="middle" fill="#7ab8ff" font-size="11" font-weight="bold">WHO</text>
+  <text x="80"  y="358" text-anchor="middle" fill="#5080c0" font-size="8.5">수신자 + 발신자</text>
+  <text x="80"  y="372" text-anchor="middle" fill="#4060a0" font-size="8">RACI 기반</text>
+  <text x="214" y="344" text-anchor="middle" fill="#7dff9a" font-size="11" font-weight="bold">WHAT</text>
+  <text x="214" y="358" text-anchor="middle" fill="#40a060" font-size="8.5">정보 내용·수준</text>
+  <text x="214" y="372" text-anchor="middle" fill="#308050" font-size="8">요약 vs 상세</text>
+  <text x="360" y="344" text-anchor="middle" fill="#ffa040" font-size="11" font-weight="bold">WHEN</text>
+  <text x="360" y="358" text-anchor="middle" fill="#c08030" font-size="8.5">주기·마일스톤</text>
+  <text x="360" y="372" text-anchor="middle" fill="#a06020" font-size="8">이슈 발생 시 추가</text>
+  <text x="500" y="344" text-anchor="middle" fill="#c084f5" font-size="11" font-weight="bold">HOW</text>
+  <text x="500" y="358" text-anchor="middle" fill="#8060c0" font-size="8.5">채널·형식</text>
+  <text x="500" y="372" text-anchor="middle" fill="#6040a0" font-size="8">Push/Pull/Interactive</text>
+  <text x="640" y="344" text-anchor="middle" fill="#ff7070" font-size="11" font-weight="bold">WHY</text>
+  <text x="640" y="358" text-anchor="middle" fill="#c05050" font-size="8.5">목적·기대 효과</text>
+  <text x="640" y="372" text-anchor="middle" fill="#a04040" font-size="8">참여 수준과 연계</text>
+</svg>

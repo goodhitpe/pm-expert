@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="26" text-anchor="middle" fill="#e0e0ff" font-size="14" font-weight="bold">범위 크리프(Scope Creep) 예방 및 통제</text>
+  <text x="360" y="43" text-anchor="middle" fill="#9090c0" font-size="9.5">미승인 범위 확장의 위험 · 원인 · 예방 · 통합 변경 통제 프로세스</text>
+
+  <!-- Scope creep warning visual -->
+  <rect x="12" y="56" width="240" height="170" rx="9" fill="#2a0e0e" opacity="0.85" stroke="#8a2a2a" stroke-width="1.5"/>
+  <text x="132" y="74" text-anchor="middle" fill="#ffb0b0" font-size="11" font-weight="bold">범위 크리프 (Scope Creep)</text>
+  <text x="132" y="88" text-anchor="middle" fill="#c05050" font-size="8.5">Uncontrolled Scope Expansion</text>
+
+  <!-- Expanding triangle -->
+  <polygon points="132,100 112,165 152,165" fill="#3a1010" stroke="#8a3030" stroke-width="1"/>
+  <polygon points="132,103 96,162 168,162" fill="#4a1515" stroke="#9a4040" stroke-width="1" opacity="0.7"/>
+  <polygon points="132,106 82,159 182,159" fill="#5a2020" stroke="#aa5050" stroke-width="1" opacity="0.5"/>
+  <text x="132" y="140" text-anchor="middle" fill="#ff7070" font-size="9" font-weight="bold">범위</text>
+  <text x="132" y="155" text-anchor="middle" fill="#ff7070" font-size="8">통제 불능</text>
+
+  <!-- Consequences -->
+  <text x="22" y="182" fill="#e08080" font-size="8">⚠ 비용 초과  ⚠ 일정 지연</text>
+  <text x="22" y="194" fill="#e08080" font-size="8">⚠ 품질 저하  ⚠ 팀 사기 저하</text>
+  <text x="22" y="206" fill="#c06060" font-size="7.5">PMBOK: "단 하나의 변경도 반드시</text>
+  <text x="22" y="217" fill="#c06060" font-size="7.5">통합 변경 통제 프로세스를 거쳐야"</text>
+
+  <!-- Causes -->
+  <rect x="268" y="56" width="210" height="170" rx="9" fill="#1a1a2a" opacity="0.85" stroke="#4a4a8a" stroke-width="1"/>
+  <text x="373" y="74" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">범위 크리프 주요 원인</text>
+  <text x="283" y="92" fill="#8080c0" font-size="8.5">① 불명확한 요구사항 정의</text>
+  <text x="283" y="107" fill="#8080c0" font-size="8.5">② 승인 없는 변경 수락</text>
+  <text x="283" y="122" fill="#8080c0" font-size="8.5">③ Gold Plating (과잉 개발)</text>
+  <text x="283" y="137" fill="#8080c0" font-size="8.5">④ 이해관계자 관리 실패</text>
+  <text x="283" y="152" fill="#8080c0" font-size="8.5">⑤ 범위 기준선 미수립</text>
+  <text x="283" y="167" fill="#8080c0" font-size="8.5">⑥ RTM 미유지</text>
+  <text x="283" y="182" fill="#8080c0" font-size="8.5">⑦ "이 정도는 당연히 포함"</text>
+  <text x="283" y="197" fill="#8080c0" font-size="8.5">⑧ 계약 범위 모호성</text>
+  <text x="283" y="212" fill="#6060a0" font-size="7.5">→ 회의록 없는 구두 지시도 원인!</text>
+
+  <!-- Prevention -->
+  <rect x="494" y="56" width="214" height="170" rx="9" fill="#0e1a2a" opacity="0.85" stroke="#2a6aac" stroke-width="1"/>
+  <text x="601" y="74" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">예방 5대 전략</text>
+  <rect x="504" y="82" width="194" height="20" rx="4" fill="#1a3a6c" opacity="0.8"/>
+  <text x="601" y="96" text-anchor="middle" fill="#7ab8ff" font-size="8">① 명확한 범위 기술서(SOW) 작성</text>
+  <rect x="504" y="106" width="194" height="20" rx="4" fill="#1a3a6c" opacity="0.7"/>
+  <text x="601" y="120" text-anchor="middle" fill="#7ab8ff" font-size="8">② 범위 기준선(Scope Baseline) 수립</text>
+  <rect x="504" y="130" width="194" height="20" rx="4" fill="#1a3a6c" opacity="0.8"/>
+  <text x="601" y="144" text-anchor="middle" fill="#7ab8ff" font-size="8">③ 변경 요청 → CCB 공식 승인</text>
+  <rect x="504" y="154" width="194" height="20" rx="4" fill="#1a3a6c" opacity="0.7"/>
+  <text x="601" y="168" text-anchor="middle" fill="#7ab8ff" font-size="8">④ RTM으로 요구사항 추적</text>
+  <rect x="504" y="178" width="194" height="20" rx="4" fill="#1a3a6c" opacity="0.8"/>
+  <text x="601" y="192" text-anchor="middle" fill="#7ab8ff" font-size="8">⑤ "No"라고 말하는 PM 역량</text>
+  <text x="601" y="218" text-anchor="middle" fill="#4a6aac" font-size="7.5">변경은 사라지지 않음 → 관리하라</text>
+
+  <!-- CCB Process flow -->
+  <rect x="12" y="238" width="696" height="152" rx="10" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="360" y="256" text-anchor="middle" fill="#d0d0ff" font-size="11" font-weight="bold">통합 변경 통제 프로세스 (Perform Integrated Change Control)</text>
+
+  <!-- Step flow -->
+  <rect x="22"  y="264" width="96" height="56" rx="6" fill="#1a2a5c" stroke="#4a6adc" stroke-width="1.2"/>
+  <text x="70"  y="282" text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="bold">① 변경 식별</text>
+  <text x="70"  y="296" text-anchor="middle" fill="#5070a0" font-size="7.5">이해관계자 요청</text>
+  <text x="70"  y="307" text-anchor="middle" fill="#5070a0" font-size="7.5">이슈 발생</text>
+  <text x="70"  y="316" text-anchor="middle" fill="#3050a0" font-size="7">변경 요청서 작성</text>
+
+  <polygon points="118,292 126,286 134,292 126,298" fill="#4a6adc"/>
+
+  <rect x="134" y="264" width="96" height="56" rx="6" fill="#1a3a20" stroke="#2a9a5a" stroke-width="1.2"/>
+  <text x="182" y="282" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">② 영향 분석</text>
+  <text x="182" y="296" text-anchor="middle" fill="#40a060" font-size="7.5">범위/일정/비용</text>
+  <text x="182" y="307" text-anchor="middle" fill="#40a060" font-size="7.5">품질/리스크 영향</text>
+  <text x="182" y="316" text-anchor="middle" fill="#205030" font-size="7">3중 제약 Trade-off</text>
+
+  <polygon points="230,292 238,286 246,292 238,298" fill="#2a9a5a"/>
+
+  <rect x="246" y="264" width="96" height="56" rx="6" fill="#3a2a10" stroke="#ca8a2a" stroke-width="1.2"/>
+  <text x="294" y="282" text-anchor="middle" fill="#ffc070" font-size="9" font-weight="bold">③ CCB 검토</text>
+  <text x="294" y="296" text-anchor="middle" fill="#c08030" font-size="7.5">변경 통제 위원회</text>
+  <text x="294" y="307" text-anchor="middle" fill="#c08030" font-size="7.5">전문가 검토</text>
+  <text x="294" y="316" text-anchor="middle" fill="#a06020" font-size="7">승인/거부/보류</text>
+
+  <polygon points="342,292 350,286 358,292 350,298" fill="#ca8a2a"/>
+
+  <rect x="358" y="264" width="96" height="56" rx="6" fill="#1a2060" stroke="#4a5aac" stroke-width="1.2"/>
+  <text x="406" y="282" text-anchor="middle" fill="#a0b8ff" font-size="9" font-weight="bold">④ 승인/거부</text>
+  <text x="406" y="296" text-anchor="middle" fill="#7080c0" font-size="7.5">승인: 계획 갱신</text>
+  <text x="406" y="307" text-anchor="middle" fill="#7080c0" font-size="7.5">거부: 이해관계자</text>
+  <text x="406" y="316" text-anchor="middle" fill="#5060a0" font-size="7">통보 후 종결</text>
+
+  <polygon points="454,292 462,286 470,292 462,298" fill="#4a5aac"/>
+
+  <rect x="470" y="264" width="96" height="56" rx="6" fill="#2a1a5c" stroke="#7a4acc" stroke-width="1.2"/>
+  <text x="518" y="282" text-anchor="middle" fill="#c084f5" font-size="9" font-weight="bold">⑤ 계획 갱신</text>
+  <text x="518" y="296" text-anchor="middle" fill="#9060d0" font-size="7.5">기준선 업데이트</text>
+  <text x="518" y="307" text-anchor="middle" fill="#9060d0" font-size="7.5">WBS 수정</text>
+  <text x="518" y="316" text-anchor="middle" fill="#6040a0" font-size="7">RTM 업데이트</text>
+
+  <polygon points="566,292 574,286 582,292 574,298" fill="#7a4acc"/>
+
+  <rect x="582" y="264" width="118" height="56" rx="6" fill="#3a1a1a" stroke="#9a3a3a" stroke-width="1.2"/>
+  <text x="641" y="282" text-anchor="middle" fill="#ffb0b0" font-size="9" font-weight="bold">⑥ 실행 및 검증</text>
+  <text x="641" y="296" text-anchor="middle" fill="#c06060" font-size="7.5">변경 구현</text>
+  <text x="641" y="307" text-anchor="middle" fill="#c06060" font-size="7.5">범위 확인</text>
+  <text x="641" y="316" text-anchor="middle" fill="#a04040" font-size="7">교훈 등록부 기록</text>
+
+  <text x="360" y="341" text-anchor="middle" fill="#4060a0" font-size="8.5" font-weight="bold">Gold Plating vs Scope Creep</text>
+  <text x="210" y="356" text-anchor="middle" fill="#5070a0" font-size="8">Gold Plating: PM/팀이 고객 요청 없이 기능 추가 (내부 발생)</text>
+  <text x="530" y="356" text-anchor="middle" fill="#5070a0" font-size="8">Scope Creep: 이해관계자가 미승인 변경 요구 (외부 발생)</text>
+  <text x="360" y="382" text-anchor="middle" fill="#3050a0" font-size="7.5">⭐ 둘 다 범위 기준선(Scope Baseline) 위반 — 반드시 CCB 통과 후 구현</text>
+</svg>

@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="30" text-anchor="middle" fill="#e0e0ff" font-size="16" font-weight="bold">SDLC (소프트웨어 개발 생명주기)</text>
+  <text x="360" y="48" text-anchor="middle" fill="#9090c0" font-size="10.5">Software Development Life Cycle — 7단계 프로세스</text>
+
+  <!-- Phase boxes -->
+  <!-- 1. 계획 -->
+  <rect x="20"  y="60" width="90" height="78" rx="8" fill="#1a2a5c" stroke="#3a5aac" stroke-width="1.5"/>
+  <text x="65"  y="80"  text-anchor="middle" fill="#7ab8ff" font-size="13">📋</text>
+  <text x="65"  y="96"  text-anchor="middle" fill="#7ab8ff" font-size="10" font-weight="bold">계획</text>
+  <text x="65"  y="109" text-anchor="middle" fill="#9090c0" font-size="8">타당성 분석</text>
+  <text x="65"  y="120" text-anchor="middle" fill="#9090c0" font-size="8">범위·일정</text>
+  <text x="65"  y="131" text-anchor="middle" fill="#9090c0" font-size="8">예산 수립</text>
+
+  <!-- arrow -->
+  <polygon points="115,99 128,94 128,104" fill="#6080c0"/>
+  <line x1="110" y1="99" x2="128" y2="99" stroke="#6080c0" stroke-width="1.5"/>
+
+  <!-- 2. 요구사항 -->
+  <rect x="130" y="60" width="90" height="78" rx="8" fill="#1a3a2a" stroke="#3aac6a" stroke-width="1.5"/>
+  <text x="175" y="80"  text-anchor="middle" fill="#7dff9a" font-size="13">📝</text>
+  <text x="175" y="96"  text-anchor="middle" fill="#7dff9a" font-size="10" font-weight="bold">요구사항</text>
+  <text x="175" y="109" text-anchor="middle" fill="#9090c0" font-size="8">기능적 요구</text>
+  <text x="175" y="120" text-anchor="middle" fill="#9090c0" font-size="8">비기능적 요구</text>
+  <text x="175" y="131" text-anchor="middle" fill="#9090c0" font-size="8">SRS 작성</text>
+
+  <polygon points="225,99 238,94 238,104" fill="#6080c0"/>
+  <line x1="220" y1="99" x2="238" y2="99" stroke="#6080c0" stroke-width="1.5"/>
+
+  <!-- 3. 설계 -->
+  <rect x="240" y="60" width="90" height="78" rx="8" fill="#2a1a5c" stroke="#7a3aac" stroke-width="1.5"/>
+  <text x="285" y="80"  text-anchor="middle" fill="#c084f5" font-size="13">🏗️</text>
+  <text x="285" y="96"  text-anchor="middle" fill="#c084f5" font-size="10" font-weight="bold">설계</text>
+  <text x="285" y="109" text-anchor="middle" fill="#9090c0" font-size="8">아키텍처</text>
+  <text x="285" y="120" text-anchor="middle" fill="#9090c0" font-size="8">DB 설계</text>
+  <text x="285" y="131" text-anchor="middle" fill="#9090c0" font-size="8">UI/UX 설계</text>
+
+  <polygon points="335,99 348,94 348,104" fill="#6080c0"/>
+  <line x1="330" y1="99" x2="348" y2="99" stroke="#6080c0" stroke-width="1.5"/>
+
+  <!-- 4. 구현 -->
+  <rect x="350" y="60" width="90" height="78" rx="8" fill="#3a2a1a" stroke="#ac7a3a" stroke-width="1.5"/>
+  <text x="395" y="80"  text-anchor="middle" fill="#ffa040" font-size="13">💻</text>
+  <text x="395" y="96"  text-anchor="middle" fill="#ffa040" font-size="10" font-weight="bold">구현(코딩)</text>
+  <text x="395" y="109" text-anchor="middle" fill="#9090c0" font-size="8">코드 작성</text>
+  <text x="395" y="120" text-anchor="middle" fill="#9090c0" font-size="8">코드 리뷰</text>
+  <text x="395" y="131" text-anchor="middle" fill="#9090c0" font-size="8">단위 테스트</text>
+
+  <polygon points="445,99 458,94 458,104" fill="#6080c0"/>
+  <line x1="440" y1="99" x2="458" y2="99" stroke="#6080c0" stroke-width="1.5"/>
+
+  <!-- 5. 테스트 -->
+  <rect x="460" y="60" width="90" height="78" rx="8" fill="#1a3a3a" stroke="#3aacac" stroke-width="1.5"/>
+  <text x="505" y="80"  text-anchor="middle" fill="#40e0d0" font-size="13">🔍</text>
+  <text x="505" y="96"  text-anchor="middle" fill="#40e0d0" font-size="10" font-weight="bold">테스트</text>
+  <text x="505" y="109" text-anchor="middle" fill="#9090c0" font-size="8">통합 테스트</text>
+  <text x="505" y="120" text-anchor="middle" fill="#9090c0" font-size="8">시스템 테스트</text>
+  <text x="505" y="131" text-anchor="middle" fill="#9090c0" font-size="8">UAT</text>
+
+  <polygon points="555,99 568,94 568,104" fill="#6080c0"/>
+  <line x1="550" y1="99" x2="568" y2="99" stroke="#6080c0" stroke-width="1.5"/>
+
+  <!-- 6. 배포 -->
+  <rect x="570" y="60" width="80" height="78" rx="8" fill="#3a1a1a" stroke="#ac3a3a" stroke-width="1.5"/>
+  <text x="610" y="80"  text-anchor="middle" fill="#ff7070" font-size="13">🚀</text>
+  <text x="610" y="96"  text-anchor="middle" fill="#ff7070" font-size="10" font-weight="bold">배포</text>
+  <text x="610" y="109" text-anchor="middle" fill="#9090c0" font-size="8">릴리즈</text>
+  <text x="610" y="120" text-anchor="middle" fill="#9090c0" font-size="8">마이그레이션</text>
+  <text x="610" y="131" text-anchor="middle" fill="#9090c0" font-size="8">훈련·교육</text>
+
+  <polygon points="655,99 668,94 668,104" fill="#6080c0"/>
+  <line x1="650" y1="99" x2="668" y2="99" stroke="#6080c0" stroke-width="1.5"/>
+
+  <!-- 7. 유지보수 -->
+  <rect x="660" y="60" width="48" height="78" rx="8" fill="#1a2a4a" stroke="#4a7aac" stroke-width="1.5"/>
+  <text x="684" y="80"  text-anchor="middle" fill="#80b8e0" font-size="12">🔧</text>
+  <text x="684" y="96"  text-anchor="middle" fill="#80b8e0" font-size="9" font-weight="bold">유지</text>
+  <text x="684" y="108" text-anchor="middle" fill="#80b8e0" font-size="9" font-weight="bold">보수</text>
+  <text x="684" y="122" text-anchor="middle" fill="#9090c0" font-size="7.5">패치·버그</text>
+  <text x="684" y="133" text-anchor="middle" fill="#9090c0" font-size="7.5">기능 개선</text>
+
+  <!-- Feedback loop -->
+  <path d="M 708 138 Q 708 175 360 175 Q 12 175 12 138" fill="none" stroke="#4060a0" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polygon points="12,134 9,144 18,141" fill="#4060a0"/>
+  <text x="360" y="185" text-anchor="middle" fill="#6080c0" font-size="9">← 피드백 루프 (이전 단계 복귀 가능)</text>
+
+  <!-- Key artifacts table -->
+  <rect x="20" y="200" width="680" height="92" rx="10" fill="#1a1a3a" opacity="0.8" stroke="#3a3a6a" stroke-width="1"/>
+  <text x="360" y="218" text-anchor="middle" fill="#a0b8e0" font-size="12" font-weight="bold">단계별 주요 산출물 (Key Artifacts)</text>
+
+  <rect x="30"  y="226" width="93" height="56" rx="5" fill="#12203a" opacity="0.8"/>
+  <text x="77"  y="241" text-anchor="middle" fill="#7ab8ff" font-size="8.5" font-weight="bold">계획</text>
+  <text x="77"  y="256" text-anchor="middle" fill="#7090c0" font-size="8">프로젝트 헌장</text>
+  <text x="77"  y="268" text-anchor="middle" fill="#7090c0" font-size="8">타당성 검토서</text>
+  <text x="77"  y="280" text-anchor="middle" fill="#7090c0" font-size="8">WBS 초안</text>
+
+  <rect x="133" y="226" width="93" height="56" rx="5" fill="#12203a" opacity="0.8"/>
+  <text x="180" y="241" text-anchor="middle" fill="#7dff9a" font-size="8.5" font-weight="bold">요구사항</text>
+  <text x="180" y="256" text-anchor="middle" fill="#7090c0" font-size="8">SRS 문서</text>
+  <text x="180" y="268" text-anchor="middle" fill="#7090c0" font-size="8">유스케이스</text>
+  <text x="180" y="280" text-anchor="middle" fill="#7090c0" font-size="8">프로토타입</text>
+
+  <rect x="236" y="226" width="93" height="56" rx="5" fill="#12203a" opacity="0.8"/>
+  <text x="282" y="241" text-anchor="middle" fill="#c084f5" font-size="8.5" font-weight="bold">설계</text>
+  <text x="282" y="256" text-anchor="middle" fill="#7090c0" font-size="8">아키텍처 설계서</text>
+  <text x="282" y="268" text-anchor="middle" fill="#7090c0" font-size="8">ER 다이어그램</text>
+  <text x="282" y="280" text-anchor="middle" fill="#7090c0" font-size="8">화면 설계서</text>
+
+  <rect x="339" y="226" width="93" height="56" rx="5" fill="#12203a" opacity="0.8"/>
+  <text x="385" y="241" text-anchor="middle" fill="#ffa040" font-size="8.5" font-weight="bold">구현</text>
+  <text x="385" y="256" text-anchor="middle" fill="#7090c0" font-size="8">소스코드</text>
+  <text x="385" y="268" text-anchor="middle" fill="#7090c0" font-size="8">코딩 표준서</text>
+  <text x="385" y="280" text-anchor="middle" fill="#7090c0" font-size="8">단위 테스트 결과</text>
+
+  <rect x="442" y="226" width="93" height="56" rx="5" fill="#12203a" opacity="0.8"/>
+  <text x="488" y="241" text-anchor="middle" fill="#40e0d0" font-size="8.5" font-weight="bold">테스트</text>
+  <text x="488" y="256" text-anchor="middle" fill="#7090c0" font-size="8">테스트 계획서</text>
+  <text x="488" y="268" text-anchor="middle" fill="#7090c0" font-size="8">결함 보고서</text>
+  <text x="488" y="280" text-anchor="middle" fill="#7090c0" font-size="8">테스트 완료 리포트</text>
+
+  <rect x="545" y="226" width="80" height="56" rx="5" fill="#12203a" opacity="0.8"/>
+  <text x="585" y="241" text-anchor="middle" fill="#ff7070" font-size="8.5" font-weight="bold">배포</text>
+  <text x="585" y="256" text-anchor="middle" fill="#7090c0" font-size="8">릴리즈 노트</text>
+  <text x="585" y="268" text-anchor="middle" fill="#7090c0" font-size="8">배포 계획서</text>
+  <text x="585" y="280" text-anchor="middle" fill="#7090c0" font-size="8">훈련 자료</text>
+
+  <rect x="635" y="226" width="55" height="56" rx="5" fill="#12203a" opacity="0.8"/>
+  <text x="662" y="241" text-anchor="middle" fill="#80b8e0" font-size="8.5" font-weight="bold">유지보수</text>
+  <text x="662" y="256" text-anchor="middle" fill="#7090c0" font-size="8">패치 노트</text>
+  <text x="662" y="268" text-anchor="middle" fill="#7090c0" font-size="8">변경 요청서</text>
+  <text x="662" y="280" text-anchor="middle" fill="#7090c0" font-size="8">업그레이드</text>
+
+  <!-- Cost of change curve -->
+  <rect x="20" y="306" width="680" height="74" rx="10" fill="#1a2a1a" opacity="0.8" stroke="#2a4a2a" stroke-width="1"/>
+  <text x="360" y="323" text-anchor="middle" fill="#80c080" font-size="11" font-weight="bold">결함 수정 비용 — 단계가 늦을수록 exponential 증가</text>
+  <text x="85"  y="342" text-anchor="middle" fill="#5080a0" font-size="9">계획</text>
+  <text x="175" y="342" text-anchor="middle" fill="#5080a0" font-size="9">요구사항</text>
+  <text x="265" y="342" text-anchor="middle" fill="#5080a0" font-size="9">설계</text>
+  <text x="355" y="342" text-anchor="middle" fill="#5080a0" font-size="9">구현</text>
+  <text x="445" y="342" text-anchor="middle" fill="#5080a0" font-size="9">테스트</text>
+  <text x="540" y="342" text-anchor="middle" fill="#5080a0" font-size="9">배포</text>
+  <text x="672" y="342" text-anchor="middle" fill="#5080a0" font-size="9">유지보수</text>
+  <text x="85"  y="360" text-anchor="middle" fill="#70e070" font-size="10" font-weight="bold">×1</text>
+  <text x="175" y="360" text-anchor="middle" fill="#90d060" font-size="10" font-weight="bold">×3</text>
+  <text x="265" y="360" text-anchor="middle" fill="#c0c040" font-size="10" font-weight="bold">×5</text>
+  <text x="355" y="360" text-anchor="middle" fill="#e0a020" font-size="10" font-weight="bold">×10</text>
+  <text x="445" y="360" text-anchor="middle" fill="#f07020" font-size="10" font-weight="bold">×25</text>
+  <text x="540" y="360" text-anchor="middle" fill="#f04040" font-size="10" font-weight="bold">×50</text>
+  <text x="672" y="360" text-anchor="middle" fill="#ff2020" font-size="10" font-weight="bold">×100~200</text>
+  <text x="360" y="375" text-anchor="middle" fill="#5a5a7a" font-size="8">→ PM 핵심 전략: 초기 단계에서 결함을 발견·수정하여 프로젝트 비용 최소화</text>
+</svg>

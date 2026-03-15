@@ -21,6 +21,14 @@
 
 ## 1교시: 애자일 개요 & 선언문 (1시간) <!-- 슬라이드 #1~#7 -->
 
+<div align="center">
+
+![워터폴 vs 애자일 비교](../images/day17-waterfall-vs-agile.svg)
+
+*▲ 워터폴 vs 애자일 — 8가지 핵심 차이점 + 하이브리드 접근 가이드*
+
+</div>
+
 ### 이론 (40분)
 
 #### 1. 애자일이 왜 등장했나?
@@ -68,6 +76,14 @@ Sprint 3 (2주)  이체 기능 → 고객 시연 …
 
 > ⚠️ **오해 주의**: 오른쪽 항목(문서, 계획, 계약)을 무시하는 게 아닙니다.  
 > **왼쪽을 더 가치 있게 여긴다**는 것입니다.
+
+<div align="center">
+
+![애자일 선언문 4가지 가치](../images/day17-agile-manifesto.svg)
+
+*▲ 애자일 선언문 4가지 가치와 핵심 원칙 6개 — PM이 이해해야 할 마인드셋*
+
+</div>
 
 **12가지 원칙 (핵심 6개 요약):**
 
@@ -438,9 +454,9 @@ So that [가치/이유].
 
 <div align="center">
 
-![스크럼 Sprint 사이클](../images/day17-scrum-framework.svg)
+![스크럼 스프린트 사이클](../images/day17-sprint-cycle.svg)
 
-*▲ 스크럼 Sprint 반복 사이클 — 계획→개발→검토→회고 루프로 지속적 개선*
+*▲ 스크럼 스프린트 2주 사이클 — Planning·Daily Scrum·Review·Retro + Product Backlog → Increment*
 
 </div>
 

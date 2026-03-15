@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+  <text x="360" y="26" text-anchor="middle" fill="#e0e0ff" font-size="14" font-weight="bold">통합 변경 통제 (ICC) — CCB 프로세스</text>
+  <text x="360" y="43" text-anchor="middle" fill="#9090c0" font-size="9.5">모든 변경은 공식 프로세스를 통해 ∙ 변경 통제 위원회(CCB) 심의·승인</text>
+
+  <!-- 6-step flow -->
+  <!-- Step 1 -->
+  <rect x="12"  y="58" width="100" height="56" rx="8" fill="#1a2060" opacity="0.9" stroke="#4a6adc" stroke-width="1.5"/>
+  <text x="62"  y="78" text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="bold">Step 1</text>
+  <text x="62"  y="91" text-anchor="middle" fill="#7ab8ff" font-size="8">변경 요청</text>
+  <text x="62"  y="103" text-anchor="middle" fill="#3555a0" font-size="7.5">(Change Request)</text>
+
+  <line x1="112" y1="86" x2="130" y2="86" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="130,83 137,86 130,89" fill="#4a6adc"/>
+
+  <!-- Step 2 -->
+  <rect x="130" y="58" width="100" height="56" rx="8" fill="#1a3040" opacity="0.9" stroke="#2a7aac" stroke-width="1.5"/>
+  <text x="180" y="78" text-anchor="middle" fill="#7ad8ff" font-size="9" font-weight="bold">Step 2</text>
+  <text x="180" y="91" text-anchor="middle" fill="#7ad8ff" font-size="8">영향도 분석</text>
+  <text x="180" y="103" text-anchor="middle" fill="#2a6080" font-size="7.5">(Impact Analysis)</text>
+
+  <line x1="230" y1="86" x2="248" y2="86" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="248,83 255,86 248,89" fill="#4a6adc"/>
+
+  <!-- Step 3 -->
+  <rect x="248" y="58" width="100" height="56" rx="8" fill="#3a2a10" opacity="0.9" stroke="#ca8a2a" stroke-width="1.5"/>
+  <text x="298" y="78" text-anchor="middle" fill="#ffc070" font-size="9" font-weight="bold">Step 3</text>
+  <text x="298" y="91" text-anchor="middle" fill="#ffc070" font-size="8">CCB 심의</text>
+  <text x="298" y="103" text-anchor="middle" fill="#806020" font-size="7.5">(CCB Review)</text>
+
+  <line x1="348" y1="86" x2="366" y2="86" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="366,83 373,86 366,89" fill="#4a6adc"/>
+
+  <!-- Step 4: Decision fork -->
+  <rect x="366" y="58" width="100" height="56" rx="8" fill="#3a1a10" opacity="0.9" stroke="#ca4a2a" stroke-width="1.5"/>
+  <text x="416" y="78" text-anchor="middle" fill="#ff9060" font-size="9" font-weight="bold">Step 4</text>
+  <text x="416" y="91" text-anchor="middle" fill="#ff9060" font-size="8">승인/거절</text>
+  <text x="416" y="103" text-anchor="middle" fill="#802020" font-size="7.5">(Decision)</text>
+
+  <!-- Reject arrow down -->
+  <line x1="416" y1="114" x2="416" y2="130" stroke="#ff4040" stroke-width="1.5"/>
+  <polygon points="413,130 416,137 419,130" fill="#ff4040"/>
+  <rect x="375" y="130" width="82" height="28" rx="5" fill="#3a0a0a" opacity="0.9" stroke="#aa2020" stroke-width="1"/>
+  <text x="416" y="148" text-anchor="middle" fill="#ff6060" font-size="8">거절 → 로그 기록</text>
+
+  <!-- Approve arrow right -->
+  <line x1="466" y1="86" x2="484" y2="86" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="484,83 491,86 484,89" fill="#4a6adc"/>
+
+  <!-- Step 5 -->
+  <rect x="484" y="58" width="100" height="56" rx="8" fill="#1a3a20" opacity="0.9" stroke="#2a9a5a" stroke-width="1.5"/>
+  <text x="534" y="78" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">Step 5</text>
+  <text x="534" y="91" text-anchor="middle" fill="#7dff9a" font-size="8">계획 업데이트</text>
+  <text x="534" y="103" text-anchor="middle" fill="#2a7040" font-size="7.5">(Plan Update)</text>
+
+  <line x1="584" y1="86" x2="602" y2="86" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="602,83 609,86 602,89" fill="#4a6adc"/>
+
+  <!-- Step 6 -->
+  <rect x="602" y="58" width="106" height="56" rx="8" fill="#2a1a5c" opacity="0.9" stroke="#7a3acc" stroke-width="1.5"/>
+  <text x="655" y="78" text-anchor="middle" fill="#c084f5" font-size="9" font-weight="bold">Step 6</text>
+  <text x="655" y="91" text-anchor="middle" fill="#c084f5" font-size="8">변경 실행</text>
+  <text x="655" y="103" text-anchor="middle" fill="#5030a0" font-size="7.5">(Execute)</text>
+
+  <!-- 3 Baselines section -->
+  <rect x="12" y="176" width="340" height="140" rx="9" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="182" y="194" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">3대 기준선 (Project Baselines)</text>
+  <text x="182" y="207" text-anchor="middle" fill="#9090c0" font-size="8">승인된 계획 — 변경 시 ICC 거쳐야 함</text>
+
+  <rect x="22"  y="214" width="96" height="90" rx="6" fill="#1a2060" opacity="0.9" stroke="#4a6adc" stroke-width="1"/>
+  <text x="70"  y="230" text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="bold">범위 기준선</text>
+  <text x="70"  y="244" text-anchor="middle" fill="#5070a0" font-size="7.5">Scope Baseline</text>
+  <text x="70"  y="258" text-anchor="middle" fill="#5070a0" font-size="7.5">• 범위 기술서</text>
+  <text x="70"  y="270" text-anchor="middle" fill="#5070a0" font-size="7.5">• WBS</text>
+  <text x="70"  y="282" text-anchor="middle" fill="#5070a0" font-size="7.5">• WBS 사전</text>
+  <text x="70"  y="296" text-anchor="middle" fill="#3050a0" font-size="7">승인된 범위</text>
+
+  <rect x="130" y="214" width="96" height="90" rx="6" fill="#3a2a10" opacity="0.9" stroke="#ca8a2a" stroke-width="1"/>
+  <text x="178" y="230" text-anchor="middle" fill="#ffc070" font-size="9" font-weight="bold">일정 기준선</text>
+  <text x="178" y="244" text-anchor="middle" fill="#906030" font-size="7.5">Schedule Baseline</text>
+  <text x="178" y="258" text-anchor="middle" fill="#906030" font-size="7.5">• 승인된 간트</text>
+  <text x="178" y="270" text-anchor="middle" fill="#906030" font-size="7.5">• 마일스톤 날짜</text>
+  <text x="178" y="282" text-anchor="middle" fill="#906030" font-size="7.5">• 완료 일정</text>
+  <text x="178" y="296" text-anchor="middle" fill="#604020" font-size="7">승인된 일정</text>
+
+  <rect x="238" y="214" width="106" height="90" rx="6" fill="#1a3a20" opacity="0.9" stroke="#2a9a5a" stroke-width="1"/>
+  <text x="291" y="230" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">비용 기준선</text>
+  <text x="291" y="244" text-anchor="middle" fill="#40a060" font-size="7.5">Cost Baseline</text>
+  <text x="291" y="258" text-anchor="middle" fill="#40a060" font-size="7.5">• 승인된 예산</text>
+  <text x="291" y="270" text-anchor="middle" fill="#40a060" font-size="7.5">• EVM 측정 기준</text>
+  <text x="291" y="282" text-anchor="middle" fill="#40a060" font-size="7.5">• 기간별 지출</text>
+  <text x="291" y="296" text-anchor="middle" fill="#205040" font-size="7">승인된 예산</text>
+
+  <!-- Right: CCB composition + scope creep -->
+  <rect x="366" y="176" width="342" height="140" rx="9" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="537" y="194" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">CCB 구성 &amp; 범위 크리프 대응</text>
+
+  <rect x="376" y="202" width="152" height="106" rx="5" fill="#1a2060" opacity="0.8"/>
+  <text x="452" y="216" text-anchor="middle" fill="#7ab8ff" font-size="8.5" font-weight="bold">CCB 구성원</text>
+  <text x="452" y="229" text-anchor="middle" fill="#5070a0" font-size="7.5">• 스폰서 / 핵심 이해관계자</text>
+  <text x="452" y="240" text-anchor="middle" fill="#5070a0" font-size="7.5">• PM (진행·기록)</text>
+  <text x="452" y="251" text-anchor="middle" fill="#5070a0" font-size="7.5">• 기술 전문가 (TE)</text>
+  <text x="452" y="262" text-anchor="middle" fill="#5070a0" font-size="7.5">• 법무·품질·재무 대표</text>
+  <text x="452" y="277" text-anchor="middle" fill="#3050a0" font-size="7.5">★ PM은 의결권 없음</text>
+  <text x="452" y="290" text-anchor="middle" fill="#3050a0" font-size="7.5">진행·자료제공 역할</text>
+  <text x="452" y="303" text-anchor="middle" fill="#203060" font-size="7">위원회 구성은 조직마다 상이</text>
+
+  <rect x="538" y="202" width="162" height="106" rx="5" fill="#3a0a10" opacity="0.8" stroke="#aa2020" stroke-width="0.8"/>
+  <text x="619" y="216" text-anchor="middle" fill="#ff9060" font-size="8.5" font-weight="bold">범위 크리프 예방</text>
+  <text x="619" y="229" text-anchor="middle" fill="#c05030" font-size="7.5">범위 크리프 = 비공식 범위 추가</text>
+  <text x="619" y="242" text-anchor="middle" fill="#c05030" font-size="7.5">← 팀의 선의에서 비롯되기도</text>
+  <text x="619" y="256" text-anchor="middle" fill="#a04020" font-size="7.5" font-weight="bold">예방 4단계</text>
+  <text x="619" y="268" text-anchor="middle" fill="#a04020" font-size="7.5">1. 명확한 범위 기준선</text>
+  <text x="619" y="279" text-anchor="middle" fill="#a04020" font-size="7.5">2. 변경 요청 공식화 확인</text>
+  <text x="619" y="290" text-anchor="middle" fill="#a04020" font-size="7.5">3. CCB 없는 작업 거부</text>
+  <text x="619" y="301" text-anchor="middle" fill="#a04020" font-size="7.5">4. 교훈에 사례 기록</text>
+
+  <!-- Bottom -->
+  <rect x="12" y="326" width="696" height="66" rx="10" fill="#0e0e2a" opacity="0.85" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="360" y="344" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">변경 통제 핵심 원칙</text>
+  <rect x="22"  y="351" width="160" height="34" rx="5" fill="#1a2060" opacity="0.8"/>
+  <rect x="196" y="351" width="160" height="34" rx="5" fill="#1a3a20" opacity="0.8"/>
+  <rect x="370" y="351" width="160" height="34" rx="5" fill="#3a2a10" opacity="0.8"/>
+  <rect x="544" y="351" width="164" height="34" rx="5" fill="#2a1a5c" opacity="0.8"/>
+  <text x="102" y="363" text-anchor="middle" fill="#7ab8ff" font-size="8">모든 변경 = 공식 문서화</text>
+  <text x="102" y="376" text-anchor="middle" fill="#3555a0" font-size="7.5">구두 변경 요청 금지</text>
+  <text x="276" y="363" text-anchor="middle" fill="#7dff9a" font-size="8">영향 없는 변경은 없다</text>
+  <text x="276" y="376" text-anchor="middle" fill="#2a7040" font-size="7.5">트리플 제약 동시 검토</text>
+  <text x="450" y="363" text-anchor="middle" fill="#ffc070" font-size="8">기준선 변경 = 재승인</text>
+  <text x="450" y="376" text-anchor="middle" fill="#806020" font-size="7.5">스폰서 동의 필수</text>
+  <text x="626" y="363" text-anchor="middle" fill="#c084f5" font-size="8">변경 이력 = 감사 추적</text>
+  <text x="626" y="376" text-anchor="middle" fill="#5030a0" font-size="7.5">Change Log 유지</text>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="28" text-anchor="middle" fill="#e0e0ff" font-size="15" font-weight="bold">이시카와(어골) 다이어그램 — 근본 원인 분석</text>
+  <text x="360" y="45" text-anchor="middle" fill="#9090c0" font-size="10">Fishbone (Cause &amp; Effect) Diagram — 6M 결함 원인 분석 예시: "납품 지연"</text>
+
+  <!-- Head (effect) -->
+  <rect x="600" y="155" width="112" height="50" rx="8" fill="#3a1a1a" stroke="#cc4444" stroke-width="2"/>
+  <text x="656" y="175" text-anchor="middle" fill="#ff7070" font-size="11" font-weight="bold">문제</text>
+  <text x="656" y="190" text-anchor="middle" fill="#ff9090" font-size="10" font-weight="bold">납품 지연</text>
+
+  <!-- Spine -->
+  <line x1="60" y1="180" x2="600" y2="180" stroke="#8080b0" stroke-width="2.5"/>
+  <polygon points="600,175 615,180 600,185" fill="#8080b0"/>
+
+  <!-- Top branches (diagonal to spine) -->
+  <!-- Man (사람) top-left -->
+  <line x1="120" y1="180" x2="180" y2="110" stroke="#5a5aaa" stroke-width="1.5"/>
+  <rect x="130" y="84" width="102" height="28" rx="5" fill="#1a1a5c" stroke="#5a5aac" stroke-width="1"/>
+  <text x="181" y="102" text-anchor="middle" fill="#80a8ff" font-size="10" font-weight="bold">👤 Man (사람)</text>
+  <!-- sub-causes -->
+  <line x1="148" y1="162" x2="165" y2="140" stroke="#404080" stroke-width="1"/>
+  <text x="80"  y="156" fill="#7070b0" font-size="8">기술 부족</text>
+  <line x1="160" y1="148" x2="175" y2="120" stroke="#404080" stroke-width="1"/>
+  <text x="88"  y="142" fill="#7070b0" font-size="8">의사소통 문제</text>
+
+  <!-- Method (방법) top-center-left -->
+  <line x1="260" y1="180" x2="320" y2="90" stroke="#5a5aaa" stroke-width="1.5"/>
+  <rect x="270" y="64" width="110" height="28" rx="5" fill="#1a1a5c" stroke="#5a5aac" stroke-width="1"/>
+  <text x="325" y="82" text-anchor="middle" fill="#80a8ff" font-size="10" font-weight="bold">📋 Method (방법)</text>
+  <line x1="278" y1="162" x2="296" y2="128" stroke="#404080" stroke-width="1"/>
+  <text x="200" y="155" fill="#7070b0" font-size="8">요구사항 미확정</text>
+  <line x1="288" y1="140" x2="308" y2="108" stroke="#404080" stroke-width="1"/>
+  <text x="214" y="134" fill="#7070b0" font-size="8">검토 프로세스 누락</text>
+
+  <!-- Machine (기계) top-right -->
+  <line x1="430" y1="180" x2="490" y2="100" stroke="#5a5aaa" stroke-width="1.5"/>
+  <rect x="435" y="74" width="115" height="28" rx="5" fill="#1a1a5c" stroke="#5a5aac" stroke-width="1"/>
+  <text x="493" y="92" text-anchor="middle" fill="#80a8ff" font-size="10" font-weight="bold">💻 Machine (기계)</text>
+  <line x1="450" y1="162" x2="466" y2="128" stroke="#404080" stroke-width="1"/>
+  <text x="374"  y="156" fill="#7070b0" font-size="8">개발 툴 오류</text>
+  <line x1="460" y1="148" x2="478" y2="112" stroke="#404080" stroke-width="1"/>
+  <text x="384"  y="142" fill="#7070b0" font-size="8">서버 성능 부족</text>
+
+  <!-- Bottom branches -->
+  <!-- Material (자재) bottom-left -->
+  <line x1="150" y1="180" x2="210" y2="250" stroke="#5aaa5a" stroke-width="1.5"/>
+  <rect x="155" y="253" width="115" height="28" rx="5" fill="#1a3a1a" stroke="#3aac6a" stroke-width="1"/>
+  <text x="212" y="271" text-anchor="middle" fill="#7dff9a" font-size="10" font-weight="bold">📦 Material (자재)</text>
+  <line x1="168" y1="198" x2="186" y2="224" stroke="#2a6a2a" stroke-width="1"/>
+  <text x="80"  y="216" fill="#60a070" font-size="8">요구사항 문서 불완전</text>
+  <line x1="180" y1="210" x2="198" y2="238" stroke="#2a6a2a" stroke-width="1"/>
+  <text x="90"  y="232" fill="#60a070" font-size="8">입력 데이터 오류</text>
+
+  <!-- Measurement (측정) bottom-center -->
+  <line x1="330" y1="180" x2="370" y2="270" stroke="#5aaa5a" stroke-width="1.5"/>
+  <rect x="303" y="273" width="135" height="28" rx="5" fill="#1a3a1a" stroke="#3aac6a" stroke-width="1"/>
+  <text x="370" y="291" text-anchor="middle" fill="#7dff9a" font-size="10" font-weight="bold">📏 Measurement (측정)</text>
+  <line x1="344" y1="200" x2="357" y2="236" stroke="#2a6a2a" stroke-width="1"/>
+  <text x="224"  y="218" fill="#60a070" font-size="8">진척 지표 부재</text>
+  <line x1="354" y1="216" x2="365" y2="254" stroke="#2a6a2a" stroke-width="1"/>
+  <text x="240"  y="236" fill="#60a070" font-size="8">검수 기준 미정의</text>
+
+  <!-- Milieu/Environment (환경) bottom-right -->
+  <line x1="480" y1="180" x2="530" y2="262" stroke="#5aaa5a" stroke-width="1.5"/>
+  <rect x="487" y="265" width="125" height="28" rx="5" fill="#1a3a1a" stroke="#3aac6a" stroke-width="1"/>
+  <text x="549" y="283" text-anchor="middle" fill="#7dff9a" font-size="10" font-weight="bold">🌐 Milieu (환경)</text>
+  <line x1="493" y1="202" x2="510" y2="242" stroke="#2a6a2a" stroke-width="1"/>
+  <text x="410"  y="218" fill="#60a070" font-size="8">재택·분산 환경</text>
+  <line x1="504" y1="222" x2="520" y2="254" stroke="#2a6a2a" stroke-width="1"/>
+  <text x="420"  y="240" fill="#60a070" font-size="8">외부 의존성 변동</text>
+
+  <!-- PM Guide -->
+  <rect x="16" y="313" width="688" height="72" rx="10" fill="#1a1a3a" opacity="0.85" stroke="#3a3a6a" stroke-width="1.2"/>
+  <text x="360" y="330" text-anchor="middle" fill="#d0d0ff" font-size="11" font-weight="bold">PM 실무 활용 — 어골도 작성 5단계</text>
+  <text x="90"  y="352" text-anchor="middle" fill="#6a6ab0" font-size="20" font-weight="bold">①</text>
+  <text x="90"  y="366" text-anchor="middle" fill="#9090c0" font-size="8.5">문제 정의</text>
+  <text x="90"  y="378" text-anchor="middle" fill="#7070a0" font-size="8">헤드에 기재</text>
+  <text x="214" y="352" text-anchor="middle" fill="#6a6ab0" font-size="20" font-weight="bold">②</text>
+  <text x="214" y="366" text-anchor="middle" fill="#9090c0" font-size="8.5">6M 카테고리</text>
+  <text x="214" y="378" text-anchor="middle" fill="#7070a0" font-size="8">브레인스토밍</text>
+  <text x="360" y="352" text-anchor="middle" fill="#6a6ab0" font-size="20" font-weight="bold">③</text>
+  <text x="360" y="366" text-anchor="middle" fill="#9090c0" font-size="8.5">원인 기입</text>
+  <text x="360" y="378" text-anchor="middle" fill="#7070a0" font-size="8">5-Why 반복</text>
+  <text x="506" y="352" text-anchor="middle" fill="#6a6ab0" font-size="20" font-weight="bold">④</text>
+  <text x="506" y="366" text-anchor="middle" fill="#9090c0" font-size="8.5">근본 원인</text>
+  <text x="506" y="378" text-anchor="middle" fill="#7070a0" font-size="8">가장 유력 선정</text>
+  <text x="634" y="352" text-anchor="middle" fill="#6a6ab0" font-size="20" font-weight="bold">⑤</text>
+  <text x="634" y="366" text-anchor="middle" fill="#9090c0" font-size="8.5">대응 방안</text>
+  <text x="634" y="378" text-anchor="middle" fill="#7070a0" font-size="8">예방·교정 조치</text>
+</svg>

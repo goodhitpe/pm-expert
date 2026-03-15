@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="26" text-anchor="middle" fill="#e0e0ff" font-size="14" font-weight="bold">ACID 속성 + 트랜잭션 관리 + 인덱스 전략</text>
+  <text x="360" y="43" text-anchor="middle" fill="#9090c0" font-size="9.5">데이터베이스 무결성 보장 4대 원칙 ∙ 병행 제어 ∙ 성능 최적화</text>
+
+  <!-- A: Atomicity -->
+  <rect x="12"  y="56" width="162" height="145" rx="9" fill="#1a2a5c" opacity="0.85" stroke="#4a6adc" stroke-width="1.5"/>
+  <text x="93"  y="74" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">A</text>
+  <text x="93"  y="90" text-anchor="middle" fill="#7ab8ff" font-size="10.5" font-weight="bold">Atomicity</text>
+  <text x="93"  y="103" text-anchor="middle" fill="#5070a0" font-size="8.5">원자성</text>
+  <text x="93"  y="120" text-anchor="middle" fill="#80a8e0" font-size="8">"전부 아니면 전무"</text>
+  <text x="93"  y="133" text-anchor="middle" fill="#80a8e0" font-size="8">All-or-Nothing</text>
+  <text x="93"  y="149" text-anchor="middle" fill="#6080c0" font-size="7.5">일부만 적용되면</text>
+  <text x="93"  y="161" text-anchor="middle" fill="#6080c0" font-size="7.5">전체 Rollback</text>
+  <text x="93"  y="175" text-anchor="middle" fill="#3050a0" font-size="7.5">예: 계좌이체</text>
+  <text x="93"  y="188" text-anchor="middle" fill="#3050a0" font-size="7.5">출금↑인금 동시 성공</text>
+
+  <!-- C: Consistency -->
+  <rect x="184" y="56" width="162" height="145" rx="9" fill="#1a3a2a" opacity="0.85" stroke="#2a9a5a" stroke-width="1.5"/>
+  <text x="265"  y="74" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">C</text>
+  <text x="265"  y="90" text-anchor="middle" fill="#7dff9a" font-size="10.5" font-weight="bold">Consistency</text>
+  <text x="265"  y="103" text-anchor="middle" fill="#40a060" font-size="8.5">일관성</text>
+  <text x="265"  y="120" text-anchor="middle" fill="#60c080" font-size="8">트랜잭션 전후</text>
+  <text x="265"  y="133" text-anchor="middle" fill="#60c080" font-size="8">DB 규칙 항상 준수</text>
+  <text x="265"  y="149" text-anchor="middle" fill="#408060" font-size="7.5">무결성 제약조건</text>
+  <text x="265"  y="161" text-anchor="middle" fill="#408060" font-size="7.5">항상 유지</text>
+  <text x="265"  y="175" text-anchor="middle" fill="#205030" font-size="7.5">예: 잔액 음수 불가</text>
+  <text x="265"  y="188" text-anchor="middle" fill="#205030" font-size="7.5">FK 참조 무결성 유지</text>
+
+  <!-- I: Isolation -->
+  <rect x="356" y="56" width="162" height="145" rx="9" fill="#3a2a10" opacity="0.85" stroke="#ca8a2a" stroke-width="1.5"/>
+  <text x="437"  y="74" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">I</text>
+  <text x="437"  y="90" text-anchor="middle" fill="#ffc070" font-size="10.5" font-weight="bold">Isolation</text>
+  <text x="437"  y="103" text-anchor="middle" fill="#a06020" font-size="8.5">격리성</text>
+  <text x="437"  y="120" text-anchor="middle" fill="#d09050" font-size="8">동시 트랜잭션 간</text>
+  <text x="437"  y="133" text-anchor="middle" fill="#d09050" font-size="8">서로 영향 없음</text>
+  <text x="437"  y="149" text-anchor="middle" fill="#a07030" font-size="7.5">격리 수준(Level):</text>
+  <text x="437"  y="161" text-anchor="middle" fill="#a07030" font-size="7.5">READ COMMITTED</text>
+  <text x="437"  y="173" text-anchor="middle" fill="#a07030" font-size="7.5">REPEATABLE READ</text>
+  <text x="437"  y="185" text-anchor="middle" fill="#804010" font-size="7.5">SERIALIZABLE</text>
+
+  <!-- D: Durability -->
+  <rect x="528" y="56" width="180" height="145" rx="9" fill="#2a1a5c" opacity="0.85" stroke="#7a3acc" stroke-width="1.5"/>
+  <text x="618"  y="74" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">D</text>
+  <text x="618"  y="90" text-anchor="middle" fill="#c084f5" font-size="10.5" font-weight="bold">Durability</text>
+  <text x="618"  y="103" text-anchor="middle" fill="#8060c0" font-size="8.5">지속성</text>
+  <text x="618"  y="120" text-anchor="middle" fill="#a080d0" font-size="8">Commit된 데이터는</text>
+  <text x="618"  y="133" text-anchor="middle" fill="#a080d0" font-size="8">영구적으로 저장</text>
+  <text x="618"  y="149" text-anchor="middle" fill="#8060b0" font-size="7.5">시스템 장애 후에도</text>
+  <text x="618"  y="161" text-anchor="middle" fill="#8060b0" font-size="7.5">데이터 보존</text>
+  <text x="618"  y="175" text-anchor="middle" fill="#604090" font-size="7.5">WAL(Write-Ahead Log)</text>
+  <text x="618"  y="188" text-anchor="middle" fill="#604090" font-size="7.5">백업 · 복구 전략 필수</text>
+
+  <!-- Transaction lifecycle -->
+  <rect x="12" y="214" width="340" height="88" rx="9" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="182" y="231" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">트랜잭션 생명주기</text>
+  <!-- Flow -->
+  <rect x="22"  y="239" width="60" height="22" rx="4" fill="#1a2060"/>
+  <rect x="100" y="239" width="60" height="22" rx="4" fill="#1a3a20"/>
+  <rect x="178" y="239" width="60" height="22" rx="4" fill="#3a2a10"/>
+  <rect x="256" y="239" width="88" height="22" rx="4" fill="#2a1a5c"/>
+  <text x="52"  y="254" text-anchor="middle" fill="#7ab8ff" font-size="8">BEGIN</text>
+  <text x="130" y="254" text-anchor="middle" fill="#7dff9a" font-size="8">EXECUTE</text>
+  <text x="208" y="254" text-anchor="middle" fill="#ffc070" font-size="8">VALIDATE</text>
+  <text x="300" y="254" text-anchor="middle" fill="#c084f5" font-size="8">COMMIT / ROLLBACK</text>
+  <line x1="82"  y1="250" x2="100" y2="250" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="100,247 107,250 100,253" fill="#4a6adc"/>
+  <line x1="160" y1="250" x2="178" y2="250" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="178,247 185,250 178,253" fill="#4a6adc"/>
+  <line x1="238" y1="250" x2="256" y2="250" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="256,247 263,250 256,253" fill="#4a6adc"/>
+  <!-- Rollback arrow -->
+  <path d="M344,261 Q344,285 22,285 Q18,285 18,265 L18,261" fill="none" stroke="#ff6060" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <polygon points="18,261 15,268 21,268" fill="#ff6060"/>
+  <text x="182" y="283" text-anchor="middle" fill="#c05050" font-size="7.5">⟵ ROLLBACK (오류 시 원상 복귀)</text>
+  <text x="182" y="296" text-anchor="middle" fill="#5060a0" font-size="7.5">SAVEPOINT: 부분 롤백 지원</text>
+
+  <!-- Index strategy -->
+  <rect x="366" y="214" width="342" height="88" rx="9" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="537" y="231" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">인덱스 (Index) 전략</text>
+  <rect x="376" y="239" width="152" height="56" rx="5" fill="#1a2060" opacity="0.8"/>
+  <rect x="538" y="239" width="162" height="56" rx="5" fill="#1a3a10" opacity="0.8"/>
+  <text x="452" y="252" text-anchor="middle" fill="#7ab8ff" font-size="8.5" font-weight="bold">인덱스 생성 권장</text>
+  <text x="452" y="264" text-anchor="middle" fill="#5070a0" font-size="7.5">• WHERE 절 자주 쓰는 컬럼</text>
+  <text x="452" y="275" text-anchor="middle" fill="#5070a0" font-size="7.5">• JOIN 컬럼 (FK)</text>
+  <text x="452" y="286" text-anchor="middle" fill="#5070a0" font-size="7.5">• ORDER BY 컬럼</text>
+  <text x="619" y="252" text-anchor="middle" fill="#7dff9a" font-size="8.5" font-weight="bold">인덱스 주의 사항</text>
+  <text x="619" y="264" text-anchor="middle" fill="#40a060" font-size="7.5">• 쓰기 성능 저하 (INSERT/UPDATE)</text>
+  <text x="619" y="275" text-anchor="middle" fill="#40a060" font-size="7.5">• 과도한 인덱스 = 오히려 느려짐</text>
+  <text x="619" y="286" text-anchor="middle" fill="#40a060" font-size="7.5">• 카디널리티 낮은 컬럼엔 비효율</text>
+
+  <!-- Bottom PM -->
+  <rect x="12" y="312" width="696" height="80" rx="10" fill="#0e0e2a" opacity="0.85" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="360" y="329" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">PM 데이터베이스 관리 핵심 — 3대 요구사항</text>
+  <rect x="22"  y="337" width="206" height="48" rx="6" fill="#1a2060" opacity="0.8"/>
+  <rect x="258" y="337" width="204" height="48" rx="6" fill="#1a3a10" opacity="0.8"/>
+  <rect x="490" y="337" width="210" height="48" rx="6" fill="#3a1a10" opacity="0.8"/>
+  <text x="125" y="352" text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="bold">성능 요구사항 명시</text>
+  <text x="125" y="366" text-anchor="middle" fill="#5070a0" font-size="8">응답시간 SLA 정의</text>
+  <text x="125" y="378" text-anchor="middle" fill="#5070a0" font-size="8">인덱스 전략 · 쿼리 최적화 계획</text>
+  <text x="360" y="352" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">백업·복구 계획</text>
+  <text x="360" y="366" text-anchor="middle" fill="#40a060" font-size="8">RPO(복구 목표)/RTO(복구 시간) 정의</text>
+  <text x="360" y="378" text-anchor="middle" fill="#40a060" font-size="8">Full · Incremental · Log backup</text>
+  <text x="595" y="352" text-anchor="middle" fill="#ffa040" font-size="9" font-weight="bold">보안 · 접근 통제</text>
+  <text x="595" y="366" text-anchor="middle" fill="#c07030" font-size="8">최소 권한 원칙 (Least Privilege)</text>
+  <text x="595" y="378" text-anchor="middle" fill="#c07030" font-size="8">암호화 · 감사 로깅 · 개인정보 규정</text>
+</svg>

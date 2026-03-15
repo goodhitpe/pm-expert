@@ -31,6 +31,14 @@
 
 ## 1교시: AI / 머신러닝 (1.5시간) <!-- 슬라이드 #1~#3 -->
 
+<div align="center">
+
+![AI ML 개요 및 ML 파이프라인](../images/day16-ai-ml-overview.svg)
+
+*▲ AI 계층 구조 + ML 3대 학습 유형 + CRISP-DM 파이프라인*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. AI 기본 개념
@@ -2013,6 +2021,14 @@ ROI: $48,000 / $5,000 = 960%
 
 ## 3교시: 빅데이터 (1시간) <!-- 슬라이드 #5~#6 -->
 
+<div align="center">
+
+![빅데이터 5V 및 람다 아키텔체](../images/day16-bigdata-architecture.svg)
+
+*▲ 빅데이터 5V + 람다 아키텔체 + 기술 스택 + PM 관리 포인트*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 빅데이터 인5V
@@ -2449,6 +2465,14 @@ Kafka (수집)
 </details>
 
 ## 5교시: DevOps / 로우코드 / DX (1.5시간) <!-- 슬라이드 #8 -->
+
+<div align="center">
+
+![DevOps 파이프라인과 DX](../images/day16-devops-dx.svg)
+
+*▲ DevOps 8단계 CI/CD + 로우코드 플랫폼 + DX 4대 기술 + PM 성공 요인*
+
+</div>
 
 ### 이론 (50분)
 

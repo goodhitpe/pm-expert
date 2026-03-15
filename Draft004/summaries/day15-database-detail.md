@@ -31,6 +31,14 @@
 
 ## 1교시: 데이터베이스 개요 (이론 + 예시 + 실습 + 퀴즈)
 
+<div align="center">
+
+![RDBMS vs NoSQL 비교](../images/day15-rdbms-vs-nosql.svg)
+
+*▲ RDBMS vs NoSQL 비교 + CAP 정리 + PM 선택 가이드*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 데이터베이스와 DBMS
@@ -210,6 +218,14 @@
 </details>
 
 ## 2교시: RDBMS 핵심 개념 (이론 + 예시 + 실습 + 퀴즈)
+
+<div align="center">
+
+![정규화 단계와 이상 현상](../images/day15-normalization.svg)
+
+*▲ 정규화 단계 (1NF→2NF→3NF→BCNF) + 이상 현상 + PM 관점*
+
+</div>
 
 ### 이론 (50분)
 
@@ -1268,6 +1284,14 @@ GROUP BY YEAR(주문일), MONTH(주문일);
 </div>
 
 ## 5교시: 정규화와 NoSQL (이론 + 예시 + 실습 + 퀴즈)
+
+<div align="center">
+
+![ACID 속성과 트랜잭션 관리](../images/day15-acid-properties.svg)
+
+*▲ ACID 4대 속성 + 트랜잭션 생명주기 + 인덱스 전략 + PM 요구사항*
+
+</div>
 
 ### 이론 (50분)
 

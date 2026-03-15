@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7a9ad8"/>
+    </marker>
+    <marker id="arrR" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <polygon points="8 0, 0 3, 8 6" fill="#ff9090"/>
+    </marker>
+  </defs>
+  <rect width="720" height="380" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="32" text-anchor="middle" fill="#e0e0ff" font-size="17" font-weight="bold">Shannon-Weaver 의사소통 모델</text>
+  <text x="360" y="50" text-anchor="middle" fill="#9090c0" font-size="11">PMBOK 기반 — 발신자→인코딩→채널→해독→수신자 + 노이즈·피드백</text>
+
+  <!-- Sender -->
+  <rect x="20" y="70" width="100" height="60" rx="8" fill="#1a3a2a" opacity="0.85" stroke="#3aac6a" stroke-width="1.5"/>
+  <text x="70" y="96"  text-anchor="middle" fill="#7dff9a" font-size="12" font-weight="bold">발신자</text>
+  <text x="70" y="113" text-anchor="middle" fill="#90d090" font-size="9">Sender</text>
+  <text x="70" y="126" text-anchor="middle" fill="#60a070" font-size="8">PM / 팀원</text>
+
+  <!-- Encode -->
+  <line x1="122" y1="100" x2="145" y2="100" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="147" y="70" width="100" height="60" rx="8" fill="#1a2a5c" opacity="0.85" stroke="#3a5aac" stroke-width="1.5"/>
+  <text x="197" y="96"  text-anchor="middle" fill="#58c4f6" font-size="12" font-weight="bold">인코딩</text>
+  <text x="197" y="113" text-anchor="middle" fill="#90b8e0" font-size="9">Encoding</text>
+  <text x="197" y="126" text-anchor="middle" fill="#6090c0" font-size="8">언어·제스처 변환</text>
+
+  <!-- Channel (medium) -->
+  <line x1="249" y1="100" x2="272" y2="100" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="274" y="58" width="172" height="84" rx="8" fill="#2a2a1a" opacity="0.85" stroke="#8a8a3a" stroke-width="1.5"/>
+  <text x="360" y="78"  text-anchor="middle" fill="#f0f060" font-size="12" font-weight="bold">채널 (매체)</text>
+  <text x="360" y="96"  text-anchor="middle" fill="#c8c060" font-size="9">이메일 · 전화 · 회의</text>
+  <text x="360" y="110" text-anchor="middle" fill="#c8c060" font-size="9">문서 · 보고서 · 메신저</text>
+  <text x="360" y="128" text-anchor="middle" fill="#a09040" font-size="8.5">공식/비공식 · 서면/구두</text>
+
+  <!-- Decode -->
+  <line x1="448" y1="100" x2="471" y2="100" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="473" y="70" width="100" height="60" rx="8" fill="#2a1a3a" opacity="0.85" stroke="#7a3aac" stroke-width="1.5"/>
+  <text x="523" y="96"  text-anchor="middle" fill="#c084f5" font-size="12" font-weight="bold">해독</text>
+  <text x="523" y="113" text-anchor="middle" fill="#a070d8" font-size="9">Decoding</text>
+  <text x="523" y="126" text-anchor="middle" fill="#8060b0" font-size="8">이해·해석</text>
+
+  <!-- Receiver -->
+  <line x1="575" y1="100" x2="598" y2="100" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="600" y="70" width="100" height="60" rx="8" fill="#3a1a1a" opacity="0.85" stroke="#ac3a3a" stroke-width="1.5"/>
+  <text x="650" y="96"  text-anchor="middle" fill="#ff9090" font-size="12" font-weight="bold">수신자</text>
+  <text x="650" y="113" text-anchor="middle" fill="#e08080" font-size="9">Receiver</text>
+  <text x="650" y="126" text-anchor="middle" fill="#c06060" font-size="8">팀원 / 이해관계자</text>
+
+  <!-- Noise (interference) -->
+  <rect x="274" y="160" width="172" height="55" rx="8" fill="#3a1a1a" opacity="0.8" stroke="#ac3a3a" stroke-width="1.2"/>
+  <text x="360" y="176" text-anchor="middle" fill="#ff7070" font-size="11" font-weight="bold">⚡ 노이즈 (Noise)</text>
+  <text x="360" y="191" text-anchor="middle" fill="#e09090" font-size="9">언어 장벽 · 문화 차이 · 감정</text>
+  <text x="360" y="205" text-anchor="middle" fill="#e09090" font-size="9">기술 문제 · 환경 소음 · 선입견</text>
+  <line x1="360" y1="160" x2="360" y2="143" stroke="#ac3a3a" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Feedback arrow -->
+  <path d="M 650 132 Q 650 230 360 230 Q 70 230 70 132" stroke="#f0c030" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+  <text x="360" y="250" text-anchor="middle" fill="#f0d060" font-size="10" font-weight="bold">피드백 (Feedback)</text>
+  <text x="360" y="264" text-anchor="middle" fill="#c0a040" font-size="9">수신자 → 발신자 경로 (동일 과정 역방향)</text>
+
+  <!-- PM 실무 noise 제거 팁 -->
+  <rect x="20" y="284" width="680" height="76" rx="10" fill="#1a1a3a" opacity="0.85" stroke="#3a3a6a" stroke-width="1"/>
+  <text x="360" y="302" text-anchor="middle" fill="#a0b8e0" font-size="12" font-weight="bold">PM 노이즈 제거 전략</text>
+  <rect x="35"  y="310" width="190" height="38" rx="6" fill="#1a2a5c" opacity="0.7"/>
+  <text x="130" y="325" text-anchor="middle" fill="#7addff" font-size="9.5" font-weight="bold">언어 장벽</text>
+  <text x="130" y="340" text-anchor="middle" fill="#90c8e0" font-size="8.5">쉬운 말 · 시각 자료 · 번역</text>
+
+  <rect x="238" y="310" width="190" height="38" rx="6" fill="#1a3a2a" opacity="0.7"/>
+  <text x="333" y="325" text-anchor="middle" fill="#7dff9a" font-size="9.5" font-weight="bold">문화 차이</text>
+  <text x="333" y="340" text-anchor="middle" fill="#80d090" font-size="8.5">직접 확인 · 되물음 허용 분위기</text>
+
+  <rect x="441" y="310" width="259" height="38" rx="6" fill="#2a2a1a" opacity="0.7"/>
+  <text x="570" y="325" text-anchor="middle" fill="#f0f060" font-size="9.5" font-weight="bold">정보 과부하</text>
+  <text x="570" y="340" text-anchor="middle" fill="#c0c060" font-size="8.5">핵심 메시지 먼저 · BLUF 구조 활용</text>
+
+  <!-- Footer -->
+  <text x="360" y="372" text-anchor="middle" fill="#6a6a9a" font-size="9">PMBOK 핵심: 커뮤니케이션 채널 수 = n(n-1)/2 | 10명 팀 = 45개 채널 → 체계적 관리 필수</text>
+</svg>

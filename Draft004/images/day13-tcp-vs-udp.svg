@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="360" y="38" text-anchor="middle" fill="#e0e0ff" font-size="18" font-weight="bold">Day 13 — TCP vs UDP 비교</text>
+
+  <!-- TCP Column Header -->
+  <rect x="40" y="55" width="300" height="42" rx="8" fill="#1a6fa8" opacity="0.85"/>
+  <text x="190" y="82" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="bold">TCP (Transmission Control Protocol)</text>
+
+  <!-- UDP Column Header -->
+  <rect x="380" y="55" width="300" height="42" rx="8" fill="#7b3aab" opacity="0.85"/>
+  <text x="530" y="82" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="bold">UDP (User Datagram Protocol)</text>
+
+  <!-- Row labels -->
+  <text x="30" y="122" fill="#a0a8d0" font-size="11" text-anchor="start">연결 방식</text>
+  <text x="30" y="165" fill="#a0a8d0" font-size="11" text-anchor="start">신뢰성</text>
+  <text x="30" y="208" fill="#a0a8d0" font-size="11" text-anchor="start">속도</text>
+  <text x="30" y="251" fill="#a0a8d0" font-size="11" text-anchor="start">오버헤드</text>
+  <text x="30" y="294" fill="#a0a8d0" font-size="11" text-anchor="start">흐름 제어</text>
+  <text x="30" y="337" fill="#a0a8d0" font-size="11" text-anchor="start">주요 용도</text>
+
+  <!-- Divider line -->
+  <line x1="350" y1="100" x2="350" y2="380" stroke="#4a4a7a" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="20"  y1="100" x2="700" y2="100" stroke="#4a4a7a" stroke-width="1"/>
+
+  <!-- TCP values -->
+  <rect x="100" y="107" width="230" height="28" rx="6" fill="#1a3a5c" opacity="0.7"/>
+  <text x="215" y="126" text-anchor="middle" fill="#58c4f6" font-size="12" font-weight="bold">3-way Handshake (연결 지향)</text>
+
+  <rect x="100" y="150" width="230" height="28" rx="6" fill="#1a3a5c" opacity="0.7"/>
+  <text x="215" y="169" text-anchor="middle" fill="#58c4f6" font-size="12">✅ 보장 (ACK·재전송)</text>
+
+  <rect x="100" y="193" width="230" height="28" rx="6" fill="#1a3a5c" opacity="0.7"/>
+  <text x="215" y="212" text-anchor="middle" fill="#ffcc55" font-size="12">느림 (제어 오버헤드)</text>
+
+  <rect x="100" y="236" width="230" height="28" rx="6" fill="#1a3a5c" opacity="0.7"/>
+  <text x="215" y="255" text-anchor="middle" fill="#ffcc55" font-size="12">높음 (헤더 20B+)</text>
+
+  <rect x="100" y="279" width="230" height="28" rx="6" fill="#1a3a5c" opacity="0.7"/>
+  <text x="215" y="298" text-anchor="middle" fill="#58c4f6" font-size="12">✅ 있음 (혼잡·흐름)</text>
+
+  <rect x="100" y="322" width="230" height="38" rx="6" fill="#1a3a5c" opacity="0.7"/>
+  <text x="215" y="337" text-anchor="middle" fill="#c0d8ff" font-size="11">HTTP/S, FTP, SSH,</text>
+  <text x="215" y="353" text-anchor="middle" fill="#c0d8ff" font-size="11">이메일(SMTP, IMAP)</text>
+
+  <!-- UDP values -->
+  <rect x="440" y="107" width="230" height="28" rx="6" fill="#3a1a5c" opacity="0.7"/>
+  <text x="555" y="126" text-anchor="middle" fill="#c084f5" font-size="12" font-weight="bold">비연결 (Connectionless)</text>
+
+  <rect x="440" y="150" width="230" height="28" rx="6" fill="#3a1a5c" opacity="0.7"/>
+  <text x="555" y="169" text-anchor="middle" fill="#ff8888" font-size="12">❌ 미보장 (손실 허용)</text>
+
+  <rect x="440" y="193" width="230" height="28" rx="6" fill="#3a1a5c" opacity="0.7"/>
+  <text x="555" y="212" text-anchor="middle" fill="#7dff9a" font-size="12">빠름 (지연 최소화)</text>
+
+  <rect x="440" y="236" width="230" height="28" rx="6" fill="#3a1a5c" opacity="0.7"/>
+  <text x="555" y="255" text-anchor="middle" fill="#7dff9a" font-size="12">낮음 (헤더 8B)</text>
+
+  <rect x="440" y="279" width="230" height="28" rx="6" fill="#3a1a5c" opacity="0.7"/>
+  <text x="555" y="298" text-anchor="middle" fill="#ff8888" font-size="12">❌ 없음</text>
+
+  <rect x="440" y="322" width="230" height="38" rx="6" fill="#3a1a5c" opacity="0.7"/>
+  <text x="555" y="337" text-anchor="middle" fill="#e0c0ff" font-size="11">DNS, 스트리밍(영상·음성),</text>
+  <text x="555" y="353" text-anchor="middle" fill="#e0c0ff" font-size="11">온라인 게임, VoIP</text>
+
+  <!-- Footer -->
+  <text x="360" y="403" text-anchor="middle" fill="#6a6a9a" font-size="10">PM 관점: 실시간성 vs 신뢰성 트레이드오프 → 서비스 특성에 맞는 프로토콜 선택이 아키텍처 의사결정의 핵심</text>
+</svg>

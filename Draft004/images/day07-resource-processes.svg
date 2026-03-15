@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7a9ad8"/>
+    </marker>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="360" y="33" text-anchor="middle" fill="#e0e0ff" font-size="17" font-weight="bold">Day 07 — 자원 관리 프로세스 흐름</text>
+  <text x="360" y="52" text-anchor="middle" fill="#9090c0" font-size="11">PMBOK: 계획 → 조달 → 개발 → 통제 순환</text>
+
+  <!-- 6 process boxes in 2 rows -->
+  <!-- Row 1 -->
+  <rect x="30"  y="68" width="175" height="85" rx="10" fill="#1a2a5c" opacity="0.85" stroke="#3a5aac" stroke-width="1.5"/>
+  <text x="117" y="91"  text-anchor="middle" fill="#58c4f6" font-size="13" font-weight="bold">① 계획</text>
+  <text x="117" y="109" text-anchor="middle" fill="#80b8e8" font-size="11">자원 관리 계획서</text>
+  <text x="117" y="126" text-anchor="middle" fill="#a0c0e0" font-size="10">역할·책임·조직도</text>
+  <text x="117" y="141" text-anchor="middle" fill="#a0c0e0" font-size="10">자원 요구사항 정의</text>
+
+  <line x1="207" y1="110" x2="273" y2="110" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="275" y="68" width="175" height="85" rx="10" fill="#1a4a2a" opacity="0.85" stroke="#3aac6a" stroke-width="1.5"/>
+  <text x="362" y="91"  text-anchor="middle" fill="#7dff9a" font-size="13" font-weight="bold">② 조달</text>
+  <text x="362" y="109" text-anchor="middle" fill="#80e8a8" font-size="11">자원 획득</text>
+  <text x="362" y="126" text-anchor="middle" fill="#a0e0c0" font-size="10">팀 구성·협상·가상팀</text>
+  <text x="362" y="141" text-anchor="middle" fill="#a0e0c0" font-size="10">외부 자원 확보</text>
+
+  <line x1="452" y1="110" x2="520" y2="110" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="522" y="68" width="175" height="85" rx="10" fill="#3a2a1a" opacity="0.85" stroke="#ac7a3a" stroke-width="1.5"/>
+  <text x="609" y="91"  text-anchor="middle" fill="#ffa040" font-size="13" font-weight="bold">③ 개발</text>
+  <text x="609" y="109" text-anchor="middle" fill="#e8b080" font-size="11">팀 개발</text>
+  <text x="609" y="126" text-anchor="middle" fill="#e0c0a0" font-size="10">교육·팀빌딩·보상</text>
+  <text x="609" y="141" text-anchor="middle" fill="#e0c0a0" font-size="10">Tuckman 5단계</text>
+
+  <!-- Down arrow -->
+  <line x1="609" y1="154" x2="609" y2="196" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Row 2 (reverse order for loop) -->
+  <rect x="522" y="198" width="175" height="85" rx="10" fill="#3a1a3a" opacity="0.85" stroke="#ac3aac" stroke-width="1.5"/>
+  <text x="609" y="221" text-anchor="middle" fill="#e070f0" font-size="13" font-weight="bold">④ 관리</text>
+  <text x="609" y="239" text-anchor="middle" fill="#d090e8" font-size="11">팀 관리</text>
+  <text x="609" y="256" text-anchor="middle" fill="#c0a0e0" font-size="10">성과 추적·갈등 해결</text>
+  <text x="609" y="271" text-anchor="middle" fill="#c0a0e0" font-size="10">피드백·코칭</text>
+
+  <line x1="520" y1="240" x2="452" y2="240" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="275" y="198" width="175" height="85" rx="10" fill="#3a1a1a" opacity="0.85" stroke="#ac3a3a" stroke-width="1.5"/>
+  <text x="362" y="221" text-anchor="middle" fill="#ff8888" font-size="13" font-weight="bold">⑤ 통제</text>
+  <text x="362" y="239" text-anchor="middle" fill="#e08080" font-size="11">자원 통제</text>
+  <text x="362" y="256" text-anchor="middle" fill="#e0c0c0" font-size="10">배정 vs 계획 비교</text>
+  <text x="362" y="271" text-anchor="middle" fill="#e0c0c0" font-size="10">자원 변경 요청</text>
+
+  <line x1="273" y1="240" x2="207" y2="240" stroke="#7a9ad8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="30"  y="198" width="175" height="85" rx="10" fill="#2a2a1a" opacity="0.85" stroke="#8a8a2a" stroke-width="1.5"/>
+  <text x="117" y="221" text-anchor="middle" fill="#e8e860" font-size="13" font-weight="bold">재계획</text>
+  <text x="117" y="239" text-anchor="middle" fill="#d8d870" font-size="11">문제 발생 시</text>
+  <text x="117" y="256" text-anchor="middle" fill="#e0e0a0" font-size="10">자원 재배정</text>
+  <text x="117" y="271" text-anchor="middle" fill="#e0e0a0" font-size="10">리스크 등록부 갱신</text>
+
+  <!-- Feedback arrow -->
+  <path d="M 117 283 Q 117 310 117 153" stroke="#7a9ad8" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+
+  <!-- Key tools panel -->
+  <rect x="30" y="297" width="660" height="78" rx="10" fill="#0f1a3a" opacity="0.9" stroke="#2a3a6a" stroke-width="1"/>
+  <text x="360" y="316" text-anchor="middle" fill="#a0b8e0" font-size="12" font-weight="bold">핵심 도구 &amp; 산출물</text>
+
+  <rect x="48"  y="325" width="150" height="34" rx="5" fill="#1a2a4a" opacity="0.85"/>
+  <text x="123" y="339" text-anchor="middle" fill="#58c4f6" font-size="10.5" font-weight="bold">책임 배정 매트릭스</text>
+  <text x="123" y="352" text-anchor="middle" fill="#8ab8d8" font-size="10">RACI Chart</text>
+
+  <rect x="210" y="325" width="150" height="34" rx="5" fill="#1a3a2a" opacity="0.85"/>
+  <text x="285" y="339" text-anchor="middle" fill="#7dff9a" font-size="10.5" font-weight="bold">자원 히스토그램</text>
+  <text x="285" y="352" text-anchor="middle" fill="#90c8a0" font-size="10">기간별 자원 수요</text>
+
+  <rect x="372" y="325" width="150" height="34" rx="5" fill="#2a1a3a" opacity="0.85"/>
+  <text x="447" y="339" text-anchor="middle" fill="#c084f5" font-size="10.5" font-weight="bold">팀 헌장</text>
+  <text x="447" y="352" text-anchor="middle" fill="#b090d0" font-size="10">팀 규범 문서</text>
+
+  <rect x="534" y="325" width="150" height="34" rx="5" fill="#2a1a1a" opacity="0.85"/>
+  <text x="609" y="339" text-anchor="middle" fill="#ff9898" font-size="10.5" font-weight="bold">갈등 해결 5단계</text>
+  <text x="609" y="352" text-anchor="middle" fill="#e0b0b0" font-size="10">협력→타협→회피 순</text>
+
+  <!-- Footer -->
+  <text x="360" y="390" text-anchor="middle" fill="#6a6a9a" font-size="10">PM 관점: 자원 관리의 핵심은 '사람'— 기술보다 동기부여와 갈등 관리가 프로젝트 성패를 좌우합니다</text>
+</svg>

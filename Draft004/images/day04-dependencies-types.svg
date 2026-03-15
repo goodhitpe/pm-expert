@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+
+  <text x="360" y="26" text-anchor="middle" fill="#e0e0ff" font-size="14" font-weight="bold">활동 의존 관계 4 유형 — PDM (Precedence Diagramming Method)</text>
+  <text x="360" y="43" text-anchor="middle" fill="#9090c0" font-size="9.5">FS · SS · FF · SF 시각적 비교 + 실무 빈도 + PM 적용 팁</text>
+
+  <!-- FS block -->
+  <rect x="12" y="56" width="336" height="148" rx="8" fill="#1a2a5c" opacity="0.85" stroke="#4a6adc" stroke-width="1.5"/>
+  <text x="180" y="74" text-anchor="middle" fill="#7ab8ff" font-size="12" font-weight="bold">① FS  Finish-to-Start  (완료→시작)</text>
+  <text x="180" y="88" text-anchor="middle" fill="#a0a0ff" font-size="9">실무 빈도: ★★★★★  (~90%)</text>
+  <!-- FS diagram -->
+  <rect x="32"  y="98" width="100" height="34" rx="5" fill="#122040" stroke="#3a5090"/>
+  <rect x="204" y="98" width="100" height="34" rx="5" fill="#122040" stroke="#3a5090"/>
+  <text x="82"  y="120" text-anchor="middle" fill="#7090c0" font-size="9.5">활동 A</text>
+  <text x="254" y="120" text-anchor="middle" fill="#7090c0" font-size="9.5">활동 B</text>
+  <line x1="132" y1="115" x2="204" y2="115" stroke="#7ab8ff" stroke-width="2"/>
+  <polygon points="204,111 212,115 204,119" fill="#7ab8ff"/>
+  <text x="168" y="110" text-anchor="middle" fill="#5080c0" font-size="8.5">FS</text>
+  <text x="82"  y="149" text-anchor="middle" fill="#506080" font-size="7.5">A 완료 시점</text>
+  <text x="254" y="149" text-anchor="middle" fill="#506080" font-size="7.5">B 시작 가능</text>
+  <text x="180" y="167" text-anchor="middle" fill="#4060a0" font-size="8">예: 설계 완료 → 개발 시작  /  콘크리트 양생 → 골조 시작</text>
+  <text x="180" y="181" text-anchor="middle" fill="#3050a0" font-size="7.5">⭐ 가장 일반적 · 명확한 의존 관계</text>
+  <text x="180" y="196" text-anchor="middle" fill="#3050a0" font-size="7.5">래그(Lag) 추가 가능: FS+3일 = A완료 후 3일 대기 → B시작</text>
+
+  <!-- SS block -->
+  <rect x="372" y="56" width="336" height="148" rx="8" fill="#1a3a2a" opacity="0.85" stroke="#2a9a5a" stroke-width="1.5"/>
+  <text x="540" y="74" text-anchor="middle" fill="#7dff9a" font-size="12" font-weight="bold">② SS  Start-to-Start  (시작→시작)</text>
+  <text x="540" y="88" text-anchor="middle" fill="#a0ffc0" font-size="9">실무 빈도: ★★★☆☆  (~8%)  병행 작업</text>
+  <!-- SS diagram -->
+  <rect x="392" y="98" width="100" height="34" rx="5" fill="#102410" stroke="#2a6a3a"/>
+  <rect x="564" y="98" width="100" height="34" rx="5" fill="#102410" stroke="#2a6a3a"/>
+  <text x="442" y="120" text-anchor="middle" fill="#60c080" font-size="9.5">활동 A</text>
+  <text x="614" y="120" text-anchor="middle" fill="#60c080" font-size="9.5">활동 B</text>
+  <line x1="392" y1="108" x2="564" y2="108" stroke="#7dff9a" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="564,104 572,108 564,112" fill="#7dff9a"/>
+  <text x="478" y="104" text-anchor="middle" fill="#40a060" font-size="8.5">SS</text>
+  <text x="442" y="149" text-anchor="middle" fill="#306050" font-size="7.5">A 시작 시점</text>
+  <text x="614" y="149" text-anchor="middle" fill="#306050" font-size="7.5">B도 시작 가능</text>
+  <text x="540" y="167" text-anchor="middle" fill="#308050" font-size="8">예: 설계 시작 → 문서 작성 시작  /  시추 시작 → 파이프 준비 시작</text>
+  <text x="540" y="181" text-anchor="middle" fill="#206040" font-size="7.5">일정 단축 목적 → Fast Tracking 기법의 핵심</text>
+  <text x="540" y="196" text-anchor="middle" fill="#206040" font-size="7.5">SS + 래그: "A 시작 후 N일 후 B 시작 가능"</text>
+
+  <!-- FF block -->
+  <rect x="12" y="218" width="336" height="148" rx="8" fill="#3a1a1a" opacity="0.85" stroke="#9a2a2a" stroke-width="1.5"/>
+  <text x="180" y="236" text-anchor="middle" fill="#ffa0a0" font-size="12" font-weight="bold">③ FF  Finish-to-Finish  (완료→완료)</text>
+  <text x="180" y="250" text-anchor="middle" fill="#ffc0c0" font-size="9">실무 빈도: ★★☆☆☆  (~2%)  종료 동기화</text>
+  <!-- FF diagram -->
+  <rect x="32"  y="260" width="100" height="34" rx="5" fill="#240a0a" stroke="#6a2020"/>
+  <rect x="204" y="260" width="100" height="34" rx="5" fill="#240a0a" stroke="#6a2020"/>
+  <text x="82"  y="282" text-anchor="middle" fill="#c06060" font-size="9.5">활동 A</text>
+  <text x="254" y="282" text-anchor="middle" fill="#c06060" font-size="9.5">활동 B</text>
+  <line x1="132" y1="286" x2="204" y2="286" stroke="#ffa0a0" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="204,282 212,286 204,290" fill="#ffa0a0"/>
+  <text x="168" y="282" text-anchor="middle" fill="#804040" font-size="8.5">FF</text>
+  <text x="82"  y="311" text-anchor="middle" fill="#604040" font-size="7.5">A 완료 시점</text>
+  <text x="254" y="311" text-anchor="middle" fill="#604040" font-size="7.5">B도 완료 가능</text>
+  <text x="180" y="329" text-anchor="middle" fill="#803030" font-size="8">예: 코딩 완료 → 코드리뷰 완료  /  데이터 입력 → 검증 완료</text>
+  <text x="180" y="343" text-anchor="middle" fill="#702020" font-size="7.5">종료 시점을 맞춰야 하는 작업 쌍에 사용</text>
+  <text x="180" y="357" text-anchor="middle" fill="#702020" font-size="7.5">FF + 래그: "A 완료 후 N일 내 B 완료 필요"</text>
+
+  <!-- SF block -->
+  <rect x="372" y="218" width="336" height="148" rx="8" fill="#2a1a5c" opacity="0.85" stroke="#6a3acc" stroke-width="1.5"/>
+  <text x="540" y="236" text-anchor="middle" fill="#c084f5" font-size="12" font-weight="bold">④ SF  Start-to-Finish  (시작→완료)</text>
+  <text x="540" y="250" text-anchor="middle" fill="#d0a0ff" font-size="9">실무 빈도: ☆☆☆☆☆  (&lt;1%)  매우 드묾</text>
+  <!-- SF diagram -->
+  <rect x="392" y="260" width="100" height="34" rx="5" fill="#1a0a30" stroke="#4a2080"/>
+  <rect x="564" y="260" width="100" height="34" rx="5" fill="#1a0a30" stroke="#4a2080"/>
+  <text x="442" y="282" text-anchor="middle" fill="#9060c0" font-size="9.5">활동 A</text>
+  <text x="614" y="282" text-anchor="middle" fill="#9060c0" font-size="9.5">활동 B</text>
+  <line x1="392" y1="268" x2="564" y2="282" stroke="#c084f5" stroke-width="2" stroke-dasharray="4,4"/>
+  <polygon points="564,278 572,282 564,286" fill="#c084f5"/>
+  <text x="478" y="272" text-anchor="middle" fill="#6040a0" font-size="8.5">SF</text>
+  <text x="442" y="311" text-anchor="middle" fill="#503060" font-size="7.5">A 시작 시점</text>
+  <text x="614" y="311" text-anchor="middle" fill="#503060" font-size="7.5">B 완료 가능</text>
+  <text x="540" y="329" text-anchor="middle" fill="#7050a0" font-size="8">예: 신규 경비 시작 → 구 경비 종료</text>
+  <text x="540" y="343" text-anchor="middle" fill="#604090" font-size="7.5">교대 근무·시스템 전환 시나리오에 한정</text>
+  <text x="540" y="357" text-anchor="middle" fill="#604090" font-size="7.5">⚠ 실무에서 거의 사용 안 함 → SS·FS로 대체 권장</text>
+
+  <!-- Bottom summary bar -->
+  <rect x="12" y="374" width="696" height="18" rx="5" fill="#0e0e2a" opacity="0.8"/>
+  <text x="360" y="387" text-anchor="middle" fill="#6060a0" font-size="8.5">PM 팁 : 일정 단축(Fast Tracking) 시 FS→SS 전환 검토 | Lead(-) = 시간 절약 but 재작업 리스크 ↑ | Lag(+) = 대기·양생 시간</text>
+</svg>

@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+  <text x="360" y="26" text-anchor="middle" fill="#e0e0ff" font-size="14" font-weight="bold">AI / 머신러닝 — 개념 계층 &amp; ML 파이프라인</text>
+  <text x="360" y="43" text-anchor="middle" fill="#9090c0" font-size="9.5">인공지능의 부분집합 구조 ∙ ML 학습 5단계 ∙ PM 활용 가이드</text>
+
+  <!-- AI Hierarchy  -->
+  <rect x="12" y="56" width="320" height="200" rx="9" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="172" y="75" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">AI 계층 구조 (Hierarchy)</text>
+
+  <!-- Outer: AI -->
+  <ellipse cx="172" cy="155" rx="148" ry="84" fill="#1a2060" opacity="0.7" stroke="#4a6adc" stroke-width="1.5"/>
+  <text x="172" y="82" text-anchor="middle" fill="#9aa8dc" font-size="9">Artificial Intelligence (AI) 인공지능</text>
+
+  <!-- Middle: ML -->
+  <ellipse cx="172" cy="155" rx="108" ry="60" fill="#1a3040" opacity="0.7" stroke="#2a9aac" stroke-width="1.5"/>
+  <text x="172" y="108" text-anchor="middle" fill="#7ad8ff" font-size="9">Machine Learning (ML) 머신러닝</text>
+
+  <!-- Inner: DL -->
+  <ellipse cx="172" cy="155" rx="68" ry="38" fill="#1a3a20" opacity="0.7" stroke="#2a9a5a" stroke-width="1.5"/>
+  <text x="172" y="148" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">Deep</text>
+  <text x="172" y="162" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">Learning</text>
+  <text x="172" y="175" text-anchor="middle" fill="#40a060" font-size="7.5">신경망 기반</text>
+
+  <!-- Labels outside -->
+  <text x="30"  y="225" fill="#5060a0" font-size="7.5">규칙기반·전문가시스템·NLP·로봇</text>
+  <text x="62"  y="198" fill="#3a7a8a" font-size="7.5">통계학습·분류·회귀·군집</text>
+
+  <!-- ML Types right panel -->
+  <rect x="346" y="56" width="362" height="200" rx="9" fill="#12122a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="527" y="75" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">ML 학습 유형 3가지</text>
+
+  <rect x="356" y="82" width="104" height="164" rx="7" fill="#1a2060" opacity="0.8" stroke="#4a6adc" stroke-width="1"/>
+  <text x="408" y="98"  text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="bold">지도 학습</text>
+  <text x="408" y="110" text-anchor="middle" fill="#5070a0" font-size="7.5">Supervised</text>
+  <text x="408" y="126" text-anchor="middle" fill="#5070a0" font-size="7.5">정답 레이블 있음</text>
+  <text x="408" y="139" text-anchor="middle" fill="#5070a0" font-size="7.5">• 분류 (Classification)</text>
+  <text x="408" y="151" text-anchor="middle" fill="#5070a0" font-size="7.5">• 회귀 (Regression)</text>
+  <text x="408" y="167" text-anchor="middle" fill="#3555a0" font-size="7">예: 스팸필터</text>
+  <text x="408" y="179" text-anchor="middle" fill="#3555a0" font-size="7">예: 주가 예측</text>
+  <text x="408" y="191" text-anchor="middle" fill="#3555a0" font-size="7">예: 이미지 분류</text>
+  <text x="408" y="237" text-anchor="middle" fill="#204080" font-size="7">입력 → 예측 → 오류 최소화</text>
+
+  <rect x="470" y="82" width="104" height="164" rx="7" fill="#1a3a10" opacity="0.8" stroke="#2a9a5a" stroke-width="1"/>
+  <text x="522" y="98"  text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">비지도 학습</text>
+  <text x="522" y="110" text-anchor="middle" fill="#40a060" font-size="7.5">Unsupervised</text>
+  <text x="522" y="126" text-anchor="middle" fill="#40a060" font-size="7.5">정답 레이블 없음</text>
+  <text x="522" y="139" text-anchor="middle" fill="#40a060" font-size="7.5">• 군집 (Clustering)</text>
+  <text x="522" y="151" text-anchor="middle" fill="#40a060" font-size="7.5">• 차원 축소 (PCA)</text>
+  <text x="522" y="167" text-anchor="middle" fill="#205030" font-size="7">예: 고객 세분화</text>
+  <text x="522" y="179" text-anchor="middle" fill="#205030" font-size="7">예: 이상 탐지</text>
+  <text x="522" y="191" text-anchor="middle" fill="#205030" font-size="7">예: 추천 시스템</text>
+  <text x="522" y="237" text-anchor="middle" fill="#1a4020" font-size="7">패턴·구조 자동 발견</text>
+
+  <rect x="584" y="82" width="116" height="164" rx="7" fill="#3a2a10" opacity="0.8" stroke="#ca8a2a" stroke-width="1"/>
+  <text x="642" y="98"  text-anchor="middle" fill="#ffc070" font-size="9" font-weight="bold">강화 학습</text>
+  <text x="642" y="110" text-anchor="middle" fill="#906030" font-size="7.5">Reinforcement</text>
+  <text x="642" y="126" text-anchor="middle" fill="#906030" font-size="7.5">보상 기반 학습</text>
+  <text x="642" y="139" text-anchor="middle" fill="#906030" font-size="7.5">• 에이전트+환경</text>
+  <text x="642" y="151" text-anchor="middle" fill="#906030" font-size="7.5">• 행동→보상→학습</text>
+  <text x="642" y="167" text-anchor="middle" fill="#604020" font-size="7">예: 게임 AI</text>
+  <text x="642" y="179" text-anchor="middle" fill="#604020" font-size="7">예: 자율주행</text>
+  <text x="642" y="191" text-anchor="middle" fill="#604020" font-size="7">예: 로봇 제어</text>
+  <text x="642" y="237" text-anchor="middle" fill="#403010" font-size="7">시행착오로 최적화</text>
+
+  <!-- ML Pipeline bottom -->
+  <rect x="12" y="268" width="696" height="84" rx="9" fill="#0e0e2a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="360" y="286" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">ML 프로젝트 파이프라인 (CRISP-DM 참조)</text>
+
+  <!-- 6 steps -->
+  <rect x="22"  y="294" width="96" height="48" rx="5" fill="#1a2060" opacity="0.9"/>
+  <rect x="128" y="294" width="96" height="48" rx="5" fill="#1a3040" opacity="0.9"/>
+  <rect x="234" y="294" width="96" height="48" rx="5" fill="#1a3a20" opacity="0.9"/>
+  <rect x="340" y="294" width="96" height="48" rx="5" fill="#3a2a10" opacity="0.9"/>
+  <rect x="446" y="294" width="96" height="48" rx="5" fill="#3a1a10" opacity="0.9"/>
+  <rect x="552" y="294" width="156" height="48" rx="5" fill="#2a1a5c" opacity="0.9"/>
+
+  <text x="70"  y="313" text-anchor="middle" fill="#7ab8ff" font-size="8" font-weight="bold">① 문제 정의</text>
+  <text x="70"  y="325" text-anchor="middle" fill="#5070a0" font-size="7.5">목표·성공기준</text>
+  <text x="70"  y="336" text-anchor="middle" fill="#5070a0" font-size="7.5">KPI 설정</text>
+
+  <text x="176" y="313" text-anchor="middle" fill="#7ad8ff" font-size="8" font-weight="bold">② 데이터 수집</text>
+  <text x="176" y="325" text-anchor="middle" fill="#406080" font-size="7.5">내부·외부 데이터</text>
+  <text x="176" y="336" text-anchor="middle" fill="#406080" font-size="7.5">저작권·개인정보</text>
+
+  <text x="282" y="313" text-anchor="middle" fill="#7dff9a" font-size="8" font-weight="bold">③ 전처리</text>
+  <text x="282" y="325" text-anchor="middle" fill="#40a060" font-size="7.5">결측치·이상치</text>
+  <text x="282" y="336" text-anchor="middle" fill="#40a060" font-size="7.5">정규화·피처엔지니어링</text>
+
+  <text x="388" y="313" text-anchor="middle" fill="#ffc070" font-size="8" font-weight="bold">④ 모델 학습</text>
+  <text x="388" y="325" text-anchor="middle" fill="#906030" font-size="7.5">알고리즘 선택</text>
+  <text x="388" y="336" text-anchor="middle" fill="#906030" font-size="7.5">하이퍼파라미터 튜닝</text>
+
+  <text x="494" y="313" text-anchor="middle" fill="#ff9060" font-size="8" font-weight="bold">⑤ 평가</text>
+  <text x="494" y="325" text-anchor="middle" fill="#802020" font-size="7.5">Accuracy·F1</text>
+  <text x="494" y="336" text-anchor="middle" fill="#802020" font-size="7.5">Precision·Recall</text>
+
+  <text x="630" y="313" text-anchor="middle" fill="#c084f5" font-size="8" font-weight="bold">⑥ 배포 &amp; 모니터링</text>
+  <text x="630" y="325" text-anchor="middle" fill="#8060b0" font-size="7.5">MLOps·API 서빙</text>
+  <text x="630" y="336" text-anchor="middle" fill="#8060b0" font-size="7.5">드리프트 감지·재학습</text>
+
+  <!-- Arrows between steps -->
+  <line x1="118" y1="318" x2="128" y2="318" stroke="#4a6adc" stroke-width="1.2"/>
+  <polygon points="128,315 135,318 128,321" fill="#4a6adc"/>
+  <line x1="224" y1="318" x2="234" y2="318" stroke="#4a6adc" stroke-width="1.2"/>
+  <polygon points="234,315 241,318 234,321" fill="#4a6adc"/>
+  <line x1="330" y1="318" x2="340" y2="318" stroke="#4a6adc" stroke-width="1.2"/>
+  <polygon points="340,315 347,318 340,321" fill="#4a6adc"/>
+  <line x1="436" y1="318" x2="446" y2="318" stroke="#4a6adc" stroke-width="1.2"/>
+  <polygon points="446,315 453,318 446,321" fill="#4a6adc"/>
+  <line x1="542" y1="318" x2="552" y2="318" stroke="#4a6adc" stroke-width="1.2"/>
+  <polygon points="552,315 559,318 552,321" fill="#4a6adc"/>
+</svg>

@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e3f"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="400" fill="url(#bg)" rx="12"/>
+  <text x="360" y="26" text-anchor="middle" fill="#e0e0ff" font-size="14" font-weight="bold">PMBOK 5대 프로세스 그룹 + 10대 지식 영역</text>
+  <text x="360" y="43" text-anchor="middle" fill="#9090c0" font-size="9.5">49개 프로세스(6판) ∙ 프로세스 그룹은 생명주기 단계, 지식 영역은 전문 분야</text>
+
+  <!-- 5 Process Groups top -->
+  <rect x="12"  y="56" width="118" height="56" rx="8" fill="#1a2060" opacity="0.9" stroke="#4a6adc" stroke-width="1.5"/>
+  <text x="71"  y="76" text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="bold">착수</text>
+  <text x="71"  y="89" text-anchor="middle" fill="#7ab8ff" font-size="8">Initiating</text>
+  <text x="71"  y="103" text-anchor="middle" fill="#3555a0" font-size="7.5">2개 프로세스</text>
+
+  <line x1="130" y1="84" x2="146" y2="84" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="146,81 153,84 146,87" fill="#4a6adc"/>
+
+  <rect x="146" y="56" width="118" height="56" rx="8" fill="#1a3a20" opacity="0.9" stroke="#2a9a5a" stroke-width="1.5"/>
+  <text x="205" y="76" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">기획</text>
+  <text x="205" y="89" text-anchor="middle" fill="#7dff9a" font-size="8">Planning</text>
+  <text x="205" y="103" text-anchor="middle" fill="#2a7040" font-size="7.5">24개 프로세스</text>
+
+  <line x1="264" y1="84" x2="280" y2="84" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="280,81 287,84 280,87" fill="#4a6adc"/>
+
+  <rect x="280" y="56" width="118" height="56" rx="8" fill="#3a2a10" opacity="0.9" stroke="#ca8a2a" stroke-width="1.5"/>
+  <text x="339" y="76" text-anchor="middle" fill="#ffc070" font-size="9" font-weight="bold">실행</text>
+  <text x="339" y="89" text-anchor="middle" fill="#ffc070" font-size="8">Executing</text>
+  <text x="339" y="103" text-anchor="middle" fill="#806020" font-size="7.5">10개 프로세스</text>
+
+  <line x1="398" y1="84" x2="414" y2="84" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="414,81 421,84 414,87" fill="#4a6adc"/>
+
+  <rect x="414" y="56" width="136" height="56" rx="8" fill="#3a1a10" opacity="0.9" stroke="#ca4a2a" stroke-width="1.5"/>
+  <text x="482" y="76" text-anchor="middle" fill="#ff9060" font-size="9" font-weight="bold">감시/통제</text>
+  <text x="482" y="89" text-anchor="middle" fill="#ff9060" font-size="8">Monitoring &amp; Controlling</text>
+  <text x="482" y="103" text-anchor="middle" fill="#802020" font-size="7.5">12개 프로세스</text>
+
+  <line x1="550" y1="84" x2="566" y2="84" stroke="#4a6adc" stroke-width="1.5"/>
+  <polygon points="566,81 573,84 566,87" fill="#4a6adc"/>
+
+  <rect x="566" y="56" width="142" height="56" rx="8" fill="#2a1a5c" opacity="0.9" stroke="#7a3acc" stroke-width="1.5"/>
+  <text x="637" y="76" text-anchor="middle" fill="#c084f5" font-size="9" font-weight="bold">종료</text>
+  <text x="637" y="89" text-anchor="middle" fill="#c084f5" font-size="8">Closing</text>
+  <text x="637" y="103" text-anchor="middle" fill="#5030a0" font-size="7.5">1개 프로세스</text>
+
+  <!-- Feedback loop arrow -->
+  <path d="M637,112 Q637,128 482,128 Q339,128 205,128 Q130,128 71,128 Q71,118 71,112" fill="none" stroke="#4a6adc" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <polygon points="68,112 71,105 74,112" fill="#4a6adc"/>
+  <text x="360" y="126" text-anchor="middle" fill="#3555a0" font-size="7">반복 (Iteration) — 기획·실행·감시통제는 반복 수행</text>
+
+  <!-- 10 Knowledge Areas Grid -->
+  <rect x="12" y="142" width="696" height="172" rx="9" fill="#0e0e2a" opacity="0.85" stroke="#2a2a5a" stroke-width="1"/>
+  <text x="360" y="160" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">10대 지식 영역 (Knowledge Areas)</text>
+
+  <!-- Row 1: 5 areas -->
+  <rect x="22"  y="168" width="128" height="60" rx="6" fill="#1a2060" opacity="0.85" stroke="#4a6adc" stroke-width="1"/>
+  <text x="86"  y="184" text-anchor="middle" fill="#7ab8ff" font-size="9" font-weight="bold">4. 통합 관리</text>
+  <text x="86"  y="196" text-anchor="middle" fill="#5070a0" font-size="7.5">Integration</text>
+  <text x="86"  y="208" text-anchor="middle" fill="#3555a0" font-size="7">모든 영역을 통합 조정</text>
+  <text x="86"  y="220" text-anchor="middle" fill="#3555a0" font-size="7">7개 프로세스</text>
+
+  <rect x="158" y="168" width="128" height="60" rx="6" fill="#1a3a20" opacity="0.85" stroke="#2a9a5a" stroke-width="1"/>
+  <text x="222" y="184" text-anchor="middle" fill="#7dff9a" font-size="9" font-weight="bold">5. 범위 관리</text>
+  <text x="222" y="196" text-anchor="middle" fill="#40a060" font-size="7.5">Scope</text>
+  <text x="222" y="208" text-anchor="middle" fill="#205040" font-size="7">무엇을 만들 것인가</text>
+  <text x="222" y="220" text-anchor="middle" fill="#205040" font-size="7">6개 프로세스</text>
+
+  <rect x="294" y="168" width="128" height="60" rx="6" fill="#3a2a10" opacity="0.85" stroke="#ca8a2a" stroke-width="1"/>
+  <text x="358" y="184" text-anchor="middle" fill="#ffc070" font-size="9" font-weight="bold">6. 일정 관리</text>
+  <text x="358" y="196" text-anchor="middle" fill="#906030" font-size="7.5">Schedule</text>
+  <text x="358" y="208" text-anchor="middle" fill="#604020" font-size="7">언제 완료할 것인가</text>
+  <text x="358" y="220" text-anchor="middle" fill="#604020" font-size="7">6개 프로세스</text>
+
+  <rect x="430" y="168" width="128" height="60" rx="6" fill="#3a1a10" opacity="0.85" stroke="#ca4a2a" stroke-width="1"/>
+  <text x="494" y="184" text-anchor="middle" fill="#ff9060" font-size="9" font-weight="bold">7. 원가 관리</text>
+  <text x="494" y="196" text-anchor="middle" fill="#c05030" font-size="7.5">Cost</text>
+  <text x="494" y="208" text-anchor="middle" fill="#802020" font-size="7">얼마가 드는가</text>
+  <text x="494" y="220" text-anchor="middle" fill="#802020" font-size="7">4개 프로세스</text>
+
+  <rect x="566" y="168" width="134" height="60" rx="6" fill="#2a1a5c" opacity="0.85" stroke="#7a3acc" stroke-width="1"/>
+  <text x="633" y="184" text-anchor="middle" fill="#c084f5" font-size="9" font-weight="bold">8. 품질 관리</text>
+  <text x="633" y="196" text-anchor="middle" fill="#8060b0" font-size="7.5">Quality</text>
+  <text x="633" y="208" text-anchor="middle" fill="#5030a0" font-size="7">요구사항 충족</text>
+  <text x="633" y="220" text-anchor="middle" fill="#5030a0" font-size="7">3개 프로세스</text>
+
+  <!-- Row 2: 5 areas -->
+  <rect x="22"  y="236" width="128" height="70" rx="6" fill="#2a2a10" opacity="0.85" stroke="#8a9a2a" stroke-width="1"/>
+  <text x="86"  y="252" text-anchor="middle" fill="#ddf070" font-size="9" font-weight="bold">9. 자원 관리</text>
+  <text x="86"  y="264" text-anchor="middle" fill="#8a9a30" font-size="7.5">Resource</text>
+  <text x="86"  y="276" text-anchor="middle" fill="#606020" font-size="7">팀·물적 자원</text>
+  <text x="86"  y="287" text-anchor="middle" fill="#606020" font-size="7">6개 프로세스</text>
+
+  <rect x="158" y="236" width="128" height="70" rx="6" fill="#1a2a3a" opacity="0.85" stroke="#2a6a9a" stroke-width="1"/>
+  <text x="222" y="252" text-anchor="middle" fill="#70c0f0" font-size="9" font-weight="bold">10. 의사소통</text>
+  <text x="222" y="264" text-anchor="middle" fill="#3080a0" font-size="7.5">Communications</text>
+  <text x="222" y="276" text-anchor="middle" fill="#204060" font-size="7">정보 생성·배포</text>
+  <text x="222" y="287" text-anchor="middle" fill="#204060" font-size="7">3개 프로세스</text>
+
+  <rect x="294" y="236" width="128" height="70" rx="6" fill="#3a1a2a" opacity="0.85" stroke="#ca2a7a" stroke-width="1"/>
+  <text x="358" y="252" text-anchor="middle" fill="#f070b0" font-size="9" font-weight="bold">11. 리스크 관리</text>
+  <text x="358" y="264" text-anchor="middle" fill="#b04070" font-size="7.5">Risk</text>
+  <text x="358" y="276" text-anchor="middle" fill="#802050" font-size="7">불확실성 식별·대응</text>
+  <text x="358" y="287" text-anchor="middle" fill="#802050" font-size="7">7개 프로세스</text>
+
+  <rect x="430" y="236" width="128" height="70" rx="6" fill="#3a2a3a" opacity="0.85" stroke="#8a4a9a" stroke-width="1"/>
+  <text x="494" y="252" text-anchor="middle" fill="#d090f0" font-size="9" font-weight="bold">12. 조달 관리</text>
+  <text x="494" y="264" text-anchor="middle" fill="#906090" font-size="7.5">Procurement</text>
+  <text x="494" y="276" text-anchor="middle" fill="#604060" font-size="7">외부 구매·계약</text>
+  <text x="494" y="287" text-anchor="middle" fill="#604060" font-size="7">3개 프로세스</text>
+
+  <rect x="566" y="236" width="134" height="70" rx="6" fill="#1a3030" opacity="0.85" stroke="#2a7a7a" stroke-width="1"/>
+  <text x="633" y="252" text-anchor="middle" fill="#60d0d0" font-size="9" font-weight="bold">13. 이해관계자</text>
+  <text x="633" y="264" text-anchor="middle" fill="#306060" font-size="7.5">Stakeholder</text>
+  <text x="633" y="276" text-anchor="middle" fill="#204040" font-size="7">식별·참여 관리</text>
+  <text x="633" y="287" text-anchor="middle" fill="#204040" font-size="7">4개 프로세스</text>
+
+  <!-- Bottom: PMBOK 6 vs 7 -->
+  <rect x="12" y="324" width="696" height="68" rx="10" fill="#0e0e2a" opacity="0.85" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="360" y="342" text-anchor="middle" fill="#d0d0ff" font-size="10.5" font-weight="bold">PMBOK 6판 vs 7판 핵심 차이</text>
+  <rect x="22"  y="349" width="320" height="36" rx="5" fill="#1a2060" opacity="0.8"/>
+  <rect x="352" y="349" width="348" height="36" rx="5" fill="#1a3a20" opacity="0.8"/>
+  <text x="182" y="362" text-anchor="middle" fill="#7ab8ff" font-size="8.5" font-weight="bold">6판: 프로세스 기반 (49 프로세스)</text>
+  <text x="182" y="376" text-anchor="middle" fill="#5070a0" font-size="7.5">5 프로세스 그룹 × 10 지식 영역 매트릭스</text>
+  <text x="526" y="362" text-anchor="middle" fill="#7dff9a" font-size="8.5" font-weight="bold">7판: 원칙 기반 (12 원칙 + 8 성과 영역)</text>
+  <text x="526" y="376" text-anchor="middle" fill="#40a060" font-size="7.5">결과 중심 · 애자일 친화 · 가치 전달 강조</text>
+</svg>
