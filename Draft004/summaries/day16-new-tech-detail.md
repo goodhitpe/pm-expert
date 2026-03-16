@@ -2326,6 +2326,14 @@ Kafka (수집)
 
 ## 4교시: 블록체인 & IoT (1시간) <!-- 슬라이드 #7 -->
 
+<div align="center">
+
+![블록체인 연소 구조와 IoT 4계층 아키텍처](../images/day16-blockchain-iot.svg)
+
+*▲ 블록/체인 Hash 연결 구조 + PoW vs PoS + IoT 센서→네트워크→플랫폼→서비스 4계층*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 블록체인 기본

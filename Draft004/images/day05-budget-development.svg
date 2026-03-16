@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3f"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="720" height="440" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="360" y="34" font-family="Arial" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">예산 수립 — 정확도 계층 및 예비비 구조</text>
+  <text x="360" y="54" font-family="Arial" font-size="12" fill="#94a3b8" text-anchor="middle">■ 프로젝트 진행에 따라 원가 정확도가 점진적으로 향상</text>
+
+  <!-- Three levels of estimates -->
+  <!-- Level 1: ROM -->
+  <rect x="80" y="72" width="560" height="72" rx="8" fill="#1e2a4a" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="80" y="72" width="160" height="72" rx="8" fill="#1e3a5f"/>
+  <text x="160" y="103" font-family="Arial" font-size="14" font-weight="bold" fill="#60a5fa" text-anchor="middle">ROM 산정</text>
+  <text x="160" y="119" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle">Rough Order of Magnitude</text>
+  <text x="160" y="133" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">개략적 규모 산정</text>
+  <line x1="240" y1="80" x2="240" y2="136" stroke="#334155" stroke-width="1"/>
+  <text x="430" y="95" font-family="Arial" font-size="12" fill="#e2e8f0" text-anchor="middle">정확도: -25% ~ +75%</text>
+  <text x="430" y="112" font-family="Arial" font-size="11" fill="#94a3b8" text-anchor="middle">착수 전, 타당성 검토 단계</text>
+  <text x="430" y="128" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">기법: 유사 산정, 전문가 판단</text>
+
+  <!-- Accuracy bar for ROM -->
+  <rect x="610" y="88" width="70" height="42" rx="4" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="1"/>
+  <text x="645" y="112" font-family="Arial" font-size="10" fill="#fca5a5" text-anchor="middle">±넓음</text>
+
+  <!-- Arrow down -->
+  <line x1="360" y1="144" x2="360" y2="164" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="400" y="157" font-family="Arial" font-size="10" fill="#64748b">정의가 명확해질수록</text>
+
+  <!-- Level 2: Budget Estimate -->
+  <rect x="80" y="168" width="560" height="72" rx="8" fill="#1a2820" stroke="#22c55e" stroke-width="2"/>
+  <rect x="80" y="168" width="160" height="72" rx="8" fill="#1a3a24"/>
+  <text x="160" y="199" font-family="Arial" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">예산 산정</text>
+  <text x="160" y="215" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">Budget Estimate</text>
+  <text x="160" y="229" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">예산 요청 단계</text>
+  <line x1="240" y1="176" x2="240" y2="232" stroke="#334155" stroke-width="1"/>
+  <text x="430" y="191" font-family="Arial" font-size="12" fill="#e2e8f0" text-anchor="middle">정확도: -10% ~ +25%</text>
+  <text x="430" y="208" font-family="Arial" font-size="11" fill="#94a3b8" text-anchor="middle">계획 단계, WBS 부분 완성 후</text>
+  <text x="430" y="224" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">기법: 모수 산정, 유사 산정</text>
+  <rect x="610" y="184" width="70" height="42" rx="4" fill="#eab308" opacity="0.2" stroke="#eab308" stroke-width="1"/>
+  <text x="645" y="208" font-family="Arial" font-size="10" fill="#fde68a" text-anchor="middle">±중간</text>
+
+  <!-- Arrow down -->
+  <line x1="360" y1="240" x2="360" y2="260" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="400" y="253" font-family="Arial" font-size="10" fill="#64748b">상세 계획 완료 시</text>
+
+  <!-- Level 3: Definitive -->
+  <rect x="80" y="264" width="560" height="72" rx="8" fill="#2e1065" stroke="#a855f7" stroke-width="2"/>
+  <rect x="80" y="264" width="160" height="72" rx="8" fill="#3b1a6e"/>
+  <text x="160" y="295" font-family="Arial" font-size="14" font-weight="bold" fill="#c084fc" text-anchor="middle">확정 산정</text>
+  <text x="160" y="311" font-family="Arial" font-size="10" fill="#e9d5ff" text-anchor="middle">Definitive Estimate</text>
+  <text x="160" y="325" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">확정 견적</text>
+  <line x1="240" y1="272" x2="240" y2="328" stroke="#334155" stroke-width="1"/>
+  <text x="430" y="287" font-family="Arial" font-size="12" fill="#e2e8f0" text-anchor="middle">정확도: -5% ~ +10%</text>
+  <text x="430" y="304" font-family="Arial" font-size="11" fill="#94a3b8" text-anchor="middle">상세 WBS 완성 후 사용</text>
+  <text x="430" y="320" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">기법: 상향식 산정 (Bottom-up)</text>
+  <rect x="610" y="280" width="70" height="42" rx="4" fill="#22c55e" opacity="0.2" stroke="#22c55e" stroke-width="1"/>
+  <text x="645" y="304" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">±좁음</text>
+
+  <!-- Reserve section -->
+  <text x="360" y="366" font-family="Arial" font-size="14" font-weight="bold" fill="#e2e8f0" text-anchor="middle">■ 예비비 구조 (Cost Baseline + Management Reserve = Budget)</text>
+
+  <!-- Cost Baseline bar -->
+  <rect x="40" y="380" width="420" height="36" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="250" y="403" font-family="Arial" font-size="12" fill="#93c5fd" text-anchor="middle">원가 기준선 (Cost Baseline)</text>
+  <!-- Contingency Reserve sub-portion -->
+  <rect x="340" y="380" width="120" height="36" rx="4" fill="#0e4a6e" stroke="#38bdf8" stroke-width="1"/>
+  <text x="400" y="403" font-family="Arial" font-size="10" fill="#7dd3fc" text-anchor="middle">우발 예비비</text>
+
+  <!-- Management Reserve bar -->
+  <rect x="460" y="380" width="220" height="36" rx="4" fill="#4a1d1d" stroke="#f97316" stroke-width="1.5"/>
+  <text x="570" y="403" font-family="Arial" font-size="12" fill="#fdba74" text-anchor="middle">관리 예비비 (mgmt.)</text>
+
+  <!-- Labels below -->
+  <text x="250" y="428" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">알려진 리스크 대비 (PM 직접 통제)</text>
+  <text x="570" y="428" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">미지 리스크 (경영진 승인 필요)</text>
+</svg>

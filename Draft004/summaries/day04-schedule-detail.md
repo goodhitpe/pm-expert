@@ -2318,6 +2318,14 @@ CPM의 전진 계산(Forward Pass)과 후진 계산(Backward Pass)의 목적을 
 
 ## 5교시: 간트차트 및 일정 단축 (이론 + 예시 + 실습 + 퀴즈) <!-- 슬라이드 #6 -->
 
+<div align="center">
+
+![간트차트 및 일정 단축 기법](../images/day04-gantt-schedule-compression.svg)
+
+*▲ 간트차트 구조 + 크래싱(Crashing) vs 패스트트래킹(Fast-Tracking) 비교*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 간트차트 (Gantt Chart)

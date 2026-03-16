@@ -1897,6 +1897,14 @@ C = 현재 참여 수준, D = 목표 참여 수준
 
 ## 4교시: 이해관계자 참여 관리 (1.5시간) <!-- 이론 강의 중심 -->
 
+<div align="center">
+
+![저항 관리 6전략 — Kotter & Schlesinger](../images/day11-stakeholder-resistance.svg)
+
+*▲ 변화 저항의 4가지 원인 + Kotter & Schlesinger 6가지 대응 전략*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 이해관계자 참여 관리 (13.3) 개요

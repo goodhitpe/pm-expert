@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3f"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="720" height="480" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="360" y="34" font-family="Arial" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">보안 관리 체계 — ISMS 및 ISO 27001 PDCA</text>
+
+  <!-- ISMS Hierarchy Section -->
+  <text x="200" y="60" font-family="Arial" font-size="13" font-weight="bold" fill="#93c5fd" text-anchor="middle">■ ISMS 계층 구조</text>
+
+  <!-- ISMS outer box -->
+  <rect x="28" y="72" width="340" height="268" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="28" y="72" width="340" height="30" rx="8" fill="#1d4ed8"/>
+  <rect x="28" y="86" width="340" height="16" fill="#1d4ed8"/>
+  <text x="198" y="92" font-family="Arial" font-size="12" font-weight="bold" fill="white" text-anchor="middle">ISMS (정보보호 관리체계)</text>
+  <text x="198" y="107" font-family="Arial" font-size="9" fill="#bfdbfe" text-anchor="middle">Information Security Management System</text>
+
+  <!-- Layer 3: Policy -->
+  <rect x="48" y="118" width="300" height="38" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="198" y="133" font-family="Arial" font-size="12" font-weight="bold" fill="#93c5fd" text-anchor="middle">보안 정책 (Security Policy)</text>
+  <text x="198" y="147" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">최고 경영진이 승인한 보안 의지 선언</text>
+
+  <!-- Arrow down -->
+  <line x1="198" y1="156" x2="198" y2="170" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Layer 2: Procedures -->
+  <rect x="48" y="172" width="300" height="38" rx="6" fill="#1a2a4a" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="198" y="187" font-family="Arial" font-size="12" font-weight="bold" fill="#7dd3fc" text-anchor="middle">보안 절차서 (Procedures)</text>
+  <text x="198" y="201" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">업무별 구체적 보안 처리 절차</text>
+
+  <!-- Arrow down -->
+  <line x1="198" y1="210" x2="198" y2="224" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Layer 1: Controls -->
+  <rect x="48" y="226" width="300" height="38" rx="6" fill="#1a3a3a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="198" y="241" font-family="Arial" font-size="12" font-weight="bold" fill="#86efac" text-anchor="middle">보안 통제 (Controls)</text>
+  <text x="198" y="255" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">기술적·관리적·물리적 통제 수단</text>
+
+  <!-- Arrow down -->
+  <line x1="198" y1="264" x2="198" y2="278" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Layer 0: Implementation -->
+  <rect x="48" y="280" width="300" height="38" rx="6" fill="#1a3a1a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="198" y="295" font-family="Arial" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">구현 (Implementation)</text>
+  <text x="198" y="309" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">실제 보안 솔루션 · 도구 · 인력 운영</text>
+
+  <!-- 3 control types -->
+  <rect x="48" y="328" width="88" height="50" rx="4" fill="#1e2a4a"/>
+  <text x="92" y="348" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle">기술적 통제</text>
+  <text x="92" y="362" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">암호화,방화벽</text>
+  <text x="92" y="373" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">접근 통제</text>
+  <rect x="154" y="328" width="88" height="50" rx="4" fill="#2a1a3a"/>
+  <text x="198" y="348" font-family="Arial" font-size="10" fill="#c4b5fd" text-anchor="middle">관리적 통제</text>
+  <text x="198" y="362" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">정책,교육훈련</text>
+  <text x="198" y="373" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">감사</text>
+  <rect x="260" y="328" width="88" height="50" rx="4" fill="#1a2a1a"/>
+  <text x="304" y="348" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">물리적 통제</text>
+  <text x="304" y="362" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">출입통제,CCTV</text>
+  <text x="304" y="373" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">잠금장치</text>
+
+  <!-- ISO 27001 PDCA Section -->
+  <text x="556" y="60" font-family="Arial" font-size="13" font-weight="bold" fill="#c084fc" text-anchor="middle">■ ISO 27001 PDCA 사이클</text>
+
+  <!-- PDCA Circle diagram -->
+  <!-- Background circle area -->
+  <circle cx="556" cy="222" r="148" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+
+  <!-- P - Plan segment (top-left) -->
+  <path d="M556 222 L420 130 A148 148 0 0 1 556 74 Z" fill="#1d4ed8" opacity="0.85"/>
+  <text x="476" y="140" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">P</text>
+  <text x="476" y="157" font-family="Arial" font-size="10" fill="#bfdbfe" text-anchor="middle">Plan</text>
+  <text x="476" y="170" font-family="Arial" font-size="9" fill="#93c5fd" text-anchor="middle">계획</text>
+
+  <!-- D - Do segment (top-right) -->
+  <path d="M556 222 L556 74 A148 148 0 0 1 692 130 Z" fill="#16a34a" opacity="0.85"/>
+  <text x="638" y="140" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">D</text>
+  <text x="638" y="157" font-family="Arial" font-size="10" fill="#bbf7d0" text-anchor="middle">Do</text>
+  <text x="638" y="170" font-family="Arial" font-size="9" fill="#86efac" text-anchor="middle">실행</text>
+
+  <!-- C - Check segment (bottom-right) -->
+  <path d="M556 222 L692 314 A148 148 0 0 1 556 370 Z" fill="#92400e" opacity="0.85"/>
+  <text x="638" y="298" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">C</text>
+  <text x="638" y="315" font-family="Arial" font-size="10" fill="#fed7aa" text-anchor="middle">Check</text>
+  <text x="638" y="328" font-family="Arial" font-size="9" fill="#fdba74" text-anchor="middle">점검</text>
+
+  <!-- A - Act segment (bottom-left) -->
+  <path d="M556 222 L556 370 A148 148 0 0 1 420 314 Z" fill="#7c3aed" opacity="0.85"/>
+  <text x="476" y="298" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">A</text>
+  <text x="476" y="315" font-family="Arial" font-size="10" fill="#e9d5ff" text-anchor="middle">Act</text>
+  <text x="476" y="328" font-family="Arial" font-size="9" fill="#c4b5fd" text-anchor="middle">개선</text>
+
+  <!-- Center label -->
+  <circle cx="556" cy="222" r="44" fill="#1e1e3f" stroke="#475569" stroke-width="1.5"/>
+  <text x="556" y="216" font-family="Arial" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">ISO</text>
+  <text x="556" y="230" font-family="Arial" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">27001</text>
+
+  <!-- PDCA descriptions at bottom -->
+  <rect x="372" y="390" width="368" height="74" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="432" y="408" font-family="Arial" font-size="9" fill="#93c5fd" text-anchor="middle">P: 보안 목표·</text>
+  <text x="432" y="420" font-family="Arial" font-size="9" fill="#93c5fd" text-anchor="middle">리스크 식별</text>
+  <text x="432" y="432" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">정책 수립</text>
+  <text x="516" y="408" font-family="Arial" font-size="9" fill="#86efac" text-anchor="middle">D: 통제 구현·</text>
+  <text x="516" y="420" font-family="Arial" font-size="9" fill="#86efac" text-anchor="middle">교육 실시</text>
+  <text x="516" y="432" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">운영 실행</text>
+  <text x="600" y="408" font-family="Arial" font-size="9" fill="#fdba74" text-anchor="middle">C: 내부 감사·</text>
+  <text x="600" y="420" font-family="Arial" font-size="9" fill="#fdba74" text-anchor="middle">성과 측정</text>
+  <text x="600" y="432" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">경영 검토</text>
+  <text x="688" y="408" font-family="Arial" font-size="9" fill="#c4b5fd" text-anchor="middle">A: 부적합 개선·</text>
+  <text x="688" y="420" font-family="Arial" font-size="9" fill="#c4b5fd" text-anchor="middle">재발 방지</text>
+  <text x="688" y="432" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">지속 개선</text>
+  <line x1="474" y1="394" x2="474" y2="460" stroke="#334155" stroke-width="1"/>
+  <line x1="558" y1="394" x2="558" y2="460" stroke="#334155" stroke-width="1"/>
+  <line x1="642" y1="394" x2="642" y2="460" stroke="#334155" stroke-width="1"/>
+
+  <!-- ISMS footer -->
+  <text x="198" y="398" font-family="Arial" font-size="11" fill="#64748b" text-anchor="middle">한국: ISMS-P 인증 (KISA 주관)</text>
+  <text x="198" y="415" font-family="Arial" font-size="11" fill="#64748b" text-anchor="middle">국제: ISO 27001 인증 (외부 심사)</text>
+  <text x="198" y="432" font-family="Arial" font-size="10" fill="#475569" text-anchor="middle">의무 대상: 정보통신망법 관련 기업</text>
+  <text x="198" y="448" font-family="Arial" font-size="10" fill="#475569" text-anchor="middle">인증 주기: 3년 (매년 사후 심사)</text>
+</svg>

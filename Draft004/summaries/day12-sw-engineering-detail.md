@@ -4936,6 +4936,14 @@ void testCanBorrow_NonMemberAtLimit() {
 
 ## 6교시: 형상관리와 PM의 역할 (1시간) <!-- 슬라이드 #7~#8 -->
 
+<div align="center">
+
+![형상관리 4대 기능과 Git 흐름](../images/day12-configuration-management.svg)
+
+*▲ 형상관리 4대 기능(식별/통제/상태보고/감사) + Git 웅스트림 흐름 + Git Flow 브랜치 전략*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 형상관리(Configuration Management)란?

@@ -1652,6 +1652,14 @@ FROM 주문;
 
 ## 6교시: 데이터 관리 트렌드 및 PM 관점 (이론 + 예시 + 실습 + 퀴즈)
 
+<div align="center">
+
+![데이터 파이프라인 — ETL vs ELT 비교](../images/day15-data-pipeline.svg)
+
+*▲ ETL vs ELT 5가지 항목 비교표 + Source→Extract→Transform→Load→Analytics 파이프라인 흐름*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. Data Warehouse (DW)

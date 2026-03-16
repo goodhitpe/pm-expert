@@ -955,6 +955,14 @@ bcrypt.checkpw('pass123'.encode(), pw_hash)  # True
 
 ## 4교시: 보안 관리 체계 (이론 + 예시 + 실습 + 퀴즈)
 
+<div align="center">
+
+![ISMS 계층 구조와 ISO/IEC 27001 PDCA](../images/day14-isms-iso27001.svg)
+
+*▲ ISMS 4계층 정책 체계 + ISO/IEC 27001 PDCA 사이클*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. ISMS (정보보호관리체계)
@@ -1414,6 +1422,14 @@ Act (조치):
 
 ## 5교시: 개인정보보호 및 컴플라이언스 (이론 + 예시 + 실습 + 퀴즈)
 
+<div align="center">
+
+![GDPR 5대 권리와 개인정보 생명주기](../images/day14-privacy-gdpr.svg)
+
+*▲ GDPR 정보주체 5대 권리 + 개인정보 수집→저장→이용→제공→파기 생명주기*
+
+</div>
+
 ### 이론 (50분)
 
 #### 1. 개인정보보호법 (한국)
@@ -1858,6 +1874,14 @@ Day 3, 10:00: 고객 이메일 통지
 2. 개인정보보호법의 핵심 원칙 2가지를 쓰시오.
 
 ## 6교시: PM 관점 보안 적용 (이론 + 예시 + 실습 + 퀴즈)
+
+<div align="center">
+
+![SDLC 단계별 보안 활동 — Security by Design](../images/day14-security-by-design.svg)
+
+*▲ 요구사항→설계→개발→테스트→배포→운영 SDLC 6단계별 보안 활동 + 결함 수정 비용 대비*
+
+</div>
 
 ### 이론 (50분)
 

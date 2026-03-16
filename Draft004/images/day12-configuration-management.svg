@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3f"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrgreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arrorange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f97316"/>
+    </marker>
+  </defs>
+  <rect width="720" height="480" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="360" y="30" font-family="Arial" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">형상관리 (Configuration Management) &amp; Git 흐름</text>
+
+  <!-- SCM 4 Functions -->
+  <text x="200" y="54" font-family="Arial" font-size="13" font-weight="bold" fill="#fbbf24" text-anchor="middle">■ 형상관리 4대 기능</text>
+
+  <!-- Function 1: Identification -->
+  <rect x="28" y="66" width="170" height="96" rx="6" fill="#1a2a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="50" y="88" font-family="Arial" font-size="22">🏷</text>
+  <text x="85" y="86" font-family="Arial" font-size="12" font-weight="bold" fill="#4ade80">형상 식별</text>
+  <text x="85" y="100" font-family="Arial" font-size="9" fill="#86efac">Configuration ID</text>
+  <text x="40" y="118" font-family="Arial" font-size="10" fill="#e2e8f0">관리 대상 아이템 선정</text>
+  <text x="40" y="132" font-family="Arial" font-size="10" fill="#e2e8f0">고유 식별자(ID) 부여</text>
+  <text x="40" y="146" font-family="Arial" font-size="10" fill="#e2e8f0">형상 기준선(Baseline)</text>
+  <text x="40" y="158" font-family="Arial" font-size="9" fill="#64748b">버전 번호 체계 수립</text>
+
+  <!-- Function 2: Control -->
+  <rect x="206" y="66" width="170" height="96" rx="6" fill="#1e2a3a" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="228" y="88" font-family="Arial" font-size="22">🔒</text>
+  <text x="263" y="86" font-family="Arial" font-size="12" font-weight="bold" fill="#93c5fd">형상 통제</text>
+  <text x="263" y="100" font-family="Arial" font-size="9" fill="#60a5fa">Configuration Control</text>
+  <text x="218" y="118" font-family="Arial" font-size="10" fill="#e2e8f0">변경 요청서 (CR) 검토</text>
+  <text x="218" y="132" font-family="Arial" font-size="10" fill="#e2e8f0">CCB (변경통제위원회)</text>
+  <text x="218" y="146" font-family="Arial" font-size="10" fill="#e2e8f0">승인/거부·이행 관리</text>
+  <text x="218" y="158" font-family="Arial" font-size="9" fill="#64748b">무단 변경 방지</text>
+
+  <!-- Function 3: Status Reporting -->
+  <rect x="384" y="66" width="170" height="96" rx="6" fill="#2e1065" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="406" y="88" font-family="Arial" font-size="22">📊</text>
+  <text x="441" y="86" font-family="Arial" font-size="12" font-weight="bold" fill="#c4b5fd">형상 상태 보고</text>
+  <text x="441" y="100" font-family="Arial" font-size="9" fill="#a78bfa">Status Accounting</text>
+  <text x="396" y="118" font-family="Arial" font-size="10" fill="#e2e8f0">변경 이력 기록 유지</text>
+  <text x="396" y="132" font-family="Arial" font-size="10" fill="#e2e8f0">현재 버전 상태 추적</text>
+  <text x="396" y="146" font-family="Arial" font-size="10" fill="#e2e8f0">변경 이력 가시화</text>
+  <text x="396" y="158" font-family="Arial" font-size="9" fill="#64748b">감사 추적성 확보</text>
+
+  <!-- Function 4: Audit -->
+  <rect x="562" y="66" width="130" height="96" rx="6" fill="#3a1a1a" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="584" y="88" font-family="Arial" font-size="22">🔍</text>
+  <text x="618" y="86" font-family="Arial" font-size="12" font-weight="bold" fill="#f87171" text-anchor="middle">형상 감사</text>
+  <text x="618" y="100" font-family="Arial" font-size="9" fill="#fca5a5" text-anchor="middle">Audit</text>
+  <text x="574" y="118" font-family="Arial" font-size="10" fill="#e2e8f0">기능 형상 감사(FCA)</text>
+  <text x="574" y="132" font-family="Arial" font-size="10" fill="#e2e8f0">물리적 형상 감사(PCA)</text>
+  <text x="574" y="146" font-family="Arial" font-size="10" fill="#e2e8f0">출시 전 검증</text>
+  <text x="574" y="158" font-family="Arial" font-size="9" fill="#64748b">규정 준수 확인</text>
+
+  <!-- Git Flow Diagram -->
+  <text x="360" y="184" font-family="Arial" font-size="13" font-weight="bold" fill="#e2e8f0" text-anchor="middle">■ Git 버전 관리 흐름 (Branch Strategy)</text>
+
+  <!-- Working Directory -->
+  <rect x="28" y="198" width="102" height="50" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="79" y="219" font-family="Arial" font-size="11" font-weight="bold" fill="#93c5fd" text-anchor="middle">Working</text>
+  <text x="79" y="233" font-family="Arial" font-size="11" font-weight="bold" fill="#93c5fd" text-anchor="middle">Directory</text>
+  <text x="79" y="244" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">파일 수정</text>
+
+  <!-- git add -->
+  <line x1="132" y1="223" x2="160" y2="223" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrgreen)"/>
+  <text x="146" y="216" font-family="Arial" font-size="9" fill="#4ade80" text-anchor="middle">git add</text>
+
+  <!-- Staging Area -->
+  <rect x="162" y="198" width="102" height="50" rx="5" fill="#1a3a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="213" y="219" font-family="Arial" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">Staging</text>
+  <text x="213" y="233" font-family="Arial" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">Area (Index)</text>
+  <text x="213" y="244" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">스냅샷 준비</text>
+
+  <!-- git commit -->
+  <line x1="266" y1="223" x2="294" y2="223" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrorange)"/>
+  <text x="280" y="216" font-family="Arial" font-size="9" fill="#fb923c" text-anchor="middle">git commit</text>
+
+  <!-- Local Repo -->
+  <rect x="296" y="198" width="102" height="50" rx="5" fill="#3a1a06" stroke="#f97316" stroke-width="1.5"/>
+  <text x="347" y="219" font-family="Arial" font-size="11" font-weight="bold" fill="#fb923c" text-anchor="middle">Local</text>
+  <text x="347" y="233" font-family="Arial" font-size="11" font-weight="bold" fill="#fb923c" text-anchor="middle">Repository</text>
+  <text x="347" y="244" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">로컬 커밋 히스토리</text>
+
+  <!-- git push -->
+  <line x1="400" y1="223" x2="428" y2="223" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="414" y="216" font-family="Arial" font-size="9" fill="#c4b5fd" text-anchor="middle">git push</text>
+
+  <!-- Remote Repo -->
+  <rect x="430" y="198" width="102" height="50" rx="5" fill="#2e1065" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="481" y="219" font-family="Arial" font-size="11" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Remote</text>
+  <text x="481" y="233" font-family="Arial" font-size="11" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Repository</text>
+  <text x="481" y="244" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">GitHub / GitLab</text>
+
+  <!-- git pull -->
+  <line x1="430" y1="248" x2="398" y2="248" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="414" y="268" font-family="Arial" font-size="9" fill="#94a3b8" text-anchor="middle">git pull</text>
+
+  <!-- Branch Strategy -->
+  <rect x="548" y="198" width="164" height="106" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="630" y="216" font-family="Arial" font-size="11" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Git Flow 브랜치</text>
+  <text x="558" y="233" font-family="Arial" font-size="10" fill="#4ade80">main:</text>
+  <text x="596" y="233" font-family="Arial" font-size="9" fill="#e2e8f0">배포 가능 상태</text>
+  <text x="558" y="248" font-family="Arial" font-size="10" fill="#3b82f6">develop:</text>
+  <text x="608" y="248" font-family="Arial" font-size="9" fill="#e2e8f0">통합 개발</text>
+  <text x="558" y="263" font-family="Arial" font-size="10" fill="#f97316">feature/*:</text>
+  <text x="614" y="263" font-family="Arial" font-size="9" fill="#e2e8f0">기능 개발</text>
+  <text x="558" y="278" font-family="Arial" font-size="10" fill="#a855f7">release/*:</text>
+  <text x="614" y="278" font-family="Arial" font-size="9" fill="#e2e8f0">배포 준비</text>
+  <text x="558" y="293" font-family="Arial" font-size="10" fill="#ef4444">hotfix/*:</text>
+  <text x="608" y="293" font-family="Arial" font-size="9" fill="#e2e8f0">긴급 수정</text>
+
+  <!-- Semantic Versioning -->
+  <rect x="28" y="264" width="510" height="48" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="48" y="282" font-family="Arial" font-size="11" font-weight="bold" fill="#fbbf24">의미론적 버전관리 (Semantic Versioning):</text>
+  <text x="48" y="302" font-family="Arial" font-size="11" fill="#e2e8f0">v</text>
+  <text x="60" y="302" font-family="Arial" font-size="13" font-weight="bold" fill="#ef4444">MAJOR</text>
+  <text x="115" y="302" font-family="Arial" font-size="11" fill="#94a3b8">.</text>
+  <text x="125" y="302" font-family="Arial" font-size="13" font-weight="bold" fill="#f97316">MINOR</text>
+  <text x="183" y="302" font-family="Arial" font-size="11" fill="#94a3b8">.</text>
+  <text x="193" y="302" font-family="Arial" font-size="13" font-weight="bold" fill="#22c55e">PATCH</text>
+  <text x="250" y="302" font-family="Arial" font-size="10" fill="#64748b">  예: v2.4.1 → Major(호환 파괴 변경) / Minor(기능 추가) / Patch(버그 수정)</text>
+
+  <!-- PM Role in CM -->
+  <rect x="28" y="326" width="664" height="144" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="360" y="346" font-family="Arial" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">■ PM 관점 — 형상관리의 역할과 중요성</text>
+
+  <rect x="40" y="354" width="142" height="104" rx="4" fill="#1a2a1a" stroke="#22c55e" stroke-width="1"/>
+  <text x="111" y="372" font-family="Arial" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">변경 통제</text>
+  <text x="111" y="390" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">CCB 운영으로</text>
+  <text x="111" y="404" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">범위 크리프 방지</text>
+  <text x="111" y="420" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">변경 영향 분석</text>
+  <text x="111" y="435" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">일정·비용 보호</text>
+  <text x="111" y="451" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">의사결정 문서화</text>
+
+  <rect x="194" y="354" width="142" height="104" rx="4" fill="#1e2a3a" stroke="#3b82f6" stroke-width="1"/>
+  <text x="265" y="372" font-family="Arial" font-size="11" font-weight="bold" fill="#93c5fd" text-anchor="middle">추적성 확보</text>
+  <text x="265" y="390" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">요구사항 ↔ 코드</text>
+  <text x="265" y="404" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">↔ 테스트 연계</text>
+  <text x="265" y="420" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">결함 원인 추적</text>
+  <text x="265" y="435" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">규정 준수 증명</text>
+  <text x="265" y="451" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">감사 대응</text>
+
+  <rect x="348" y="354" width="142" height="104" rx="4" fill="#2e1065" stroke="#a855f7" stroke-width="1"/>
+  <text x="419" y="372" font-family="Arial" font-size="11" font-weight="bold" fill="#c4b5fd" text-anchor="middle">품질 보증</text>
+  <text x="419" y="390" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">기준선 대비</text>
+  <text x="419" y="404" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">버전 일관성 검증</text>
+  <text x="419" y="420" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">릴리즈 관리</text>
+  <text x="419" y="435" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">배포 정확성 보장</text>
+  <text x="419" y="451" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">롤백 가능성 확보</text>
+
+  <rect x="502" y="354" width="178" height="104" rx="4" fill="#3a1a06" stroke="#f97316" stroke-width="1"/>
+  <text x="591" y="372" font-family="Arial" font-size="11" font-weight="bold" fill="#fb923c" text-anchor="middle">지식 관리</text>
+  <text x="591" y="390" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">변경 이유·결정 이력</text>
+  <text x="591" y="404" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">조직 지식으로 축적</text>
+  <text x="591" y="420" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">신규 팀원 온보딩</text>
+  <text x="591" y="435" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">과거 실수 재발 방지</text>
+  <text x="591" y="451" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">지식 이전 가능</text>
+</svg>

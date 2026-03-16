@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3f"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="50%" style="stop-color:#eab308"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="460" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="360" y="34" font-family="Arial" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">원가 산정 기법 비교</text>
+  <text x="360" y="54" font-family="Arial" font-size="12" fill="#94a3b8" text-anchor="middle">■ 4가지 산정 기법의 특성과 정확도 비교</text>
+
+  <!-- Card 1: 유사 산정 -->
+  <rect x="28" y="68" width="158" height="196" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="28" y="68" width="158" height="30" rx="8" fill="#3b82f6"/>
+  <rect x="28" y="82" width="158" height="16" fill="#3b82f6"/>
+  <text x="107" y="88" font-family="Arial" font-size="12" font-weight="bold" fill="white" text-anchor="middle">유사 산정</text>
+  <text x="107" y="101" font-family="Arial" font-size="9" fill="#bfdbfe" text-anchor="middle">Analogous Estimating</text>
+  <text x="107" y="122" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle">과거 유사 프로젝트</text>
+  <text x="107" y="136" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle">데이터 기반 추정</text>
+  <text x="107" y="158" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">빠른 산정 가능</text>
+  <text x="107" y="174" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">전문가 판단 활용</text>
+  <text x="107" y="190" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">정보 부족해도 가능</text>
+  <text x="107" y="214" font-family="Arial" font-size="10" fill="#fca5a5" text-anchor="middle">정확도: 낮음</text>
+  <text x="107" y="230" font-family="Arial" font-size="10" fill="#fca5a5" text-anchor="middle">-25% ~ +75%</text>
+  <text x="107" y="248" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">초기 단계 적합</text>
+
+  <!-- Card 2: 모수 산정 -->
+  <rect x="198" y="68" width="158" height="196" rx="8" fill="#1a3a2a" stroke="#22c55e" stroke-width="2"/>
+  <rect x="198" y="68" width="158" height="30" rx="8" fill="#22c55e"/>
+  <rect x="198" y="82" width="158" height="16" fill="#22c55e"/>
+  <text x="277" y="88" font-family="Arial" font-size="12" font-weight="bold" fill="white" text-anchor="middle">모수 산정</text>
+  <text x="277" y="101" font-family="Arial" font-size="9" fill="#bbf7d0" text-anchor="middle">Parametric Estimating</text>
+  <text x="277" y="122" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">통계·수식 모델로</text>
+  <text x="277" y="136" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">단위 비용 × 수량</text>
+  <text x="277" y="158" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">수량화 가능 시 유용</text>
+  <text x="277" y="174" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">반복 가능한 작업</text>
+  <text x="277" y="190" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">자동화 산정 가능</text>
+  <text x="277" y="214" font-family="Arial" font-size="10" fill="#fde68a" text-anchor="middle">정확도: 중간</text>
+  <text x="277" y="230" font-family="Arial" font-size="10" fill="#fde68a" text-anchor="middle">-10% ~ +25%</text>
+  <text x="277" y="248" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">예) $200/줄 × 10,000줄</text>
+
+  <!-- Card 3: 상향식 산정 -->
+  <rect x="368" y="68" width="158" height="196" rx="8" fill="#3a1a5f" stroke="#a855f7" stroke-width="2"/>
+  <rect x="368" y="68" width="158" height="30" rx="8" fill="#a855f7"/>
+  <rect x="368" y="82" width="158" height="16" fill="#a855f7"/>
+  <text x="447" y="88" font-family="Arial" font-size="12" font-weight="bold" fill="white" text-anchor="middle">상향식 산정</text>
+  <text x="447" y="101" font-family="Arial" font-size="9" fill="#e9d5ff" text-anchor="middle">Bottom-up Estimating</text>
+  <text x="447" y="122" font-family="Arial" font-size="10" fill="#c4b5fd" text-anchor="middle">WBS 최하위 수준</text>
+  <text x="447" y="136" font-family="Arial" font-size="10" fill="#c4b5fd" text-anchor="middle">합산하여 총비용 계산</text>
+  <text x="447" y="158" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">가장 정확한 방법</text>
+  <text x="447" y="174" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">팀 참여로 현실성↑</text>
+  <text x="447" y="190" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">상세 WBS 필요</text>
+  <text x="447" y="214" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">정확도: 높음</text>
+  <text x="447" y="230" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">-5% ~ +10%</text>
+  <text x="447" y="248" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">시간·노력 많이 필요</text>
+
+  <!-- Card 4: 3점 산정 -->
+  <rect x="538" y="68" width="158" height="196" rx="8" fill="#3a2a1a" stroke="#f97316" stroke-width="2"/>
+  <rect x="538" y="68" width="158" height="30" rx="8" fill="#f97316"/>
+  <rect x="538" y="82" width="158" height="16" fill="#f97316"/>
+  <text x="617" y="88" font-family="Arial" font-size="12" font-weight="bold" fill="white" text-anchor="middle">3점 산정</text>
+  <text x="617" y="101" font-family="Arial" font-size="9" fill="#fed7aa" text-anchor="middle">Three-Point Estimating</text>
+  <text x="617" y="122" font-family="Arial" font-size="10" fill="#fdba74" text-anchor="middle">낙관(O), 비관(P),</text>
+  <text x="617" y="136" font-family="Arial" font-size="10" fill="#fdba74" text-anchor="middle">최빈값(M) 3개 추정</text>
+  <text x="617" y="158" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">불확실성 반영</text>
+  <text x="617" y="174" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">PERT 공식 활용</text>
+  <text x="617" y="190" font-family="Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">(O+4M+P) ÷ 6</text>
+  <text x="617" y="214" font-family="Arial" font-size="10" fill="#fde68a" text-anchor="middle">정확도: 우수</text>
+  <text x="617" y="230" font-family="Arial" font-size="10" fill="#fde68a" text-anchor="middle">리스크 관리에 적합</text>
+  <text x="617" y="248" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">PERT/CPM 연계 활용</text>
+
+  <!-- Accuracy Spectrum -->
+  <text x="360" y="292" font-family="Arial" font-size="14" font-weight="bold" fill="#e2e8f0" text-anchor="middle">■ 정확도 스펙트럼</text>
+  <rect x="60" y="308" width="600" height="28" rx="6" fill="url(#acc)" opacity="0.85"/>
+  <text x="60" y="355" font-family="Arial" font-size="11" fill="#fca5a5" text-anchor="middle">낮음</text>
+  <text x="360" y="355" font-family="Arial" font-size="11" fill="#fde68a" text-anchor="middle">중간</text>
+  <text x="660" y="355" font-family="Arial" font-size="11" fill="#86efac" text-anchor="middle">높음</text>
+
+  <!-- Accuracy markers under spectrum -->
+  <line x1="120" y1="308" x2="120" y2="336" stroke="white" stroke-width="1.5"/>
+  <text x="120" y="372" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle">유사</text>
+  <line x1="280" y1="308" x2="280" y2="336" stroke="white" stroke-width="1.5"/>
+  <text x="280" y="372" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">모수</text>
+  <line x1="480" y1="308" x2="480" y2="336" stroke="white" stroke-width="1.5"/>
+  <text x="480" y="372" font-family="Arial" font-size="10" fill="#c4b5fd" text-anchor="middle">3점</text>
+  <line x1="600" y1="308" x2="600" y2="336" stroke="white" stroke-width="1.5"/>
+  <text x="600" y="372" font-family="Arial" font-size="10" fill="#fdba74" text-anchor="middle">상향식</text>
+
+  <!-- Comparison table -->
+  <rect x="40" y="388" width="642" height="56" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="115" y="406" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">기법</text>
+  <text x="115" y="424" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">유사</text>
+  <text x="115" y="436" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">초기/개략</text>
+  <text x="267" y="406" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">모수</text>
+  <text x="267" y="424" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">수량화 가능</text>
+  <text x="267" y="436" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">반복 작업</text>
+  <text x="450" y="406" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">상향식</text>
+  <text x="450" y="424" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">WBS 완성 후</text>
+  <text x="450" y="436" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">정밀 견적</text>
+  <text x="610" y="406" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">3점</text>
+  <text x="610" y="424" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">불확실성 높음</text>
+  <text x="610" y="436" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">리스크 반영</text>
+  <!-- Vertical dividers in table -->
+  <line x1="190" y1="392" x2="190" y2="440" stroke="#334155" stroke-width="1"/>
+  <line x1="360" y1="392" x2="360" y2="440" stroke="#334155" stroke-width="1"/>
+  <line x1="530" y1="392" x2="530" y2="440" stroke="#334155" stroke-width="1"/>
+</svg>

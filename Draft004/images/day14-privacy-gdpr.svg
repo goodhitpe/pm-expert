@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3f"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="720" height="480" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="360" y="34" font-family="Arial" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">개인정보보호 — GDPR 권리 및 생명주기</text>
+
+  <!-- GDPR 5 Rights Section -->
+  <text x="200" y="58" font-family="Arial" font-size="13" font-weight="bold" fill="#86efac" text-anchor="middle">■ GDPR 정보주체의 핵심 권리</text>
+
+  <!-- Right 1: Access -->
+  <rect x="28" y="72" width="168" height="76" rx="6" fill="#1a3a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="40" y="92" font-family="Arial" font-size="20">👁</text>
+  <text x="72" y="90" font-family="Arial" font-size="11" font-weight="bold" fill="#4ade80">정보 열람권</text>
+  <text x="72" y="105" font-family="Arial" font-size="10" fill="#e2e8f0">본인 정보를</text>
+  <text x="72" y="118" font-family="Arial" font-size="10" fill="#e2e8f0">언제든 조회 가능</text>
+  <text x="112" y="137" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">Art. 15</text>
+
+  <!-- Right 2: Rectification -->
+  <rect x="28" y="156" width="168" height="76" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="40" y="176" font-family="Arial" font-size="20">✏️</text>
+  <text x="72" y="174" font-family="Arial" font-size="11" font-weight="bold" fill="#93c5fd">정정권</text>
+  <text x="72" y="189" font-family="Arial" font-size="10" fill="#e2e8f0">잘못된 개인정보</text>
+  <text x="72" y="202" font-family="Arial" font-size="10" fill="#e2e8f0">수정 요청 권리</text>
+  <text x="112" y="221" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">Art. 16</text>
+
+  <!-- Right 3: Erasure (Right to be Forgotten) -->
+  <rect x="28" y="240" width="168" height="76" rx="6" fill="#3a1a1a" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="40" y="260" font-family="Arial" font-size="20">🗑</text>
+  <text x="72" y="258" font-family="Arial" font-size="11" font-weight="bold" fill="#f87171">삭제권</text>
+  <text x="72" y="273" font-family="Arial" font-size="10" fill="#e2e8f0">잊혀질 권리</text>
+  <text x="72" y="286" font-family="Arial" font-size="10" fill="#e2e8f0">정보 삭제 요청</text>
+  <text x="112" y="305" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">Art. 17</text>
+
+  <!-- Right 4: Portability -->
+  <rect x="28" y="324" width="168" height="76" rx="6" fill="#2e1065" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="40" y="344" font-family="Arial" font-size="20">📦</text>
+  <text x="72" y="342" font-family="Arial" font-size="11" font-weight="bold" fill="#c4b5fd">이동권</text>
+  <text x="72" y="357" font-family="Arial" font-size="10" fill="#e2e8f0">다른 서비스로</text>
+  <text x="72" y="370" font-family="Arial" font-size="10" fill="#e2e8f0">정보 이전 요청</text>
+  <text x="112" y="389" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">Art. 20</text>
+
+  <!-- Right 5: Restriction -->
+  <rect x="28" y="408" width="168" height="56" rx="6" fill="#3a3a1a" stroke="#eab308" stroke-width="1.5"/>
+  <text x="40" y="428" font-family="Arial" font-size="20">🚫</text>
+  <text x="72" y="426" font-family="Arial" font-size="11" font-weight="bold" fill="#fde68a">처리 제한권</text>
+  <text x="72" y="441" font-family="Arial" font-size="10" fill="#e2e8f0">특정 처리 중단 요청</text>
+  <text x="112" y="457" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">Art. 18</text>
+
+  <!-- Personal Data Lifecycle Section -->
+  <text x="548" y="58" font-family="Arial" font-size="13" font-weight="bold" fill="#93c5fd" text-anchor="middle">■ 개인정보 생명주기 관리</text>
+
+  <!-- Step 1: Collect -->
+  <rect x="222" y="72" width="476" height="58" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="250" y="96" font-family="Arial" font-size="20">📥</text>
+  <text x="284" y="92" font-family="Arial" font-size="12" font-weight="bold" fill="#93c5fd">1단계: 수집</text>
+  <text x="284" y="108" font-family="Arial" font-size="11" fill="#e2e8f0">목적 명시 + 최소 수집 원칙 + 명시적 동의 획득 + 제3자 제공 시 별도 동의</text>
+  <text x="284" y="122" font-family="Arial" font-size="9" fill="#64748b">Privacy by Design: 수집 전 개인정보영향평가(PIA/DPIA) 필수</text>
+
+  <line x1="460" y1="130" x2="460" y2="146" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 2: Store -->
+  <rect x="222" y="148" width="476" height="58" rx="6" fill="#1a2a3a" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="250" y="172" font-family="Arial" font-size="20">💾</text>
+  <text x="284" y="168" font-family="Arial" font-size="12" font-weight="bold" fill="#7dd3fc">2단계: 저장</text>
+  <text x="284" y="184" font-family="Arial" font-size="11" fill="#e2e8f0">AES-256 암호화 + 접근 통제(최소 권한) + 백업 + 보유 기간 관리</text>
+  <text x="284" y="198" font-family="Arial" font-size="9" fill="#64748b">물리적 보안(데이터센터 출입통제) + 논리적 보안(DB 접근 로그)</text>
+
+  <line x1="460" y1="206" x2="460" y2="222" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 3: Use / Process -->
+  <rect x="222" y="224" width="476" height="58" rx="6" fill="#1a3a2a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="250" y="248" font-family="Arial" font-size="20">⚙️</text>
+  <text x="284" y="244" font-family="Arial" font-size="12" font-weight="bold" fill="#4ade80">3단계: 이용/처리</text>
+  <text x="284" y="260" font-family="Arial" font-size="11" fill="#e2e8f0">수집 목적 범위 내 사용 + 목적 외 처리 시 재동의 필요</text>
+  <text x="284" y="274" font-family="Arial" font-size="9" fill="#64748b">처리자 계약서 체결 + 개인정보 처리방침 공개 + 접근 이력 로그</text>
+
+  <line x1="460" y1="282" x2="460" y2="298" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 4: Transfer -->
+  <rect x="222" y="300" width="476" height="58" rx="6" fill="#3a2a1a" stroke="#f97316" stroke-width="1.5"/>
+  <text x="250" y="324" font-family="Arial" font-size="20">🌐</text>
+  <text x="284" y="320" font-family="Arial" font-size="12" font-weight="bold" fill="#fb923c">4단계: 제공/이전</text>
+  <text x="284" y="336" font-family="Arial" font-size="11" fill="#e2e8f0">국내: 별도 동의 | 국외: 적정성 결정 국가 또는 표준 계약 조항(SCC)</text>
+  <text x="284" y="350" font-family="Arial" font-size="9" fill="#64748b">EU → 한국 이전: 2023년 EU 적정성 결정(Adequacy Decision) 승인</text>
+
+  <line x1="460" y1="358" x2="460" y2="374" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 5: Destroy -->
+  <rect x="222" y="376" width="476" height="58" rx="6" fill="#2e1065" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="250" y="400" font-family="Arial" font-size="20">🔥</text>
+  <text x="284" y="396" font-family="Arial" font-size="12" font-weight="bold" fill="#c4b5fd">5단계: 파기</text>
+  <text x="284" y="412" font-family="Arial" font-size="11" fill="#e2e8f0">보유 기간 경과·목적 달성 시 즉시 파기 (복구 불가능 방법)</text>
+  <text x="284" y="426" font-family="Arial" font-size="9" fill="#64748b">전자: 덮어쓰기(7회 이상) | 물리: 파쇄 | 파기 이력 기록·보관</text>
+
+  <!-- Fine note -->
+  <rect x="222" y="446" width="476" height="26" rx="4" fill="#450a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="460" y="464" font-family="Arial" font-size="10" fill="#fca5a5" text-anchor="middle">⚠️ GDPR 위반 과징금: Tier1 — 1천만 유로 또는 매출 2% | Tier2 — 2천만 유로 또는 매출 4%</text>
+</svg>

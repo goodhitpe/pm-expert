@@ -260,6 +260,14 @@ PM (오늘 수업 후): "어제 포트 443, 8080 인바운드 허용
 
 ## 2교시: 인터넷 통신 원리 (1.5시간) <!-- 슬라이드 #9~#17 -->
 
+<div align="center">
+
+![인터넷 통신 원리 — DNS와 HTTP/HTTPS](../images/day13-internet-communication.svg)
+
+*▲ DNS 질의 해결 5단계 흐름 + HTTP vs HTTPS 암호화 비교*
+
+</div>
+
 ### 이론 (55분)
 
 #### 1. DNS(Domain Name System)
@@ -471,6 +479,14 @@ CDN 있을 때:
 ---
 
 ## 3교시: 네트워크 장비와 아키텍처 (1시간) <!-- 슬라이드 #18~#24 -->
+
+<div align="center">
+
+![네트워크 작업 아키텍처 구조](../images/day13-network-architecture.svg)
+
+*▲ Router/Switch/Firewall 3계층 네트워크 아키텍처 + 장비별 역할 구조*
+
+</div>
 
 ### 이론 (40분)
 

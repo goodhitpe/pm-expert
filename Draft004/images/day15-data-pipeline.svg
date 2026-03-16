@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" width="720" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3f"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrblue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrorange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f97316"/>
+    </marker>
+  </defs>
+  <rect width="720" height="500" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="360" y="32" font-family="Arial" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">데이터 파이프라인 — ETL vs ELT 비교</text>
+
+  <!-- ETL vs ELT Comparison Table -->
+  <text x="360" y="56" font-family="Arial" font-size="12" fill="#94a3b8" text-anchor="middle">데이터 통합 접근 방식의 핵심 차이</text>
+
+  <!-- Table Header -->
+  <rect x="28" y="66" width="664" height="32" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="164" y="87" font-family="Arial" font-size="12" font-weight="bold" fill="#94a3b8" text-anchor="middle">비교 항목</text>
+  <line x1="300" y1="66" x2="300" y2="98" stroke="#334155" stroke-width="1"/>
+  <text x="490" y="87" font-family="Arial" font-size="13" font-weight="bold" fill="#60a5fa" text-anchor="middle">ETL (Extract-Transform-Load)</text>
+  <line x1="514" y1="66" x2="514" y2="98" stroke="#334155" stroke-width="1"/>
+  <text x="618" y="87" font-family="Arial" font-size="13" font-weight="bold" fill="#fb923c" text-anchor="middle">ELT (Extract-Load-Transform)</text>
+
+  <!-- Row 1: Flow -->
+  <rect x="28" y="98" width="664" height="36" rx="0" fill="#1a1a2e" stroke="#334155" stroke-width="0.5"/>
+  <text x="164" y="121" font-family="Arial" font-size="11" fill="#94a3b8" text-anchor="middle">처리 흐름</text>
+  <line x1="300" y1="98" x2="300" y2="134" stroke="#334155" stroke-width="1"/>
+  <text x="490" y="115" font-family="Arial" font-size="11" fill="#93c5fd" text-anchor="middle">추출 → 변환(중간 서버) → 적재</text>
+  <text x="490" y="129" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">데이터 중간 가공 후 저장</text>
+  <line x1="514" y1="98" x2="514" y2="134" stroke="#334155" stroke-width="1"/>
+  <text x="618" y="115" font-family="Arial" font-size="11" fill="#fdba74" text-anchor="middle">추출 → 적재(원본) → 변환</text>
+  <text x="618" y="129" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">목적지에서 변환 처리</text>
+
+  <!-- Row 2: Transform location -->
+  <rect x="28" y="134" width="664" height="36" rx="0" fill="#16213e" stroke="#334155" stroke-width="0.5"/>
+  <text x="164" y="156" font-family="Arial" font-size="11" fill="#94a3b8" text-anchor="middle">변환 위치</text>
+  <line x1="300" y1="134" x2="300" y2="170" stroke="#334155" stroke-width="1"/>
+  <text x="490" y="155" font-family="Arial" font-size="11" fill="#93c5fd" text-anchor="middle">별도 ETL 서버 / 스테이징 영역</text>
+  <text x="490" y="168" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">데이터 웨어하우스 외부</text>
+  <line x1="514" y1="134" x2="514" y2="170" stroke="#334155" stroke-width="1"/>
+  <text x="618" y="155" font-family="Arial" font-size="11" fill="#fdba74" text-anchor="middle">목적지 (DW/Data Lake)</text>
+  <text x="618" y="168" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">클라우드 DW 내부 엔진 활용</text>
+
+  <!-- Row 3: Best for -->
+  <rect x="28" y="170" width="664" height="36" rx="0" fill="#1a1a2e" stroke="#334155" stroke-width="0.5"/>
+  <text x="164" y="192" font-family="Arial" font-size="11" fill="#94a3b8" text-anchor="middle">적합 환경</text>
+  <line x1="300" y1="170" x2="300" y2="206" stroke="#334155" stroke-width="1"/>
+  <text x="490" y="191" font-family="Arial" font-size="11" fill="#93c5fd" text-anchor="middle">온프레미스 / 레거시 시스템</text>
+  <text x="490" y="204" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">구조화 데이터, 규정 준수 필요</text>
+  <line x1="514" y1="170" x2="514" y2="206" stroke="#334155" stroke-width="1"/>
+  <text x="618" y="191" font-family="Arial" font-size="11" fill="#fdba74" text-anchor="middle">클라우드 / 빅데이터 환경</text>
+  <text x="618" y="204" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">비정형 데이터, 대용량 처리</text>
+
+  <!-- Row 4: Tools -->
+  <rect x="28" y="206" width="664" height="36" rx="0" fill="#16213e" stroke="#334155" stroke-width="0.5"/>
+  <text x="164" y="228" font-family="Arial" font-size="11" fill="#94a3b8" text-anchor="middle">대표 도구</text>
+  <line x1="300" y1="206" x2="300" y2="242" stroke="#334155" stroke-width="1"/>
+  <text x="490" y="222" font-family="Arial" font-size="11" fill="#93c5fd" text-anchor="middle">Informatica, SSIS, Talend</text>
+  <text x="490" y="236" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">전통적 ETL 툴</text>
+  <line x1="514" y1="206" x2="514" y2="242" stroke="#334155" stroke-width="1"/>
+  <text x="618" y="222" font-family="Arial" font-size="11" fill="#fdba74" text-anchor="middle">dbt, BigQuery, Snowflake</text>
+  <text x="618" y="236" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">현대 클라우드 기반 도구</text>
+
+  <!-- Row 5: Speed -->
+  <rect x="28" y="242" width="664" height="36" rx="0" fill="#1a1a2e" stroke="#334155" stroke-width="0.5"/>
+  <text x="164" y="264" font-family="Arial" font-size="11" fill="#94a3b8" text-anchor="middle">속도 / 유연성</text>
+  <line x1="300" y1="242" x2="300" y2="278" stroke="#334155" stroke-width="1"/>
+  <text x="490" y="261" font-family="Arial" font-size="11" fill="#fca5a5" text-anchor="middle">상대적으로 느림 (사전 변환)</text>
+  <text x="490" y="275" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">스키마 변경 시 재설계 필요</text>
+  <line x1="514" y1="242" x2="514" y2="278" stroke="#334155" stroke-width="1"/>
+  <text x="618" y="261" font-family="Arial" font-size="11" fill="#86efac" text-anchor="middle">빠른 적재 + 탄력적 변환</text>
+  <text x="618" y="275" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">원본 보존으로 재처리 용이</text>
+
+  <!-- Pipeline Flow Diagram -->
+  <text x="360" y="300" font-family="Arial" font-size="13" font-weight="bold" fill="#e2e8f0" text-anchor="middle">■ 데이터 파이프라인 전체 흐름</text>
+
+  <!-- Source Systems -->
+  <rect x="28" y="314" width="90" height="60" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="73" y="338" font-family="Arial" font-size="16" text-anchor="middle">🗄</text>
+  <text x="73" y="355" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle" font-weight="bold">Sources</text>
+  <text x="73" y="368" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">DB / API / File</text>
+
+  <!-- Arrow -->
+  <line x1="120" y1="344" x2="154" y2="344" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrblue)"/>
+
+  <!-- Extract -->
+  <rect x="156" y="314" width="90" height="60" rx="6" fill="#1a2a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="201" y="338" font-family="Arial" font-size="16" text-anchor="middle">📤</text>
+  <text x="201" y="355" font-family="Arial" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="bold">Extract</text>
+  <text x="201" y="368" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">데이터 추출</text>
+
+  <line x1="248" y1="344" x2="282" y2="344" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Transform (ETL path) -->
+  <rect x="284" y="308" width="90" height="40" rx="6" fill="#3a2a1a" stroke="#f97316" stroke-width="1.5"/>
+  <text x="329" y="333" font-family="Arial" font-size="10" fill="#fb923c" text-anchor="middle" font-weight="bold">Transform (ETL)</text>
+
+  <text x="329" y="360" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">↕ 또는 ↔</text>
+
+  <!-- Load raw (ELT path) -->
+  <rect x="284" y="363" width="90" height="40" rx="6" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="329" y="388" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle" font-weight="bold">Load Raw (ELT)</text>
+
+  <line x1="376" y1="328" x2="412" y2="344" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="376" y1="383" x2="412" y2="355" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Data Warehouse / Lake -->
+  <rect x="414" y="314" width="90" height="60" rx="6" fill="#2e1065" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="459" y="338" font-family="Arial" font-size="16" text-anchor="middle">🏦</text>
+  <text x="459" y="353" font-family="Arial" font-size="10" fill="#c4b5fd" text-anchor="middle" font-weight="bold">DW / Lake</text>
+  <text x="459" y="368" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">저장소</text>
+
+  <line x1="506" y1="344" x2="540" y2="344" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Analytics/BI -->
+  <rect x="542" y="314" width="90" height="60" rx="6" fill="#3a1a3a" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="587" y="338" font-family="Arial" font-size="16" text-anchor="middle">📊</text>
+  <text x="587" y="353" font-family="Arial" font-size="10" fill="#f9a8d4" text-anchor="middle" font-weight="bold">Analytics</text>
+  <text x="587" y="368" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">BI / AI / ML</text>
+
+  <line x1="634" y1="344" x2="668" y2="344" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- End user -->
+  <rect x="670" y="314" width="46" height="60" rx="6" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="693" y="344" font-family="Arial" font-size="16" text-anchor="middle">👤</text>
+  <text x="693" y="362" font-family="Arial" font-size="9" fill="#7dd3fc" text-anchor="middle">소비</text>
+
+  <!-- Key terms bottom -->
+  <rect x="28" y="392" width="664" height="96" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="48" y="412" font-family="Arial" font-size="12" font-weight="bold" fill="#e2e8f0">핵심 개념</text>
+  <text x="48" y="430" font-family="Arial" font-size="11" fill="#93c5fd">• Data Warehouse (DW):</text>
+  <text x="196" y="430" font-family="Arial" font-size="11" fill="#e2e8f0">구조화된 분석 목적 저장소 — OLAP, Star Schema, Fact/Dimension Table</text>
+  <text x="48" y="448" font-family="Arial" font-size="11" fill="#fb923c">• Data Lake:</text>
+  <text x="141" y="448" font-family="Arial" font-size="11" fill="#e2e8f0">원시 데이터(정형+비정형) 대규모 저장 — S3, Azure Data Lake, HDFS</text>
+  <text x="48" y="466" font-family="Arial" font-size="11" fill="#c4b5fd">• Data Lakehouse:</text>
+  <text x="168" y="466" font-family="Arial" font-size="11" fill="#e2e8f0">Data Lake + DW 장점 결합 (Delta Lake, Apache Iceberg)</text>
+  <text x="48" y="484" font-family="Arial" font-size="11" fill="#4ade80">• CDC (Change Data Capture):</text>
+  <text x="228" y="484" font-family="Arial" font-size="11" fill="#e2e8f0">소스 DB 변경사항만 실시간 감지·전달 (실시간 파이프라인)</text>
+</svg>

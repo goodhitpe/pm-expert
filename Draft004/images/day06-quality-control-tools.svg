@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3f"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="480" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="360" y="30" font-family="Arial" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">품질 통제 도구 — 관리도 &amp; QA vs QC</text>
+
+  <!-- Control Chart Section -->
+  <text x="200" y="54" font-family="Arial" font-size="13" font-weight="bold" fill="#fbbf24" text-anchor="middle">■ 관리도 (Control Chart)</text>
+
+  <!-- Chart area background -->
+  <rect x="28" y="66" width="380" height="220" rx="6" fill="#1a1a2e" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- UCL line -->
+  <line x1="50" y1="100" x2="390" y2="100" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <text x="400" y="104" font-family="Arial" font-size="10" fill="#f87171">UCL</text>
+  <text x="52" y="97" font-family="Arial" font-size="9" fill="#f87171">+3σ</text>
+
+  <!-- Center Line -->
+  <line x1="50" y1="176" x2="390" y2="176" stroke="#22c55e" stroke-width="2"/>
+  <text x="400" y="180" font-family="Arial" font-size="10" fill="#4ade80">CL</text>
+  <text x="52" y="173" font-family="Arial" font-size="9" fill="#4ade80">μ</text>
+
+  <!-- LCL line -->
+  <line x1="50" y1="252" x2="390" y2="252" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <text x="400" y="256" font-family="Arial" font-size="10" fill="#f87171">LCL</text>
+  <text x="52" y="249" font-family="Arial" font-size="9" fill="#f87171">-3σ</text>
+
+  <!-- Warning lines -->
+  <line x1="50" y1="126" x2="390" y2="126" stroke="#f97316" stroke-width="1" stroke-dasharray="4,4" opacity="0.6"/>
+  <text x="52" y="123" font-family="Arial" font-size="9" fill="#f97316" opacity="0.7">+2σ</text>
+  <line x1="50" y1="226" x2="390" y2="226" stroke="#f97316" stroke-width="1" stroke-dasharray="4,4" opacity="0.6"/>
+  <text x="52" y="223" font-family="Arial" font-size="9" fill="#f97316" opacity="0.7">-2σ</text>
+
+  <!-- Data points (within control) -->
+  <polyline points="80,165 110,155 140,182 170,160 200,190 230,170 260,148 290,175 320,185 350,158 380,172"
+            fill="none" stroke="#93c5fd" stroke-width="2"/>
+  <!-- Normal points (blue) -->
+  <circle cx="80" cy="165" r="4" fill="#3b82f6"/>
+  <circle cx="110" cy="155" r="4" fill="#3b82f6"/>
+  <circle cx="140" cy="182" r="4" fill="#3b82f6"/>
+  <circle cx="170" cy="160" r="4" fill="#3b82f6"/>
+  <circle cx="200" cy="190" r="4" fill="#3b82f6"/>
+  <circle cx="230" cy="170" r="4" fill="#3b82f6"/>
+  <!-- Out of control point (red) -->
+  <circle cx="260" cy="90" r="5" fill="#ef4444"/>
+  <text x="265" y="86" font-family="Arial" font-size="9" fill="#f87171">이상치!</text>
+  <circle cx="290" cy="175" r="4" fill="#3b82f6"/>
+  <circle cx="320" cy="185" r="4" fill="#3b82f6"/>
+  <circle cx="350" cy="158" r="4" fill="#3b82f6"/>
+  <circle cx="380" cy="172" r="4" fill="#3b82f6"/>
+
+  <!-- Axes labels -->
+  <text x="208" y="275" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">시간 (샘플 번호)</text>
+  <text x="36" y="180" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle" transform="rotate(-90, 36, 176)">측정값</text>
+
+  <!-- Control chart legend -->
+  <rect x="28" y="294" width="380" height="48" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <line x1="46" y1="314" x2="76" y2="314" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <text x="82" y="318" font-family="Arial" font-size="10" fill="#e2e8f0">UCL/LCL: 관리 한계선 (±3σ) — 이 선 밖 = 즉각 조치</text>
+  <line x1="46" y1="334" x2="76" y2="334" stroke="#22c55e" stroke-width="2"/>
+  <text x="82" y="338" font-family="Arial" font-size="10" fill="#e2e8f0">CL: 중심선 (μ 평균) — 7점 연속 한쪽 = 추세 이상 신호</text>
+
+  <!-- QA vs QC Comparison Table -->
+  <text x="575" y="54" font-family="Arial" font-size="13" font-weight="bold" fill="#86efac" text-anchor="middle">■ QA vs QC 비교</text>
+
+  <!-- Table Header -->
+  <rect x="426" y="66" width="266" height="30" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="490" y="86" font-family="Arial" font-size="11" font-weight="bold" fill="#7dd3fc" text-anchor="middle">QA</text>
+  <line x1="554" y1="66" x2="554" y2="96" stroke="#334155" stroke-width="1"/>
+  <text x="624" y="86" font-family="Arial" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">QC</text>
+
+  <!-- Row: Full Name -->
+  <rect x="426" y="96" width="266" height="40" rx="0" fill="#1a1a2e" stroke="#334155" stroke-width="0.5"/>
+  <text x="490" y="112" font-family="Arial" font-size="10" fill="#7dd3fc" text-anchor="middle">Quality Assurance</text>
+  <text x="490" y="126" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">품질 보증</text>
+  <line x1="554" y1="96" x2="554" y2="136" stroke="#334155" stroke-width="1"/>
+  <text x="624" y="112" font-family="Arial" font-size="10" fill="#4ade80" text-anchor="middle">Quality Control</text>
+  <text x="624" y="126" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">품질 통제</text>
+
+  <!-- Row: Purpose -->
+  <rect x="426" y="136" width="266" height="40" rx="0" fill="#16213e" stroke="#334155" stroke-width="0.5"/>
+  <text x="490" y="152" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle">프로세스 개선</text>
+  <text x="490" y="166" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">결함 예방 목적</text>
+  <line x1="554" y1="136" x2="554" y2="176" stroke="#334155" stroke-width="1"/>
+  <text x="624" y="152" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">제품/산출물 검사</text>
+  <text x="624" y="166" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">결함 탐지 목적</text>
+
+  <!-- Row: Timing -->
+  <rect x="426" y="176" width="266" height="40" rx="0" fill="#1a1a2e" stroke="#334155" stroke-width="0.5"/>
+  <text x="490" y="192" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle">작업 수행 중</text>
+  <text x="490" y="206" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">(예방적, 진행 중)</text>
+  <line x1="554" y1="176" x2="554" y2="216" stroke="#334155" stroke-width="1"/>
+  <text x="624" y="192" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">작업 완료 후</text>
+  <text x="624" y="206" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">(사후적, 검증)</text>
+
+  <!-- Row: Responsibility -->
+  <rect x="426" y="216" width="266" height="40" rx="0" fill="#16213e" stroke="#334155" stroke-width="0.5"/>
+  <text x="490" y="232" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle">전체 팀 책임</text>
+  <text x="490" y="246" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">PM + 개발자</text>
+  <line x1="554" y1="216" x2="554" y2="256" stroke="#334155" stroke-width="1"/>
+  <text x="624" y="232" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">QC 팀 / 테스터</text>
+  <text x="624" y="246" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">별도 품질 조직</text>
+
+  <!-- Row: Tools -->
+  <rect x="426" y="256" width="266" height="40" rx="0" fill="#1a1a2e" stroke="#334155" stroke-width="0.5"/>
+  <text x="490" y="272" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle">프로세스 감사</text>
+  <text x="490" y="286" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">체크리스트, 리뷰</text>
+  <line x1="554" y1="256" x2="554" y2="296" stroke="#334155" stroke-width="1"/>
+  <text x="624" y="272" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">관리도, 파레토</text>
+  <text x="624" y="286" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">원인-결과도</text>
+
+  <!-- PMI Note -->
+  <rect x="426" y="304" width="266" height="38" rx="4" fill="#3b0764" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="559" y="320" font-family="Arial" font-size="11" font-weight="bold" fill="#c4b5fd" text-anchor="middle">PMI PMBOK 관점</text>
+  <text x="559" y="335" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">QA=품질감사 → QC=인도물검사 → 개선</text>
+
+  <!-- 7 Quality Tools -->
+  <rect x="28" y="354" width="664" height="114" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="360" y="374" font-family="Arial" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">품질 7대 도구 (7 Basic Quality Tools)</text>
+  <!-- Tool 1 -->
+  <rect x="42" y="382" width="86" height="32" rx="4" fill="#1a3a1a" stroke="#22c55e" stroke-width="1"/>
+  <text x="85" y="400" font-family="Arial" font-size="10" fill="#4ade80" text-anchor="middle">관리도</text>
+  <text x="85" y="411" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">Control Chart</text>
+  <!-- Tool 2 -->
+  <rect x="136" y="382" width="86" height="32" rx="4" fill="#1e2a3a" stroke="#3b82f6" stroke-width="1"/>
+  <text x="179" y="400" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle">파레토 차트</text>
+  <text x="179" y="411" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">80/20 법칙</text>
+  <!-- Tool 3 -->
+  <rect x="230" y="382" width="86" height="32" rx="4" fill="#2e1065" stroke="#a855f7" stroke-width="1"/>
+  <text x="273" y="400" font-family="Arial" font-size="10" fill="#c4b5fd" text-anchor="middle">산점도</text>
+  <text x="273" y="411" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">Scatter Diagram</text>
+  <!-- Tool 4 -->
+  <rect x="324" y="382" width="86" height="32" rx="4" fill="#3a1a06" stroke="#f97316" stroke-width="1"/>
+  <text x="367" y="400" font-family="Arial" font-size="10" fill="#fb923c" text-anchor="middle">원인결과도</text>
+  <text x="367" y="411" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">Fishbone</text>
+  <!-- Tool 5 -->
+  <rect x="418" y="382" width="86" height="32" rx="4" fill="#3a1a1a" stroke="#ef4444" stroke-width="1"/>
+  <text x="461" y="400" font-family="Arial" font-size="10" fill="#f87171" text-anchor="middle">히스토그램</text>
+  <text x="461" y="411" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">분포 분석</text>
+  <!-- Tool 6 -->
+  <rect x="512" y="382" width="86" height="32" rx="4" fill="#0f2a2a" stroke="#14b8a6" stroke-width="1"/>
+  <text x="555" y="400" font-family="Arial" font-size="10" fill="#2dd4bf" text-anchor="middle">흐름도</text>
+  <text x="555" y="411" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">Flowchart</text>
+  <!-- Tool 7 -->
+  <rect x="606" y="382" width="86" height="32" rx="4" fill="#2a1a3a" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="649" y="400" font-family="Arial" font-size="10" fill="#a78bfa" text-anchor="middle">체크시트</text>
+  <text x="649" y="411" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">Check Sheet</text>
+
+  <text x="360" y="452" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">식스시그마(6σ): DMAIC (Define→Measure→Analyze→Improve→Control) — 프로세스 변동 최소화 (3.4 DPMO)</text>
+  <text x="360" y="466" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">Cost of Quality = Cost of Conformance (예방+검사비) + Cost of Non-Conformance (실패비용)</text>
+</svg>

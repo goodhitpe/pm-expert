@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" width="720" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3f"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <marker id="arru" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrd" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+  </defs>
+  <rect width="720" height="500" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="360" y="34" font-family="Arial" font-size="18" font-weight="bold" fill="#e2e8f0" text-anchor="middle">네트워크 장비 및 3계층 아키텍처</text>
+  <text x="360" y="54" font-family="Arial" font-size="12" fill="#94a3b8" text-anchor="middle">■ Router / Switch / Firewall의 역할과 3계층(Core-Distribution-Access) 구조</text>
+
+  <!-- Layer 1: Internet/Core -->
+  <!-- Internet cloud -->
+  <ellipse cx="360" cy="90" rx="120" ry="36" fill="#1e2a4a" stroke="#3b82f6" stroke-width="2"/>
+  <text x="360" y="85" font-family="Arial" font-size="13" font-weight="bold" fill="#93c5fd" text-anchor="middle">🌐 인터넷</text>
+  <text x="360" y="102" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">Internet (WAN)</text>
+
+  <!-- Line from internet to firewall -->
+  <line x1="360" y1="126" x2="360" y2="154" stroke="#ef4444" stroke-width="2" marker-end="url(#arru)"/>
+  <text x="390" y="145" font-family="Arial" font-size="9" fill="#f87171">외부 트래픽</text>
+
+  <!-- Firewall -->
+  <rect x="268" y="154" width="184" height="52" rx="8" fill="#3a1a1a" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="360" y="178" font-family="Arial" font-size="14" font-weight="bold" fill="#f87171" text-anchor="middle">🔥 방화벽 (Firewall)</text>
+  <text x="360" y="196" font-family="Arial" font-size="10" fill="#fca5a5" text-anchor="middle">허가된 트래픽만 통과 | 패킷 필터링 | 정책 기반 제어</text>
+
+  <!-- Device description box -->
+  <rect x="28" y="154" width="220" height="52" rx="6" fill="#2a1a1a" stroke="#f97316" stroke-width="1"/>
+  <text x="138" y="174" font-family="Arial" font-size="10" fill="#fdba74" text-anchor="middle">방화벽이 하는 일:</text>
+  <text x="138" y="190" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">• IP 주소·포트 기반 차단/허용</text>
+  <text x="138" y="204" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">• DoS 공격 방어 | DMZ 구성</text>
+
+  <!-- Line to Router -->
+  <line x1="360" y1="206" x2="360" y2="234" stroke="#f97316" stroke-width="2" marker-end="url(#arru)"/>
+
+  <!-- Router -->
+  <rect x="268" y="234" width="184" height="52" rx="8" fill="#3a2a1a" stroke="#f97316" stroke-width="2"/>
+  <text x="360" y="258" font-family="Arial" font-size="14" font-weight="bold" fill="#fb923c" text-anchor="middle">🔀 라우터 (Router)</text>
+  <text x="360" y="276" font-family="Arial" font-size="10" fill="#fdba74" text-anchor="middle">네트워크 간 패킷 경로 결정 | L3 (IP 주소 기반)</text>
+
+  <!-- Router description -->
+  <rect x="28" y="234" width="220" height="52" rx="6" fill="#2a2a1a" stroke="#eab308" stroke-width="1"/>
+  <text x="138" y="254" font-family="Arial" font-size="10" fill="#fde68a" text-anchor="middle">라우터가 하는 일:</text>
+  <text x="138" y="270" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">• 최적 경로 계산 (라우팅 테이블)</text>
+  <text x="138" y="284" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">• LAN ↔ WAN 연결 | NAT 처리</text>
+
+  <!-- Additional router right box -->
+  <rect x="472" y="234" width="220" height="52" rx="6" fill="#1e2a3a" stroke="#3b82f6" stroke-width="1"/>
+  <text x="582" y="254" font-family="Arial" font-size="10" fill="#93c5fd" text-anchor="middle">OSI 계층: Layer 3 (네트워크층)</text>
+  <text x="582" y="270" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">• BGP, OSPF 라우팅 프로토콜</text>
+  <text x="582" y="284" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">• 서브넷 분리 (VLAN과 연동)</text>
+
+  <!-- Line to Switch -->
+  <line x1="280" y1="286" x2="220" y2="322" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arru)"/>
+  <line x1="360" y1="286" x2="360" y2="322" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arru)"/>
+  <line x1="440" y1="286" x2="500" y2="322" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arru)"/>
+
+  <!-- Distribution Layer Switches -->
+  <!-- Switch A -->
+  <rect x="140" y="322" width="160" height="50" rx="6" fill="#2e1065" stroke="#a855f7" stroke-width="2"/>
+  <text x="220" y="342" font-family="Arial" font-size="12" font-weight="bold" fill="#c4b5fd" text-anchor="middle">🔗 L3 스위치</text>
+  <text x="220" y="358" font-family="Arial" font-size="10" fill="#e9d5ff" text-anchor="middle">분배 계층 (Distribution)</text>
+  <text x="220" y="370" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">VLAN 라우팅 처리</text>
+
+  <!-- Switch B (Core) -->
+  <rect x="500" y="322" width="160" height="50" rx="6" fill="#2e1065" stroke="#a855f7" stroke-width="2"/>
+  <text x="580" y="342" font-family="Arial" font-size="12" font-weight="bold" fill="#c4b5fd" text-anchor="middle">🔗 L3 스위치</text>
+  <text x="580" y="358" font-family="Arial" font-size="10" fill="#e9d5ff" text-anchor="middle">분배 계층 (Distribution)</text>
+  <text x="580" y="370" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">고속 패킷 전달</text>
+
+  <!-- Lines to access switches -->
+  <line x1="180" y1="372" x2="120" y2="406" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrd)"/>
+  <line x1="260" y1="372" x2="260" y2="406" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrd)"/>
+  <line x1="540" y1="372" x2="460" y2="406" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrd)"/>
+  <line x1="620" y1="372" x2="620" y2="406" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrd)"/>
+
+  <!-- Access Layer Switches -->
+  <rect x="68" y="406" width="100" height="38" rx="5" fill="#1a3a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="118" y="422" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">L2 스위치</text>
+  <text x="118" y="436" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">접근 계층</text>
+
+  <rect x="210" y="406" width="100" height="38" rx="5" fill="#1a3a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="260" y="422" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">L2 스위치</text>
+  <text x="260" y="436" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">접근 계층</text>
+
+  <rect x="410" y="406" width="100" height="38" rx="5" fill="#1a3a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="460" y="422" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">L2 스위치</text>
+  <text x="460" y="436" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">접근 계층</text>
+
+  <rect x="570" y="406" width="100" height="38" rx="5" fill="#1a3a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="620" y="422" font-family="Arial" font-size="10" fill="#86efac" text-anchor="middle">L2 스위치</text>
+  <text x="620" y="436" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">접근 계층</text>
+
+  <!-- End devices -->
+  <text x="118" y="470" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">💻 PC / IoT</text>
+  <text x="260" y="470" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">💻 PC / 서버</text>
+  <text x="460" y="470" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">📱 WiFi AP</text>
+  <text x="620" y="470" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">🖨️ 프린터</text>
+
+  <!-- Note: Switch vs Router -->
+  <rect x="310" y="322" width="170" height="82" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="395" y="340" font-family="Arial" font-size="10" font-weight="bold" fill="#e2e8f0" text-anchor="middle">스위치 핵심 역할</text>
+  <text x="395" y="356" font-family="Arial" font-size="10" fill="#c4b5fd" text-anchor="middle">MAC 주소 기반 전달</text>
+  <text x="395" y="372" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">• 동일 네트워크 내 통신</text>
+  <text x="395" y="388" font-family="Arial" font-size="10" fill="#e2e8f0" text-anchor="middle">• L2: MAC | L3: IP+MAC</text>
+  <text x="395" y="400" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">VLAN으로 네트워크 분할</text>
+</svg>
