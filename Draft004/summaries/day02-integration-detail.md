@@ -932,9 +932,9 @@ ABC 서점 온라인 플랫폼 구축 프로젝트
 
 <div align="center">
 
-![통합 변경 통제 CCB 프로세스](../images/day02-change-control.svg)
+![프로젝트 관리 계획서(PMP) 구성 체계](../images/day02-pmp-structure.svg)
 
-*▲ 통합 변경 통제(ICC) 6단계 + CCB 구성 + 3대 기준선 + 범위 크리프 예방*
+*▲ PMP = 9개 보조 관리 계획서 + 3대 기준선 — 헌장이 "무엇을"이라면 PMP는 "어떻게"*
 
 </div>
 
@@ -1431,6 +1431,14 @@ Week 13 목표: 동영상 스트리밍 기능 완성
 ![통합 관리 흐름도](../images/day02-integration-flow.svg)
 
 *▲ 프로세스 그룹과 통합 관리 관계 — 감시/통제 단계에서 변경 요청 승인 후 기획으로 피드백됩니다*
+
+</div>
+
+<div align="center">
+
+![통합 변경 통제 CCB 프로세스](../images/day02-change-control.svg)
+
+*▲ 통합 변경 통제(ICC) 6단계 + CCB 구성 + 3대 기준선 + 범위 크리프 예방*
 
 </div>
 

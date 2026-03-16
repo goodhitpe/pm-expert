@@ -100,14 +100,6 @@
 - 재난신고: 가용성 우선 (누구나 즉시 접근)
 ```
 
-<div align="center">
-
-![CIA 균형 원칙](../images/day14-cia-triad.svg)
-
-*▲ CIA 트라이앨 보안 요소 간 균형 — 프로젝트 성격에 따라 우선순위 조정 필요*
-
-</div>
-
 #### 3. 인증과 인가
 
 **Authentication (인증): "당신이 누구인가?"**
@@ -606,14 +598,6 @@ $stmt->execute();
 </details>
 
 ---
-
-<div align="center">
-
-![CIA 암호화 보안](../images/day14-cia-triad.svg)
-
-*▲ 암호화 기술이 CIA 3원칙을 학습적으로 지원하는 방식 — 대칭키/비대칭키, 해시, 전자서명*
-
-</div>
 
 ## 3교시: 암호화 및 인증 기술 (이론 + 예시 + 실습 + 퀴즈)
 

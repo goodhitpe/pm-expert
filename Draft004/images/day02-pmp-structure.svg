@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3f"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7971e"/>
+      <stop offset="100%" style="stop-color:#ffd200"/>
+    </linearGradient>
+    <linearGradient id="planGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4776e6"/>
+      <stop offset="100%" style="stop-color:#8e54e9"/>
+    </linearGradient>
+    <linearGradient id="baseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e"/>
+      <stop offset="100%" style="stop-color:#38ef7d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="480" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="360" y="36" font-family="Arial,sans-serif" font-size="18" font-weight="bold"
+        fill="#ffd200" text-anchor="middle">프로젝트 관리 계획서 (PMP) 구성 체계</text>
+  <text x="360" y="58" font-family="Arial,sans-serif" font-size="12" fill="#aaa" text-anchor="middle">
+    Project Management Plan = 방법 계획서 + 기준선 = 프로젝트 실행 청사진
+  </text>
+
+  <!-- Center PMP box -->
+  <rect x="270" y="72" width="180" height="54" rx="8" fill="url(#centerGrad)" opacity="0.95"/>
+  <text x="360" y="94" font-family="Arial,sans-serif" font-size="14" font-weight="bold"
+        fill="#1e1e3f" text-anchor="middle">Project Management</text>
+  <text x="360" y="114" font-family="Arial,sans-serif" font-size="14" font-weight="bold"
+        fill="#1e1e3f" text-anchor="middle">Plan (PMP)</text>
+
+  <!-- Left column: Subsidiary Plans (top 5) -->
+  <!-- Connector lines left side -->
+  <line x1="270" y1="99" x2="200" y2="155" stroke="#4776e6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+  <line x1="270" y1="99" x2="200" y2="210" stroke="#4776e6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+  <line x1="270" y1="99" x2="200" y2="265" stroke="#4776e6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+  <line x1="270" y1="99" x2="200" y2="320" stroke="#4776e6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+  <line x1="270" y1="99" x2="200" y2="375" stroke="#4776e6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+
+  <!-- Right column: Subsidiary Plans (bottom 4) + baseline -->
+  <line x1="450" y1="99" x2="520" y2="155" stroke="#4776e6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+  <line x1="450" y1="99" x2="520" y2="210" stroke="#4776e6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+  <line x1="450" y1="99" x2="520" y2="265" stroke="#4776e6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+  <line x1="450" y1="99" x2="520" y2="320" stroke="#4776e6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+
+  <!-- LEFT subsidiary plan boxes -->
+  <!-- Plan 1: Scope -->
+  <rect x="94" y="138" width="152" height="34" rx="6" fill="url(#planGrad)" opacity="0.85"/>
+  <text x="170" y="152" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">📋 범위 관리 계획서</text>
+  <text x="170" y="165" font-family="Arial,sans-serif" font-size="9" fill="#dde" text-anchor="middle">Scope Management Plan</text>
+
+  <!-- Plan 2: Schedule -->
+  <rect x="94" y="193" width="152" height="34" rx="6" fill="url(#planGrad)" opacity="0.85"/>
+  <text x="170" y="207" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">📅 일정 관리 계획서</text>
+  <text x="170" y="220" font-family="Arial,sans-serif" font-size="9" fill="#dde" text-anchor="middle">Schedule Management Plan</text>
+
+  <!-- Plan 3: Cost -->
+  <rect x="94" y="248" width="152" height="34" rx="6" fill="url(#planGrad)" opacity="0.85"/>
+  <text x="170" y="262" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">💰 원가 관리 계획서</text>
+  <text x="170" y="275" font-family="Arial,sans-serif" font-size="9" fill="#dde" text-anchor="middle">Cost Management Plan</text>
+
+  <!-- Plan 4: Quality -->
+  <rect x="94" y="303" width="152" height="34" rx="6" fill="url(#planGrad)" opacity="0.85"/>
+  <text x="170" y="317" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">✅ 품질 관리 계획서</text>
+  <text x="170" y="330" font-family="Arial,sans-serif" font-size="9" fill="#dde" text-anchor="middle">Quality Management Plan</text>
+
+  <!-- Plan 5: Resource -->
+  <rect x="94" y="358" width="152" height="34" rx="6" fill="url(#planGrad)" opacity="0.85"/>
+  <text x="170" y="372" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">👥 자원 관리 계획서</text>
+  <text x="170" y="385" font-family="Arial,sans-serif" font-size="9" fill="#dde" text-anchor="middle">Resource Management Plan</text>
+
+  <!-- RIGHT subsidiary plan boxes -->
+  <!-- Plan 6: Communication -->
+  <rect x="474" y="138" width="152" height="34" rx="6" fill="url(#planGrad)" opacity="0.85"/>
+  <text x="550" y="152" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">📢 의사소통 관리 계획서</text>
+  <text x="550" y="165" font-family="Arial,sans-serif" font-size="9" fill="#dde" text-anchor="middle">Communications Mgmt Plan</text>
+
+  <!-- Plan 7: Risk -->
+  <rect x="474" y="193" width="152" height="34" rx="6" fill="url(#planGrad)" opacity="0.85"/>
+  <text x="550" y="207" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">⚠️ 리스크 관리 계획서</text>
+  <text x="550" y="220" font-family="Arial,sans-serif" font-size="9" fill="#dde" text-anchor="middle">Risk Management Plan</text>
+
+  <!-- Plan 8: Procurement -->
+  <rect x="474" y="248" width="152" height="34" rx="6" fill="url(#planGrad)" opacity="0.85"/>
+  <text x="550" y="262" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">🛒 조달 관리 계획서</text>
+  <text x="550" y="275" font-family="Arial,sans-serif" font-size="9" fill="#dde" text-anchor="middle">Procurement Management Plan</text>
+
+  <!-- Plan 9: Stakeholder -->
+  <rect x="474" y="303" width="152" height="34" rx="6" fill="url(#planGrad)" opacity="0.85"/>
+  <text x="550" y="317" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">🤝 이해관계자 관리 계획서</text>
+  <text x="550" y="330" font-family="Arial,sans-serif" font-size="9" fill="#dde" text-anchor="middle">Stakeholder Mgmt Plan</text>
+
+  <!-- Baseline section - bottom center -->
+  <line x1="360" y1="126" x2="360" y2="358" stroke="#38ef7d" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
+
+  <!-- Baseline box -->
+  <rect x="180" y="358" width="360" height="80" rx="8" fill="url(#baseGrad)" opacity="0.2"/>
+  <rect x="180" y="358" width="360" height="80" rx="8" fill="none" stroke="#38ef7d" stroke-width="1.5"/>
+  <text x="360" y="378" font-family="Arial,sans-serif" font-size="13" font-weight="bold"
+        fill="#38ef7d" text-anchor="middle">📌 3대 기준선 (Performance Baseline)</text>
+
+  <rect x="195" y="388" width="100" height="40" rx="6" fill="#38ef7d" opacity="0.25"/>
+  <text x="245" y="404" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#38ef7d" text-anchor="middle">범위 기준선</text>
+  <text x="245" y="420" font-family="Arial,sans-serif" font-size="9" fill="#aef" text-anchor="middle">Scope Baseline</text>
+
+  <rect x="310" y="388" width="100" height="40" rx="6" fill="#38ef7d" opacity="0.25"/>
+  <text x="360" y="404" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#38ef7d" text-anchor="middle">일정 기준선</text>
+  <text x="360" y="420" font-family="Arial,sans-serif" font-size="9" fill="#aef" text-anchor="middle">Schedule Baseline</text>
+
+  <rect x="425" y="388" width="100" height="40" rx="6" fill="#38ef7d" opacity="0.25"/>
+  <text x="475" y="404" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#38ef7d" text-anchor="middle">원가 기준선</text>
+  <text x="475" y="420" font-family="Arial,sans-serif" font-size="9" fill="#aef" text-anchor="middle">Cost Baseline</text>
+
+  <!-- Footer -->
+  <text x="360" y="462" font-family="Arial,sans-serif" font-size="10" fill="#888" text-anchor="middle">
+    PMP = 9개 보조 관리 계획서 + 3대 기준선 | 헌장(Charter)이 "무엇을"이라면 PMP는 "어떻게"
+  </text>
+</svg>

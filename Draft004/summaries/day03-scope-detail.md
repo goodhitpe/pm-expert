@@ -361,7 +361,7 @@ PM의 대응 실패:
 
 <div align="center">
 
-![요구사항 수집 5대 기법 + RTM](../images/day03-product-vs-project-scope.svg)
+![요구사항 수집 5대 기법 + RTM](../images/day03-requirements-collection.svg)
 
 *▲ 요구사항 수집 5대 기법 + 추적 매트릭스(RTM) + MoSCoW*
 

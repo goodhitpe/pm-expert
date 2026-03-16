@@ -519,14 +519,6 @@ PM 주의사항:
 
 #### 2. 클라우드 서비스 모델 (SPI 모델)
 
-<div align="center">
-
-![클라우드 SPI 모델](../images/day16-cloud.svg)
-
-*▲ IaaS(EC2) → PaaS(Elastic Beanstalk) → SaaS(Gmail) — 관리 책임 범위 기준 구분*
-
-</div>
-
 **A. IaaS (Infrastructure as a Service, 인프라 서비스)**
 
 **정의:** 가상화된 컴퓨팅 리소스를 제공
@@ -2010,14 +2002,6 @@ ROI: $48,000 / $5,000 = 960%
 클라우드 비용 최적화는 **지속적인 프로세스**입니다. 한 번 하고 끝이 아니라, 정기적으로 검토하고 개선해야 합니다.
 
 </details>
-
-<div align="center">
-
-![클라우드 비용 최적화](../images/day16-cloud.svg)
-
-*▲ 클라우드 활용 및 비용 관리 펌다멘털 — 온디맨드 vs 리저브드 vs 스팟*
-
-</div>
 
 ## 3교시: 빅데이터 (1시간) <!-- 슬라이드 #5~#6 -->
 
